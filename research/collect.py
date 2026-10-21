@@ -47,7 +47,7 @@ def image_url(url:str)->str|None:
     p=urlparse(url)
     if p.scheme!='https' or p.hostname not in HOSTS or p.username or p.password or not p.path.startswith('/photos/') or p.query:return None
     if not re.search(r'/(?:square|thumb|small|medium|large|original)\.(?:jpe?g|png)$',p.path,re.I):return None
-    return urlunparse((p.scheme,p.netloc,re.sub(r'/(?:square|thumb|small|large|original)\.', '/medium.',p.path),'','',''))
+    return urlunparse((p.scheme,p.netloc,re.sub(r'/(?:square|thumb|small|large|original)\.', '/large.',p.path),'','',''))
 
 def inspect_image(b:bytes)->tuple[str,int,int,int]:
     try:
