@@ -19,6 +19,7 @@ on:
     branches: [main]
     paths:
       - 'research/species_seed.json'
+      - 'research/run_requests/*.json'
   pull_request:
     paths:
       - 'research/collect.py'
