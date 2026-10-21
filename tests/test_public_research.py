@@ -38,7 +38,7 @@ class PublicTests(unittest.TestCase):
         self.assertIsNone(collect.image_url('https://evil.com/photos/1/square.jpg'))
         self.assertIsNone(collect.image_url('https://static.inaturalist.org/photos/1/square.jpg?x=1'))
         self.assertEqual(collect.image_url('https://static.inaturalist.org/photos/1/square.jpg'),
-                         'https://static.inaturalist.org/photos/1/medium.jpg')
+                         'https://static.inaturalist.org/photos/1/large.jpg')
     def test_multi_page_rights_exact_species(self):
         urls=[]
         def api(url,cap):
