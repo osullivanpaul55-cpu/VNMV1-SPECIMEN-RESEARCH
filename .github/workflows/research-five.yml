@@ -101,6 +101,7 @@ jobs:
     timeout-minutes: 15
     permissions:
       contents: write
+      actions: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -156,6 +157,13 @@ jobs:
           done
           echo 'Could not persist index after archiving; halt and investigate.' >&2
           exit 1
+      - name: Trigger live review site after index update
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          # GITHUB_TOKEN git pushes do not trigger push workflows; workflow_dispatch does.
+          gh workflow run pages.yml --ref main
       - name: Research status summary
         run: |
           python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
