@@ -5,6 +5,7 @@ from PIL import Image
 BASE=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(BASE/'research'))
 import collect,archive
+from pose_reference import CORE_POSES,OPTIONAL_POSES,unverified_text_pose_hints,research_needs
 
 def jpeg(color):
     im=Image.new('RGB',(300,240),color);b=io.BytesIO();im.save(b,format='JPEG');return b.getvalue()
@@ -37,7 +38,7 @@ class PublicTests(unittest.TestCase):
         self.assertIsNone(collect.image_url('https://evil.com/photos/1/square.jpg'))
         self.assertIsNone(collect.image_url('https://static.inaturalist.org/photos/1/square.jpg?x=1'))
         self.assertEqual(collect.image_url('https://static.inaturalist.org/photos/1/square.jpg'),
-                         'https://static.inaturalist.org/photos/1/medium.jpg')
+                         'https://static.inaturalist.org/photos/1/large.jpg')
     def test_multi_page_rights_exact_species(self):
         urls=[]
         def api(url,cap):
@@ -91,5 +92,35 @@ class PublicTests(unittest.TestCase):
         self.assertIn('gh release create',yaml)
         self.assertIn('contents: write',yaml)
         self.assertNotIn('OPENAI_API_KEY',yaml)
+
+    def test_camera_pose_vocabulary_and_text_hints_are_non_authoritative(self):
+        self.assertEqual(len(CORE_POSES),6)
+        self.assertEqual(len(OPTIONAL_POSES),4)
+        self.assertIn('DORSAL_TOP_DOWN',unverified_text_pose_hints('dorsal view'))
+        self.assertIn('DEFENSIVE_THREAT',unverified_text_pose_hints('defensive posture'))
+        self.assertEqual(unverified_text_pose_hints('generic spider observation'),[])
+        self.assertEqual(research_needs()['visually_verified_pose_coverage'],[])
+        self.assertTrue(research_needs()['no_forced_threat_or_ventral_view'])
+
+    def test_pose_candidate_from_observer_text_needs_visual_review(self):
+        def api(url,cap):
+            return json.dumps({'results':[{'id':13,'quality_grade':'research',
+              'description':'Dorsal view of tarantula on bark',
+              'taxon':{'name':'Abdomegaphobema mesomelas','rank':'species'},
+              'photos':[{'id':101,'license_code':'cc0',
+               'url':'https://static.inaturalist.org/photos/101/square.jpg'},
+               {'id':102,'license_code':'cc0',
+               'url':'https://static.inaturalist.org/photos/102/square.jpg'}]}]}).encode()
+        rows=collect.discover('Abdomegaphobema mesomelas',set(),api_fetch=api,pages=1)
+        self.assertEqual(len(rows),2)
+        self.assertIn('DORSAL_TOP_DOWN',rows[0]['unverified_observer_text_pose_hints'])
+        self.assertEqual(rows[0]['pose_id'],'UNREVIEWED')
+        self.assertEqual(rows[0]['rights_verdict'],'CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED')
+
+    def test_review_exports_pose_only_labels(self):
+        page=(BASE/'review/index.html').read_text()
+        self.assertIn('WALKING_AWAY_REAR_OBLIQUE',page)
+        self.assertIn('HUMAN_LABEL_NOT_INDEPENDENTLY_PROMOTED',page)
+        self.assertIn("d.pose_id&&d.pose_id!=='UNREVIEWED'",page)
 
 if __name__=='__main__':unittest.main()

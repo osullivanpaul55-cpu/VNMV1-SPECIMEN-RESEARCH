@@ -8,6 +8,7 @@ from pathlib import Path
 from urllib.parse import urlencode, urlparse, urlunparse
 from urllib.request import Request, urlopen
 from PIL import Image, UnidentifiedImageError
+from pose_reference import unverified_text_pose_hints, research_needs
 
 SHARDS=5; MAX_IMAGE_BYTES=5_000_000; ALLOWED={'cc0','cc-by'}
 HOSTS={'static.inaturalist.org','inaturalist-open-data.s3.amazonaws.com','inaturalist-open-data.s3.us-west-2.amazonaws.com'}
@@ -46,7 +47,7 @@ def image_url(url:str)->str|None:
     p=urlparse(url)
     if p.scheme!='https' or p.hostname not in HOSTS or p.username or p.password or not p.path.startswith('/photos/') or p.query:return None
     if not re.search(r'/(?:square|thumb|small|medium|large|original)\.(?:jpe?g|png)$',p.path,re.I):return None
-    return urlunparse((p.scheme,p.netloc,re.sub(r'/(?:square|thumb|small|large|original)\.', '/medium.',p.path),'','',''))
+    return urlunparse((p.scheme,p.netloc,re.sub(r'/(?:square|thumb|small|large|original)\.', '/large.',p.path),'','',''))
 
 def inspect_image(b:bytes)->tuple[str,int,int,int]:
     try:
@@ -64,7 +65,7 @@ def inspect_image(b:bytes)->tuple[str,int,int,int]:
     except (OSError,ValueError,UnidentifiedImageError) as exc:
         raise ValueError('PHOTO_DECODE_OR_DIMENSIONS_FAILED') from exc
 
-def discover(taxon:str,seen:set[str],api_fetch=fetch,pages:int=5,per_page:int=25)->list[dict]:
+def discover(taxon:str,seen:set[str],api_fetch=fetch,pages:int=8,per_page:int=25)->list[dict]:
     results=[];checked=set()
     for page in range(1,pages+1):
         qs=urlencode({'taxon_name':taxon,'quality_grade':'research','photos':'true','photo_license':'cc0,cc-by','per_page':per_page,'page':page})
@@ -90,7 +91,9 @@ def discover(taxon:str,seen:set[str],api_fetch=fetch,pages:int=5,per_page:int=25
                   'thumbnail_url':url,'sex':'UNKNOWN_UNVERIFIED',
                   'taxon_authority':'COMMUNITY_RESEARCH_GRADE_NOT_USER_APPROVED',
                   'rights_verdict':'CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED',
-                  'review_state':'PENDING'})
+                  'review_state':'PENDING',
+                  'pose_id':'UNREVIEWED','pose_review_status':'VISUAL_REVIEW_REQUIRED',
+                  'unverified_observer_text_pose_hints':unverified_text_pose_hints(ob.get('description') or '')})
         if len(obs)<per_page:break
         time.sleep(.12)
     return results
@@ -98,14 +101,16 @@ def discover(taxon:str,seen:set[str],api_fetch=fetch,pages:int=5,per_page:int=25
 def research_species(spec:dict,previous:dict,out:Path,max_per_species:int=12,discovery=discover,download=fetch)->dict:
     taxon=spec['name'];key=spec['key'];old=(previous.get('species') or {}).get(key,{})
     prior=old.get('candidates',[]);seen={v.get('photo_key') for v in prior}
-    accepted=[];rejections=[];phashes=[];obs_seen=set()
+    accepted=[];rejections=[];phashes=[];obs_counts={}
     # Every return is candidate-only; never auto-promote species, sex or licence.
     try: found=discovery(taxon,seen)
     except Exception as exc:
         return {'key':key,'taxon':taxon,'status':'RETRY_DISCOVERY','new_candidates':[], 'rejections':[str(exc)[:140]]}
     for c in found:
         if len(accepted)>=max_per_species:break
-        if c['observation_id'] in obs_seen:continue
+        # Multiple independent frames from one observation may show different angles.
+        # Allow up to three, but do not mistake them for three specimens.
+        if obs_counts.get(c['observation_id'],0)>=3:continue
         try:
             data=download(c['thumbnail_url'],MAX_IMAGE_BYTES)
             ext,w,h,dh=inspect_image(data);digest=sha(data)
@@ -114,13 +119,16 @@ def research_species(spec:dict,previous:dict,out:Path,max_per_species:int=12,dis
             name=f"media/{key}/{c['photo_id']}.{ext}";dest=out/name;dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(data)
             accepted.append({**c,'sha256':digest,'bytes':len(data),'width':w,'height':h,
                 'archive_member':name,'photo_identity':'UNVERIFIED','sex':'UNKNOWN_UNVERIFIED',
-                'independent_photo_status':'PROVISIONAL_HASH_AND_PERCEPTUAL_FILTER',
+                'independent_photo_status':'DISTINCT_FRAME_PROVISIONAL_HASH_FILTER',
+                'same_observation_reference_group':c['observation_id'],
+                'pose_id':'UNREVIEWED','pose_review_status':'VISUAL_REVIEW_REQUIRED',
                 'approved_for_imagegen':False})
-            obs_seen.add(c['observation_id']);phashes.append({'sha256':digest,'phash':dh})
+            obs_counts[c['observation_id']]=obs_counts.get(c['observation_id'],0)+1;phashes.append({'sha256':digest,'phash':dh})
         except Exception as exc:
             rejections.append({'key':c.get('photo_key'),'reason':str(exc)[:140]})
     return {'key':key,'taxon':taxon,'status':'REVIEW_REQUIRED' if accepted else ('ALREADY_COLLECTED_OR_NO_NEW_LEADS' if prior else 'NO_CANDIDATES'),
-            'new_candidates':accepted,'rejections':rejections[:20]}
+            'new_candidates':accepted,'rejections':rejections[:20],
+            'camera_view_research_needs':research_needs()}
 
 def run(seed:dict,index:dict,shard:int,cycle:int,per_worker:int,limit:int,out:Path,**kwargs)->dict:
     specs=choose_species(seed,shard,cycle,per_worker,index)
@@ -129,6 +137,7 @@ def run(seed:dict,index:dict,shard:int,cycle:int,per_worker:int,limit:int,out:Pa
         row=research_species(spec,index,out,limit,**kwargs);rows.append(row)
         print(spec['name'], row['status'],len(row['new_candidates']),flush=True)
     report={'schema':'VNMV1_PUBLIC_PHOTO_RESEARCH_SHARD_V1','shard':shard,'cycle':cycle,'species_processed':len(rows),
+            'camera_view_research_standard':research_needs(),
             'downloaded_candidates':sum(len(r['new_candidates']) for r in rows),'approvals':0,'imagegen_invocations':0,'species':rows}
     (out/'report.json').write_text(json.dumps(report,indent=2)+'\n')
     return report
