@@ -5,7 +5,7 @@ from PIL import Image
 BASE=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(BASE/'research'))
 import collect,archive
-from pose_reference import CORE_POSES,OPTIONAL_POSES,unverified_text_pose_hints,research_needs
+from pose_reference import CORE_POSES,OPTIONAL_POSES,unverified_text_pose_hints,unverified_text_behaviour_hints,research_needs
 
 def jpeg(color):
     im=Image.new('RGB',(300,240),color);b=io.BytesIO();im.save(b,format='JPEG');return b.getvalue()
@@ -117,6 +117,33 @@ class PublicTests(unittest.TestCase):
         self.assertEqual(rows[0]['pose_id'],'UNREVIEWED')
         self.assertEqual(rows[0]['rights_verdict'],'CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED')
 
+    def test_behaviour_hints_do_not_assign_pose_or_biological_state(self):
+        self.assertIn('BURROW_ENTRANCE',unverified_text_behaviour_hints('emerging from a burrow'))
+        self.assertIn('COURTSHIP_OR_MATING',unverified_text_behaviour_hints('courtship drumming'))
+        self.assertIn('MOLT_OR_EXUVIA',unverified_text_behaviour_hints('moulted exuvia'))
+        self.assertEqual(unverified_text_behaviour_hints('no behavior information'),[])
+        def api(url,cap):
+            return json.dumps({'results':[{'id':13,'quality_grade':'research',
+                'description':'Burrow entrance and possible threat display',
+                'taxon':{'name':'Abdomegaphobema mesomelas','rank':'species'},
+                'photos':[{'id':101,'license_code':'cc0',
+                'url':'https://static.inaturalist.org/photos/101/square.jpg'}]}]}).encode()
+        items=collect.discover('Abdomegaphobema mesomelas',set(),api_fetch=api,pages=1)
+        self.assertIn('BURROW_ENTRANCE',items[0]['unverified_observer_behaviour_hints'])
+        self.assertEqual(items[0]['pose_id'],'UNREVIEWED')
+        self.assertEqual(items[0]['sex'],'UNKNOWN_UNVERIFIED')
+        self.assertEqual(items[0]['rights_verdict'],'CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED')
+
+    def test_diverse_observations_ahead_of_same_observation_extra_frames(self):
+        a=original(101);b=original(102);c=original(103)
+        b['observation_id']=a['observation_id']
+        c['unverified_observer_behaviour_hints']=['FEEDING']
+        ordered=collect.prioritize_reference_diversity([a,b,c],[])
+        self.assertEqual([x['photo_id'] for x in ordered],[103,101,102])
+        old=[{'observation_id':c['observation_id']}]
+        ordered2=collect.prioritize_reference_diversity([a,b,c],old)
+        self.assertEqual([x['photo_id'] for x in ordered2],[101,103,102])
+        self.assertEqual(b['photo_key'],'inat:102')
     def test_review_exports_pose_only_labels(self):
         page=(BASE/'review/index.html').read_text()
         self.assertIn('WALKING_AWAY_REAR_OBLIQUE',page)
