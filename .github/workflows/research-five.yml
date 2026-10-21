@@ -1,0 +1,169 @@
+name: Five public specimen reference researchers
+on:
+  workflow_dispatch:
+    inputs:
+      cycle:
+        description: 'Optional 0-based research cycle. Leave blank to advance ledger.'
+        type: string
+        required: false
+      species_per_worker:
+        description: 'Unique species per worker (1-6)'
+        type: choice
+        options: ['2','4','6']
+        default: '4'
+        required: true
+  schedule:
+    # Frequent enough to finish the 195-name first sweep in ~10 successful cycles.
+    - cron: '23 6 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'research/species_seed.json'
+
+permissions:
+  contents: read
+concurrency:
+  group: public-vnmv1-five-research
+  cancel-in-progress: false
+
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      cycle: ${{ steps.pick.outputs.cycle }}
+      per_worker: ${{ steps.pick.outputs.per_worker }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'Pillow>=10,<13'
+      - run: python -m unittest discover -s tests -p 'test_public_research.py' -v
+      - name: Choose next cycle without inventing completion
+        id: pick
+        shell: bash
+        env:
+          CYCLE_INPUT: ${{ inputs.cycle }}
+          PER_WORKER_INPUT: ${{ inputs.species_per_worker }}
+        run: |
+          set -euo pipefail
+          if [[ -n "${CYCLE_INPUT}" ]]; then
+            [[ "${CYCLE_INPUT}" =~ ^[0-9]{1,5}$ ]] || exit 2
+            CYCLE="${CYCLE_INPUT}"
+          else
+            CYCLE=$(python - <<'PY'
+          import json
+          print(int(json.load(open('data/index.json'))['last_cycle']) + 1)
+          PY
+            )
+          fi
+          PER_WORKER="${PER_WORKER_INPUT:-4}"
+          [[ "$PER_WORKER" == 2 || "$PER_WORKER" == 4 || "$PER_WORKER" == 6 ]] || exit 2
+          echo "cycle=$CYCLE" >> "$GITHUB_OUTPUT"
+          echo "per_worker=$PER_WORKER" >> "$GITHUB_OUTPUT"
+
+  collect:
+    needs: certify
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        shard: [0,1,2,3,4]
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'Pillow>=10,<13'
+      - name: Discover and download candidate photos (no approval)
+        run: |
+          python research/collect.py \
+            --seed research/species_seed.json --index data/index.json \
+            --shard ${{ matrix.shard }} \
+            --cycle ${{ needs.certify.outputs.cycle }} \
+            --species-per-worker ${{ needs.certify.outputs.per_worker }} \
+            --max-photos 18 \
+            --out "candidate-output/shard-${{ matrix.shard }}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: unreviewed-photo-shard-${{ matrix.shard }}
+          path: candidate-output/shard-${{ matrix.shard }}/
+          retention-days: 7
+          if-no-files-found: error
+          compression-level: 0
+
+  persist:
+    needs: [certify, collect]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 2
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: unreviewed-photo-shard-*
+          path: download
+      - name: Arrange five shards
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p shard-output
+          for s in 0 1 2 3 4; do mv "download/unreviewed-photo-shard-$s" "shard-output/shard-$s"; done
+      - name: Compile permanent photo assets and provenance
+        env:
+          PUBLIC_REPO: ${{ github.repository }}
+          TAG: photo-candidates-run-${{ github.run_number }}
+        run: |
+          python research/archive.py --shards shard-output \
+            --index data/index.json --out release-output --repo "$PUBLIC_REPO" --tag "$TAG"
+      - name: Upload candidate ZIPs to permanent GitHub Release assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: photo-candidates-run-${{ github.run_number }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" release-output/shard-*.zip release-output/release_manifest.json --clobber
+          else
+            gh release create "$TAG" release-output/shard-*.zip release-output/release_manifest.json \
+              --title "Research candidates (UNAPPROVED) $TAG" \
+              --notes 'Openly licensed candidate photos for human source/sex/identity/licence review. Attribution retained. Not approved for AI generation.' \
+              --latest=false
+          fi
+      - name: Publish review index only after release uploads succeed
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp release-output/index.json data/index.json
+          git config user.name 'VNMV1 public research bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/index.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'research: archive new unapproved candidate sources [skip ci]'
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          echo 'Could not persist index after archiving; halt and investigate.' >&2
+          exit 1
+      - name: Research status summary
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          d=json.load(open('data/index.json'))
+          print('## Public photo research (NOT APPROVED)')
+          print('Distinct species visited:',len(d['species']))
+          print('Candidate photographs archived:',d['discovered_candidate_count'])
+          print('Human-reviewed photographs: 0 (private review required)')
+          print('Image-generation invocations: 0')
+          PY
