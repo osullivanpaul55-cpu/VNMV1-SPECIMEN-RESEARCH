@@ -1,0 +1,20 @@
+{
+  "schema": "VNMV1_PUBLIC_RESEARCH_RUN_REQUEST_V1",
+  "request_id": "POSE_BEHAVIOUR_CYCLE_01_20261021",
+  "requested_date": "2026-10-21",
+  "requested_by": "VNMV1_USER_IN_CHAT",
+  "purpose": "Expand photo candidates for the six core and four optional camera views, plus biologically plausible spider behaviour evidence.",
+  "target": "NEXT_UNVISITED_SPECIES_CYCLE",
+  "workers": 5,
+  "species_per_worker": 4,
+  "max_downloaded_distinct_candidates_per_species_per_run": 18,
+  "sources": "PUBLIC_LICENSE_SCREENED_INATURALIST_ONLY",
+  "candidate_evidence": "UNVERIFIED_OBSERVER_TEXT_AND_UNREVIEWED_CAMERA_VIEW",
+  "binary_destination": "PUBLIC_GITHUB_RELEASE_ZIP_WITH_CREDITS_SHA256_AND_SOURCE_URL",
+  "prohibited": [
+    "PRIVATE_CARD_IDS",
+    "PRIVATE_HUMAN_GOLD_FILES",
+    "AUTO_SPECIES_SEX_POSE_APPROVAL",
+    "IMAGEGEN_OR_PAID_API"
+  ]
+}
