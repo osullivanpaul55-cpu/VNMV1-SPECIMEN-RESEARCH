@@ -55,7 +55,7 @@ const root=$('#results');root.replaceChildren();for(const spec of specs.slice(0,
 sect.append(create('div',cs.length+' candidate photographs · '+labelled.size+'/6 core viewpoints labelled locally (unapproved) · '+(spec.last_state||'not yet researched'),'specdetails'));if(cs.length){const gallery=create('div',undefined,'photos');for(const photo of cs)gallery.append(imageCard(spec,photo));sect.append(gallery)}else sect.append(create('p','No usable candidates archived yet. Research still needed.'));root.append(sect)}
 if(!specs.length)root.append(create('div','No species match this filter, or the public index has not yet been populated.','empty'));const remaining=Math.max(0,specs.length-shown);$('#more').hidden=remaining===0;$('#more').textContent='Show more species ('+Math.min(remaining,8)+')'}
 async function load(){
-  // Actions commits made by GITHUB_TOKEN do not automatically trigger Pages.
+  // Workflow-authenticated commits do not automatically trigger Pages.
   // Read the current public main-branch index first, with static-site fallback.
   const sources=[
     'https://raw.githubusercontent.com/osullivanpaul55-cpu/VNMV1-SPECIMEN-RESEARCH/main/data/index.json',
