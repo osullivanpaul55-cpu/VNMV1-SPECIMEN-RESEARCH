@@ -19,6 +19,13 @@ on:
     branches: [main]
     paths:
       - 'research/species_seed.json'
+  pull_request:
+    paths:
+      - 'research/collect.py'
+      - 'research/pose_reference.py'
+      - 'review/index.html'
+      - 'tests/test_public_research.py'
+      - '.github/workflows/research-five.yml'
 
 permissions:
   contents: read
@@ -64,6 +71,7 @@ jobs:
           echo "per_worker=$PER_WORKER" >> "$GITHUB_OUTPUT"
 
   collect:
+    if: github.event_name != 'pull_request'
     needs: certify
     strategy:
       fail-fast: false
