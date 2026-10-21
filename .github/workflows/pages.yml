@@ -1,6 +1,9 @@
 name: Publish specimen photo review webpage
 on:
   workflow_dispatch:
+  schedule:
+    # Fallback: Actions-token index commits do not trigger push workflows.
+    - cron: '09 08 * * *'
   push:
     branches: [main]
     paths:
@@ -30,6 +33,7 @@ jobs:
           mkdir -p _site/review _site/data
           cp review/index.html _site/review/index.html
           cp data/index.json _site/data/index.json
+          printf '%s\n' '<!doctype html><html lang="en"><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=./review/"><title>VNMV1 Reference Review</title><a href="./review/">Open specimen review</a></html>' > _site/index.html
           printf 'GitHub Pages review interface; all images are unapproved research candidates.\n' > _site/README.txt
       - uses: actions/upload-pages-artifact@v3
         with:
