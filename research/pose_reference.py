@@ -61,3 +61,23 @@ def research_needs() -> dict:
         "photo_count_is_not_pose_coverage": True,
         "no_forced_threat_or_ventral_view": True,
     }
+
+
+# Behaviour research is separate from camera angle. These fields record only
+# possible leads from the observer's narrative, never photograph verification.
+BEHAVIOUR_CUES = {
+    "LOCOMOTION": r"\b(?:walking|running|moving|locomotion)\b",
+    "BURROW_ENTRANCE": r"\b(?:burrow|burrowing|emerg(?:e|ing|ence)|retreat entrance)\b",
+    "FEEDING": r"\b(?:feeding|eating|prey|hunting|capture(?:d)?)\b",
+    "DEFENSIVE_DISPLAY": r"\b(?:defensive|threat display|threat posture|rearing up)\b",
+    "CLIMBING": r"\b(?:climbing|on bark|tree trunk|vertical surface)\b",
+    "MOLT_OR_EXUVIA": r"\b(?:molt(?:ing|ed)?|moult(?:ing|ed)?|exuvia|exuviae)\b",
+    "COURTSHIP_OR_MATING": r"\b(?:courtship|mating|copulat(?:ion|ing)|drumming)\b",
+    "GROOMING": r"\b(?:grooming|cleaning its legs|preening)\b",
+    "WEB_OR_SILK": r"\b(?:silk(?:ing)?|spinning a web|webbing|web construction)\b",
+}
+def unverified_text_behaviour_hints(description: str) -> list[str]:
+    if not isinstance(description, str):
+        return []
+    value=description[:1000].casefold()
+    return [kind for kind,pattern in BEHAVIOUR_CUES.items() if re.search(pattern,value,re.I)]
