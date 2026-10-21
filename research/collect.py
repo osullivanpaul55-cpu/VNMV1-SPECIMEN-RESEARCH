@@ -8,7 +8,7 @@ from pathlib import Path
 from urllib.parse import urlencode, urlparse, urlunparse
 from urllib.request import Request, urlopen
 from PIL import Image, UnidentifiedImageError
-from pose_reference import unverified_text_pose_hints, research_needs
+from pose_reference import unverified_text_pose_hints, unverified_text_behaviour_hints, research_needs
 
 SHARDS=5; MAX_IMAGE_BYTES=5_000_000; ALLOWED={'cc0','cc-by'}
 HOSTS={'static.inaturalist.org','inaturalist-open-data.s3.amazonaws.com','inaturalist-open-data.s3.us-west-2.amazonaws.com'}
@@ -93,10 +93,33 @@ def discover(taxon:str,seen:set[str],api_fetch=fetch,pages:int=8,per_page:int=25
                   'rights_verdict':'CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED',
                   'review_state':'PENDING',
                   'pose_id':'UNREVIEWED','pose_review_status':'VISUAL_REVIEW_REQUIRED',
-                  'unverified_observer_text_pose_hints':unverified_text_pose_hints(ob.get('description') or '')})
+                  'unverified_observer_text_pose_hints':unverified_text_pose_hints(ob.get('description') or ''),
+                  'unverified_observer_behaviour_hints':unverified_text_behaviour_hints(ob.get('description') or '')})
         if len(obs)<per_page:break
         time.sleep(.12)
     return results
+
+def prioritize_reference_diversity(candidates:list[dict], prior:list[dict])->list[dict]:
+    """Prefer distinct observations before extra frames from one observer event.
+
+    Unverified observer text may influence research search order only.
+    It does not assign a camera pose, behaviour, sex or readiness decision.
+    """
+    seen_previous={x.get('observation_id') for x in prior}
+    ordered=sorted(enumerate(candidates),key=lambda item:(
+        item[1].get('observation_id') in seen_previous,
+        -len(item[1].get('unverified_observer_text_pose_hints') or []),
+        -len(item[1].get('unverified_observer_behaviour_hints') or []),
+        item[0]))
+    primary=[];extras=[];seen_obs=set()
+    for _,candidate in ordered:
+        oid=candidate.get('observation_id')
+        if oid not in seen_obs:
+            primary.append(candidate);seen_obs.add(oid)
+        else:
+            extras.append(candidate)
+    return primary+extras
+
 
 def research_species(spec:dict,previous:dict,out:Path,max_per_species:int=12,discovery=discover,download=fetch)->dict:
     taxon=spec['name'];key=spec['key'];old=(previous.get('species') or {}).get(key,{})
@@ -106,7 +129,7 @@ def research_species(spec:dict,previous:dict,out:Path,max_per_species:int=12,dis
     try: found=discovery(taxon,seen)
     except Exception as exc:
         return {'key':key,'taxon':taxon,'status':'RETRY_DISCOVERY','new_candidates':[], 'rejections':[str(exc)[:140]]}
-    for c in found:
+    for c in prioritize_reference_diversity(found,prior):
         if len(accepted)>=max_per_species:break
         # Multiple independent frames from one observation may show different angles.
         # Allow up to three, but do not mistake them for three specimens.
@@ -128,7 +151,8 @@ def research_species(spec:dict,previous:dict,out:Path,max_per_species:int=12,dis
             rejections.append({'key':c.get('photo_key'),'reason':str(exc)[:140]})
     return {'key':key,'taxon':taxon,'status':'REVIEW_REQUIRED' if accepted else ('ALREADY_COLLECTED_OR_NO_NEW_LEADS' if prior else 'NO_CANDIDATES'),
             'new_candidates':accepted,'rejections':rejections[:20],
-            'camera_view_research_needs':research_needs()}
+            'camera_view_research_needs':research_needs(),
+            'behaviour_research_hints_are_unverified':True}
 
 def run(seed:dict,index:dict,shard:int,cycle:int,per_worker:int,limit:int,out:Path,**kwargs)->dict:
     specs=choose_species(seed,shard,cycle,per_worker,index)
