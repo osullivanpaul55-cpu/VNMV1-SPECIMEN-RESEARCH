@@ -1,0 +1,982 @@
+{
+  "schema": "VNMV1_PUBLIC_RESEARCH_SPECIES_SEED_V1",
+  "disclaimer": "Research candidates only. No card identities, original photos, sex assignments, Human Gold, keys or private source labels. Species names do not imply expert verification.",
+  "unique_research_taxa": 195,
+  "species": [
+    {
+      "name": "Abdomegaphobema mesomelas",
+      "key": "f3787c4b515c0a91",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Acanthoscurria chacoana",
+      "key": "97618dd4f3162e7c",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Acanthoscurria geniculata",
+      "key": "7d0da68d2f392007",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Acanthoscurria maga",
+      "key": "0de3235ee2b517f0",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Androctonus australis",
+      "key": "341049924c7d674c",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Anqasha picta",
+      "key": "8d054056cc528193",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Aphonopelma bicoloratum",
+      "key": "96535d9cb2259f7a",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Aphonopelma gabeli",
+      "key": "c12a306b45d07e09",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Aphonopelma hentzi",
+      "key": "f0625506729d3b63",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Aphonopelma moderatum",
+      "key": "172d288cf0e6b6e7",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Aphonopelma mooreae",
+      "key": "23e851712bf8b7a1",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Aphonopelma seemanni",
+      "key": "5baeca6cbc6b4404",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Asbolus verrucosus",
+      "key": "ca14b57418eb10e3",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Aspinochilus rufus",
+      "key": "4363b81658966c7a",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Atypus karschi",
+      "key": "f2cd37c5844fea7c",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Augacephalus ezendami",
+      "key": "71df21aa4aa68053",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Avicularia avicularia",
+      "key": "87b1db096a7ff2af",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Avicularia geroldi",
+      "key": "cd5e7cdf8a28e77a",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Avicularia huriana",
+      "key": "c357bc20b1e14da3",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Avicularia juruensis",
+      "key": "581a1aedb63c915c",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Avicularia minatrix",
+      "key": "d1651bd150c7f91e",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Avicularia rufa",
+      "key": "0404458defd2061b",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Avicularia variegata",
+      "key": "c10790afc9a1e22c",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Bacillochilus xenostridulans",
+      "key": "9f5855dee85b54b1",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Barylestis occidentalis",
+      "key": "cd04521a83bc01e1",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Birupes simoroxigorum",
+      "key": "6a555801b7c86fe0",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Bonnetina minax",
+      "key": "ccbca17299c46076",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Bonnetina papalutlensis",
+      "key": "8656abaa937ea2b3",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Bonnetina tanzeri",
+      "key": "10199468c9f13026",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Brachypelma albiceps",
+      "key": "97c04285e5bdae9e",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Brachypelma auratum",
+      "key": "e2a9b9a4762e2054",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Brachypelma baumgarteni",
+      "key": "418372f83cc636e5",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Brachypelma boehmei",
+      "key": "c2a2f2846c7c0b71",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Brachypelma emilia",
+      "key": "e9b1de96d05c9b5d",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Brachypelma hamorii",
+      "key": "71c1b329da06e6f5",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Brachypelma klaasi",
+      "key": "0f346796519e83ac",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Brachypelma smithi",
+      "key": "7225e5930e6e6909",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Caribena versicolor",
+      "key": "8ccd6b0d01f08c84",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Ceratogyrus darlingi",
+      "key": "c40f155520521e74",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Ceratogyrus marshalli",
+      "key": "6766dc0df982316e",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Ceratogyrus meridionalis",
+      "key": "47a9be434c45becb",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Ceratogyrus sanderi",
+      "key": "c2b06a31cf657463",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Chaetopelma olivaceum",
+      "key": "326f583f28a1d7e4",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Chilobrachys dyscolus",
+      "key": "c5f740202ba70737",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Chilobrachys fimbriatus",
+      "key": "b36555e5723e8407",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Chilobrachys huahini",
+      "key": "10ab0e09a6a0d2f9",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Chilobrachys natanicharum",
+      "key": "bcac939d4c465419",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Chilocosmia dichromata",
+      "key": "a784049c4e3ece4a",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Chromatopelma cyaneopubescens",
+      "key": "d5aab94695c19b71",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Cilantica devamatha",
+      "key": "28b290574818a2a4",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Citharacanthus cyaneus",
+      "key": "3d67658c67e7b8d9",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Cyriocosmus elegans",
+      "key": "585e9d19537e9bb8",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Cyriocosmus giganteus",
+      "key": "807da919e162c17f",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Cyriocosmus leetzi",
+      "key": "523bae6ba16814db",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Cyriocosmus perezmilesi",
+      "key": "1ea2db4800232574",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Cyriocosmus sellatus",
+      "key": "a094a1628028bf48",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Encyocratella olivacea",
+      "key": "c036a0b5b154ee5b",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Ephebopus cyanognathus",
+      "key": "dec9982e1dda8401",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Ephebopus murinus",
+      "key": "63f31c9be949e735",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Ephebopus rufescens",
+      "key": "b720e168e46a45ca",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Eresus walckenaeri",
+      "key": "89d7defd9acf612f",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Euathlus manicatus",
+      "key": "b28875820c54b42e",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Euathlus truculentus",
+      "key": "ffe239d36d2ed81a",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Eucratoscelus constrictus",
+      "key": "308b3298f6bdcd2a",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Eucratoscelus pachypus",
+      "key": "ece2902150d6ce31",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Eupalaestrus campestratus",
+      "key": "afe5d4688d54ed62",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Ewok kimraykawasaki",
+      "key": "31a244aed0fb3415",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Gigathele gigas",
+      "key": "b13f2f4cb58b71f7",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Hapalopus planetearth",
+      "key": "6a29c7c840e1500b",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Hapalopus vangoghi",
+      "key": "82d12550dc127b3b",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Harpactira gigas",
+      "key": "e3cab69db7e4f893",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Harpactira hamiltoni",
+      "key": "a4684cf47f08ed9d",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Harpactira tigrina",
+      "key": "2641f3c83502d917",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Heterometrus longimanus",
+      "key": "e2864ca0cadbfe6c",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Heterometrus silenus",
+      "key": "0410384a40c4de8f",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Heteropoda davidbowie",
+      "key": "5f4e7937d9c467d1",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Heterothele villosella",
+      "key": "29aec6b91db2869e",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Hogna carolinensis",
+      "key": "05c69061264ea61e",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Hogna maderiana",
+      "key": "05e6c847f9fad1e0",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Hogna radiata",
+      "key": "6c1d0d77f0fd0889",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Holconia murrayensis",
+      "key": "20c33dcdd20ac741",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Hyllus diardi",
+      "key": "7d968a3319cdf2ca",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Hysterocrates hercules",
+      "key": "793d0d138916520e",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Hysterocrates scepticus",
+      "key": "a48197f9178a111a",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Idiothele mira",
+      "key": "64a6d14833b7c781",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Idiothele nigrofulva",
+      "key": "9e817c35f041e27c",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Iridopelma hirsutum",
+      "key": "c959e8ee926eadcf",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Iridopelma zorodes",
+      "key": "7a02d3763d286d5d",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Kochiana brunnipes",
+      "key": "2afb86cbb01a190f",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Lampropelma nigerrimum",
+      "key": "c5cf6464f38089a1",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Lasiocyano sazimai",
+      "key": "da7f4efccdb71df3",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Lasiodora benedeni",
+      "key": "a14aa3f5ce390128",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Lasiodora klugi",
+      "key": "b29f595f88d6a4b0",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Lasiodora parahybana",
+      "key": "a60664604b5ba094",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Lasiodora sertaneja",
+      "key": "e47aa2f3356d8a1d",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Lasiodorides polycuspulatus",
+      "key": "a5c8be6c4fd20f1b",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Lasiodorides striatus",
+      "key": "aae945123a1e15dd",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Linothele fallax",
+      "key": "acc0cc521250709f",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Linothele sericata",
+      "key": "d00a9bc9682aa050",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Lyrognathus giannisposatoi",
+      "key": "e11d6f9f479236c7",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Macrothele calpeiana",
+      "key": "c402b969e6abe49a",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Magnacrus taynguyenensis",
+      "key": "cd101458cc851dfb",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Magnacrus tongmianensis",
+      "key": "f7bb2a3b5cd688c2",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Megaphobema robustum",
+      "key": "11fed5354acd44df",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Melopoeus albostriatus",
+      "key": "f1814a9785cfa745",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Melopoeus hainanus",
+      "key": "f61b15b2f6981fd9",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Melopoeus lividus",
+      "key": "e551e88e364f57ef",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Melopoeus minax",
+      "key": "1a1e7c84d61fccf4",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Melopoeus schmidti",
+      "key": "1fc3fc52d1dee8ce",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Melopoeus vonwirthi",
+      "key": "3664a0521b669892",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Monocentropus balfouri",
+      "key": "2bca2d9be2708fec",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Monocentropus lambertoni",
+      "key": "4753229bb69228b9",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Neoholothele fasciaaurinigra",
+      "key": "877232d7d8482f3d",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Neoholothele incei",
+      "key": "cef129d9a19d5abd",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Nhandu carapoensis",
+      "key": "14f29e7b93c90959",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Nhandu cerradensis",
+      "key": "52316f3cbde18b38",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Nhandu chromatus",
+      "key": "ea4cfd0ae468b6ed",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Nhandu coloratovillosus",
+      "key": "30ec8abd152bd951",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Nhandu tripepii",
+      "key": "5291bd3d0905852b",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Omothymus schioedtei",
+      "key": "909c280d676dc682",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Omothymus violaceopes",
+      "key": "58df955bbfccb525",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Ornithoctonus aureotibialis",
+      "key": "2dfe5150a46c4c4c",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Pachistopelma bromelicola",
+      "key": "c58552aa94c9b7a2",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Pamphobeteus antinous",
+      "key": "45bc1434ad2ff605",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Pamphobeteus fortis",
+      "key": "9f29b28be974a6fe",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Pamphobeteus insignis",
+      "key": "6a539dfbb24aa2a6",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Pamphobeteus solaris",
+      "key": "abeda9bf0d16a1b1",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Pamphobeteus ultramarinus",
+      "key": "1e4b7f98d5bf7ca6",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Pamphobeteus vespertinus",
+      "key": "6b79840337ecd944",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Pelinobius muticus",
+      "key": "e1e7af0250120239",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Phidippus audax",
+      "key": "aef39363fad0b0ed",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Phidippus johnsoni",
+      "key": "81a12f33cf1827b8",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Phidippus regius",
+      "key": "426f1aeb5c927661",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Phlogiellus baeri",
+      "key": "0944bc33335df84b",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Phormictopus atrichomatus",
+      "key": "01868bdbd30bf65d",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Phormictopus auratus",
+      "key": "54202e87b463e274",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Phormictopus cancerides",
+      "key": "6cf1b8b652b39703",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Phormictopus cautus",
+      "key": "b2020e042cb774b8",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Phormictopus cochleasvorax",
+      "key": "cb430cf310916747",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Phormingochilus everetti",
+      "key": "0932ac045a29deff",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Phormingochilus hatihati",
+      "key": "3713df3b8c234291",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Phormingochilus pennellhewlettorum",
+      "key": "f1384717899f71f5",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Phrixotrichus scrofa",
+      "key": "18fdf200ef8a8d67",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Phrixotrichus vulpinus",
+      "key": "a45dc6af37f24855",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Platymeris biguttatus",
+      "key": "7d89c8648c07ba92",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Poecilotheria fasciata",
+      "key": "108709b3b8f603e7",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Poecilotheria formosa",
+      "key": "a4b5eab8eb53518b",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Poecilotheria hanumavilasumica",
+      "key": "78fe7fd7472d94a1",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Poecilotheria metallica",
+      "key": "631b0d7f22046e2c",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Poecilotheria miranda",
+      "key": "d5a20421027fae10",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Poecilotheria ornata",
+      "key": "204f712a0372282d",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Poecilotheria regalis",
+      "key": "51f1a0b6427a0055",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Poecilotheria rufilata",
+      "key": "624de4385921f126",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Poecilotheria smithi",
+      "key": "b3500f6c11a47fa4",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Poecilotheria subfusca",
+      "key": "8e56097930c86622",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Poecilotheria tigrinawesseli",
+      "key": "394bf7b250a32d40",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Poecilotheria vittata",
+      "key": "410dffc1d7024163",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Psalmopoeus cambridgei",
+      "key": "1e609862639634fb",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Psalmopoeus ecclesiasticus",
+      "key": "1c841cb5fd4082dd",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Psalmopoeus irminia",
+      "key": "fa65658713b31f89",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Psalmopoeus pulcher",
+      "key": "6ad42e6ab6ce6350",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Psalmopoeus reduncus",
+      "key": "12b7831d5c67d7f0",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Psalmopoeus victori",
+      "key": "241d040655888932",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Psednocnemis brachyramosa",
+      "key": "5baa881eea446773",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Pterinochilus chordatus",
+      "key": "d8ab27a812524e45",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Pterinochilus lugardi",
+      "key": "1a77ccd2b9e285b8",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Pterinochilus murinus",
+      "key": "dcb4221a4144e8b1",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Sandinista lanceolatum",
+      "key": "f5b15eb3d23cb55a",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Selenobrachys philippinus",
+      "key": "5a850c2df35be3ad",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Selenocosmia arndsti",
+      "key": "dda52054a6e81fea",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Selenocosmia aruana",
+      "key": "b789b7a8d6865b11",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Selenocosmia crassipes",
+      "key": "80e4bcc4b8262a13",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Selenocosmia kovariki",
+      "key": "907caf4dcada789d",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Sicarius thomisoides",
+      "key": "d88bb99fa21011b5",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Stichoplastoris obelix",
+      "key": "e3e5a84eb4c0607e",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Stromatopelma calceatum",
+      "key": "19be4bffa466a977",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Taksinus bambus",
+      "key": "188667bef5d309d8",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Tapinauchenius rasti",
+      "key": "910791c60e6085b5",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Theraphosa apophysis",
+      "key": "ef56f36e8f0166a9",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Theraphosa blondi",
+      "key": "681fb0af0cb06494",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Theraphosa stirmi",
+      "key": "fb839ed3658e6a88",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Thrigmopoeus truculentus",
+      "key": "2260edac37e4af30",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Tliltocatl albopilosus",
+      "key": "4015bb7667233e02",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Tliltocatl kahlenbergi",
+      "key": "4d0beb7bd1878881",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Tliltocatl vagans",
+      "key": "243149cc5e179159",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Typhochlaena amma",
+      "key": "5af907d569b2026e",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Typhochlaena costae",
+      "key": "90d4c624d0d492dc",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Typhochlaena curumim",
+      "key": "012c84236571e1ff",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Typhochlaena seladonia",
+      "key": "db05f3c011d9e058",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Vitalius paranaensis",
+      "key": "fcf2b4929c571be7",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Warmiru longicolli",
+      "key": "e85940f6189c0799",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Xenesthis immanis",
+      "key": "0a7ea8ea713f895e",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Xenesthis intermedia",
+      "key": "9ad99889621d705f",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Ybyrapora diversipes",
+      "key": "7f229122fd76b16f",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    {
+      "name": "Ybyrapora sooretama",
+      "key": "f22344caac26a03d",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    }
+  ]
+}
