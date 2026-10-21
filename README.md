@@ -12,6 +12,12 @@ This is the **public component only** of the VNMV1 natural-history reference res
 - If named taxa are exhausted, the workflow revisits for more sources. It never fabricates missing six-photo female or male sets.
 - Species pools share research across multiple private cards, but the mapping remains private. 236 of 526 cards currently lack a usable research-species key in the separate private roster; they are explicitly unresolved, not magically covered by 195 species research queries.
 
+## Deployment status — 21 October 2026
+
+The fresh-history PUBLIC repository is now created and deployed. The first five-runner execution passed and published 157 **unapproved** candidates across 20 research species into five public Release ZIPs. Research runs automatically every day at the scheduled UTC time, subject to GitHub Actions availability. The PRIVATE VNMV1 production importer is connected and succeeded; private original specimen photos and card mappings remain outside this public repository. No biological or licence approval, and no image generation, has occurred.
+
+**Phone review website:** GitHub Pages still needs to be enabled manually in this new repository's Settings → Pages → Build and deployment → Source → GitHub Actions. The automatic enablement workflow is refused by the repository-scoped Actions token. After enabling Pages, manually rerun the 'Publish specimen photo review webpage' workflow or allow the next index update to publish it.
+
 ## How to activate
 
 1. This repository is a dedicated public, fresh-history research repository named `VNMV1-SPECIMEN-RESEARCH`. Do not turn the existing private `VNMV1-FLUX-Docker-Build` repository public. A separate public repo should be created with a **fresh history**.
