@@ -1,0 +1,36 @@
+name: Publish specimen photo review webpage
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'data/index.json'
+      - 'review/index.html'
+      - '.github/workflows/pages.yml'
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: specimen-review-pages
+  cancel-in-progress: true
+jobs:
+  publish:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - name: Prepare public static website
+        run: |
+          mkdir -p _site/review _site/data
+          cp review/index.html _site/review/index.html
+          cp data/index.json _site/data/index.json
+          printf 'GitHub Pages review interface; all images are unapproved research candidates.\n' > _site/README.txt
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - uses: actions/deploy-pages@v4
+        id: deployment
