@@ -73,7 +73,7 @@ function photosFrom(x){return Array.isArray(x.candidates)?x.candidates:[]}
 function leadsFrom(x){return Array.isArray(x.link_only_leads)?x.link_only_leads:[]}
 const REVIEW_DOCTRINE='VNMV1_UNIFIED_REFERENCE_REVIEW_DOCTRINE_V1';
 const LIFE_STAGES=['UNKNOWN','MATURE_MALE','ADULT_FEMALE_MATURE','ADULT_FEMALE_YOUNGER','JUVENILE_SPIDERLING'];
-const SUITABILITY=new Set(['PENDING','ACCEPT_REFERENCE','STRUCTURAL_ONLY','NEEDS_RESEARCH','REJECT']);
+const SUITABILITY=new Set(['PENDING','ACCEPT_REFERENCE','STRUCTURAL_ONLY','HABITAT_ONLY','NEEDS_RESEARCH','REJECT']);
 const RESEMBLES=[['NOT_ASSESSED','Not assessed yet'],['STRONGLY','Strongly resembles my card original'],['PARTLY','Partly resembles my card original'],['POORLY','Little resemblance'],['DOES_NOT_RESEMBLE','Does not resemble my specimen'],['NO_ORIGINAL_AVAILABLE','Cannot compare — original not visible']];
 function suggestions(p){
  const x=p.preanalysis||{};
@@ -228,7 +228,7 @@ if(sug.recommended_suitability!=='PENDING')
  info.append(create('small','AI recommendation: '+sug.recommended_suitability.replaceAll('_',' ')+
   ' · provisional research use; not your approval, not a species/rights verification.'));
 const select=create('select');
-for(const [value,title] of [['PENDING','Pending'],['ACCEPT_REFERENCE','Suitable reference — request approval'],['STRUCTURAL_ONLY','General anatomy / structural only'],['NEEDS_RESEARCH','Needs more research'],['REJECT','Reject']]){const opt=create('option',title);opt.value=value;select.append(opt)}
+for(const [value,title] of [['PENDING','Pending'],['ACCEPT_REFERENCE','Suitable reference — request approval'],['STRUCTURAL_ONLY','General anatomy / structural only'],['HABITAT_ONLY','Habitat / silk structure only — no specimen anatomy'],['NEEDS_RESEARCH','Needs more research'],['REJECT','Reject']]){const opt=create('option',title);opt.value=value;select.append(opt)}
 const isUntouchedAI=d.proposal_prepopulated_not_human_reviewed===true&&d.reviewed_by_human!==true;
 select.value=isUntouchedAI&&sug.recommended_suitability!=='PENDING'?
  sug.recommended_suitability:reviewDecisionChoice(d);
