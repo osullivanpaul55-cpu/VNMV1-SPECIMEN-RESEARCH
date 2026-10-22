@@ -49,8 +49,60 @@ class PublicTests(unittest.TestCase):
                 {'id':8,'quality_grade':'research','taxon':{'name':'Other species','rank':'species'},
                 'photos':[{'id':3,'license_code':'cc0','url':'https://static.inaturalist.org/photos/3/square.jpg'}]}]}).encode()
         got=collect.discover('Abdomegaphobema mesomelas',set(),api_fetch=api,pages=1,per_page=25)
-        self.assertEqual(len(got),1);self.assertEqual(got[0]['photo_key'],'inat:1')
+        self.assertEqual(len(got),2);self.assertEqual(got[0]['photo_key'],'inat:1')
+        self.assertTrue(got[1]['link_only']);self.assertEqual(got[1]['photo_key'],'inat:2')
+        self.assertIsNone(got[1]['thumbnail_url'])
         self.assertEqual(got[0]['sex'],'UNKNOWN_UNVERIFIED')
+    def test_missing_licence_available_immediately_as_link_never_downloaded(self):
+        def api(url,cap):
+            self.assertNotIn('photo_license=',url)
+            return json.dumps({'results':[{'id':11,'quality_grade':'research',
+              'description':'feeding from burrow','taxon':{'name':'Abdomegaphobema mesomelas','rank':'species'},
+              'photos':[{'id':404,'license_code':None,'url':'https://static.inaturalist.org/photos/404/square.jpg',
+                         'attribution':'Unverified photographer'}]}]}).encode()
+        found=collect.discover('Abdomegaphobema mesomelas',set(),api_fetch=api,pages=1)
+        self.assertEqual(len(found),1)
+        self.assertEqual(found[0]['license_code'],'UNKNOWN')
+        self.assertEqual(found[0]['research_use_status'],'USE_SOURCE_LINK_IMMEDIATELY_FOR_RESEARCH')
+        self.assertTrue(found[0]['link_only'])
+        self.assertIsNone(found[0]['thumbnail_url'])
+        with tempfile.TemporaryDirectory() as td:
+            result=collect.research_species({'name':'Abdomegaphobema mesomelas','key':'f3787c4b515c0a91'},
+                  {},Path(td),discovery=lambda name,seen:found,
+                  download=lambda url,cap:(_ for _ in ()).throw(AssertionError('UNKNOWN_LICENSE_DOWNLOADED')))
+            self.assertEqual(len(result['new_candidates']),0)
+            self.assertEqual(len(result['new_link_leads']),1)
+            self.assertEqual(result['status'],'LINK_RESEARCH_READY')
+            self.assertEqual(result['new_link_leads'][0]['research_use_status'],'RESEARCH_LINK_AVAILABLE_NOW')
+            self.assertFalse(result['new_link_leads'][0]['media_copied_to_public_repo'])
+
+    def test_archive_link_only_saved_outside_media_and_deduped(self):
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td)
+            for shard in range(5):
+                folder=root/'shards'/f'shard-{shard}';folder.mkdir(parents=True)
+                lead={'photo_key':'inat:404','observation_id':11,'photo_id':404,
+                  'license_code':'UNKNOWN','source_url':'https://www.inaturalist.org/observations/11',
+                  'attribution':'Example observer','link_only':True,
+                  'redistribution_allowed_by_collector':False,'thumbnail_url':None,
+                  'unverified_observer_behaviour_hints':['FEEDING']}
+                entry=[{'key':'f3787c4b515c0a91','taxon':'Abdomegaphobema mesomelas',
+                       'status':'LINK_RESEARCH_READY','new_candidates':[],'new_link_leads':[lead]}] if shard==0 else []
+                (folder/'report.json').write_text(json.dumps({'shard':shard,'cycle':2,'species':entry}))
+            previous=json.loads((BASE/'data/index.json').read_text())
+            out=root/'archive'
+            res=archive.compile_archive(root/'shards',previous,out,'photo-candidates-run-100','sample/public')
+            self.assertEqual(res['new_candidate_count'],0)
+            self.assertEqual(res['new_link_research_leads'],1)
+            idx=json.loads((out/'index.json').read_text())
+            row=idx['species']['f3787c4b515c0a91']
+            self.assertEqual(row['link_only_leads'][-1]['license_code'],'UNKNOWN')
+            self.assertEqual(row['link_only_leads'][-1]['research_use_status'],'RESEARCH_LINK_AVAILABLE_NOW')
+            self.assertNotIn('thumbnail_url',row['link_only_leads'][-1])
+            with zipfile.ZipFile(out/'shard-0.zip') as z:
+                self.assertEqual([name for name in z.namelist() if name.startswith('media/')],[])
+            res2=archive.compile_archive(root/'shards',idx,root/'archive2','photo-candidates-run-101','sample/public')
+            self.assertEqual(res2['new_link_research_leads'],0)
     def test_decode_and_duplicate(self):
         a=jpeg((70,51,30));self.assertEqual(collect.inspect_image(a)[0],'jpg')
         with self.assertRaises(ValueError):collect.inspect_image(b'not a jpeg')
@@ -84,6 +136,7 @@ class PublicTests(unittest.TestCase):
         html=(BASE/'review/index.html').read_text()
         self.assertIn('Export decisions',html)
         self.assertIn('localStorage',html)
+        self.assertIn('Research-only link',html)
         self.assertIn('rights_checked',html)
         self.assertNotIn('GITHUB_TOKEN',html)
     def test_public_actions_have_no_secret_exfil(self):
