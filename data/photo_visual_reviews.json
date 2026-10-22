@@ -1,6 +1,6 @@
 {
   "schema": "VNMV1_PUBLIC_VISUAL_RECOMMENDATIONS_V1",
-  "revision": 4,
+  "revision": 5,
   "status": "VISUAL_DRAFTS_READY_FOR_USER_CORRECTION",
   "photos": {
     "inat:114448505": {
@@ -22,7 +22,13 @@
       "visible_image_notes": "Mostly overhead image of a dark, hairy tarantula on pale stone; legs spread broadly, carapace and abdomen visible. Lighting subdued and the image is small, so eye pattern, palps, spurs and sex cannot be established.",
       "reviewed_by_human": false,
       "resembles_original": "NOT_ASSESSED",
-      "approved_for_imagegen": false
+      "approved_for_imagegen": false,
+      "recommended_suitability": "ACCEPT_REFERENCE",
+      "suitability_recommendation_status": "AI_VISUAL_PROVISIONAL_NOT_HUMAN_APPROVED",
+      "recommended_visual_notes": "Mostly overhead image of a dark, hairy tarantula on pale stone; legs spread broadly, carapace and abdomen visible. Lighting subdued and the image is small, so eye pattern, palps, spurs and sex cannot be established.",
+      "recommended_resemblance": "NOT_ASSESSED",
+      "reference_use_status": "RESEARCH_PROPOSAL_ONLY",
+      "imagegen_approval_status": "NOT_APPROVED"
     },
     "inat:150501010": {
       "source_image_sha256": "5dda7f7558ac99f3e4b326b2d74188ecccb5f4b676b6876307bff3d8361c2fb5",
@@ -42,7 +48,13 @@
       "visible_image_notes": "Dark tarantula among dry stems and ground litter, photographed from above at a slight angle. Several legs overlap plant material; colour is affected by shade. No reliable sex or eye-detail evidence.",
       "reviewed_by_human": false,
       "resembles_original": "NOT_ASSESSED",
-      "approved_for_imagegen": false
+      "approved_for_imagegen": false,
+      "recommended_suitability": "STRUCTURAL_ONLY",
+      "suitability_recommendation_status": "AI_VISUAL_PROVISIONAL_NOT_HUMAN_APPROVED",
+      "recommended_visual_notes": "Dark tarantula among dry stems and ground litter, photographed from above at a slight angle. Several legs overlap plant material; colour is affected by shade. No reliable sex or eye-detail evidence.",
+      "recommended_resemblance": "NOT_ASSESSED",
+      "reference_use_status": "RESEARCH_PROPOSAL_ONLY",
+      "imagegen_approval_status": "NOT_APPROVED"
     },
     "inat:182254590": {
       "source_image_sha256": "64ee1d17eea758846c7b8f17761adba9dfee83692d34b142bd7c3e3d4984cc3c",
@@ -62,7 +74,13 @@
       "visible_image_notes": "Hairy tan-orange tarantula on bark near a dark cavity. Oblique overhead view; strong orange setal highlights, pale legs and abdomen seen against rough bark. Part of the body is shadowed; no mature-male diagnostic detail is established.",
       "reviewed_by_human": false,
       "resembles_original": "NOT_ASSESSED",
-      "approved_for_imagegen": false
+      "approved_for_imagegen": false,
+      "recommended_suitability": "ACCEPT_REFERENCE",
+      "suitability_recommendation_status": "AI_VISUAL_PROVISIONAL_NOT_HUMAN_APPROVED",
+      "recommended_visual_notes": "Hairy tan-orange tarantula on bark near a dark cavity. Oblique overhead view; strong orange setal highlights, pale legs and abdomen seen against rough bark. Part of the body is shadowed; no mature-male diagnostic detail is established.",
+      "recommended_resemblance": "NOT_ASSESSED",
+      "reference_use_status": "RESEARCH_PROPOSAL_ONLY",
+      "imagegen_approval_status": "NOT_APPROVED"
     },
     "inat:182325808": {
       "source_image_sha256": "c6cc6bd33c22e46646b789789f5f892faff43df03dff2069fe8cf302eb253004",
@@ -83,7 +101,13 @@
       "visible_image_notes": "Overhead, slightly angled image on vertical bark: dark carapace, warm orange-brown abdomen and tan-brown legs with setae. Body appears complete, but precise sex and stage are not securely determined from this view.",
       "reviewed_by_human": false,
       "resembles_original": "NOT_ASSESSED",
-      "approved_for_imagegen": false
+      "approved_for_imagegen": false,
+      "recommended_suitability": "ACCEPT_REFERENCE",
+      "suitability_recommendation_status": "AI_VISUAL_PROVISIONAL_NOT_HUMAN_APPROVED",
+      "recommended_visual_notes": "Overhead, slightly angled image on vertical bark: dark carapace, warm orange-brown abdomen and tan-brown legs with setae. Body appears complete, but precise sex and stage are not securely determined from this view.",
+      "recommended_resemblance": "NOT_ASSESSED",
+      "reference_use_status": "RESEARCH_PROPOSAL_ONLY",
+      "imagegen_approval_status": "NOT_APPROVED"
     },
     "inat:294244397": {
       "source_image_sha256": "f7fafb867d1c447202153ff2404b52479dcf3eb993a9d577cd461042cdb60203",
@@ -102,7 +126,13 @@
       "visible_image_notes": "Small, distant brown tarantula on broken wood and bark; strong surrounding dark/light contrast. At this contact-sheet resolution neither precise facing direction nor sex/anatomical details are reliable. A closer original photo is needed.",
       "reviewed_by_human": false,
       "resembles_original": "NOT_ASSESSED",
-      "approved_for_imagegen": false
+      "approved_for_imagegen": false,
+      "recommended_suitability": "NEEDS_RESEARCH",
+      "suitability_recommendation_status": "AI_VISUAL_PROVISIONAL_NOT_HUMAN_APPROVED",
+      "recommended_visual_notes": "Small, distant brown tarantula on broken wood and bark; strong surrounding dark/light contrast. At this contact-sheet resolution neither precise facing direction nor sex/anatomical details are reliable. A closer original photo is needed.",
+      "recommended_resemblance": "NOT_ASSESSED",
+      "reference_use_status": "RESEARCH_PROPOSAL_ONLY",
+      "imagegen_approval_status": "NOT_APPROVED"
     },
     "inat:342781737": {
       "source_image_sha256": "418599691016e9d6244c986520521fb9f783b9a1313d269a1ba5a29b3a21866c",
@@ -122,7 +152,13 @@
       "visible_image_notes": "Dark, stocky, hairy tarantula on soil and leaf litter, viewed from a slightly raised front/oblique angle. Thick legs and darker carapace are visible. Shadowed ventral features and overlapping limbs preclude a sex inference.",
       "reviewed_by_human": false,
       "resembles_original": "NOT_ASSESSED",
-      "approved_for_imagegen": false
+      "approved_for_imagegen": false,
+      "recommended_suitability": "ACCEPT_REFERENCE",
+      "suitability_recommendation_status": "AI_VISUAL_PROVISIONAL_NOT_HUMAN_APPROVED",
+      "recommended_visual_notes": "Dark, stocky, hairy tarantula on soil and leaf litter, viewed from a slightly raised front/oblique angle. Thick legs and darker carapace are visible. Shadowed ventral features and overlapping limbs preclude a sex inference.",
+      "recommended_resemblance": "NOT_ASSESSED",
+      "reference_use_status": "RESEARCH_PROPOSAL_ONLY",
+      "imagegen_approval_status": "NOT_APPROVED"
     },
     "inat:500710105": {
       "source_image_sha256": "137cbbc1c8768c096c852cc865c753c7214f77f9323f415d8b608570d0870b56",
@@ -143,7 +179,13 @@
       "visible_image_notes": "Near-overhead image of a compact dark tarantula on pale gravelly ground. Hairy round abdomen and legs visible, with cool blue-grey highlights likely influenced by illumination. Eye, palp and sex details unresolved.",
       "reviewed_by_human": false,
       "resembles_original": "NOT_ASSESSED",
-      "approved_for_imagegen": false
+      "approved_for_imagegen": false,
+      "recommended_suitability": "ACCEPT_REFERENCE",
+      "suitability_recommendation_status": "AI_VISUAL_PROVISIONAL_NOT_HUMAN_APPROVED",
+      "recommended_visual_notes": "Near-overhead image of a compact dark tarantula on pale gravelly ground. Hairy round abdomen and legs visible, with cool blue-grey highlights likely influenced by illumination. Eye, palp and sex details unresolved.",
+      "recommended_resemblance": "NOT_ASSESSED",
+      "reference_use_status": "RESEARCH_PROPOSAL_ONLY",
+      "imagegen_approval_status": "NOT_APPROVED"
     },
     "inat:526124408": {
       "source_image_sha256": "5b4deaa2ee4983bbd86008dd57ca0939fc99291836433955f33417e54d22d160",
@@ -164,7 +206,13 @@
       "visible_image_notes": "Near-front elevated view of brown-orange tarantula on dirt, with forelegs and carapace visible and rounded abdomen behind. Symmetrical-looking presentation suggests a frontal view; precise eye/palp structures are not resolved.",
       "reviewed_by_human": false,
       "resembles_original": "NOT_ASSESSED",
-      "approved_for_imagegen": false
+      "approved_for_imagegen": false,
+      "recommended_suitability": "ACCEPT_REFERENCE",
+      "suitability_recommendation_status": "AI_VISUAL_PROVISIONAL_NOT_HUMAN_APPROVED",
+      "recommended_visual_notes": "Near-front elevated view of brown-orange tarantula on dirt, with forelegs and carapace visible and rounded abdomen behind. Symmetrical-looking presentation suggests a frontal view; precise eye/palp structures are not resolved.",
+      "recommended_resemblance": "NOT_ASSESSED",
+      "reference_use_status": "RESEARCH_PROPOSAL_ONLY",
+      "imagegen_approval_status": "NOT_APPROVED"
     },
     "inat:579081718": {
       "source_image_sha256": "5e83305dbc4bcd7cc02fe88215e76a47252fb581ef0611f73e3363bb393880c8",
@@ -182,7 +230,13 @@
       "visible_image_notes": "Animal is small and partially hidden among brown leaf litter and a green leaf. Some dark, banded legs show but body orientation and taxonomic details are too unclear for confident pose or sex assignment.",
       "reviewed_by_human": false,
       "resembles_original": "NOT_ASSESSED",
-      "approved_for_imagegen": false
+      "approved_for_imagegen": false,
+      "recommended_suitability": "NEEDS_RESEARCH",
+      "suitability_recommendation_status": "AI_VISUAL_PROVISIONAL_NOT_HUMAN_APPROVED",
+      "recommended_visual_notes": "Animal is small and partially hidden among brown leaf litter and a green leaf. Some dark, banded legs show but body orientation and taxonomic details are too unclear for confident pose or sex assignment.",
+      "recommended_resemblance": "NOT_ASSESSED",
+      "reference_use_status": "RESEARCH_PROPOSAL_ONLY",
+      "imagegen_approval_status": "NOT_APPROVED"
     },
     "inat:608965725": {
       "source_image_sha256": "d0d0b6e65f4591632495c45f46f17defc02609ede84a7608c95fa73e257650d2",
@@ -202,7 +256,13 @@
       "visible_image_notes": "Distant dark spider on pale flat concrete/stone, seen from an oblique raised angle; legs are visible but body features are partly dark or indistinct. Magnification and source-image review needed for anatomical labels.",
       "reviewed_by_human": false,
       "resembles_original": "NOT_ASSESSED",
-      "approved_for_imagegen": false
+      "approved_for_imagegen": false,
+      "recommended_suitability": "STRUCTURAL_ONLY",
+      "suitability_recommendation_status": "AI_VISUAL_PROVISIONAL_NOT_HUMAN_APPROVED",
+      "recommended_visual_notes": "Distant dark spider on pale flat concrete/stone, seen from an oblique raised angle; legs are visible but body features are partly dark or indistinct. Magnification and source-image review needed for anatomical labels.",
+      "recommended_resemblance": "NOT_ASSESSED",
+      "reference_use_status": "RESEARCH_PROPOSAL_ONLY",
+      "imagegen_approval_status": "NOT_APPROVED"
     },
     "inat:623448714": {
       "source_image_sha256": "330a44c919e27c525f5629f06dedaec9e3ac8a4fe4f5e7a293a82752822a1283",
@@ -222,7 +282,13 @@
       "visible_image_notes": "Tight macro photograph of the hairy front carapace and legs. Dark, dense setae with grayish highlights are prominent; abdomen and full stance are out of frame. Excellent hair/texture lead, not a reliable full-body pose or sex reference.",
       "reviewed_by_human": false,
       "resembles_original": "NOT_ASSESSED",
-      "approved_for_imagegen": false
+      "approved_for_imagegen": false,
+      "recommended_suitability": "STRUCTURAL_ONLY",
+      "suitability_recommendation_status": "AI_VISUAL_PROVISIONAL_NOT_HUMAN_APPROVED",
+      "recommended_visual_notes": "Tight macro photograph of the hairy front carapace and legs. Dark, dense setae with grayish highlights are prominent; abdomen and full stance are out of frame. Excellent hair/texture lead, not a reliable full-body pose or sex reference.",
+      "recommended_resemblance": "NOT_ASSESSED",
+      "reference_use_status": "RESEARCH_PROPOSAL_ONLY",
+      "imagegen_approval_status": "NOT_APPROVED"
     },
     "inat:630658922": {
       "source_image_sha256": "60a59af6f2a1937c60bed6718ec2699b5e4fa61e34b6ba912306b3503eab0a7f",
@@ -242,7 +308,13 @@
       "visible_image_notes": "Mostly overhead tarantula on orange sandy soil, with legs extended and a dark, warm-brown body. The limbs and body outline are visible; lower-resolution image does not resolve eyes, palpal details or sex.",
       "reviewed_by_human": false,
       "resembles_original": "NOT_ASSESSED",
-      "approved_for_imagegen": false
+      "approved_for_imagegen": false,
+      "recommended_suitability": "ACCEPT_REFERENCE",
+      "suitability_recommendation_status": "AI_VISUAL_PROVISIONAL_NOT_HUMAN_APPROVED",
+      "recommended_visual_notes": "Mostly overhead tarantula on orange sandy soil, with legs extended and a dark, warm-brown body. The limbs and body outline are visible; lower-resolution image does not resolve eyes, palpal details or sex.",
+      "recommended_resemblance": "NOT_ASSESSED",
+      "reference_use_status": "RESEARCH_PROPOSAL_ONLY",
+      "imagegen_approval_status": "NOT_APPROVED"
     },
     "inat:733328644": {
       "analysis_method": "CHATGPT_VISUAL_DRAFT",
@@ -265,7 +337,13 @@
       "resembles_original": "NOT_ASSESSED",
       "reviewed_by_human": false,
       "approved_for_imagegen": false,
-      "limitation": "Medium thumbnail/contact sheet inspection; archive hash pointer obtained from research index, not separately verified against displayed compressed thumbnail. No private original photographed."
+      "limitation": "Medium thumbnail/contact sheet inspection; archive hash pointer obtained from research index, not separately verified against displayed compressed thumbnail. No private original photographed.",
+      "recommended_suitability": "ACCEPT_REFERENCE",
+      "suitability_recommendation_status": "AI_VISUAL_PROVISIONAL_NOT_HUMAN_APPROVED",
+      "recommended_visual_notes": "Useful dorsal body-shape, leg arrangement and reddish-brown abdominal setae reference. Exposure may exaggerate colour. Retain as a provisional structural and texture candidate only until species identity and photo-rights are separately checked; sex/maturity/eyes not proven.",
+      "recommended_resemblance": "NOT_ASSESSED",
+      "reference_use_status": "RESEARCH_PROPOSAL_ONLY",
+      "imagegen_approval_status": "NOT_APPROVED"
     },
     "inat:99336289": {
       "analysis_method": "CHATGPT_VISUAL_DRAFT",
@@ -288,7 +366,13 @@
       "resembles_original": "NOT_ASSESSED",
       "reviewed_by_human": false,
       "approved_for_imagegen": false,
-      "limitation": "Medium thumbnail/contact sheet inspection; archive hash pointer obtained from research index, not separately verified against displayed compressed thumbnail. No private original photographed."
+      "limitation": "Medium thumbnail/contact sheet inspection; archive hash pointer obtained from research index, not separately verified against displayed compressed thumbnail. No private original photographed.",
+      "recommended_suitability": "ACCEPT_REFERENCE",
+      "suitability_recommendation_status": "AI_VISUAL_PROVISIONAL_NOT_HUMAN_APPROVED",
+      "recommended_visual_notes": "Spider photographed from an elevated angle on granular orange and grey earth. Long jointed legs and a dark central body are distinguishable; carapace-to-abdomen details have shadow and no trustworthy sex structures visible.",
+      "recommended_resemblance": "NOT_ASSESSED",
+      "reference_use_status": "RESEARCH_PROPOSAL_ONLY",
+      "imagegen_approval_status": "NOT_APPROVED"
     },
     "inat:242252521": {
       "analysis_method": "CHATGPT_VISUAL_DRAFT",
@@ -309,7 +393,13 @@
       "resembles_original": "NOT_ASSESSED",
       "reviewed_by_human": false,
       "approved_for_imagegen": false,
-      "limitation": "Medium thumbnail/contact sheet inspection; archive hash pointer obtained from research index, not separately verified against displayed compressed thumbnail. No private original photographed."
+      "limitation": "Medium thumbnail/contact sheet inspection; archive hash pointer obtained from research index, not separately verified against displayed compressed thumbnail. No private original photographed.",
+      "recommended_suitability": "NEEDS_RESEARCH",
+      "suitability_recommendation_status": "AI_VISUAL_PROVISIONAL_NOT_HUMAN_APPROVED",
+      "recommended_visual_notes": "Spider partly concealed among long pale grass at a ground entrance. The photo is distant and heavily occluded; only some dark appendages and body outline can be inferred. Species-specific features, camera pose and sex cannot be verified.",
+      "recommended_resemblance": "NOT_ASSESSED",
+      "reference_use_status": "RESEARCH_PROPOSAL_ONLY",
+      "imagegen_approval_status": "NOT_APPROVED"
     },
     "inat:271855877": {
       "analysis_method": "CHATGPT_VISUAL_DRAFT",
@@ -330,7 +420,13 @@
       "resembles_original": "NOT_ASSESSED",
       "reviewed_by_human": false,
       "approved_for_imagegen": false,
-      "limitation": "Medium thumbnail/contact sheet inspection; archive hash pointer obtained from research index, not separately verified against displayed compressed thumbnail. No private original photographed."
+      "limitation": "Medium thumbnail/contact sheet inspection; archive hash pointer obtained from research index, not separately verified against displayed compressed thumbnail. No private original photographed.",
+      "recommended_suitability": "NEEDS_RESEARCH",
+      "suitability_recommendation_status": "AI_VISUAL_PROVISIONAL_NOT_HUMAN_APPROVED",
+      "recommended_visual_notes": "Small dark spider appears amid curled dry leaves and branches. Camouflage, shadow and distance obscure the body axis and fine appendages, so only general external outline is useful; sex, stage and pose remain unassigned.",
+      "recommended_resemblance": "NOT_ASSESSED",
+      "reference_use_status": "RESEARCH_PROPOSAL_ONLY",
+      "imagegen_approval_status": "NOT_APPROVED"
     },
     "inat:461809083": {
       "analysis_method": "CHATGPT_VISUAL_DRAFT",
@@ -352,7 +448,13 @@
       "resembles_original": "NOT_ASSESSED",
       "reviewed_by_human": false,
       "approved_for_imagegen": false,
-      "limitation": "Medium thumbnail/contact sheet inspection; archive hash pointer obtained from research index, not separately verified against displayed compressed thumbnail. No private original photographed."
+      "limitation": "Medium thumbnail/contact sheet inspection; archive hash pointer obtained from research index, not separately verified against displayed compressed thumbnail. No private original photographed.",
+      "recommended_suitability": "STRUCTURAL_ONLY",
+      "suitability_recommendation_status": "AI_VISUAL_PROVISIONAL_NOT_HUMAN_APPROVED",
+      "recommended_visual_notes": "Dark spider seen against a white lined notebook on a floor, angled from above. Leg lengths and broad body orientation are visible, but the spider is small within a tall frame. Fine hair, eyes and reproductive structures are not clear.",
+      "recommended_resemblance": "NOT_ASSESSED",
+      "reference_use_status": "RESEARCH_PROPOSAL_ONLY",
+      "imagegen_approval_status": "NOT_APPROVED"
     },
     "inat:591625458": {
       "analysis_method": "CHATGPT_VISUAL_DRAFT",
@@ -375,7 +477,13 @@
       "resembles_original": "NOT_ASSESSED",
       "reviewed_by_human": false,
       "approved_for_imagegen": false,
-      "limitation": "Medium thumbnail/contact sheet inspection; archive hash pointer obtained from research index, not separately verified against displayed compressed thumbnail. No private original photographed."
+      "limitation": "Medium thumbnail/contact sheet inspection; archive hash pointer obtained from research index, not separately verified against displayed compressed thumbnail. No private original photographed.",
+      "recommended_suitability": "ACCEPT_REFERENCE",
+      "suitability_recommendation_status": "AI_VISUAL_PROVISIONAL_NOT_HUMAN_APPROVED",
+      "recommended_visual_notes": "Distinct low side-profile view of a hairy spider walking or standing on grey gravel. Body height, leg joints and relative side silhouette are visible. No observed movement sequence is available, and sex or maturity cannot be inferred.",
+      "recommended_resemblance": "NOT_ASSESSED",
+      "reference_use_status": "RESEARCH_PROPOSAL_ONLY",
+      "imagegen_approval_status": "NOT_APPROVED"
     },
     "inat:596575816": {
       "analysis_method": "CHATGPT_VISUAL_DRAFT",
@@ -398,7 +506,13 @@
       "resembles_original": "NOT_ASSESSED",
       "reviewed_by_human": false,
       "approved_for_imagegen": false,
-      "limitation": "Medium thumbnail/contact sheet inspection; archive hash pointer obtained from research index, not separately verified against displayed compressed thumbnail. No private original photographed."
+      "limitation": "Medium thumbnail/contact sheet inspection; archive hash pointer obtained from research index, not separately verified against displayed compressed thumbnail. No private original photographed.",
+      "recommended_suitability": "ACCEPT_REFERENCE",
+      "suitability_recommendation_status": "AI_VISUAL_PROVISIONAL_NOT_HUMAN_APPROVED",
+      "recommended_visual_notes": "Dark spider against a blue plastic container, primarily dorsal/elevated view. Pale contrasting bands on several leg segments and a rounded abdomen are visible; strong blue background and artificial lighting alter colour contrast.",
+      "recommended_resemblance": "NOT_ASSESSED",
+      "reference_use_status": "RESEARCH_PROPOSAL_ONLY",
+      "imagegen_approval_status": "NOT_APPROVED"
     },
     "inat:59296839": {
       "analysis_method": "CHATGPT_VISUAL_DRAFT",
@@ -420,7 +534,13 @@
       "resembles_original": "NOT_ASSESSED",
       "reviewed_by_human": false,
       "approved_for_imagegen": false,
-      "limitation": "Medium thumbnail/contact sheet inspection; archive hash pointer obtained from research index, not separately verified against displayed compressed thumbnail. No private original photographed."
+      "limitation": "Medium thumbnail/contact sheet inspection; archive hash pointer obtained from research index, not separately verified against displayed compressed thumbnail. No private original photographed.",
+      "recommended_suitability": "STRUCTURAL_ONLY",
+      "suitability_recommendation_status": "AI_VISUAL_PROVISIONAL_NOT_HUMAN_APPROVED",
+      "recommended_visual_notes": "Reddish-brown abdomen and pale hairy legs on a small spider partly surrounded by loose soil. Elevated photographic view with vegetation/clutter; sex, life stage and species diagnostics cannot be established.",
+      "recommended_resemblance": "NOT_ASSESSED",
+      "reference_use_status": "RESEARCH_PROPOSAL_ONLY",
+      "imagegen_approval_status": "NOT_APPROVED"
     },
     "inat:593340634": {
       "analysis_method": "CHATGPT_VISUAL_DRAFT",
@@ -443,7 +563,13 @@
       "resembles_original": "NOT_ASSESSED",
       "reviewed_by_human": false,
       "approved_for_imagegen": false,
-      "limitation": "Medium thumbnail/contact sheet inspection; archive hash pointer obtained from research index, not separately verified against displayed compressed thumbnail. No private original photographed."
+      "limitation": "Medium thumbnail/contact sheet inspection; archive hash pointer obtained from research index, not separately verified against displayed compressed thumbnail. No private original photographed.",
+      "recommended_suitability": "ACCEPT_REFERENCE",
+      "suitability_recommendation_status": "AI_VISUAL_PROVISIONAL_NOT_HUMAN_APPROVED",
+      "recommended_visual_notes": "Brown-grey hairy spider on granular dry soil, viewed from above with front legs directed outward. The abdomen and cephalothorax can be separated visually, though fine ocular and reproductive anatomy is not resolved.",
+      "recommended_resemblance": "NOT_ASSESSED",
+      "reference_use_status": "RESEARCH_PROPOSAL_ONLY",
+      "imagegen_approval_status": "NOT_APPROVED"
     },
     "inat:593340760": {
       "analysis_method": "CHATGPT_VISUAL_DRAFT",
@@ -466,7 +592,13 @@
       "resembles_original": "NOT_ASSESSED",
       "reviewed_by_human": false,
       "approved_for_imagegen": false,
-      "limitation": "Medium thumbnail/contact sheet inspection; archive hash pointer obtained from research index, not separately verified against displayed compressed thumbnail. No private original photographed."
+      "limitation": "Medium thumbnail/contact sheet inspection; archive hash pointer obtained from research index, not separately verified against displayed compressed thumbnail. No private original photographed.",
+      "recommended_suitability": "ACCEPT_REFERENCE",
+      "suitability_recommendation_status": "AI_VISUAL_PROVISIONAL_NOT_HUMAN_APPROVED",
+      "recommended_visual_notes": "Brown-haired spider sitting on a person's palm, viewed mainly from above. Most legs and the body are clearly in frame with useful scale context from the hand; warm sunlight impacts apparent colour. Sex remains unverified.",
+      "recommended_resemblance": "NOT_ASSESSED",
+      "reference_use_status": "RESEARCH_PROPOSAL_ONLY",
+      "imagegen_approval_status": "NOT_APPROVED"
     },
     "inat:593341056": {
       "analysis_method": "CHATGPT_VISUAL_DRAFT",
@@ -489,7 +621,13 @@
       "resembles_original": "NOT_ASSESSED",
       "reviewed_by_human": false,
       "approved_for_imagegen": false,
-      "limitation": "Medium thumbnail/contact sheet inspection; archive hash pointer obtained from research index, not separately verified against displayed compressed thumbnail. No private original photographed."
+      "limitation": "Medium thumbnail/contact sheet inspection; archive hash pointer obtained from research index, not separately verified against displayed compressed thumbnail. No private original photographed.",
+      "recommended_suitability": "STRUCTURAL_ONLY",
+      "suitability_recommendation_status": "AI_VISUAL_PROVISIONAL_NOT_HUMAN_APPROVED",
+      "recommended_visual_notes": "Close frontal photograph of brown hairy spider with anterior leg bases and facial region prominent. Hair texture and cheliceral area can guide appearance studies; clear eye arrangement and male palp anatomy cannot be distinguished.",
+      "recommended_resemblance": "NOT_ASSESSED",
+      "reference_use_status": "RESEARCH_PROPOSAL_ONLY",
+      "imagegen_approval_status": "NOT_APPROVED"
     },
     "inat:735521311": {
       "analysis_method": "CHATGPT_VISUAL_DRAFT",
@@ -512,8 +650,14 @@
       "resembles_original": "NOT_ASSESSED",
       "reviewed_by_human": false,
       "approved_for_imagegen": false,
-      "limitation": "Medium thumbnail/contact sheet inspection; archive hash pointer obtained from research index, not separately verified against displayed compressed thumbnail. No private original photographed."
+      "limitation": "Medium thumbnail/contact sheet inspection; archive hash pointer obtained from research index, not separately verified against displayed compressed thumbnail. No private original photographed.",
+      "recommended_suitability": "ACCEPT_REFERENCE",
+      "suitability_recommendation_status": "AI_VISUAL_PROVISIONAL_NOT_HUMAN_APPROVED",
+      "recommended_visual_notes": "Rust-orange spider on soil and decomposing wood, viewed from an elevated diagonal angle. Body proportions and multiple limbs are visible; intense warm image tones may reflect lighting or recent molt and should not be treated as confirmed natural pigmentation.",
+      "recommended_resemblance": "NOT_ASSESSED",
+      "reference_use_status": "RESEARCH_PROPOSAL_ONLY",
+      "imagegen_approval_status": "NOT_APPROVED"
     }
   },
-  "notes": "12 public Acanthoscurria chacoana image previews were directly inspected in a contact sheet. Drafts describe only visible details and preserve UNKNOWN sex and private-original resemblance. These are not taxonomic or ImageGen approvals."
+  "notes": "24 actually-inspected public reference photos have provisional research suitability choices, notes, pose and visible anatomy; species/rights/private-original comparisons are not certified. The review form pre-selects AI suggestions for untouched records without saving a human sign-off."
 }
