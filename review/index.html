@@ -1,30 +1,45 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>VNMV1 Reference Review</title><style>
-:root{color-scheme:dark;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:#0e1420;color:#e9eef7}*{box-sizing:border-box}body{margin:0;background:linear-gradient(170deg,#0d1728,#101622 55%);min-height:100vh}main{max-width:1180px;margin:auto;padding:18px 14px 160px}header{padding:14px 0 16px;border-bottom:1px solid #334257;display:flex;gap:15px;justify-content:space-between;align-items:center;flex-wrap:wrap}h1{font-size:1.4rem;line-height:1.3;margin:0}p{line-height:1.55;color:#aabbcd;margin:.6em 0}.muted{font-size:.9rem;color:#9dabbe}.stats{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}.stat{background:#1b283b;border:1px solid #314156;border-radius:12px;padding:11px;min-width:130px}.stat b{display:block;font-size:1.3rem;color:#f9fafc}.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:18px 0}input,select,button{font:inherit}input[type=search]{flex:1;min-width:170px}input[type=search],select{background:#1c2737;border:1px solid #536079;padding:10px;border-radius:9px;color:#f4f6fb}button,.upload{border-radius:9px;background:#315980;border:1px solid #658db1;color:white;padding:10px 13px;font-weight:600;cursor:pointer}button:disabled{opacity:.5;cursor:not-allowed}.secondary{background:#212f42}.species{border:1px solid #354457;background:#162031;border-radius:14px;padding:14px;margin:16px 0}h2{font-size:1.1rem;margin:0 0 8px}.specdetails{font-size:.85rem;color:#9ab0c7;margin:3px 0 14px}.photos{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:12px}.photo{border:1px solid #3d4d61;border-radius:11px;overflow:hidden;background:#1b2a3b}.photo img{width:100%;aspect-ratio:4/3;object-fit:contain;background:#0a1019}.photo .info{padding:11px} .photo .review-status{border-left:2px solid #789abd;padding-left:8px;margin-top:6px;color:#cbe1f7}.photo small{display:block;margin:5px 0;color:#c5d1e0;overflow-wrap:anywhere}.photo a{color:#99ccff}label{display:block;font-size:.86rem;margin:9px 0 4px;color:#d0d9e4}label.check{display:flex;gap:7px;align-items:flex-start}.photo select{width:100%}.photo textarea{width:100%;resize:vertical;min-height:62px;border-radius:8px;border:1px solid #576985;background:#182237;color:white;padding:7px}.note{padding:12px 14px;border-left:3px solid #789abd;background:#1a293c;margin:16px 0}.toplink{font-size:.85rem;color:#a8d0ff}.empty{text-align:center;padding:35px 14px;color:#a7b7c9;border:1px dashed #435269;border-radius:11px}.sticky{position:sticky;bottom:0;background:#111b29f2;border-top:1px solid #405169;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 16px;margin:0 -14px -90px;z-index:3}.sticky>div{min-width:0;flex:1}.sticky small{display:block;color:#afc1d4;line-height:1.3;overflow-wrap:anywhere}.sticky button{flex-shrink:0}#notification{color:#d8e6f8;font-size:.9rem}button.reject-action{width:100%;margin-top:10px;background:#743039;border:1px solid #ba6772;color:white}.navstrip{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#1a293c;border:1px solid #3c5370;border-radius:12px;padding:9px 8px;margin:12px 0}
-.navstrip button{padding:10px 11px;min-width:78px}.navstrip strong{font-size:.82rem;text-align:center;flex:1}
+:root{color-scheme:dark;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:#0e1420;color:#e9eef7}*{box-sizing:border-box}body{margin:0;background:linear-gradient(170deg,#0d1728,#101622 55%);min-height:100vh}main{max-width:900px;margin:auto;padding:8px 12px 36px}header{padding:14px 0 16px;border-bottom:1px solid #334257;display:flex;gap:15px;justify-content:space-between;align-items:center;flex-wrap:wrap}h1{font-size:1.4rem;line-height:1.3;margin:0}p{line-height:1.55;color:#aabbcd;margin:.6em 0}.muted{font-size:.9rem;color:#9dabbe}.stats{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}.stat{background:#1b283b;border:1px solid #314156;border-radius:12px;padding:11px;min-width:130px}.stat b{display:block;font-size:1.3rem;color:#f9fafc}.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:18px 0}input,select,button{font:inherit}input[type=search]{flex:1;min-width:170px}input[type=search],select{background:#1c2737;border:1px solid #536079;padding:10px;border-radius:9px;color:#f4f6fb}button,.upload{border-radius:9px;background:#315980;border:1px solid #658db1;color:white;padding:10px 13px;font-weight:600;cursor:pointer}button:disabled{opacity:.5;cursor:not-allowed}.secondary{background:#212f42}.species{border:1px solid #354457;background:#162031;border-radius:14px;padding:14px;margin:16px 0}h2{font-size:1.1rem;margin:0 0 8px}.specdetails{font-size:.85rem;color:#9ab0c7;margin:3px 0 14px}.photos{display:flex;flex-direction:column;gap:16px}.photo{border:1px solid #3d4d61;border-radius:11px;overflow:hidden;background:#1b2a3b}.photo img{width:100%;aspect-ratio:4/3;object-fit:contain;background:#0a1019}.photo .info{padding:11px} .photo .review-status{border-left:2px solid #789abd;padding-left:8px;margin-top:6px;color:#cbe1f7}.photo small{display:block;margin:5px 0;color:#c5d1e0;overflow-wrap:anywhere}.photo a{color:#99ccff}label{display:block;font-size:.86rem;margin:9px 0 4px;color:#d0d9e4}label.check{display:flex;gap:7px;align-items:flex-start}.photo select{width:100%}.photo textarea{width:100%;resize:vertical;min-height:62px;border-radius:8px;border:1px solid #576985;background:#182237;color:white;padding:7px}.note{padding:12px 14px;border-left:3px solid #789abd;background:#1a293c;margin:16px 0}.toplink{font-size:.85rem;color:#a8d0ff}.empty{text-align:center;padding:35px 14px;color:#a7b7c9;border:1px dashed #435269;border-radius:11px}.sticky{position:sticky;bottom:0;background:#111b29f2;border-top:1px solid #405169;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 16px;margin:0 -14px -90px;z-index:3}.sticky>div{min-width:0;flex:1}.sticky small{display:block;color:#afc1d4;line-height:1.3;overflow-wrap:anywhere}.sticky button{flex-shrink:0}#notification{color:#d8e6f8;font-size:.9rem}button.reject-action{width:100%;margin-top:10px;background:#743039;border:1px solid #ba6772;color:white}.navstrip{display:flex;align-items:center;justify-content:space-between;gap:8px;background:#1a293c;border:1px solid #3c5370;border-radius:12px;padding:6px; margin:6px 0;position:sticky;top:0;z-index:4}
+.navstrip button{padding:8px 9px;min-width:70px}.navstrip strong{font-size:.95rem;line-height:1.25;text-align:center;flex:1}
 #speciesPosition,#photoPosition{overflow-wrap:anywhere}
-.mobile-tips{font-size:.84rem;color:#b7cbe1;margin:5px 0 12px}
+.mobile-tips{font-size:.78rem;color:#b7cbe1;margin:2px 0 5px;text-align:center}
 .details-checks summary,.details-archive summary{cursor:pointer;color:#b9d4f7;padding:9px 0}
 .info details{margin:7px 0 10px;border-top:1px solid #344358}
 #reviewUpload{max-width:190px}
 .more{display:block;margin:20px auto}[hidden]{display:none!important}input[type=file]{max-width:100%}@media(max-width:600px){.sticky{padding:10px 14px max(10px,env(safe-area-inset-bottom))}.sticky small{display:none}.sticky button{min-width:145px;max-width:55%}.stat{min-width:calc(50% - 8px)}}
+.review-settings{padding:0 2px 4px;margin:0 0 6px;border-bottom:1px solid #26394e}
+.review-settings>summary{cursor:pointer;font-size:.86rem;color:#d3e6fb;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 3px;list-style:none}
+.review-settings>summary::-webkit-details-marker{display:none}
+.review-settings>summary span{color:#a4bace;font-size:.75rem}
+.review-settings[open]>summary{border-bottom:1px solid #35465d}
+.species{margin:4px auto 12px;padding:7px;max-width:800px}
+.species h2{font-size:.95rem;margin:4px 4px 3px}
+.specdetails{margin:0 4px 7px}
+.photo-number{font-weight:650;font-size:.83rem;color:#c6def7;padding:9px 10px 4px}
+.photo{width:100%;touch-action:pan-y}
+#notification:empty{display:none}
+@media(max-width:600px){.species{border:0;background:transparent;padding:2px;margin:3px 0 10px}.photo img{aspect-ratio:4/3}.photo .info{padding:10px}}
 </style></head>
-<body><main><header><div><h1>VNMV1 · Specimen reference review</h1><p class="muted">Independent photo research • one species pool • human-reviewed decisions</p></div><div class="muted">Candidate references only · No image generation</div></header>
-<div class="note"><strong>Sex, pose and notes save on this phone as you select them.</strong> Selecting female or male does not require licence approval. To send your reviews to Google Drive using the Android APK, tap its <strong>Save to Drive</strong> button at the very top; the bottom Export button is for browser downloads only.  Check the exact species, sex, photographer, image licence and suitability. Community research grade is not proof of sex. Camera pose is a separate visual review: label what is actually visible, not what the observation description suggests. No original specimen photographs or Human Gold records are included on this public page.</div>
+<body><main>
+<details id="reviewSettings" class="review-settings"><summary>VNMV1 Reference Review <span>Tools & progress ▾</span></summary>
+<header><div><h1>VNMV1 · Specimen reference review</h1><p class="muted">Independent photo research • one species pool • human-reviewed decisions</p></div><div class="muted">Candidate references only · No image generation</div></header>
+<div class="note"><strong>Quick review:</strong> select sex, pose, notes or Reject for each photograph. Your notes save on the phone automatically. Swipe horizontally to change species; scroll downward through photos for that species. Licence/identity checks are only needed later for production eligibility.</div>
 <section class="stats" aria-label="Research counts"><div class="stat"><b id="speciesCount">0</b><span>Species in index</span></div><div class="stat"><b id="candidateCount">0</b><span>Photo candidates</span></div><div class="stat"><b id="decisionCount">0</b><span>Decisions entered</span></div><div class="stat"><b id="floorCount">0</b><span>Species with 9+ candidates</span></div></section>
 <div class="controls"><input id="filter" type="search" placeholder="Find species…" aria-label="Filter species"><select id="statusFilter" aria-label="Filter research state"><option value="all">All species</option><option value="photos" selected>With photographs</option><option value="under">Fewer than nine candidates</option><option value="decided">My reviewed photographs</option></select><button class="secondary" id="reload">Refresh public index</button></div>
 <div class="controls"><label class="upload" for="reviewUpload">Import saved review JSON</label><input id="reviewUpload" type="file" accept="application/json,.json"><button class="secondary" id="openHelp" type="button">Where do I save?</button></div>
 <details id="advancedIndex"><summary>Advanced: load offline research index</summary><input style="max-width:180px" id="indexUpload" type="file" accept="application/json,.json"></details>
+<div class="controls"><button id="export" type="button">Download backup review JSON</button><small>This is a manual browser backup, NOT the Android Drive upload. In the APK, use the fixed bottom SAVE JSON → DRIVE button.</small></div>
 <div id="notification" role="status" aria-live="polite"></div>
+</details>
 <nav id="speciesNav" class="navstrip" aria-label="Specimen navigation"><button id="prevSpecies" type="button">◀ Previous</button><strong id="speciesPosition">Specimen 0/0</strong><button id="nextSpecies" type="button">Next ▶</button></nav>
-<div class="mobile-tips">Swipe ← or → across the photograph to change species. Use the photo arrows to inspect different references within that species.</div>
+<div class="mobile-tips">Swipe ← → to change species · Scroll ↓ for the next photograph</div>
 <div id="results"></div>
-<nav id="photoNav" class="navstrip" aria-label="Reference photograph navigation"><button id="prevPhoto" type="button">◀ Photo</button><strong id="photoPosition">Photo 0/0</strong><button id="nextPhoto" type="button">Photo ▶</button></nav>
-<div class="sticky"><div><strong id="reviewedLabel">0 decisions</strong><small>Browser: Download JSON. APK: use native Save JSON to Drive control.</small></div><button id="export">Download review JSON</button></div></main>
+</main>
 <script>
 'use strict';
-let dataset={schema:'VNMV1_PUBLIC_PHOTO_CANDIDATES_V1',species:{}},speciesCursor=0,photoCursor=0,visibleSpecies=[];
+let dataset={schema:'VNMV1_PUBLIC_PHOTO_CANDIDATES_V1',species:{}},speciesCursor=0,visibleSpecies=[];
 const $=s=>document.querySelector(s), KEY='vnmv1-photo-review-v1';
 const POSES=[
 ['UNREVIEWED','Camera pose not reviewed'],
@@ -121,15 +136,11 @@ rejectButton.addEventListener('click',()=>{
 box.append(info);return box}
 function changeSpecies(delta){
   if(!visibleSpecies.length)return;
-  speciesCursor=Math.max(0,Math.min(visibleSpecies.length-1,speciesCursor+delta));
-  photoCursor=0;render();window.scrollTo({top:0,behavior:'auto'});
-}
-function changePhoto(delta){
-  if(!visibleSpecies.length)return;
-  const photos=photosFrom(visibleSpecies[speciesCursor]);
-  if(!photos.length)return;
-  photoCursor=Math.max(0,Math.min(photos.length-1,photoCursor+delta));
-  render();document.querySelector('#results')?.scrollIntoView({block:'start',behavior:'auto'});
+  const next=Math.max(0,Math.min(visibleSpecies.length-1,speciesCursor+delta));
+  if(next===speciesCursor)return;
+  speciesCursor=next;
+  render();
+  window.scrollTo({top:0,behavior:'auto'});
 }
 function render(){
  stats();
@@ -143,28 +154,30 @@ function render(){
    return true;
  }).sort((a,b)=>String(a.scientific_name).localeCompare(String(b.scientific_name)));
  const root=$('#results');root.replaceChildren();
- const sp=visibleSpecies.length;
- speciesCursor=Math.max(0,Math.min(speciesCursor,Math.max(0,sp-1)));
- $('#speciesPosition').textContent=sp?('Specimen '+(speciesCursor+1)+'/'+sp):'No matching specimens';
- $('#prevSpecies').disabled=sp===0||speciesCursor===0;
- $('#nextSpecies').disabled=sp===0||speciesCursor>=sp-1;
- $('#speciesNav').hidden=sp===0;
- if(!sp){
-   root.append(create('div','No specimens match. Choose With photographs or change the filter.','empty'));
-   $('#photoNav').hidden=true;return;
+ const count=visibleSpecies.length;
+ speciesCursor=Math.max(0,Math.min(speciesCursor,Math.max(0,count-1)));
+ $('#prevSpecies').disabled=!count||speciesCursor===0;
+ $('#nextSpecies').disabled=!count||speciesCursor>=count-1;
+ $('#speciesNav').hidden=count===0;
+ if(!count){
+   $('#speciesPosition').textContent='No matching specimens';
+   root.append(create('div','No species match your filters. Open Tools & progress to change the filter.','empty'));return;
  }
  const spec=visibleSpecies[speciesCursor],photos=photosFrom(spec);
+ $('#speciesPosition').textContent=(spec.scientific_name||'Unknown species')+' · '+(speciesCursor+1)+'/'+count;
  const card=create('section',undefined,'species');
- card.append(create('h2',spec.scientific_name||'Unknown species'));
- card.append(create('div',photos.length+' researched photo candidates · '+(spec.last_state||'research pending')+' · source photos are not yet approved','specdetails'));
- photoCursor=Math.max(0,Math.min(photoCursor,Math.max(0,photos.length-1)));
- if(photos.length){card.append(imageCard(spec,photos[photoCursor]))}
- else{card.append(create('p','No reference photographs retrieved yet. This species is underfilled.'))}
+ card.append(create('div',photos.length+' photo candidates · Unapproved references','specdetails'));
+ if(photos.length){
+   const gallery=create('div',undefined,'photos');
+   for(let i=0;i<photos.length;i++){
+     const photo=imageCard(spec,photos[i]);
+     const label=create('div','Photo '+(i+1)+' of '+photos.length,'photo-number');
+     photo.prepend(label);
+     gallery.append(photo);
+   }
+   card.append(gallery);
+ }else card.append(create('p','No reference photographs yet; this species needs further research.'));
  root.append(card);
- $('#photoNav').hidden=photos.length<2;
- $('#photoPosition').textContent=photos.length?('Photo '+(photoCursor+1)+'/'+photos.length):'No photos';
- $('#prevPhoto').disabled=photoCursor===0;
- $('#nextPhoto').disabled=photoCursor>=photos.length-1;
 }
 function navigateWithinImage(event){
  // Deliberately avoid swipes begun on form controls; preserve vertical scrolling and editing.
@@ -203,15 +216,13 @@ async function load(){
   }
   render();notify('Public research index unavailable ('+lastError+'). Open index JSON offline.');
 }
-$('#indexUpload').addEventListener('change',async event=>{const f=event.target.files?.[0];if(!f)return;try{const o=JSON.parse(await f.text());if(o.schema!=='VNMV1_PUBLIC_PHOTO_CANDIDATES_V1'||typeof o.species!=='object')throw Error('Invalid index');dataset=o;speciesCursor=0;photoCursor=0;render();notify('Loaded local index: '+f.name)}catch(e){notify('Could not load index: '+e.message)}});
-$('#filter').addEventListener('input',()=>{speciesCursor=0;photoCursor=0;render()});
-$('#statusFilter').addEventListener('change',()=>{speciesCursor=0;photoCursor=0;render()});
+$('#indexUpload').addEventListener('change',async event=>{const f=event.target.files?.[0];if(!f)return;try{const o=JSON.parse(await f.text());if(o.schema!=='VNMV1_PUBLIC_PHOTO_CANDIDATES_V1'||typeof o.species!=='object')throw Error('Invalid index');dataset=o;speciesCursor=0;render();notify('Loaded local index: '+f.name)}catch(e){notify('Could not load index: '+e.message)}});
+$('#filter').addEventListener('input',()=>{speciesCursor=0;render()});
+$('#statusFilter').addEventListener('change',()=>{speciesCursor=0;render()});
 $('#reload').addEventListener('click',load);
 $('#prevSpecies').addEventListener('click',()=>changeSpecies(-1));
 $('#nextSpecies').addEventListener('click',()=>changeSpecies(1));
-$('#prevPhoto').addEventListener('click',()=>changePhoto(-1));
-$('#nextPhoto').addEventListener('click',()=>changePhoto(1));
-$('#openHelp').addEventListener('click',()=>notify("Web browser: Download review JSON below, then upload to Google Drive folder 09 using Drive. Android APK: use the app's native Save JSON to Drive button. Photo archive ZIPs are NOT review JSON files."));
+$('#openHelp').addEventListener('click',()=>notify("APK: use its fixed bottom SAVE JSON → DRIVE button and select Google Drive > folder 09. Browser only: use Download backup review JSON then manually upload it in Drive. Photo archive ZIP files are not review JSON."));
 $('#reviewUpload').addEventListener('change',async event=>{
  const file=event.target.files?.[0];if(!file)return;
  try{
