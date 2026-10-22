@@ -134,7 +134,7 @@ class PublicTests(unittest.TestCase):
             with zipfile.ZipFile(out/'shard-0.zip') as z:self.assertEqual(z.read(p['archive_member']),photo)
     def test_html_review_exports_without_public_write(self):
         html=(BASE/'review/index.html').read_text()
-        self.assertIn('Export decisions',html)
+        self.assertIn('Download backup review JSON',html)
         self.assertIn('localStorage',html)
         self.assertIn('Research-only link',html)
         self.assertIn('rights_checked',html)
