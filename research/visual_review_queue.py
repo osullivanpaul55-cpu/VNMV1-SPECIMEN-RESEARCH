@@ -77,18 +77,37 @@ def main():
     p.add_argument("--start",type=int,default=0)
     p.add_argument("--count",type=int,default=12)
     p.add_argument("--contact-sheet",action="store_true")
+    p.add_argument("--skip-reviewed",action="store_true",
+                   help="Queue only photos without a validated ChatGPT visual draft in the review manifest")
+    p.add_argument("--reviews",default="data/photo_visual_reviews.json")
     a=p.parse_args()
     pool=entries(json.loads(Path(a.index).read_text()))
+    reviewed=set()
+    if a.skip_reviewed:
+        d=json.loads(Path(a.reviews).read_text())
+        assert d.get("schema")=="VNMV1_PUBLIC_VISUAL_RECOMMENDATIONS_V1"
+        for item in pool:
+            known=d.get("photos",{}).get(item["photo_key"])
+            if (isinstance(known,dict) and known.get("source_image_sha256")==item["source_image_sha256"]
+                    and known.get("reviewed_actual_image") is True
+                    and known.get("analysis_method")=="CHATGPT_VISUAL_DRAFT"):
+                reviewed.add(item["photo_key"])
+        pending=[item for item in pool if item["photo_key"] not in reviewed]
+    else:
+        pending=pool
     assert 0<=a.start and 1<=a.count<=36
-    rows=pool[a.start:a.start+a.count]
+    rows=pending[a.start:a.start+a.count]
     folder=Path(a.out);folder.mkdir(parents=True,exist_ok=True)
     manifest={"schema":"VNMV1_PHOTO_VISUAL_REVIEW_HANDOFF_V1",
       "total_indexed_public_candidates":len(pool),
+      "already_visually_reviewed":len(reviewed),
+      "remaining_unreviewed_candidates":len(pending),
+      "selection_mode":"NEXT_UNREVIEWED" if a.skip_reviewed else "INDEX_OFFSET",
       "start":a.start,"count":len(rows),"model_visual_analysis_completed":0,
       "photo_review_items":rows,
       "import_contract":"data/photo_visual_reviews.json",
       "notice":"Reference images are not source specimen originals. Photo-based draft recommendations must be annotated after observing exact imagery; do not assert resemblance to private originals."}
     if a.contact_sheet and rows:sheet(rows,folder/"public_photo_contact_sheet.png")
     (folder/"review_packet.json").write_text(json.dumps(manifest,indent=2)+"\n")
-    print(f"Queued {len(rows)} photos from {len(pool)} candidate photos; no visual approvals")
+    print(f"Queued {len(rows)} photo(s) from {len(pool)} total public candidates; {len(reviewed)} already visually reviewed; {len(pending)} pending; no visual approvals granted")
 if __name__=="__main__":main()
