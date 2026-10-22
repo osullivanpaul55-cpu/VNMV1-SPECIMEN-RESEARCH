@@ -26,7 +26,7 @@
 <details id="reviewSettings" class="review-settings"><summary>VNMV1 Reference Review <span>Tools & progress ▾</span></summary>
 <header><div><h1>VNMV1 · Specimen reference review</h1><p class="muted">Independent photo research • one species pool • human-reviewed decisions</p></div><div class="muted">Candidate references only · No image generation</div></header>
 <div class="note"><strong>Quick review:</strong> select sex, pose, notes or Reject for each photograph. Your notes and Resembles assessment save on the phone automatically. Swipe horizontally to change species; scroll downward through photos for that species. References and available text-based suggestions are preselected for retention. Correct our proposals where necessary; biological and photo rights approval remain separate. Licence/identity checks are only needed later for production eligibility.</div>
-<section class="stats" aria-label="Research counts"><div class="stat"><b id="speciesCount">0</b><span>Species in index</span></div><div class="stat"><b id="candidateCount">0</b><span>Photo candidates</span></div><div class="stat"><b id="sourceLeadCount">0</b><span>Research-only photo links</span></div><div class="stat"><b id="decisionCount">0</b><span>Decisions entered</span></div><div class="stat"><b id="floorCount">0</b><span>Species with 9+ candidates</span></div></section>
+<section class="stats" aria-label="Research counts"><div class="stat"><b id="speciesCount">0</b><span>Species in index</span></div><div class="stat"><b id="candidateCount">0</b><span>Photo candidates</span></div><div class="stat"><b id="sourceLeadCount">0</b><span>Research-only photo links</span></div><div class="stat"><b id="decisionCount">0</b><span>Decisions entered</span></div><div class="stat"><b id="aiDraftCount">0</b><span>AI draft reviews</span></div><div class="stat"><b id="floorCount">0</b><span>Species with 9+ candidates</span></div></section>
 <div class="controls"><input id="filter" type="search" placeholder="Find species…" aria-label="Filter species"><select id="statusFilter" aria-label="Filter research state"><option value="all">All species</option><option value="photos" selected>With photographs or research links</option><option value="under">Fewer than nine candidates</option><option value="decided">My reviewed photographs</option></select><button class="secondary" id="reload">Refresh public index</button></div>
 <div class="controls"><label class="upload" for="reviewUpload">Import saved review JSON</label><input id="reviewUpload" type="file" accept="application/json,.json"><button class="secondary" id="openHelp" type="button">Where do I save?</button></div>
 <details id="advancedIndex"><summary>Advanced: load offline research index</summary><input style="max-width:180px" id="indexUpload" type="file" accept="application/json,.json"></details>
@@ -192,7 +192,21 @@ function leadCard(p){
  info.append(create('small','No licence, identity, anatomical or ImageGen approval is implied by selecting a proposal.'));
  article.append(info);return article;
 }
-function stats(){let names=Object.values(dataset.species||{});$('#speciesCount').textContent=names.length;$('#candidateCount').textContent=names.reduce((a,x)=>a+photosFrom(x).length,0);$('#sourceLeadCount').textContent=names.reduce((a,x)=>a+leadsFrom(x).length,0);$('#floorCount').textContent=names.filter(x=>photosFrom(x).length>=9).length;const n=Object.values(decisions).filter(reviewIsEntered).length;$('#decisionCount').textContent=n;}
+function stats(){
+ let names=Object.values(dataset.species||{});
+ const photos=names.flatMap(x=>photosFrom(x));
+ $('#speciesCount').textContent=names.length;
+ $('#candidateCount').textContent=photos.length;
+ $('#sourceLeadCount').textContent=names.reduce((a,x)=>a+leadsFrom(x).length,0);
+ $('#floorCount').textContent=names.filter(x=>photosFrom(x).length>=9).length;
+ $('#decisionCount').textContent=Object.values(decisions).filter(reviewIsEntered).length;
+ const checked=photos.filter(p=>{
+  const x=visualDrafts[p.photo_key];
+  return !!x&&x.source_image_sha256===p.sha256&&x.reviewed_actual_image===true
+    &&x.analysis_method==='CHATGPT_VISUAL_DRAFT';
+ }).length;
+ $('#aiDraftCount').textContent=checked+' / '+photos.length;
+}
 function reviewIsEntered(d){return !!d&&(!d.proposal_prepopulated_not_human_reviewed||d.reviewed_by_human===true)&&(d.resembles_original&&d.resembles_original!=='NOT_ASSESSED'||d.reviewed_by_human===true||!!d.sex&&d.sex!=='UNKNOWN'||!!d.decision&&d.decision!=='PENDING'||!!d.pose_id&&d.pose_id!=='UNREVIEWED'||!!d.notes?.trim()||!!d.reject_reason?.trim())}
 function reviewDecisionChoice(d){return d.requested_decision || (d.decision==='ACCEPT_FEMALE'||d.decision==='ACCEPT_MALE'?'ACCEPT_REFERENCE':d.decision)||'PENDING'}
 function reviewSex(d){return d.sex || (d.decision==='ACCEPT_FEMALE'?'FEMALE':d.decision==='ACCEPT_MALE'?'MATURE_MALE':'UNKNOWN')}
@@ -205,7 +219,9 @@ const retainLabel=create('label',undefined,'check');const retainBox=create('inpu
 retainLabel.append(retainBox,create('span','Keep this photo in the research packet — preselected'));info.append(retainLabel);
 const suggestLabel=create('label',undefined,'check');const suggestBox=create('input');suggestBox.type='checkbox';suggestBox.checked=d.retain_suggested_classifications!==false;
 suggestLabel.append(suggestBox,create('span','Keep proposed classifications — preselected, editable'));info.append(suggestLabel);
-info.append(create('small','Research starter (editable): KEEP as candidate · suggested sex '+sug.sex+' · pose '+sug.pose+' · stage '+sug.life_stage+' · Resembles NOT ASSESSED. Basis: '+sug.basis+' / confidence '+sug.confidence+'. These do not claim a visual scan.'));
+info.append(create('small',sug.basis==='CHATGPT_HASH_BOUND_VISUAL_DRAFT_NOT_VERIFIED'?
+ 'AI photo review prepared · Suggested pose '+sug.pose+' · Sex '+sug.sex+' · Confidence '+sug.confidence+'. Please correct my assessment where needed.':
+ 'Research candidate retained · Photo not yet individually inspected by AI. Unverified hints are not visual reviews.'));
 if(sug.visible_note){const ai=create('div',undefined,'review-status');ai.append(create('strong','AI photo observations — check & correct'));ai.append(create('small',sug.visible_note));info.append(ai)}
 const link=safeUrl(p.source_url,'www.inaturalist.org');if(link){const a=create('a','Open original iNaturalist observation');a.href=link;a.target='_blank';a.rel='noopener noreferrer';info.append(a)}
 // The archive ZIP is NOT a review JSON or installable APK. Keep it out of the mobile review controls.
@@ -215,7 +231,7 @@ for(const [value,title] of [['UNKNOWN','Uncertain / not classified'],['FEMALE','
 sexSelect.value=reviewSex(d)!=='UNKNOWN'?reviewSex(d):sug.sex;info.append(sexSelect);
 info.append(create('small','Suggested sex: '+sug.sex+' · evidence '+sug.basis+'. Unknown means no visual sex inference has been run.'));
 info.append(create('small','Recommended stage: '+sug.life_stage+' · '+sug.basis));
-if(sug.visible_note){const ai=create('div',undefined,'review-status');ai.append(create('strong','AI photo observations — check & correct'));ai.append(create('small',sug.visible_note));info.append(ai)}
+
 info.append(create('small','Your sex classification saves immediately. It does not approve a photograph or assert independently verified sex.'));
 info.append(create('label','Resembles my card original?'));
 const resembles=create('select');for(const [id,label] of RESEMBLES){const o=create('option',label);o.value=id;resembles.append(o)}
@@ -237,7 +253,7 @@ const reviewStatus=create('small','', 'review-status');info.append(reviewStatus)
 info.append(create('label','Camera pose — review the actual photo'));const poseSelect=create('select');
 for(const [value,title] of POSES){const opt=create('option',title);opt.value=value;poseSelect.append(opt)}
 poseSelect.value=POSES.some(x=>x[0]===d.pose_id)&&d.pose_id!=='UNREVIEWED'?d.pose_id:sug.pose;info.append(poseSelect);
-info.append(create('small','Preselected suggestion: '+sug.pose+' · source: '+sug.basis+'. Not yet human-verified.'));
+info.append(create('small','Camera angle proposed by AI: '+sug.pose+' · Confidence '+sug.confidence+'. You can amend it.'));
 info.append(create('label','Life-stage suggestion (edit if necessary)'));
 const stageSelect=create('select');
 for(const id of LIFE_STAGES){const opt=create('option',id.replaceAll('_',' '));opt.value=id;stageSelect.append(opt)}
