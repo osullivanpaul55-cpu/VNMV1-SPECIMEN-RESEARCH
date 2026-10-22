@@ -12,6 +12,7 @@ on:
       - "research/visual_review_queue.py"
       - "research/validate_visual_reviews.py"
       - "data/photo_visual_reviews.json"
+      - "review/index.html"
       - ".github/workflows/visual-photo-reference-packets.yml"
 permissions:
   contents: read
