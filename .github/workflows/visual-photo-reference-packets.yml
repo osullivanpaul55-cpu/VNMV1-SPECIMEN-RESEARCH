@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       cycle:
-        description: "Zero-based batch of up to 60 research references"
+        description: "Offset cycle through the unreviewed research-photo queue (0 = next 60)"
         required: false
         default: "0"
   push:
@@ -54,7 +54,7 @@ jobs:
           [[ "$CYCLE" =~ ^[0-9]+$ ]]
           START=$((10#$CYCLE * 60 + 10#$SHARD * 12))
           python research/visual_review_queue.py \
-            --start "$START" --count 12 --contact-sheet \
+            --start "$START" --count 12 --contact-sheet --skip-reviewed \
             --out "visual-review-shard-$SHARD"
       - uses: actions/upload-artifact@v4
         with:
