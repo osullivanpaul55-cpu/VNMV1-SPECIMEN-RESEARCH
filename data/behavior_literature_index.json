@@ -1,10 +1,562 @@
 {
   "schema": "VNMV1_PUBLIC_BEHAVIOUR_LITERATURE_CANDIDATES_V1",
-  "last_cycle": -1,
+  "last_cycle": 0,
   "named_species_in_seed": 195,
-  "species_searched": 0,
-  "species_with_literature_leads": 0,
+  "species_searched": 24,
+  "species_with_literature_leads": 14,
   "research_completed_first_sweep": false,
-  "last_research_at_utc": null,
-  "species": {}
+  "last_research_at_utc": "2026-10-22T16:24:09.797966+00:00",
+  "species": {
+    "f3787c4b515c0a91": {
+      "research_taxon": "Abdomegaphobema mesomelas",
+      "taxon_key": "f3787c4b515c0a91",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "97618dd4f3162e7c": {
+      "research_taxon": "Acanthoscurria chacoana",
+      "taxon_key": "97618dd4f3162e7c",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "7d0da68d2f392007": {
+      "research_taxon": "Acanthoscurria geniculata",
+      "taxon_key": "7d0da68d2f392007",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "0de3235ee2b517f0": {
+      "research_taxon": "Acanthoscurria maga",
+      "taxon_key": "0de3235ee2b517f0",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "341049924c7d674c": {
+      "research_taxon": "Androctonus australis",
+      "taxon_key": "341049924c7d674c",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1002/psc.70125",
+          "url": "https://doi.org/10.1002/psc.70125",
+          "title": "Chemical Synthesis and Biological Evaluation of the Insecticidal Peptide AaIT5 Identified From the Androctonus australis Venom.",
+          "published_year": 2026,
+          "behavior_text_hints_unverified": [
+            "EGG_SAC_PREPARATION"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.3390/biom16050681",
+          "url": "https://doi.org/10.3390/biom16050681",
+          "title": "Interaction of Human Lymphocyte Scavenger Receptors CD5 and CD6 with Toxins from &lt;i&gt;Naja haje&lt;/i&gt;, &lt;i&gt;Androctonus australis&lt;/i&gt; and &lt;i&gt;Apis mellifera&lt;/i&gt; Venoms.",
+          "published_year": 2026,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1016/j.toxicon.2025.108611",
+          "url": "https://doi.org/10.1016/j.toxicon.2025.108611",
+          "title": "Antinociceptive and neuromodulatory effects of the scorpion venom tetrapeptide tetrascorpin-1 in a long-lasting pain hypersensitivity model in mice.",
+          "published_year": 2025,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1016/j.toxicon.2025.108265",
+          "url": "https://doi.org/10.1016/j.toxicon.2025.108265",
+          "title": "Immunomodulatory effect of selective COX-2 inhibitor celecoxib on the neuropathological disorders and immunoinflammatory response induced by Kaliotoxin from Androctonus australis venom.",
+          "published_year": 2025,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "8d054056cc528193": {
+      "research_taxon": "Anqasha picta",
+      "taxon_key": "8d054056cc528193",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "96535d9cb2259f7a": {
+      "research_taxon": "Aphonopelma bicoloratum",
+      "taxon_key": "96535d9cb2259f7a",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "c12a306b45d07e09": {
+      "research_taxon": "Aphonopelma gabeli",
+      "taxon_key": "c12a306b45d07e09",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "f0625506729d3b63": {
+      "research_taxon": "Aphonopelma hentzi",
+      "taxon_key": "f0625506729d3b63",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1101/2023.08.08.552527",
+          "url": "https://doi.org/10.1101/2023.08.08.552527",
+          "title": "A taxon-restricted duplicate of Iroquois3 is required for patterning the spider waist",
+          "published_year": 2023,
+          "behavior_text_hints_unverified": [
+            "SCORPION_PECTINAL_SUBSTRATE_SCAN",
+            "COLEOPTERA_DEFENSIVE_ABDOMEN"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1371/journal.pbio.3002771",
+          "url": "https://doi.org/10.1371/journal.pbio.3002771",
+          "title": "A taxon-restricted duplicate of Iroquois3 is required for patterning the spider waist.",
+          "published_year": 2024,
+          "behavior_text_hints_unverified": [
+            "COLEOPTERA_DEFENSIVE_ABDOMEN"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "172d288cf0e6b6e7": {
+      "research_taxon": "Aphonopelma moderatum",
+      "taxon_key": "172d288cf0e6b6e7",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.3897/zookeys.560.6264",
+          "url": "https://doi.org/10.3897/zookeys.560.6264",
+          "title": "Taxonomic revision of the tarantula genus Aphonopelma Pocock, 1901 (Araneae, Mygalomorphae, Theraphosidae) within the United States.",
+          "published_year": 2016,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "23e851712bf8b7a1": {
+      "research_taxon": "Aphonopelma mooreae",
+      "taxon_key": "23e851712bf8b7a1",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "5baeca6cbc6b4404": {
+      "research_taxon": "Aphonopelma seemanni",
+      "taxon_key": "5baeca6cbc6b4404",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1242/jeb.069690",
+          "url": "https://doi.org/10.1242/jeb.069690",
+          "title": "Tarantulas do not shoot silk from their legs: experimental evidence in four species of New World tarantulas.",
+          "published_year": 2012,
+          "behavior_text_hints_unverified": [
+            "CLIMBING_VERTICAL",
+            "SCORPION_PECTINAL_SUBSTRATE_SCAN"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1242/jeb.055657",
+          "url": "https://doi.org/10.1242/jeb.055657",
+          "title": "Tarantulas cling to smooth vertical surfaces by secreting silk from their feet.",
+          "published_year": 2011,
+          "behavior_text_hints_unverified": [
+            "CLIMBING_VERTICAL",
+            "SCORPION_PECTINAL_SUBSTRATE_SCAN",
+            "COLEOPTERA_DEFENSIVE_ABDOMEN"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1038/nature08404",
+          "url": "https://doi.org/10.1038/nature08404",
+          "title": "Silk production from tarantula feet questioned.",
+          "published_year": 2009,
+          "behavior_text_hints_unverified": [
+            "CLIMBING_VERTICAL",
+            "COLEOPTERA_DEFENSIVE_ABDOMEN"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1038/443407a",
+          "url": "https://doi.org/10.1038/443407a",
+          "title": "Biomaterials: silk-like secretion from tarantula feet.",
+          "published_year": 2006,
+          "behavior_text_hints_unverified": [
+            "CLIMBING_VERTICAL",
+            "PREY_CAPTURE",
+            "AMBLYPYGI_RAPTORY_PEDIPALP_STRIKE",
+            "CHILOPODA_FORCIPULE_STRIKE"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "ca14b57418eb10e3": {
+      "research_taxon": "Asbolus verrucosus",
+      "taxon_key": "ca14b57418eb10e3",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1649/0010-065x-76.2.237",
+          "url": "https://doi.org/10.1649/0010-065x-76.2.237",
+          "title": "Reflex Bleeding in Tonically Immobilized Larvae Causes Debris-Based Camouflage in the Blue Death-Feigning Beetle, Asbolus verrucosus LeConte (Coleoptera: Tenebrionidae)",
+          "published_year": 2022,
+          "behavior_text_hints_unverified": [
+            "CRYPSIS",
+            "PREY_CAPTURE",
+            "AMBLYPYGI_RAPTORY_PEDIPALP_STRIKE",
+            "CHILOPODA_FORCIPULE_STRIKE",
+            "COLEOPTERA_THANATOSIS"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1002/arch.21916",
+          "url": "https://doi.org/10.1002/arch.21916",
+          "title": "Comparative genomic analysis of ABC transporter genes in Tenebrio molitor and four other tenebrionid beetles (Coleoptera: Tenebrionidea).",
+          "published_year": 2022,
+          "behavior_text_hints_unverified": [
+            "COURTSHIP_DISPLAY"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "4363b81658966c7a": {
+      "research_taxon": "Aspinochilus rufus",
+      "taxon_key": "4363b81658966c7a",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "f2cd37c5844fea7c": {
+      "research_taxon": "Atypus karschi",
+      "taxon_key": "f2cd37c5844fea7c",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1371/journal.pone.0261695",
+          "url": "https://doi.org/10.1371/journal.pone.0261695",
+          "title": "Atypus karschi Dönitz, 1887 (Araneae: Atypidae): An Asian purse-web spider established in Pennsylvania, USA.",
+          "published_year": 2022,
+          "behavior_text_hints_unverified": [
+            "RESTING_NATURAL"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1101/2021.12.09.471987",
+          "url": "https://doi.org/10.1101/2021.12.09.471987",
+          "title": "Atypus karschi Dönitz, 1887 (Araneae: Atypidae): an Asian purse-web spider established in Pennsylvania, USA",
+          "published_year": 2021,
+          "behavior_text_hints_unverified": [
+            "RESTING_NATURAL",
+            "CLIMBING_VERTICAL"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1080/23802359.2021.1959443",
+          "url": "https://doi.org/10.1080/23802359.2021.1959443",
+          "title": "The complete mitochondrial genome of Atypus karschi (Araneae, Atypidae) with phylogenetic consideration.",
+          "published_year": 2021,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "71df21aa4aa68053": {
+      "research_taxon": "Augacephalus ezendami",
+      "taxon_key": "71df21aa4aa68053",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1038/srep29538",
+          "url": "https://doi.org/10.1038/srep29538",
+          "title": "Molecular basis of the remarkable species selectivity of an insecticidal sodium channel toxin from the African spider Augacephalus ezendami.",
+          "published_year": 2016,
+          "behavior_text_hints_unverified": [
+            "RESTING_NATURAL"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "87b1db096a7ff2af": {
+      "research_taxon": "Avicularia avicularia",
+      "taxon_key": "87b1db096a7ff2af",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1016/j.msec.2020.111219",
+          "url": "https://doi.org/10.1016/j.msec.2020.111219",
+          "title": "Correlating the secondary protein structure of natural spider silk with its guiding properties for Schwann cells.",
+          "published_year": 2020,
+          "behavior_text_hints_unverified": [
+            "RESTING_NATURAL",
+            "MOLT_IN_PROGRESS"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "cd5e7cdf8a28e77a": {
+      "research_taxon": "Avicularia geroldi",
+      "taxon_key": "cd5e7cdf8a28e77a",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.3897/zookeys.659.10717",
+          "url": "https://doi.org/10.3897/zookeys.659.10717",
+          "title": "Taxonomic revision and cladistic analysis of Avicularia Lamarck, 1818 (Araneae, Theraphosidae, Aviculariinae) with description of three new aviculariine genera.",
+          "published_year": 2017,
+          "behavior_text_hints_unverified": [
+            "ALERT_ELEVATED",
+            "SCORPION_BROOD_ON_BACK"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "c357bc20b1e14da3": {
+      "research_taxon": "Avicularia huriana",
+      "taxon_key": "c357bc20b1e14da3",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.3897/zookeys.659.10717",
+          "url": "https://doi.org/10.3897/zookeys.659.10717",
+          "title": "Taxonomic revision and cladistic analysis of Avicularia Lamarck, 1818 (Araneae, Theraphosidae, Aviculariinae) with description of three new aviculariine genera.",
+          "published_year": 2017,
+          "behavior_text_hints_unverified": [
+            "ALERT_ELEVATED",
+            "SCORPION_BROOD_ON_BACK"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "581a1aedb63c915c": {
+      "research_taxon": "Avicularia juruensis",
+      "taxon_key": "581a1aedb63c915c",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1101/2022.10.09.511474",
+          "url": "https://doi.org/10.1101/2022.10.09.511474",
+          "title": "How a tarantula can help treat infections: Avicularia juruensis ’s theraphotoxins that also act as antimicrobials",
+          "published_year": 2022,
+          "behavior_text_hints_unverified": [
+            "ALERT_ELEVATED"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "d1651bd150c7f91e": {
+      "research_taxon": "Avicularia minatrix",
+      "taxon_key": "d1651bd150c7f91e",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.3897/zookeys.659.10717",
+          "url": "https://doi.org/10.3897/zookeys.659.10717",
+          "title": "Taxonomic revision and cladistic analysis of Avicularia Lamarck, 1818 (Araneae, Theraphosidae, Aviculariinae) with description of three new aviculariine genera.",
+          "published_year": 2017,
+          "behavior_text_hints_unverified": [
+            "ALERT_ELEVATED",
+            "SCORPION_BROOD_ON_BACK"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "0404458defd2061b": {
+      "research_taxon": "Avicularia rufa",
+      "taxon_key": "0404458defd2061b",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.3897/zookeys.659.10717",
+          "url": "https://doi.org/10.3897/zookeys.659.10717",
+          "title": "Taxonomic revision and cladistic analysis of Avicularia Lamarck, 1818 (Araneae, Theraphosidae, Aviculariinae) with description of three new aviculariine genera.",
+          "published_year": 2017,
+          "behavior_text_hints_unverified": [
+            "ALERT_ELEVATED",
+            "SCORPION_BROOD_ON_BACK"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "c10790afc9a1e22c": {
+      "research_taxon": "Avicularia variegata",
+      "taxon_key": "c10790afc9a1e22c",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.3897/zookeys.659.10717",
+          "url": "https://doi.org/10.3897/zookeys.659.10717",
+          "title": "Taxonomic revision and cladistic analysis of Avicularia Lamarck, 1818 (Araneae, Theraphosidae, Aviculariinae) with description of three new aviculariine genera.",
+          "published_year": 2017,
+          "behavior_text_hints_unverified": [
+            "ALERT_ELEVATED",
+            "SCORPION_BROOD_ON_BACK"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "9f5855dee85b54b1": {
+      "research_taxon": "Bacillochilus xenostridulans",
+      "taxon_key": "9f5855dee85b54b1",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    }
+  }
 }
