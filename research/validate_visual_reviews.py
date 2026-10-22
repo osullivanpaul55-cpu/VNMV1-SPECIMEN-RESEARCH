@@ -11,6 +11,7 @@ SEXES={"UNKNOWN","FEMALE","MATURE_MALE","JUVENILE_SUBADULT"}
 STAGES={"UNKNOWN","MATURE_MALE","ADULT_FEMALE_MATURE","ADULT_FEMALE_YOUNGER",
         "JUVENILE_SPIDERLING"}
 CONF={"LOW","MEDIUM","HIGH","UNKNOWN"}
+SUITABILITY={"PENDING","ACCEPT_REFERENCE","STRUCTURAL_ONLY","HABITAT_ONLY","NEEDS_RESEARCH","REJECT"}
 def validate(index,proposals):
     errors=[]
     if proposals.get("schema")!="VNMV1_PUBLIC_VISUAL_RECOMMENDATIONS_V1":errors.append("BAD_SCHEMA")
@@ -36,6 +37,13 @@ def validate(index,proposals):
         if p.get("recommended_sex","UNKNOWN") not in SEXES:errors.append(f"{key}:BAD_SEX")
         if p.get("recommended_life_stage","UNKNOWN") not in STAGES:errors.append(f"{key}:BAD_STAGE")
         if p.get("confidence","UNKNOWN") not in CONF:errors.append(f"{key}:BAD_CONFIDENCE")
+        if p.get("recommended_suitability","PENDING") not in SUITABILITY:
+            errors.append(f"{key}:BAD_SUITABILITY")
+        if p.get("recommended_suitability")=="HABITAT_ONLY":
+            if p.get("specimen_visible") is not False:errors.append(f"{key}:HABITAT_SPECIMEN_CONFLICT")
+            if p.get("recommended_visible_anatomy"):errors.append(f"{key}:HABITAT_ONLY_CANNOT_PROVE_ANATOMY")
+            if p.get("recommended_sex")!="UNKNOWN":errors.append(f"{key}:HABITAT_ONLY_CANNOT_PROVE_SEX")
+            if p.get("recommended_pose_id")!="UNREVIEWED":errors.append(f"{key}:HABITAT_ONLY_CANNOT_PROVE_POSE")
         for field in ["recommended_visible_anatomy","recommended_behaviours"]:
             tags=p.get(field,[])
             if not isinstance(tags,list) or len(tags)>56 or any(not isinstance(t,str) or len(t)>80 for t in tags):
