@@ -1,0 +1,63 @@
+name: Prepare VNMV1 visual-photo review batches
+on:
+  workflow_dispatch:
+    inputs:
+      cycle:
+        description: "Zero-based batch of up to 60 research references"
+        required: false
+        default: "0"
+  push:
+    branches: [main]
+    paths:
+      - "research/visual_review_queue.py"
+      - "research/validate_visual_reviews.py"
+      - "data/photo_visual_reviews.json"
+      - ".github/workflows/visual-photo-reference-packets.yml"
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate hash-bound visual proposals
+        run: python research/validate_visual_reviews.py
+      - name: Check public page review JavaScript syntax
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          p=Path('review/index.html').read_text()
+          blocks=re.findall(r'<script[^>]*>(.*?)</script>',p,re.S)
+          assert blocks
+          Path('/tmp/vnmv1_review_ui.js').write_text(blocks[-1])
+          PY
+          node --check /tmp/vnmv1_review_ui.js
+  prepare:
+    needs: validate
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4]
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m pip install Pillow
+      - name: Assemble research candidate photos for visual review
+        env:
+          CYCLE: ${{ github.event.inputs.cycle || '0' }}
+          SHARD: ${{ matrix.shard }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$CYCLE" =~ ^[0-9]+$ ]]
+          START=$((10#$CYCLE * 60 + 10#$SHARD * 12))
+          python research/visual_review_queue.py \
+            --start "$START" --count 12 --contact-sheet \
+            --out "visual-review-shard-$SHARD"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: vnmv1-public-visual-review-shard-${{ matrix.shard }}
+          path: visual-review-shard-${{ matrix.shard }}/
+          if-no-files-found: error
+          retention-days: 30
