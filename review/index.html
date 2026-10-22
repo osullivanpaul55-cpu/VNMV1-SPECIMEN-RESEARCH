@@ -158,7 +158,7 @@ info.append(create('label','Sex or maturity — save independently of approval')
 const sexSelect=create('select');
 for(const [value,title] of [['UNKNOWN','Uncertain / not classified'],['FEMALE','Female'],['MATURE_MALE','Mature male'],['JUVENILE_SUBADULT','Juvenile / subadult']]){const opt=create('option',title);opt.value=value;sexSelect.append(opt)}
 sexSelect.value=reviewSex(d);info.append(sexSelect);
-info.append(create('small','Recommended sex: '+(p.preanalysis?.analysis_method==='VALIDATED_VISUAL_ANALYSIS'&&p.preanalysis?.source_image_sha256===p.sha256?(p.preanalysis.recommended_life_stage||'UNKNOWN'):'UNKNOWN — not visually analysed'));
+info.append(create('small','Recommended stage: '+((p.preanalysis?.analysis_method==='VALIDATED_VISUAL_ANALYSIS'&&p.preanalysis?.source_image_sha256===p.sha256)?(p.preanalysis.recommended_life_stage||'UNKNOWN'):'UNKNOWN — not visually analysed')));
 info.append(create('small','Your sex classification saves immediately. It does not approve a photograph or assert independently verified sex.'));
 info.append(create('label','Photo suitability / your review decision'));
 const select=create('select');
