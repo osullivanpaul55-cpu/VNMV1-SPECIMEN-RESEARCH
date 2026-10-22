@@ -226,6 +226,19 @@ const specieslabel=create('label',undefined,'check');const speciesbox=create('in
 const rightslabel=create('label',undefined,'check');const rightsbox=create('input');rightsbox.type='checkbox';rightsbox.checked=!!d.rights_checked;rightslabel.append(rightsbox,create('span','I checked photographer, source and intended-use licence'));verification.append(rightslabel);
 
 info.append(verification);
+const detailBox=create('details');detailBox.className='details-checks';
+detailBox.append(create('summary','Fine morphology / anatomy check — optional'));
+detailBox.append(create('small','The taxon atlas supplies structural topology and pose QA, not species-specific diagnostic morphology. No repeated digit-tip, head/rear or appendage coordinates are required unless evidence conflicts or an unusual feature needs review.'));
+detailBox.append(create('label','Extra evidence needed for this photograph?'));
+const detailStatus=create('select');
+for(const [id,label] of [['ATLAS_GUIDANCE_SUFFICIENT','Atlas/general guidance sufficient'],['SPECIES_MORPHOLOGY_REVIEW','Review species-specific morphology'],['LANDMARK_REVIEW_REQUIRED','Anatomical landmark requires inspection'],['CONFLICT_HELD','Conflicting or unclear anatomy — hold']]){const o=create('option',label);o.value=id;detailStatus.append(o)}
+detailStatus.value=d.anatomy_followup_status||'ATLAS_GUIDANCE_SUFFICIENT';
+detailBox.append(detailStatus);
+detailBox.append(create('label','Specific feature to verify (only where necessary)'));
+const detailNotes=create('textarea');detailNotes.rows=2;detailNotes.value=d.anatomy_followup_notes||'';detailNotes.placeholder='Example: male palpal embolus not visible; confirm with matched species/sex reference';
+detailBox.append(detailNotes);
+detailBox.append(create('small','No pixel-coordinate markers are invented. Source-specific positions must be anchored to inspected images or existing registered Human Gold. Unreviewed photo-text suggestions stay unverified.'));
+info.append(detailBox);
 info.append(create('label','Notes or anatomy correction'));const notes=create('textarea');notes.value=d.notes||'';notes.placeholder='For example: female, lighting exaggerates orange; pedipalps obscured…';info.append(notes);
 info.append(create('label','Rejection reason (required if rejected)'));
 const rejectReason=create('textarea');rejectReason.value=d.reject_reason||'';rejectReason.placeholder='Why should this photo not be used? e.g. wrong species, blurred, poor anatomy';info.append(rejectReason);
@@ -256,16 +269,19 @@ const update=()=>{
     pose_id:poseSelect.value,pose_type:POSE_V11[poseSelect.value]||'UNKNOWN',
     pose_review_status:poseSelect.value==='UNREVIEWED'?'UNREVIEWED':'HUMAN_LABEL_NOT_INDEPENDENTLY_PROMOTED',
     reject_reason:choice==='REJECT'?rejection:null,notes:notes.value,
+    anatomy_followup_status:detailStatus.value,anatomy_followup_notes:detailNotes.value.trim(),
+    anatomical_coordinate_review:'NOT_REQUIRED_BY_DEFAULT',atlas_pose_role:'STRUCTURAL_STAGING_AND_QA_ONLY',
     approved_for_imagegen:false,review_gate:choice==='REJECT'?'REJECTED':
       eligibleIntent?(readyForReview?'USER_REQUESTED_PENDING_PRIVATE_VALIDATION':'IDENTITY_OR_RIGHTS_CHECK_REQUIRED'):'UNAPPROVED_CANDIDATE'};
   decisions[key]=rec;save();
   reviewStatus.textContent=eligibleIntent&&!readyForReview?'Sex/pose saved. Suitability request held until both species and licence checks.':
     'Saved on this device. Use APK bottom Save to Drive to export.';
 };
-[select,sexSelect,poseSelect,stageSelect,retainBox,suggestBox,speciesbox,rightsbox].forEach(c=>c.addEventListener('change',()=>{if(c===select&&select.value!=='REJECT')rejectReason.value='';update()}));
+[select,sexSelect,poseSelect,stageSelect,retainBox,suggestBox,speciesbox,rightsbox,detailStatus].forEach(c=>c.addEventListener('change',()=>{if(c===select&&select.value!=='REJECT')rejectReason.value='';update()}));
 notes.addEventListener('input',update);
 behaviours.addEventListener('change',update);
 anatomy.addEventListener('change',update);
+detailNotes.addEventListener('change',update);
 rejectReason.addEventListener('input',()=>{if(select.value==='REJECT'&&rejectReason.value.trim().length>=3)update()});
 rejectButton.addEventListener('click',()=>{
   if(rejectReason.value.trim().length<3){reviewStatus.textContent='Enter a reason before rejecting this photo.';rejectReason.focus();return}
@@ -304,6 +320,7 @@ function render(){
  const spec=visibleSpecies[speciesCursor],photos=photosFrom(spec),leads=leadsFrom(spec);
  $('#speciesPosition').textContent=(spec.scientific_name||'Unknown species')+' · '+(speciesCursor+1)+'/'+count;
  const card=create('section',undefined,'species');
+ card.append(create('div','Atlas stages the pose and checks topology; the original/Human Gold governs its card, and these references refine taxon/sex morphology. Detailed landmarks only when evidence requires it.','specdetails'));
  card.append(create('div',photos.length+' archived photo candidates · '+leads.length+' link-only research leads','specdetails'));
  if(photos.length){
    const gallery=create('div',undefined,'photos');
