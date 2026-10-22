@@ -1,0 +1,2114 @@
+{
+  "schema": "VNMV1_PUBLIC_CARD_RESEARCH_REGISTRY_V1",
+  "revision": 1,
+  "origin": "Research candidate name index; no original photos, hashes, private identity evidence or source-sex claims",
+  "card_count": 526,
+  "named": 290,
+  "unresolved": 236,
+  "cards": {
+    "Card_0001": {
+      "research_taxon": "Abdomegaphobema mesomelas",
+      "identity_status": "USER_CONFIRMED_SOURCE_SPECIES"
+    },
+    "Card_0002": {
+      "research_taxon": "Acanthoscurria chacoana",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0003": {
+      "research_taxon": "Acanthoscurria geniculata",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0004": {
+      "research_taxon": "Acanthoscurria maga",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0005": {
+      "research_taxon": "Androctonus australis",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0006": {
+      "research_taxon": "Androctonus australis",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0007": {
+      "research_taxon": "Aphonopelma mooreae",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0008": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0009": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0010": {
+      "research_taxon": "Aphonopelma gabeli",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0011": {
+      "research_taxon": "Aphonopelma gabeli",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0012": {
+      "research_taxon": "Aphonopelma hentzi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0013": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0014": {
+      "research_taxon": "Aphonopelma moderatum",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0015": {
+      "research_taxon": "Aphonopelma moderatum",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0016": {
+      "research_taxon": "Aphonopelma mooreae",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0017": {
+      "research_taxon": "Aphonopelma seemanni",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0018": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0019": {
+      "research_taxon": "Atypus karschi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0020": {
+      "research_taxon": "Augacephalus ezendami",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0021": {
+      "research_taxon": "Avicularia juruensis",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0022": {
+      "research_taxon": "Barylestis occidentalis",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0023": {
+      "research_taxon": "Bonnetina minax",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0024": {
+      "research_taxon": "Bonnetina minax",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0025": {
+      "research_taxon": "Bonnetina papalutlensis",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0026": {
+      "research_taxon": "Bonnetina tanzeri",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0027": {
+      "research_taxon": "Bonnetina tanzeri",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0028": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0029": {
+      "research_taxon": "Brachypelma albiceps",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0030": {
+      "research_taxon": "Brachypelma auratum",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0031": {
+      "research_taxon": "Brachypelma auratum",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0032": {
+      "research_taxon": "Brachypelma auratum",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0033": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0034": {
+      "research_taxon": "Brachypelma baumgarteni",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0035": {
+      "research_taxon": "Brachypelma boehmei",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0036": {
+      "research_taxon": "Brachypelma emilia",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0037": {
+      "research_taxon": "Brachypelma hamorii",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0038": {
+      "research_taxon": "Brachypelma hamorii",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0039": {
+      "research_taxon": "Brachypelma hamorii",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0040": {
+      "research_taxon": "Brachypelma klaasi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0041": {
+      "research_taxon": "Brachypelma smithi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0042": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0043": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0044": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0045": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0046": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0047": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0048": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0049": {
+      "research_taxon": "Caribena versicolor",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0050": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0051": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0052": {
+      "research_taxon": "Ceratogyrus darlingi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0053": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0054": {
+      "research_taxon": "Ceratogyrus marshalli",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0055": {
+      "research_taxon": "Ceratogyrus marshalli",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0056": {
+      "research_taxon": "Ceratogyrus meridionalis",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0057": {
+      "research_taxon": "Ceratogyrus sanderi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0058": {
+      "research_taxon": "Chaetopelma olivaceum",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0059": {
+      "research_taxon": "Chilobrachys dyscolus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0060": {
+      "research_taxon": "Chilobrachys dyscolus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0061": {
+      "research_taxon": "Chilobrachys fimbriatus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0062": {
+      "research_taxon": "Chilobrachys huahini",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0063": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0064": {
+      "research_taxon": "Melopoeus minax",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0065": {
+      "research_taxon": "Chilobrachys natanicharum",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0066": {
+      "research_taxon": "Chilobrachys natanicharum",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0067": {
+      "research_taxon": "Chromatopelma cyaneopubescens",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0068": {
+      "research_taxon": "Cilantica devamatha",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0069": {
+      "research_taxon": "Cilantica devamatha",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0070": {
+      "research_taxon": "Citharacanthus cyaneus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0071": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0072": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0073": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0074": {
+      "research_taxon": "Cyriocosmus elegans",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0075": {
+      "research_taxon": "Cyriocosmus elegans",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0076": {
+      "research_taxon": "Cyriocosmus giganteus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0077": {
+      "research_taxon": "Cyriocosmus giganteus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0078": {
+      "research_taxon": "Cyriocosmus leetzi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0079": {
+      "research_taxon": "Cyriocosmus perezmilesi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0080": {
+      "research_taxon": "Cyriocosmus sellatus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0081": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0082": {
+      "research_taxon": "Melopoeus albostriatus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0083": {
+      "research_taxon": "Phormingochilus hatihati",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0084": {
+      "research_taxon": "Melopoeus lividus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0085": {
+      "research_taxon": "Melopoeus lividus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0086": {
+      "research_taxon": "Melopoeus minax",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0087": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0088": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0089": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0090": {
+      "research_taxon": "Melopoeus vonwirthi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0091": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0092": {
+      "research_taxon": "Encyocratella olivacea",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0093": {
+      "research_taxon": "Ephebopus cyanognathus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0094": {
+      "research_taxon": "Ephebopus murinus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0095": {
+      "research_taxon": "Ephebopus rufescens",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0096": {
+      "research_taxon": "Eresus walckenaeri",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0097": {
+      "research_taxon": "Eresus walckenaeri",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0098": {
+      "research_taxon": "Eresus walckenaeri",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0099": {
+      "research_taxon": "Euathlus manicatus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0100": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0101": {
+      "research_taxon": "Euathlus truculentus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0102": {
+      "research_taxon": "Eucratoscelus constrictus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0103": {
+      "research_taxon": "Eucratoscelus pachypus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0104": {
+      "research_taxon": "Eucratoscelus pachypus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0105": {
+      "research_taxon": "Eupalaestrus campestratus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0106": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0107": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0108": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0109": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0110": {
+      "research_taxon": "Heterothele villosella",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0111": {
+      "research_taxon": "Hapalopus planetearth",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0112": {
+      "research_taxon": "Hapalopus planetearth",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0113": {
+      "research_taxon": "Melopoeus schmidti",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0114": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0115": {
+      "research_taxon": "Heterometrus longimanus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0116": {
+      "research_taxon": "Heterometrus longimanus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0117": {
+      "research_taxon": "Heteropoda davidbowie",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0118": {
+      "research_taxon": "Hogna maderiana",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0119": {
+      "research_taxon": "Magnacrus taynguyenensis",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0120": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0121": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0122": {
+      "research_taxon": "Monocentropus lambertoni",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0123": {
+      "research_taxon": "Monocentropus lambertoni",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0124": {
+      "research_taxon": "Neoholothele fasciaaurinigra",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0125": {
+      "research_taxon": "Neoholothele fasciaaurinigra",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0126": {
+      "research_taxon": "Omothymus violaceopes",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0127": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0128": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0129": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0130": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0131": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0132": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0133": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0134": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0135": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0136": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0137": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0138": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0139": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0140": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0141": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0142": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0143": {
+      "research_taxon": "Anqasha picta",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0144": {
+      "research_taxon": "Anqasha picta",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0145": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0146": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0147": {
+      "research_taxon": "Aphonopelma bicoloratum",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0148": {
+      "research_taxon": "Atypus karschi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0149": {
+      "research_taxon": "Augacephalus ezendami",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0150": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0151": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0152": {
+      "research_taxon": "Avicularia avicularia",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0153": {
+      "research_taxon": "Avicularia geroldi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0154": {
+      "research_taxon": "Avicularia huriana",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0155": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0156": {
+      "research_taxon": "Avicularia minatrix",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0157": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0158": {
+      "research_taxon": "Avicularia rufa",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0159": {
+      "research_taxon": "Avicularia variegata",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0160": {
+      "research_taxon": "Avicularia variegata",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0161": {
+      "research_taxon": "Bacillochilus xenostridulans",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0162": {
+      "research_taxon": "Birupes simoroxigorum",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0163": {
+      "research_taxon": "Asbolus verrucosus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0164": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0165": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0166": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0167": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0168": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0169": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0170": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0171": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0172": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0173": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0174": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0175": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0176": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0177": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0178": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0179": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0180": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0181": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0182": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0183": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0184": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0185": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0186": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0187": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0188": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0189": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0190": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0191": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0192": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0193": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0194": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0195": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0196": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0197": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0198": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0199": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0200": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0201": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0202": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0203": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0204": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0205": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0206": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0207": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0208": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0209": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0210": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0211": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0212": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0213": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0214": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0215": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0216": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0217": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0218": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0219": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0220": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0221": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0222": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0223": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0224": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0225": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0226": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0227": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0228": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0229": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0230": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0231": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0232": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0233": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0234": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0235": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0236": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0237": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0238": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0239": {
+      "research_taxon": "Hysterocrates scepticus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0240": {
+      "research_taxon": "Heterometrus silenus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0241": {
+      "research_taxon": "Heterometrus silenus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0242": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0243": {
+      "research_taxon": "Hapalopus vangoghi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0244": {
+      "research_taxon": "Harpactira tigrina",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0245": {
+      "research_taxon": "Heterothele villosella",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0246": {
+      "research_taxon": "Heterothele villosella",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0247": {
+      "research_taxon": "Heterothele villosella",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0248": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0249": {
+      "research_taxon": "Melopoeus hainanus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0250": {
+      "research_taxon": "Melopoeus hainanus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0251": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0252": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0253": {
+      "research_taxon": "Melopoeus schmidti",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0254": {
+      "research_taxon": "Harpactira gigas",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0255": {
+      "research_taxon": "Harpactira hamiltoni",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0256": {
+      "research_taxon": "Hysterocrates hercules",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0257": {
+      "research_taxon": "Hogna carolinensis",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0258": {
+      "research_taxon": "Hogna carolinensis",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0259": {
+      "research_taxon": "Hogna maderiana",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0260": {
+      "research_taxon": "Hogna radiata",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0261": {
+      "research_taxon": "Holconia murrayensis",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0262": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0263": {
+      "research_taxon": "Hyllus diardi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0264": {
+      "research_taxon": "Iridopelma hirsutum",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0265": {
+      "research_taxon": "Idiothele mira",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0266": {
+      "research_taxon": "Iridopelma zorodes",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0267": {
+      "research_taxon": "Iridopelma zorodes",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0268": {
+      "research_taxon": "Idiothele nigrofulva",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0269": {
+      "research_taxon": "Kochiana brunnipes",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0270": {
+      "research_taxon": "Pelinobius muticus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0271": {
+      "research_taxon": "Pelinobius muticus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0272": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0273": {
+      "research_taxon": "Lasiodora benedeni",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0274": {
+      "research_taxon": "Linothele fallax",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0275": {
+      "research_taxon": "Lyrognathus giannisposatoi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0276": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0277": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0278": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0279": {
+      "research_taxon": "Lasiodora klugi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0280": {
+      "research_taxon": "Lasiodora klugi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0281": {
+      "research_taxon": "Lampropelma nigerrimum",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0282": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0283": {
+      "research_taxon": "Lasiodora parahybana",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0284": {
+      "research_taxon": "Lasiodorides polycuspulatus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0285": {
+      "research_taxon": "Lasiocyano sazimai",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0286": {
+      "research_taxon": "Linothele sericata",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0287": {
+      "research_taxon": "Lasiodora klugi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0288": {
+      "research_taxon": "Lasiodorides striatus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0289": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0290": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0291": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0292": {
+      "research_taxon": "Lasiodora sertaneja",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0293": {
+      "research_taxon": "Lasiodorides polycuspulatus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0294": {
+      "research_taxon": "Lasiodorides polycuspulatus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0295": {
+      "research_taxon": "Lasiodorides striatus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0296": {
+      "research_taxon": "Monocentropus balfouri",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0297": {
+      "research_taxon": "Monocentropus balfouri",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0298": {
+      "research_taxon": "Megaphobema robustum",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0299": {
+      "research_taxon": "Magnacrus tongmianensis",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0300": {
+      "research_taxon": "Magnacrus tongmianensis",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0301": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0302": {
+      "research_taxon": "Macrothele calpeiana",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0303": {
+      "research_taxon": "Gigathele gigas",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0304": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0305": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0306": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0307": {
+      "research_taxon": "Nhandu chromatus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0308": {
+      "research_taxon": "Nhandu coloratovillosus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0309": {
+      "research_taxon": "Neoholothele incei",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0310": {
+      "research_taxon": "Neoholothele incei",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0311": {
+      "research_taxon": "Nhandu tripepii",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0312": {
+      "research_taxon": "Nhandu tripepii",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0313": {
+      "research_taxon": "Nhandu carapoensis",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0314": {
+      "research_taxon": "Nhandu cerradensis",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0315": {
+      "research_taxon": "Nhandu coloratovillosus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0316": {
+      "research_taxon": "Ornithoctonus aureotibialis",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0317": {
+      "research_taxon": "Chilocosmia dichromata",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0318": {
+      "research_taxon": "Taksinus bambus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0319": {
+      "research_taxon": "Selenobrachys philippinus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0320": {
+      "research_taxon": "Omothymus schioedtei",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0321": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0322": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0323": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0324": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0325": {
+      "research_taxon": "Taksinus bambus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0326": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0327": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0328": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0329": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0330": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0331": {
+      "research_taxon": "Omothymus violaceopes",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0332": {
+      "research_taxon": "Omothymus violaceopes",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0333": {
+      "research_taxon": "Omothymus violaceopes",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0334": {
+      "research_taxon": "Stichoplastoris obelix",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0335": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0336": {
+      "research_taxon": "Phrixotrichus scrofa",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0337": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0338": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0339": {
+      "research_taxon": "Pamphobeteus antinous",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0340": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0341": {
+      "research_taxon": "Phormictopus atrichomatus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0342": {
+      "research_taxon": "Phormictopus auratus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0343": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0344": {
+      "research_taxon": "Phlogiellus baeri",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0345": {
+      "research_taxon": "Pachistopelma bromelicola",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0346": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0347": {
+      "research_taxon": "Psalmopoeus cambridgei",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0348": {
+      "research_taxon": "Psalmopoeus cambridgei",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0349": {
+      "research_taxon": "Phormictopus cancerides",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0350": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0351": {
+      "research_taxon": "Phormictopus cautus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0352": {
+      "research_taxon": "Pterinochilus chordatus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0353": {
+      "research_taxon": "Phormictopus cochleasvorax",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0354": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0355": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0356": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0357": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0358": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0359": {
+      "research_taxon": "Phormingochilus everetti",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0360": {
+      "research_taxon": "Phormingochilus everetti",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0361": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0362": {
+      "research_taxon": "Poecilotheria subfusca",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0363": {
+      "research_taxon": "Poecilotheria subfusca",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0364": {
+      "research_taxon": "Psednocnemis brachyramosa",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0365": {
+      "research_taxon": "Psednocnemis brachyramosa",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0366": {
+      "research_taxon": "Selenocosmia aruana",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0367": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0368": {
+      "research_taxon": "Theraphosa blondi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0369": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0370": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0371": {
+      "research_taxon": "Ewok kimraykawasaki",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0372": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0373": {
+      "research_taxon": "Thrigmopoeus truculentus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0374": {
+      "research_taxon": "Ewok kimraykawasaki",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0375": {
+      "research_taxon": "Tliltocatl albopilosus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0376": {
+      "research_taxon": "Tliltocatl vagans",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0377": {
+      "research_taxon": "Platymeris biguttatus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0378": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0379": {
+      "research_taxon": "Poecilotheria metallica",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0380": {
+      "research_taxon": "Selenocosmia crassipes",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0381": {
+      "research_taxon": "Selenocosmia crassipes",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0382": {
+      "research_taxon": "Poecilotheria fasciata",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0383": {
+      "research_taxon": "Poecilotheria fasciata",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0384": {
+      "research_taxon": "Poecilotheria formosa",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0385": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0386": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0387": {
+      "research_taxon": "Poecilotheria hanumavilasumica",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0388": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0389": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0390": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0391": {
+      "research_taxon": "Pamphobeteus insignis",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0392": {
+      "research_taxon": "Pamphobeteus insignis",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0393": {
+      "research_taxon": "Psalmopoeus irminia",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0394": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0395": {
+      "research_taxon": "Pterinochilus lugardi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0396": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0397": {
+      "research_taxon": "Poecilotheria metallica",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0398": {
+      "research_taxon": "Poecilotheria miranda",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0399": {
+      "research_taxon": "Pterinochilus murinus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0400": {
+      "research_taxon": "Pterinochilus murinus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0401": {
+      "research_taxon": "Poecilotheria ornata",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0402": {
+      "research_taxon": "Phormingochilus pennellhewlettorum",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0403": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0404": {
+      "research_taxon": "Psalmopoeus pulcher",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0405": {
+      "research_taxon": "Psalmopoeus pulcher",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0406": {
+      "research_taxon": "Psalmopoeus reduncus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0407": {
+      "research_taxon": "Poecilotheria regalis",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0408": {
+      "research_taxon": "Poecilotheria regalis",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0409": {
+      "research_taxon": "Poecilotheria rufilata",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0410": {
+      "research_taxon": "Aspinochilus rufus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0411": {
+      "research_taxon": "Lasiocyano sazimai",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0412": {
+      "research_taxon": "Poecilotheria smithi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0413": {
+      "research_taxon": "Pamphobeteus solaris",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0414": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0415": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0416": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0417": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0418": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0419": {
+      "research_taxon": "Poecilotheria subfusca",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0420": {
+      "research_taxon": "Poecilotheria tigrinawesseli",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0421": {
+      "research_taxon": "Pamphobeteus ultramarinus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0422": {
+      "research_taxon": "Pamphobeteus ultramarinus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0423": {
+      "research_taxon": "Pamphobeteus vespertinus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0424": {
+      "research_taxon": "Pamphobeteus vespertinus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0425": {
+      "research_taxon": "Psalmopoeus victori",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0426": {
+      "research_taxon": "Poecilotheria vittata",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0427": {
+      "research_taxon": "Poecilotheria vittata",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0428": {
+      "research_taxon": "Poecilotheria vittata",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0429": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0430": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0431": {
+      "research_taxon": "Psalmopoeus ecclesiasticus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0432": {
+      "research_taxon": "Pamphobeteus fortis",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0433": {
+      "research_taxon": "Pamphobeteus fortis",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0434": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0435": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0436": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0437": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0438": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0439": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0440": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0441": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0442": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0443": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0444": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0445": {
+      "research_taxon": "Phidippus audax",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0446": {
+      "research_taxon": "Phidippus johnsoni",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0447": {
+      "research_taxon": "Phidippus regius",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0448": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0449": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0450": {
+      "research_taxon": "Poecilotheria rufilata",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0451": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0452": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0453": {
+      "research_taxon": "Phrixotrichus vulpinus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0454": {
+      "research_taxon": "Selenocosmia arndsti",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0455": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0456": {
+      "research_taxon": "Stromatopelma calceatum",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0457": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0458": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0459": {
+      "research_taxon": "Selenocosmia kovariki",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0460": {
+      "research_taxon": "Sandinista lanceolatum",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0461": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0462": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0463": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0464": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0465": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0466": {
+      "research_taxon": "Sicarius thomisoides",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0467": {
+      "research_taxon": "Stichoplastoris obelix",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0468": {
+      "research_taxon": "Tliltocatl albopilosus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0469": {
+      "research_taxon": "Tliltocatl albopilosus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0470": {
+      "research_taxon": "Tliltocatl albopilosus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0471": {
+      "research_taxon": "Tliltocatl albopilosus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0472": {
+      "research_taxon": "Typhochlaena amma",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0473": {
+      "research_taxon": "Theraphosa apophysis",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0474": {
+      "research_taxon": "Taksinus bambus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0475": {
+      "research_taxon": "Theraphosa blondi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0476": {
+      "research_taxon": "Theraphosa blondi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0477": {
+      "research_taxon": "Theraphosa blondi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0478": {
+      "research_taxon": "Theraphosa blondi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0479": {
+      "research_taxon": "Typhochlaena costae",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0480": {
+      "research_taxon": "Typhochlaena costae",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0481": {
+      "research_taxon": "Typhochlaena costae",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0482": {
+      "research_taxon": "Typhochlaena curumim",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0483": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0484": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0485": {
+      "research_taxon": "Tliltocatl kahlenbergi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0486": {
+      "research_taxon": "Tliltocatl kahlenbergi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0487": {
+      "research_taxon": "Warmiru longicolli",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0488": {
+      "research_taxon": "Pterinochilus murinus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0489": {
+      "research_taxon": "Pterinochilus murinus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0490": {
+      "research_taxon": "Pterinochilus murinus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0491": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0492": {
+      "research_taxon": "Tapinauchenius rasti",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0493": {
+      "research_taxon": "Typhochlaena seladonia",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0494": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0495": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0496": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0497": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0498": {
+      "research_taxon": "Theraphosa stirmi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0499": {
+      "research_taxon": "Tliltocatl vagans",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0500": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0501": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0502": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0503": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0504": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0505": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0506": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0507": {
+      "research_taxon": "Tliltocatl kahlenbergi",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0508": {
+      "research_taxon": "Nhandu chromatus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0509": {
+      "research_taxon": "Nhandu chromatus",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0510": {
+      "research_taxon": "Vitalius paranaensis",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0511": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0512": {
+      "research_taxon": "Xenesthis immanis",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0513": {
+      "research_taxon": "Xenesthis intermedia",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0514": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0515": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0516": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0517": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0518": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0519": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0520": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0521": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0522": {
+      "research_taxon": "Ybyrapora diversipes",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0523": {
+      "research_taxon": "Ybyrapora diversipes",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0524": {
+      "research_taxon": null,
+      "identity_status": "UNRESOLVED"
+    },
+    "Card_0525": {
+      "research_taxon": "Ybyrapora sooretama",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    },
+    "Card_0526": {
+      "research_taxon": "Ybyrapora sooretama",
+      "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
+    }
+  }
+}
