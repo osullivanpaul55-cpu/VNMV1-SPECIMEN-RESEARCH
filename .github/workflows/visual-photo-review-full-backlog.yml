@@ -1,0 +1,32 @@
+name: Prepare full pending VNMV1 photo visual backlog
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [".github/workflows/visual-photo-review-full-backlog.yml"]
+permissions:
+  contents: read
+jobs:
+  make-photo-sheets:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m pip install Pillow
+      - name: Assemble exact outstanding source references into viewable 12-photo sheets
+        env:
+          SHARD: ${{ matrix.shard }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          START=$((SHARD*12))
+          python research/visual_review_queue.py --skip-reviewed --start "$START" --count 12 --contact-sheet --out "out-$SHARD"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pending-source-photo-sheet-${{ matrix.shard }}
+          path: out-${{ matrix.shard }}/
+          if-no-files-found: error
+          retention-days: 14
