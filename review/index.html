@@ -21,6 +21,7 @@
 .photo{width:100%;touch-action:pan-y}
 #notification:empty{display:none}
 @media(max-width:600px){.species{border:0;background:transparent;padding:2px;margin:3px 0 10px}.photo img{aspect-ratio:4/3}.photo .info{padding:10px}}
+.tap-zoom{cursor:zoom-in;touch-action:pan-y}#photoZoom{position:fixed;inset:0;z-index:1000;background:rgba(3,8,15,.98);display:flex;flex-direction:column;align-items:stretch;justify-content:center;overscroll-behavior:contain}#photoZoom[hidden]{display:none!important}#photoZoom .zoom-controls{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;gap:12px;background:#102238}#photoZoom .zoom-stage{flex:1;min-height:0;display:grid;place-items:center;overflow:hidden;touch-action:none;position:relative}#photoZoom .zoom-stage img{max-width:100%;max-height:100%;object-fit:contain;transform-origin:center;touch-action:none;user-select:none;pointer-events:none}#photoZoom .zoom-close{background:#744048;font-weight:700}#photoZoom .zoom-tip{font-size:.83rem;color:#d5e5f5}
 </style></head>
 <body><main>
 <details id="reviewSettings" class="review-settings"><summary>VNMV1 Reference Review <span>Tools & progress ▾</span></summary>
@@ -37,6 +38,7 @@
 <div class="mobile-tips">Swipe ← → to change species · Scroll ↓ for the next photograph</div>
 <div id="results"></div>
 </main>
+<div id="photoZoom" hidden role="dialog" aria-modal="true" aria-label="Zoom reference photograph"><div class="zoom-controls"><span id="zoomTitle">Reference photo · Pinch to zoom</span><button id="zoomClose" class="zoom-close" type="button">✕ Close</button></div><div class="zoom-stage" id="zoomStage"><img id="zoomImage" alt="Enlarged photograph"></div><div class="zoom-controls"><span class="zoom-tip">Two fingers: zoom · One finger: drag · Double-tap: reset</span><button id="zoomReset" type="button">Reset</button></div></div>
 <script>
 'use strict';
 let dataset={schema:'VNMV1_PUBLIC_PHOTO_CANDIDATES_V1',species:{}},speciesCursor=0,visibleSpecies=[];
@@ -67,6 +69,41 @@ let decisions={};try{decisions=JSON.parse(localStorage.getItem(KEY)||'{}')}catch
 const create=(name,text,cls)=>{const a=document.createElement(name);if(text!==undefined)a.textContent=String(text);if(cls)a.className=cls;return a};
 function safeUrl(url,hostname){try{const u=new URL(url);return u.protocol==='https:'&&u.hostname===hostname?u.href:null}catch(_){return null}}
 function imgUrl(url){for(const h of ['static.inaturalist.org','inaturalist-open-data.s3.amazonaws.com','inaturalist-open-data.s3.us-west-2.amazonaws.com']){const u=safeUrl(url,h);if(u)return u}return null}
+// Photo lightbox: zoom only the photograph, not the review controls.
+let zoomScale=1,zoomX=0,zoomY=0;
+let gesture=null;
+const zoomRoot=$('#photoZoom'), zoomStage=$('#zoomStage'),zoomImage=$('#zoomImage');
+const renderZoom=()=>{zoomImage.style.transform='translate('+zoomX+'px,'+zoomY+'px) scale('+zoomScale+')'};
+const resetZoom=()=>{zoomScale=1;zoomX=0;zoomY=0;gesture=null;renderZoom()};
+function openPhotoZoom(url,label){
+ if(!url)return;
+ zoomImage.src=url;$('#zoomTitle').textContent=label+' · Pinch to zoom';
+ resetZoom();zoomRoot.hidden=false;document.body.style.overflow='hidden';
+}
+function closePhotoZoom(){zoomRoot.hidden=true;zoomImage.removeAttribute('src');document.body.style.overflow='';resetZoom()}
+$('#zoomClose').addEventListener('click',closePhotoZoom);
+$('#zoomReset').addEventListener('click',resetZoom);
+zoomRoot.addEventListener('click',e=>{if(e.target===zoomRoot)closePhotoZoom()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!zoomRoot.hidden)closePhotoZoom()});
+zoomStage.addEventListener('touchstart',e=>{
+ if(e.touches.length===2){const [a,b]=e.touches;gesture={kind:'pinch',dist:Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY),scale:zoomScale,x:zoomX,y:zoomY};}
+ else if(e.touches.length===1){gesture={kind:'drag',x:e.touches[0].clientX,y:e.touches[0].clientY,baseX:zoomX,baseY:zoomY}}
+ e.preventDefault();
+},{passive:false});
+zoomStage.addEventListener('touchmove',e=>{
+ if(!gesture)return;
+ if(e.touches.length===2&&gesture.kind==='pinch'){
+  const [a,b]=e.touches;
+  zoomScale=Math.max(1,Math.min(8,gesture.scale*Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY)/Math.max(10,gesture.dist)));
+ }else if(e.touches.length===1&&gesture.kind==='drag'&&zoomScale>1){
+  zoomX=gesture.baseX+e.touches[0].clientX-gesture.x;
+  zoomY=gesture.baseY+e.touches[0].clientY-gesture.y;
+ }
+ renderZoom();e.preventDefault();
+},{passive:false});
+zoomStage.addEventListener('touchend',e=>{gesture=null;e.preventDefault()},{passive:false});
+zoomStage.addEventListener('dblclick',resetZoom);
+zoomStage.addEventListener('wheel',e=>{zoomScale=Math.max(1,Math.min(8,zoomScale+(e.deltaY<0?.3:-.3)));renderZoom();e.preventDefault()},{passive:false});
 function save(){try{localStorage.setItem(KEY,JSON.stringify(decisions))}catch(_){notify('Browser storage unavailable; export your review regularly.')}stats()}
 function notify(message){$('#notification').textContent=message}
 function photosFrom(x){return Array.isArray(x.candidates)?x.candidates:[]}
@@ -210,7 +247,7 @@ function stats(){
 function reviewIsEntered(d){return !!d&&(!d.proposal_prepopulated_not_human_reviewed||d.reviewed_by_human===true)&&(d.resembles_original&&d.resembles_original!=='NOT_ASSESSED'||d.reviewed_by_human===true||!!d.sex&&d.sex!=='UNKNOWN'||!!d.decision&&d.decision!=='PENDING'||!!d.pose_id&&d.pose_id!=='UNREVIEWED'||!!d.notes?.trim()||!!d.reject_reason?.trim())}
 function reviewDecisionChoice(d){return d.requested_decision || (d.decision==='ACCEPT_FEMALE'||d.decision==='ACCEPT_MALE'?'ACCEPT_REFERENCE':d.decision)||'PENDING'}
 function reviewSex(d){return d.sex || (d.decision==='ACCEPT_FEMALE'?'FEMALE':d.decision==='ACCEPT_MALE'?'MATURE_MALE':'UNKNOWN')}
-function imageCard(spec,p){const key=p.photo_key;if(typeof key!=='string'||!/^inat:\d+$/.test(key))return create('div','Invalid photo entry','photo');const d=decisions[key]||seedProposal(spec,p,false);const sug=suggestions(p);const box=create('article',undefined,'photo');const src=imgUrl(p.thumbnail_url);if(src){const im=create('img');im.loading='lazy';im.src=src;im.alt='Unreviewed candidate photograph for '+spec.scientific_name;box.append(im)}
+function imageCard(spec,p){const key=p.photo_key;if(typeof key!=='string'||!/^inat:\d+$/.test(key))return create('div','Invalid photo entry','photo');const d=decisions[key]||seedProposal(spec,p,false);const sug=suggestions(p);const box=create('article',undefined,'photo');const src=imgUrl(p.thumbnail_url);if(src){const im=create('img');im.loading='lazy';im.src=src;im.alt='Reference photo for '+spec.scientific_name;im.className='tap-zoom';im.title='Tap to pinch-zoom';im.addEventListener('click',()=>openPhotoZoom(src,key+' · '+spec.scientific_name));box.append(im)}
 const info=create('div',undefined,'info');info.append(create('strong','Photo '+key));info.append(create('small',p.attribution||'Photographer unknown'));info.append(create('small','Licence metadata: '+(p.license_code||'UNKNOWN')+' (verify original terms)'));
 info.append(create('small','Species: '+spec.scientific_name+' · Observation: '+(p.observation_id||'UNKNOWN')+' · Photo ID: '+(p.photo_id||'UNKNOWN')));
 info.append(create('small','Media: '+(p.width||'?')+' × '+(p.height||'?')+' · SHA256: '+(p.sha256||'unavailable')));
