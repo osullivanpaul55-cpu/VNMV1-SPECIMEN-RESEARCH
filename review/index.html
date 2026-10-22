@@ -18,7 +18,16 @@
 .species h2{font-size:.95rem;margin:4px 4px 3px}
 .specdetails{margin:0 4px 7px}
 .photo-number{font-weight:650;font-size:.83rem;color:#c6def7;padding:9px 10px 4px}
-.photo{width:100%;touch-action:pan-y}
+.photo{width:100%;touch-action:pan-y;overflow-anchor:none}
+#results{overflow-anchor:none}
+.photo-source,.research-options,.advanced-review,.ai-extra,.reject-detail{border:1px solid #37495e;border-radius:8px;background:#172536;margin:7px 0;padding:0 9px}
+.photo-source>summary,.research-options>summary,.advanced-review>summary,.ai-extra>summary,.reject-detail>summary{cursor:pointer;font-size:.84rem;color:#d3e7ff;padding:9px 2px}
+.photo-source[open],.research-options[open],.advanced-review[open],.ai-extra[open],.reject-detail[open]{padding-bottom:8px}
+.photo .info>label{font-size:.84rem;margin-top:8px}.photo .info>small{font-size:.78rem;margin:4px 0;color:#acc1d5}.photo .compact-ai{font-size:.79rem;color:#c6def9;margin:5px 0}
+.photo select{padding:10px 8px;min-height:44px}.photo textarea{min-height:52px}
+.quick-save{display:flex;align-items:center;justify-content:space-between;gap:9px;padding:6px 0;font-size:.73rem;color:#aabed4}
+.quick-save button{font-size:.82rem;padding:8px 10px;white-space:nowrap}
+
 #notification:empty{display:none}
 @media(max-width:600px){.species{border:0;background:transparent;padding:2px;margin:3px 0 10px}.photo img{aspect-ratio:4/3}.photo .info{padding:10px}}
 .tap-zoom{cursor:zoom-in;touch-action:pan-y}#photoZoom{position:fixed;inset:0;z-index:1000;background:rgba(3,8,15,.98);display:flex;flex-direction:column;align-items:stretch;justify-content:center;overscroll-behavior:contain}#photoZoom[hidden]{display:none!important}#photoZoom .zoom-controls{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;gap:12px;background:#102238}#photoZoom .zoom-stage{flex:1;min-height:0;display:grid;place-items:center;overflow:hidden;touch-action:none;position:relative}#photoZoom .zoom-stage img{max-width:100%;max-height:100%;object-fit:contain;transform-origin:center;touch-action:none;user-select:none;pointer-events:none}#photoZoom .zoom-close{background:#744048;font-weight:700}#photoZoom .zoom-tip{font-size:.83rem;color:#d5e5f5}
@@ -35,6 +44,7 @@
 <div id="notification" role="status" aria-live="polite"></div>
 </details>
 <nav id="speciesNav" class="navstrip" aria-label="Specimen navigation"><button id="prevSpecies" type="button">◀ Previous</button><strong id="speciesPosition">Specimen 0/0</strong><button id="nextSpecies" type="button">Next ▶</button></nav>
+<div class="quick-save"><span>Edits save on this phone</span><button id="saveQuick" type="button">Save / Export JSON</button></div>
 <div class="mobile-tips">Swipe ← → to change species · Opens at Photo 1 · Scroll ↓ for the next photograph</div>
 <div id="results"></div>
 </main>
@@ -200,7 +210,7 @@ function leadCard(p){
  info.append(create('label','Behaviour suggestions (comma separated)'));
  const behavior=create('textarea');behavior.value=Array.isArray(d.behaviours)?d.behaviours.join(', '):sug.behaviour.join(', ');info.append(behavior);
  info.append(create('label','Visible anatomy (comma separated)'));
- const anatomy=create('textarea');anatomy.value=Array.isArray(d.visible_anatomy)?d.visible_anatomy.join(', '):sug.anatomy.join(', ');info.append(anatomy);
+ const anatomy=create('textarea');anatomy.value=Array.isArray(d.visible_anatomy)?d.visible_anatomy.join(', '):sug.anatomy.join(', ');advancedReview.append(anatomy);
  info.append(create('label','Corrections and source notes'));
  const notes=create('textarea');notes.value=d.notes||'';info.append(notes);
  const lookedLabel=create('label',undefined,'check');const looked=create('input');looked.type='checkbox';looked.checked=d.human_visual_confirmation===true;
@@ -248,38 +258,42 @@ function reviewIsEntered(d){return !!d&&(!d.proposal_prepopulated_not_human_revi
 function reviewDecisionChoice(d){return d.requested_decision || (d.decision==='ACCEPT_FEMALE'||d.decision==='ACCEPT_MALE'?'ACCEPT_REFERENCE':d.decision)||'PENDING'}
 function reviewSex(d){return d.sex || (d.decision==='ACCEPT_FEMALE'?'FEMALE':d.decision==='ACCEPT_MALE'?'MATURE_MALE':'UNKNOWN')}
 function imageCard(spec,p){const key=p.photo_key;if(typeof key!=='string'||!/^inat:\d+$/.test(key))return create('div','Invalid photo entry','photo');const d=decisions[key]||seedProposal(spec,p,false);const sug=suggestions(p);const box=create('article',undefined,'photo');const src=imgUrl(p.thumbnail_url);if(src){const im=create('img');im.loading='lazy';im.src=src;im.alt='Reference photo for '+spec.scientific_name;im.className='tap-zoom';im.title='Tap to pinch-zoom';im.addEventListener('click',()=>openPhotoZoom(src,key+' · '+spec.scientific_name));box.append(im)}
-const info=create('div',undefined,'info');info.append(create('strong','Photo '+key));info.append(create('small',p.attribution||'Photographer unknown'));info.append(create('small','Licence metadata: '+(p.license_code||'UNKNOWN')+' (verify original terms)'));
-info.append(create('small','Species: '+spec.scientific_name+' · Observation: '+(p.observation_id||'UNKNOWN')+' · Photo ID: '+(p.photo_id||'UNKNOWN')));
-info.append(create('small','Media: '+(p.width||'?')+' × '+(p.height||'?')+' · SHA256: '+(p.sha256||'unavailable')));
-info.append(create('small','Reference state: archived candidate, source verified for catalogue only. No species/sex/rights or ImageGen approval.'));
+const info=create('div',undefined,'info');info.append(create('strong','Photo '+key));
+const sourceDetails=create('details');sourceDetails.className='photo-source';
+sourceDetails.append(create('summary','Source, photographer, licence & photo details ▾'));
+sourceDetails.append(create('small',p.attribution||'Photographer unknown'));
+sourceDetails.append(create('small','Licence: '+(p.license_code||'UNKNOWN')+' (check original terms)'));
+sourceDetails.append(create('small','Species: '+spec.scientific_name+' · Observation: '+(p.observation_id||'UNKNOWN')+' · Photo ID: '+(p.photo_id||'UNKNOWN')));
+sourceDetails.append(create('small','Media: '+(p.width||'?')+' × '+(p.height||'?')+' · SHA256: '+(p.sha256||'unavailable')));
+sourceDetails.append(create('small','Catalogue lead only, not certification of sex, species, photo rights or ImageGen use.'));
+const researchOptions=create('details');researchOptions.className='research-options';
+researchOptions.append(create('summary','Keep photo / proposed classifications ▾'));
 const retainLabel=create('label',undefined,'check');const retainBox=create('input');retainBox.type='checkbox';retainBox.checked=d.keep_research_candidate!==false;
-retainLabel.append(retainBox,create('span','Keep this photo in the research packet — preselected'));info.append(retainLabel);
+retainLabel.append(retainBox,create('span','Keep this photo in research'));researchOptions.append(retainLabel);
 const suggestLabel=create('label',undefined,'check');const suggestBox=create('input');suggestBox.type='checkbox';suggestBox.checked=d.retain_suggested_classifications!==false;
-suggestLabel.append(suggestBox,create('span','Keep proposed classifications — preselected, editable'));info.append(suggestLabel);
-info.append(create('small',sug.basis==='CHATGPT_HASH_BOUND_VISUAL_DRAFT_NOT_VERIFIED'?
- 'AI photo review prepared · Suggested pose '+sug.pose+' · Sex '+sug.sex+' · Confidence '+sug.confidence+'. Please correct my assessment where needed.':
- 'Research candidate retained · Photo not yet individually inspected by AI. Unverified hints are not visual reviews.'));
-if(sug.visible_note){const ai=create('div',undefined,'review-status');ai.append(create('strong','AI photo observations — check & correct'));ai.append(create('small',sug.visible_note));info.append(ai)}
-const link=safeUrl(p.source_url,'www.inaturalist.org');if(link){const a=create('a','Open original iNaturalist observation');a.href=link;a.target='_blank';a.rel='noopener noreferrer';info.append(a)}
+suggestLabel.append(suggestBox,create('span','Keep suggested labels (editable)'));researchOptions.append(suggestLabel);
+info.append(create('div','AI: '+sug.pose.replaceAll('_',' ').toLowerCase()+
+ ' · sex '+sug.sex.replaceAll('_',' ').toLowerCase()+' · '+sug.confidence.toLowerCase()+' confidence','compact-ai'));
+if(sug.visible_note){const aiNotes=create('details');aiNotes.className='ai-extra';aiNotes.append(create('summary','AI visual observations ▾'));aiNotes.append(create('small',sug.visible_note));info.append(aiNotes)}
+const link=safeUrl(p.source_url,'www.inaturalist.org');if(link){const a=create('a','View original iNaturalist record');a.href=link;a.target='_blank';a.rel='noopener noreferrer';sourceDetails.append(a)}
+info.append(sourceDetails);info.append(researchOptions);
 // The archive ZIP is NOT a review JSON or installable APK. Keep it out of the mobile review controls.
 info.append(create('label','Sex or maturity — save independently of approval'));
 const sexSelect=create('select');
 for(const [value,title] of [['UNKNOWN','Uncertain / not classified'],['FEMALE','Female'],['MATURE_MALE','Mature male'],['JUVENILE_SUBADULT','Juvenile / subadult']]){const opt=create('option',title);opt.value=value;sexSelect.append(opt)}
 sexSelect.value=reviewSex(d)!=='UNKNOWN'?reviewSex(d):sug.sex;info.append(sexSelect);
-info.append(create('small','Suggested sex: '+sug.sex+' · evidence '+sug.basis+'. Unknown means no visual sex inference has been run.'));
-info.append(create('small','Recommended stage: '+sug.life_stage+' · '+sug.basis));
 
-info.append(create('small','Your sex classification saves immediately. It does not approve a photograph or assert independently verified sex.'));
+
+
+
 info.append(create('label','Resembles my card original?'));
 const resembles=create('select');for(const [id,label] of RESEMBLES){const o=create('option',label);o.value=id;resembles.append(o)}
 resembles.value=d.resembles_original||'NOT_ASSESSED';info.append(resembles);
 const resemblesNotes=create('textarea');resemblesNotes.rows=2;resemblesNotes.value=d.resembles_notes||'';resemblesNotes.placeholder='Visual similarities and differences: colour, proportions, markings, eyes, hairs…';
 info.append(create('label','Resemblance notes (editable)'));info.append(resemblesNotes);
-info.append(create('small','Compare the private original at the top of the Android app. No automatic pixel comparison is claimed.'));
+
 info.append(create('label','Photo suitability — AI recommendation, editable'));
-if(sug.recommended_suitability!=='PENDING')
- info.append(create('small','AI recommendation: '+sug.recommended_suitability.replaceAll('_',' ')+
-  ' · provisional research use; not your approval, not a species/rights verification.'));
+if(sug.recommended_suitability!=='PENDING')info.append(create('small','Preselected: '+sug.recommended_suitability.replaceAll('_',' ').toLowerCase()+' · not yet approved.'));
 const select=create('select');
 for(const [value,title] of [['PENDING','Pending'],['ACCEPT_REFERENCE','Suitable reference — request approval'],['STRUCTURAL_ONLY','General anatomy / structural only'],['HABITAT_ONLY','Habitat / silk structure only — no specimen anatomy'],['NEEDS_RESEARCH','Needs more research'],['REJECT','Reject']]){const opt=create('option',title);opt.value=value;select.append(opt)}
 const isUntouchedAI=d.proposal_prepopulated_not_human_reviewed===true&&d.reviewed_by_human!==true;
@@ -290,18 +304,20 @@ const reviewStatus=create('small','', 'review-status');info.append(reviewStatus)
 info.append(create('label','Camera pose — review the actual photo'));const poseSelect=create('select');
 for(const [value,title] of POSES){const opt=create('option',title);opt.value=value;poseSelect.append(opt)}
 poseSelect.value=POSES.some(x=>x[0]===d.pose_id)&&d.pose_id!=='UNREVIEWED'?d.pose_id:sug.pose;info.append(poseSelect);
-info.append(create('small','Camera angle proposed by AI: '+sug.pose+' · Confidence '+sug.confidence+'. You can amend it.'));
+
 info.append(create('label','Life-stage suggestion (edit if necessary)'));
 const stageSelect=create('select');
 for(const id of LIFE_STAGES){const opt=create('option',id.replaceAll('_',' '));opt.value=id;stageSelect.append(opt)}
 stageSelect.value=LIFE_STAGES.includes(d.life_stage)&&d.life_stage!=='UNKNOWN'?d.life_stage:sug.life_stage;info.append(stageSelect);
-info.append(create('label','Behaviour suggestions (comma separated, editable)'));
+const advancedReview=create('details');advancedReview.className='advanced-review';
+advancedReview.append(create('summary','More: behaviour, anatomy & verification ▾'));
+advancedReview.append(create('label','Behaviour suggestions (comma separated, editable)'));
 const behaviours=create('textarea');behaviours.rows=2;
-behaviours.value=Array.isArray(d.behaviours)?d.behaviours.join(', '):sug.behaviour.join(', ');info.append(behaviours);
-info.append(create('label','Visible anatomy suggestions (comma separated, editable)'));
+behaviours.value=Array.isArray(d.behaviours)?d.behaviours.join(', '):sug.behaviour.join(', ');advancedReview.append(behaviours);
+advancedReview.append(create('label','Visible anatomy suggestions (comma separated, editable)'));
 const anatomy=create('textarea');anatomy.rows=2;
 anatomy.value=Array.isArray(d.visible_anatomy)?d.visible_anatomy.join(', '):sug.anatomy.join(', ');info.append(anatomy);
-info.append(create('small','Pose-only labels can be exported separately. They do not verify sex, taxonomy, image rights or generation readiness.'));
+
 const verification=create('details');verification.className='details-checks';
 const verifySummary=create('summary','Optional production verification — species and licence');
 verification.append(verifySummary);
@@ -309,7 +325,7 @@ verification.append(create('small','These checks are NOT required to classify se
 const specieslabel=create('label',undefined,'check');const speciesbox=create('input');speciesbox.type='checkbox';speciesbox.checked=!!d.species_verified;specieslabel.append(speciesbox,create('span','I checked the exact species identification'));verification.append(specieslabel);
 const rightslabel=create('label',undefined,'check');const rightsbox=create('input');rightsbox.type='checkbox';rightsbox.checked=!!d.rights_checked;rightslabel.append(rightsbox,create('span','I checked photographer, source and intended-use licence'));verification.append(rightslabel);
 
-info.append(verification);
+advancedReview.append(verification);
 const detailBox=create('details');detailBox.className='details-checks';
 detailBox.append(create('summary','Fine morphology / anatomy check — optional'));
 detailBox.append(create('small','The taxon atlas supplies structural topology and pose QA, not species-specific diagnostic morphology. No repeated digit-tip, head/rear or appendage coordinates are required unless evidence conflicts or an unusual feature needs review.'));
@@ -322,16 +338,19 @@ detailBox.append(create('label','Specific feature to verify (only where necessar
 const detailNotes=create('textarea');detailNotes.rows=2;detailNotes.value=d.anatomy_followup_notes||'';detailNotes.placeholder='Example: male palpal embolus not visible; confirm with matched species/sex reference';
 detailBox.append(detailNotes);
 detailBox.append(create('small','No pixel-coordinate markers are invented. Source-specific positions must be anchored to inspected images or existing registered Human Gold. Unreviewed photo-text suggestions stay unverified.'));
-info.append(detailBox);
+advancedReview.append(detailBox);info.append(advancedReview);
 info.append(create('label','AI visual notes — edit if necessary'));const notes=create('textarea');
 notes.value=d.notes||(isUntouchedAI?sug.visible_note:'');notes.placeholder='For example: female, lighting exaggerates orange; pedipalps obscured…';info.append(notes);
-info.append(create('label','Rejection reason (required if rejected)'));
-const rejectReason=create('textarea');rejectReason.value=d.reject_reason||'';rejectReason.placeholder='Why should this photo not be used? e.g. wrong species, blurred, poor anatomy';info.append(rejectReason);
-const rejectButton=create('button','Reject this photo');rejectButton.className='reject-action';rejectButton.type='button';info.append(rejectButton);
+const rejectDetails=create('details');rejectDetails.className='reject-detail';
+rejectDetails.append(create('summary','Reject / exclude photograph ▾'));
+rejectDetails.append(create('label','Rejection reason (required if rejected)'));
+const rejectReason=create('textarea');rejectReason.value=d.reject_reason||'';rejectReason.placeholder='Why should this photo not be used?';rejectDetails.append(rejectReason);
+const rejectButton=create('button','Reject this photo');rejectButton.className='reject-action';rejectButton.type='button';rejectDetails.append(rejectButton);
+rejectDetails.open=select.value==='REJECT';info.append(rejectDetails);
 const update=()=>{
   const choice=select.value;
   const rejection=rejectReason.value.trim();
-  if(choice==='REJECT'&&rejection.length<3){
+  if(choice==='REJECT'&&rejection.length<3){rejectDetails.open=true;
     reviewStatus.textContent='Rejection not saved yet: enter a reason (3+ characters).';
     notify('Please enter a rejection reason before saving it.');return;
   }
@@ -364,7 +383,7 @@ const update=()=>{
   reviewStatus.textContent=eligibleIntent&&!readyForReview?'Sex/pose saved. Suitability request held until both species and licence checks.':
     'Saved on this device. Use APK bottom Save to Drive to export.';
 };
-[select,sexSelect,poseSelect,stageSelect,retainBox,suggestBox,speciesbox,rightsbox,detailStatus,resembles].forEach(c=>c.addEventListener('change',()=>{if(c===select&&select.value!=='REJECT')rejectReason.value='';update()}));
+[select,sexSelect,poseSelect,stageSelect,retainBox,suggestBox,speciesbox,rightsbox,detailStatus,resembles].forEach(c=>c.addEventListener('change',()=>{if(c===select&&select.value!=='REJECT')rejectReason.value='';if(c===select&&select.value==='REJECT')rejectDetails.open=true;update()}));
 notes.addEventListener('input',update);
 resemblesNotes.addEventListener('input',update);
 behaviours.addEventListener('change',update);
@@ -376,24 +395,26 @@ rejectButton.addEventListener('click',()=>{
   select.value='REJECT';update();notify('Rejected and excluded from approved ImageGen references.');
 });
 box.append(info);return box}
+let navSequence=0;
+function anchorToFirstPhoto(sequence){
+ if(sequence!==navSequence)return;
+ const first=$('#results .photo img')||$('#results .photo')||$('#results .species');
+ if(!first)return;
+ const nav=$('#speciesNav');
+ const navHeight=nav?nav.getBoundingClientRect().height:0;
+ const y=first.getBoundingClientRect().top+window.scrollY-navHeight-7;
+ const max=Math.max(0,document.documentElement.scrollHeight-window.innerHeight);
+ window.scrollTo({top:Math.max(0,Math.min(max,y)),behavior:'instant'});
+}
 function changeSpecies(delta){
-  if(!visibleSpecies.length)return;
-  const next=Math.max(0,Math.min(visibleSpecies.length-1,speciesCursor+delta));
-  if(next===speciesCursor)return;
-  speciesCursor=next;
-  render();
-  // Advance directly to PHOTO 1, not the top of Tools, statistics or the page.
-  // Run after the new species DOM has been laid out so sticky navigation is measured correctly.
-  requestAnimationFrame(()=>{
-    requestAnimationFrame(()=>{
-      const first=$('#results .photo')||$('#results .species')||$('#results');
-      const nav=$('#speciesNav');
-      if(!first)return;
-      const navHeight=nav&&!nav.hidden?nav.getBoundingClientRect().height:0;
-      const y=first.getBoundingClientRect().top+window.scrollY-navHeight-7;
-      window.scrollTo({top:Math.max(0,y),behavior:'instant'});
-    });
-  });
+ if(!visibleSpecies.length)return;
+ const next=Math.max(0,Math.min(visibleSpecies.length-1,speciesCursor+delta));
+ if(next===speciesCursor)return;
+ const id=++navSequence;
+ speciesCursor=next;render();
+ requestAnimationFrame(()=>{anchorToFirstPhoto(id);requestAnimationFrame(()=>anchorToFirstPhoto(id))});
+ setTimeout(()=>anchorToFirstPhoto(id),130);
+ setTimeout(()=>anchorToFirstPhoto(id),350);
 }
 function render(){
  stats();
@@ -419,8 +440,8 @@ function render(){
  const spec=visibleSpecies[speciesCursor],photos=photosFrom(spec),leads=leadsFrom(spec);
  $('#speciesPosition').textContent=(spec.scientific_name||'Unknown species')+' · '+(speciesCursor+1)+'/'+count;
  const card=create('section',undefined,'species');
- card.append(create('div','Atlas stages the pose and checks topology; the original/Human Gold governs its card, and these references refine taxon/sex morphology. Detailed landmarks only when evidence requires it.','specdetails'));
- card.append(create('div',photos.length+' archived photo candidates · '+leads.length+' link-only research leads','specdetails'));
+
+ card.append(create('div',photos.length+' reference photographs · '+leads.length+' source links · tap photo to zoom','specdetails'));
  if(photos.length){
    const gallery=create('div',undefined,'photos');
    for(let i=0;i<photos.length;i++){
@@ -545,6 +566,14 @@ $('#reviewUpload').addEventListener('change',async event=>{
    notify('Imported '+n+' photo reviews into this device. Not automatically uploaded to Google Drive.');
  }catch(error){notify('Cannot import review JSON: '+error.message)}
  finally{event.target.value=''}
+});
+$('#saveQuick').addEventListener('click',()=>{
+ if(navigator.userAgent.includes('VNMV1ReviewAndroid/11')){
+  window.location.href='vnmv1-review://save';
+ }else{
+  $('#export').click();
+  notify('Photo JSON downloaded. For ALL card identities and private original reviews, use the Android app Save All to Drive button.');
+ }
 });
 $('#export').addEventListener('click',()=>{const rows=exportRecords();const body={schema:'VNMV1_HUMAN_PHOTO_REVIEW_DECISIONS_V1',camera_pose_vocabulary:'VNMV1_CAMERA_VIEW_RESEARCH_NEEDS_V1',status:'USER_SUBMITTED_NOT_YET_IMPORTED_OR_PROMOTED',exported_at:new Date().toISOString(),records:rows};const blob=new Blob([JSON.stringify(body,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='VNMV1_reference_decisions_'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);notify('Exported '+rows.length+' decisions. Import into your private production review workflow.')});
 load();
