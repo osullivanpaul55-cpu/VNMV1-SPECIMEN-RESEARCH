@@ -1,0 +1,579 @@
+{
+  "schema": "VNMV1_PUBLIC_BEHAVIOR_TEXT_HINTS_V1",
+  "scope": "PUBLIC_RESEARCH_LEADS_ONLY_NEVER_VISUALLY_CHECKED",
+  "behaviors": [
+    {
+      "id": "RESTING_NATURAL",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "resting in a natural posture",
+        "resting",
+        "natural"
+      ]
+    },
+    {
+      "id": "WALKING_STRIDE",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "walking with anatomically natural gait",
+        "walking",
+        "stride"
+      ]
+    },
+    {
+      "id": "WALKING_AWAY",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "walking away from camera",
+        "walking"
+      ]
+    },
+    {
+      "id": "ALERT_ELEVATED",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "raised alert posture",
+        "elevated"
+      ]
+    },
+    {
+      "id": "DEFENSIVE_REARING",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "defensive raised front legs",
+        "defensive",
+        "rearing"
+      ]
+    },
+    {
+      "id": "STRIDULATION",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "sound-producing defensive stridulation",
+        "stridulation"
+      ]
+    },
+    {
+      "id": "URTICATING_SETAE_RELEASE",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "urticating hair flicking or rubbing",
+        "urticating",
+        "release"
+      ]
+    },
+    {
+      "id": "ESCAPE_SPRINT",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "retreat or quick escape",
+        "escape",
+        "sprint"
+      ]
+    },
+    {
+      "id": "CRYPSIS",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "camouflage or cryptic resting stance",
+        "crypsis"
+      ]
+    },
+    {
+      "id": "BURROW_EMERGENCE",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "emerging from burrow",
+        "burrow",
+        "emergence"
+      ]
+    },
+    {
+      "id": "BURROW_EXCAVATION",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "digging or excavating tunnel",
+        "burrow",
+        "excavation"
+      ]
+    },
+    {
+      "id": "SUBSTRATE_CARRY",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "carrying and depositing excavated soil",
+        "substrate"
+      ]
+    },
+    {
+      "id": "BURROW_SEAL",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "blocking or closing burrow entrance",
+        "burrow"
+      ]
+    },
+    {
+      "id": "BURROW_SILK_LINING",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "lining a burrow with silk",
+        "burrow",
+        "lining"
+      ]
+    },
+    {
+      "id": "TURRET_CONSTRUCTION",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "constructing burrow entrance turret",
+        "turret",
+        "construction"
+      ]
+    },
+    {
+      "id": "CLIMBING_VERTICAL",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "climbing trunk or vertical surface",
+        "climbing",
+        "vertical"
+      ]
+    },
+    {
+      "id": "BRANCH_UNDERSIDE",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "clinging beneath branch or bark",
+        "branch",
+        "underside"
+      ]
+    },
+    {
+      "id": "ARBORIAL_RETREAT",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "building or occupying arboreal retreat",
+        "arborial",
+        "retreat"
+      ]
+    },
+    {
+      "id": "SILK_SPINNING",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "spinning or laying silk",
+        "spinning"
+      ]
+    },
+    {
+      "id": "HEAVY_WEB_BUILDING",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "building dense or extensive web structure",
+        "building"
+      ]
+    },
+    {
+      "id": "WEB_REPAIR",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "repairing existing silk or web",
+        "repair"
+      ]
+    },
+    {
+      "id": "ORB_WEB_BUILDING",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "building orb web",
+        "building"
+      ]
+    },
+    {
+      "id": "FUNNEL_WEB_BUILDING",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "building funnel or sheet web",
+        "funnel",
+        "building"
+      ]
+    },
+    {
+      "id": "WEB_SENSING",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "responding to silk vibrations",
+        "sensing"
+      ]
+    },
+    {
+      "id": "HUNT_AMBUSH",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "ambush or sit-and-wait hunting",
+        "ambush"
+      ]
+    },
+    {
+      "id": "HUNT_ACTIVE",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "active pursuit or stalking of prey",
+        "active"
+      ]
+    },
+    {
+      "id": "PREY_CAPTURE",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "capturing prey",
+        "capture"
+      ]
+    },
+    {
+      "id": "PREY_RESTRAINT",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "holding restraining or subduing prey",
+        "restraint"
+      ]
+    },
+    {
+      "id": "PREY_WRAPPING",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "wrapping prey in silk",
+        "wrapping"
+      ]
+    },
+    {
+      "id": "FEEDING",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "feeding on prey",
+        "feeding"
+      ]
+    },
+    {
+      "id": "DRINKING",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "drinking water",
+        "drinking"
+      ]
+    },
+    {
+      "id": "GROOMING",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "cleaning legs palps or body",
+        "grooming"
+      ]
+    },
+    {
+      "id": "MOLT_IN_PROGRESS",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "moulting / ecdysis",
+        "progress"
+      ]
+    },
+    {
+      "id": "POST_MOLT",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "freshly moulted animal and exuvia"
+      ]
+    },
+    {
+      "id": "SPERM_WEB_BUILDING",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "mature male constructing sperm web",
+        "building"
+      ]
+    },
+    {
+      "id": "SPERM_LOADING",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "mature male loading sperm into palps",
+        "loading"
+      ]
+    },
+    {
+      "id": "COURTSHIP_DISPLAY",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "courtship drumming or vibratory signal",
+        "courtship",
+        "display"
+      ]
+    },
+    {
+      "id": "MATING_PAIR",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "conspecific pair during mating",
+        "mating"
+      ]
+    },
+    {
+      "id": "MALE_DISENGAGEMENT",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "male retreating after mating",
+        "disengagement"
+      ]
+    },
+    {
+      "id": "EGG_SAC_PREPARATION",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "female preparing egg sac",
+        "preparation"
+      ]
+    },
+    {
+      "id": "EGG_SAC_CONSTRUCTION",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "female constructing or wrapping egg sac",
+        "construction"
+      ]
+    },
+    {
+      "id": "EGG_SAC_GUARDING",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "female guarding egg sac",
+        "guarding"
+      ]
+    },
+    {
+      "id": "EGG_SAC_CARRYING",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "female carrying or manipulating egg sac",
+        "carrying"
+      ]
+    },
+    {
+      "id": "BROOD_HATCHING",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "spiderlings emerging from sac",
+        "hatching"
+      ]
+    },
+    {
+      "id": "MATERNAL_CARE",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "female tending offspring",
+        "maternal"
+      ]
+    },
+    {
+      "id": "SPIDERLING_DISPERSAL",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "young spiderlings dispersing",
+        "spiderling",
+        "dispersal"
+      ]
+    },
+    {
+      "id": "SPIDERLING_BALLOONING",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "silk-assisted dispersal when documented",
+        "spiderling",
+        "ballooning"
+      ]
+    },
+    {
+      "id": "COHABITATION",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "several individuals coexisting in same retreat",
+        "cohabitation"
+      ]
+    },
+    {
+      "id": "PREDATOR_ENCOUNTER",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "encounter with documented natural predator",
+        "predator",
+        "encounter"
+      ]
+    },
+    {
+      "id": "PREDATOR_DEFENSE",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "escape or defence from natural predator",
+        "predator",
+        "defense"
+      ]
+    },
+    {
+      "id": "PREDATOR_ATTACK",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "predator attacking focal species",
+        "predator",
+        "attack"
+      ]
+    },
+    {
+      "id": "CANNIBALISM",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "conspecific predation if documented",
+        "cannibalism"
+      ]
+    },
+    {
+      "id": "NET_CASTING",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "hunting using handheld capture net",
+        "casting"
+      ]
+    },
+    {
+      "id": "SALTICID_POUNCE",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "jumping spider prey-attack leap",
+        "salticid",
+        "pounce"
+      ]
+    },
+    {
+      "id": "TRAPDOOR_AMBUSH",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "ambush at trapdoor entrance",
+        "trapdoor",
+        "ambush"
+      ]
+    },
+    {
+      "id": "BOLAS_HUNT",
+      "source": "VNMV1_56_BEHAVIOURS",
+      "unverified_text_terms": [
+        "bolas silk lure/capture strategy"
+      ]
+    },
+    {
+      "id": "SCORPION_PECTINAL_SUBSTRATE_SCAN",
+      "source": "VNMV1_NON_SPIDER_GROUP_RESEARCH_EXTENSION",
+      "unverified_text_terms": [
+        "ventral",
+        "pectines",
+        "contact"
+      ]
+    },
+    {
+      "id": "SCORPION_METASOMA_DEFENSIVE_ARCH",
+      "source": "VNMV1_NON_SPIDER_GROUP_RESEARCH_EXTENSION",
+      "unverified_text_terms": [
+        "defensive",
+        "tail/chela",
+        "geometry"
+      ]
+    },
+    {
+      "id": "SCORPION_COURTSHIP_PROMENADE",
+      "source": "VNMV1_NON_SPIDER_GROUP_RESEARCH_EXTENSION",
+      "unverified_text_terms": [
+        "courtship",
+        "promenade"
+      ]
+    },
+    {
+      "id": "SCORPION_BROOD_ON_BACK",
+      "source": "VNMV1_NON_SPIDER_GROUP_RESEARCH_EXTENSION",
+      "unverified_text_terms": [
+        "supported",
+        "mother's"
+      ]
+    },
+    {
+      "id": "AMBLYPYGI_ANTENNIFORM_EXPLORATION",
+      "source": "VNMV1_NON_SPIDER_GROUP_RESEARCH_EXTENSION",
+      "unverified_text_terms": [
+        "antenniform",
+        "sensory-leg",
+        "tactile"
+      ]
+    },
+    {
+      "id": "AMBLYPYGI_RAPTORY_PEDIPALP_STRIKE",
+      "source": "VNMV1_NON_SPIDER_GROUP_RESEARCH_EXTENSION",
+      "unverified_text_terms": [
+        "raptorial",
+        "pedipalp",
+        "capture"
+      ]
+    },
+    {
+      "id": "AMBLYPYGI_MALE_ANTENNIFORM_FENCING",
+      "source": "VNMV1_NON_SPIDER_GROUP_RESEARCH_EXTENSION",
+      "unverified_text_terms": [
+        "documented",
+        "territorial/courtship",
+        "antenniform"
+      ]
+    },
+    {
+      "id": "CHILOPODA_FORCIPULE_STRIKE",
+      "source": "VNMV1_NON_SPIDER_GROUP_RESEARCH_EXTENSION",
+      "unverified_text_terms": [
+        "multi-legged",
+        "predatory",
+        "capture"
+      ]
+    },
+    {
+      "id": "CHILOPODA_BROOD_COIL",
+      "source": "VNMV1_NON_SPIDER_GROUP_RESEARCH_EXTENSION",
+      "unverified_text_terms": [
+        "egg/brood",
+        "guarding",
+        "relevant"
+      ]
+    },
+    {
+      "id": "COLEOPTERA_THANATOSIS",
+      "source": "VNMV1_NON_SPIDER_GROUP_RESEARCH_EXTENSION",
+      "unverified_text_terms": [
+        "death-feigning",
+        "posture"
+      ]
+    },
+    {
+      "id": "COLEOPTERA_DEFENSIVE_ABDOMEN",
+      "source": "VNMV1_NON_SPIDER_GROUP_RESEARCH_EXTENSION",
+      "unverified_text_terms": [
+        "abdomen",
+        "documented"
+      ]
+    },
+    {
+      "id": "HEMIPTERA_ROSTRUM_PREY_STRIKE",
+      "source": "VNMV1_NON_SPIDER_GROUP_RESEARCH_EXTENSION",
+      "unverified_text_terms": [
+        "assassin-bug",
+        "stalking/ambush",
+        "piercing-sucking"
+      ]
+    }
+  ],
+  "photo_license_or_sex_approval_from_text": false,
+  "copy_private_cards": false
+}

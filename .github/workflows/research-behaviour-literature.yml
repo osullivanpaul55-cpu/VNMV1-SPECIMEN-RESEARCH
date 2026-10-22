@@ -1,0 +1,84 @@
+name: Public species behaviour literature leads (unverified)
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '41 7,19 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'research/behavior_literature.py'
+      - 'research/behavior_text_terms.json'
+      - 'tests/test_behavior_literature.py'
+      - '.github/workflows/research-behaviour-literature.yml'
+  pull_request:
+    paths:
+      - 'research/behavior_literature.py'
+      - 'research/behavior_text_terms.json'
+      - 'tests/test_behavior_literature.py'
+      - '.github/workflows/research-behaviour-literature.yml'
+permissions:
+  contents: write
+concurrency:
+  group: public-vnmv1-literature-evidence
+  cancel-in-progress: false
+jobs:
+  literature:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.head_ref || 'main' }}
+          fetch-depth: 3
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Certify no invented behaviour verification
+        run: python -m unittest discover -s tests -p test_behavior_literature.py -v
+      - name: Discover species literature, never photos or media
+        if: github.event_name != 'pull_request'
+        shell: bash
+        run: |
+          set -euo pipefail
+          CYCLE="$(python - <<'PY'
+          import json
+          x=json.load(open('data/behavior_literature_index.json'))
+          print(int(x['last_cycle'])+1)
+          PY
+          )"
+          MAX="$(python - <<'PY'
+          import json,math
+          n=len(json.load(open('research/species_seed.json'))['species'])
+          print(math.ceil(n/24))
+          PY
+          )"
+          if (( CYCLE >= MAX )); then
+            echo "195-name first literature sweep finished; continue only with intentional new research pass."
+            exit 0
+          fi
+          python research/behavior_literature.py --cycle "$CYCLE" --per-run 24
+          git config user.name 'VNMV1 public literature research bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/behavior_literature_index.json
+          git commit -m "research: unverified species bibliography cycle $CYCLE [skip ci]"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          echo "Index push failed: do not claim data saved." >&2
+          exit 1
+      - name: Disclose research status
+        if: github.event_name != 'pull_request'
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          x=json.load(open('data/behavior_literature_index.json'))
+          print("## Research-only source leads — NOT verified behaviours")
+          print("Named species searched:",x["species_searched"])
+          print("Species with candidate papers:",x["species_with_literature_leads"])
+          print("Visual pose analysis performed: 0")
+          print("Verified behaviour photos: 0")
+          print("ImageGen authorisations: 0")
+          PY
