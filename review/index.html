@@ -122,14 +122,14 @@ box.append(info);return box}
 function changeSpecies(delta){
   if(!visibleSpecies.length)return;
   speciesCursor=Math.max(0,Math.min(visibleSpecies.length-1,speciesCursor+delta));
-  photoCursor=0;render();window.scrollTo({top:0,behavior:'instant'});
+  photoCursor=0;render();window.scrollTo({top:0,behavior:'auto'});
 }
 function changePhoto(delta){
   if(!visibleSpecies.length)return;
   const photos=photosFrom(visibleSpecies[speciesCursor]);
   if(!photos.length)return;
   photoCursor=Math.max(0,Math.min(photos.length-1,photoCursor+delta));
-  render();document.querySelector('#results')?.scrollIntoView({block:'start',behavior:'instant'});
+  render();document.querySelector('#results')?.scrollIntoView({block:'start',behavior:'auto'});
 }
 function render(){
  stats();
