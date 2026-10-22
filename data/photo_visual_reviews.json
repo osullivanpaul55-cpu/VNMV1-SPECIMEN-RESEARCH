@@ -1,6 +1,6 @@
 {
   "schema": "VNMV1_PUBLIC_VISUAL_RECOMMENDATIONS_V1",
-  "revision": 6,
+  "revision": 7,
   "status": "VISUAL_DRAFTS_READY_FOR_USER_CORRECTION",
   "photos": {
     "inat:114448505": {
@@ -1079,8 +1079,8 @@
       ],
       "recommended_behaviours": [],
       "confidence": "HIGH",
-      "visible_image_notes": "Strong overhead view of pale scorpion with dark pincers and thick segmented tail on light sandy ground. Whole body axis and six walking-leg pairs? Scorpions have four pairs of walking legs; four pairs are visible with some overlap. Good dorsal anatomy and claw placement.",
-      "recommended_visual_notes": "Strong overhead view of pale scorpion with dark pincers and thick segmented tail on light sandy ground. Whole body axis and six walking-leg pairs? Scorpions have four pairs of walking legs; four pairs are visible with some overlap. Good dorsal anatomy and claw placement.",
+      "visible_image_notes": "Strong overhead view of pale scorpion with dark pincers and thick segmented tail on light sandy ground. Whole body axis and the four pairs of walking legs can be followed, although several legs overlap. Good dorsal anatomy and claw placement.",
+      "recommended_visual_notes": "Strong overhead view of pale scorpion with dark pincers and thick segmented tail on light sandy ground. Whole body axis and the four pairs of walking legs can be followed, although several legs overlap. Good dorsal anatomy and claw placement.",
       "recommended_suitability": "ACCEPT_REFERENCE",
       "suitability_recommendation_status": "AI_VISUAL_PROVISIONAL_NOT_HUMAN_APPROVED",
       "recommended_resemblance": "NOT_ASSESSED",
