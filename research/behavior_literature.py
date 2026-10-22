@@ -7,8 +7,8 @@ from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
-API="https://api.crossref.org/works"
-UA="VNMV1-SPECIMEN-RESEARCH/1.2 (github.com/osullivanpaul55-cpu/VNMV1-SPECIMEN-RESEARCH; bibliographic research only)"
+API="https://api.crossref.org/works" # preserved only for offline unit-test injection
+UA="VNMV1-SPECIMEN-RESEARCH/1.3 (github.com/osullivanpaul55-cpu/VNMV1-SPECIMEN-RESEARCH; Europe PMC bibliography only)"
 SCHEMA="VNMV1_PUBLIC_BEHAVIOUR_LITERATURE_CANDIDATES_V1"
 MAX_TAXA_PER_RUN=24
 DOI_PATTERN=re.compile(r"^10\.\d{4,9}/[-._;()/:A-Za-z0-9]+$")
@@ -38,18 +38,43 @@ def safe_publication(record,taxon,lexicon):
        "species_behavior_verified":False,"visual_pose_verified":False,
        "photo_source_verified":False,"photo_license_verified":False}
 def get_crossref(taxon,fetch=None):
-    url=API+"?"+urlencode({"query.bibliographic":taxon,"rows":7,"select":"DOI,title,abstract,issued,type,URL"})
-    if fetch is None:
-        def fetch(url):
+    """Use freely accessible Europe PMC research-index metadata.
+
+    Network errors, including 429, cause a held/retry cycle. They must never
+    be rewritten into 'no papers' or a false complete result.
+    Test injection accepts the historic Crossref-shaped stub.
+    """
+    if fetch is not None:
+        response=fetch(API+"?"+urlencode({"query.bibliographic":taxon,"rows":7}))
+        items=response.get("message",{}).get("items",[])
+        if not isinstance(items,list):raise ValueError("STUB_INVALID")
+        return items
+    url="https://www.ebi.ac.uk/europepmc/webservices/rest/search?"+urlencode({
+        "query":'"'+taxon+'"',"resultType":"core","format":"json","pageSize":7})
+    import urllib.error
+    last=None
+    for retry in range(3):
+        try:
             req=Request(url,headers={"User-Agent":UA,"Accept":"application/json"})
-            with urlopen(req,timeout=20) as resp:
-                raw=resp.read(850_000+1)
-                if len(raw)>850_000:raise ValueError("CROSSREF_RESPONSE_TOO_LARGE")
-                return json.loads(raw)
-    response=fetch(url)
-    items=response.get("message",{}).get("items",[])
-    if not isinstance(items,list):raise ValueError("CROSSREF_RESPONSE_INVALID")
-    return items
+            with urlopen(req,timeout=25) as resp:
+                raw=resp.read(950_000+1)
+                if len(raw)>950_000:raise ValueError("EUROPE_PMC_RESPONSE_TOO_LARGE")
+                payload=json.loads(raw)
+            results=payload.get("resultList",{}).get("result",[])
+            if not isinstance(results,list):raise ValueError("EUROPE_PMC_RESULTS_INVALID")
+            return [{
+                "DOI":item.get("doi",""),
+                "title":[item.get("title","")],
+                "abstract":item.get("abstractText",""),
+                "issued":{"date-parts":[[int(item.get("pubYear"))]]} if str(item.get("pubYear","")).isdigit() else {},
+                "source_id":item.get("id",""),
+                "source_type":item.get("source","")
+            } for item in results]
+        except (urllib.error.HTTPError,urllib.error.URLError,TimeoutError) as exc:
+            last=exc
+            if retry<2:time.sleep(4*(retry+1))
+    raise RuntimeError("LITERATURE_PROVIDER_UNAVAILABLE_RETRY_NO_DATA_ADVANCEMENT") from last
+
 def run(seed,index,terms,cycle,per_run=MAX_TAXA_PER_RUN,fetch=None):
     if seed.get("schema")!="VNMV1_PUBLIC_RESEARCH_SPECIES_SEED_V1":raise ValueError("INVALID_SEED")
     if index.get("schema")!=SCHEMA:raise ValueError("INVALID_INDEX")
