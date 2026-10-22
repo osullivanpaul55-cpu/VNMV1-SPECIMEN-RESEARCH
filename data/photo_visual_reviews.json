@@ -1,0 +1,7 @@
+{
+  "schema": "VNMV1_PUBLIC_VISUAL_RECOMMENDATIONS_V1",
+  "revision": 1,
+  "status": "READY_FOR_HASH_BOUND_VISUAL_REVIEW_INGEST",
+  "photos": {},
+  "notes": "No photos are marked visually analysed yet. Entries require source photo SHA-256, visible-image inspection, confidence and explicit visual draft status. Original private card photos are never published."
+}
