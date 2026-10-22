@@ -1,0 +1,13 @@
+{
+  "schema": "VNMV1_PUBLIC_RESEARCH_RUN_REQUEST_V1",
+  "request_id": "UNKNOWN_LICENCE_SOURCE_LINK_RESEARCH_20261022",
+  "requested_date": "2026-10-22",
+  "scope": "FIVE_PARALLEL_SPECIES_RESEARCH_WORKERS",
+  "purpose": "Discover new CC0/CC-BY archiveable photos AND all unknown/restricted-licence source photo links usable immediately for reference research, pose and behavior leads; do not copy restricted photographs.",
+  "species_per_worker": 4,
+  "track": "NEXT_CYCLE_UNVISITED_SPECIES",
+  "research_use": "OPEN_AND_REVIEW_SOURCE_LINKS_NOW",
+  "public_archiving": "ONLY_LICENSE_SCREENED_CC0_CC_BY_PHOTO_BYTES",
+  "private_gold": "IMPORT_SOURCE_LINK_ONLY_LEADS_LATER_AS_RESEARCH_NOT_IMAGEGEN",
+  "identity_sex_pose_auto_approval": false
+}
