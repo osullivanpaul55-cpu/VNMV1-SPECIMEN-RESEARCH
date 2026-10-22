@@ -25,7 +25,7 @@
 <body><main>
 <details id="reviewSettings" class="review-settings"><summary>VNMV1 Reference Review <span>Tools & progress ▾</span></summary>
 <header><div><h1>VNMV1 · Specimen reference review</h1><p class="muted">Independent photo research • one species pool • human-reviewed decisions</p></div><div class="muted">Candidate references only · No image generation</div></header>
-<div class="note"><strong>Quick review:</strong> select sex, pose, notes or Reject for each photograph. Your notes save on the phone automatically. Swipe horizontally to change species; scroll downward through photos for that species. Licence/identity checks are only needed later for production eligibility.</div>
+<div class="note"><strong>Quick review:</strong> select sex, pose, notes or Reject for each photograph. Your notes save on the phone automatically. Swipe horizontally to change species; scroll downward through photos for that species. References and available text-based suggestions are preselected for retention. Correct our proposals where necessary; biological and photo rights approval remain separate. Licence/identity checks are only needed later for production eligibility.</div>
 <section class="stats" aria-label="Research counts"><div class="stat"><b id="speciesCount">0</b><span>Species in index</span></div><div class="stat"><b id="candidateCount">0</b><span>Photo candidates</span></div><div class="stat"><b id="sourceLeadCount">0</b><span>Research-only photo links</span></div><div class="stat"><b id="decisionCount">0</b><span>Decisions entered</span></div><div class="stat"><b id="floorCount">0</b><span>Species with 9+ candidates</span></div></section>
 <div class="controls"><input id="filter" type="search" placeholder="Find species…" aria-label="Filter species"><select id="statusFilter" aria-label="Filter research state"><option value="all">All species</option><option value="photos" selected>With photographs or research links</option><option value="under">Fewer than nine candidates</option><option value="decided">My reviewed photographs</option></select><button class="secondary" id="reload">Refresh public index</button></div>
 <div class="controls"><label class="upload" for="reviewUpload">Import saved review JSON</label><input id="reviewUpload" type="file" accept="application/json,.json"><button class="secondary" id="openHelp" type="button">Where do I save?</button></div>
@@ -70,30 +70,95 @@ function save(){try{localStorage.setItem(KEY,JSON.stringify(decisions))}catch(_)
 function notify(message){$('#notification').textContent=message}
 function photosFrom(x){return Array.isArray(x.candidates)?x.candidates:[]}
 function leadsFrom(x){return Array.isArray(x.link_only_leads)?x.link_only_leads:[]}
+const REVIEW_DOCTRINE='VNMV1_UNIFIED_REFERENCE_REVIEW_DOCTRINE_V1';
+const LIFE_STAGES=['UNKNOWN','MATURE_MALE','ADULT_FEMALE_MATURE','ADULT_FEMALE_YOUNGER','JUVENILE_SPIDERLING'];
+function suggestions(p){
+ const x=p.preanalysis||{};
+ const valid=x.analysis_method==='VALIDATED_VISUAL_ANALYSIS'&&x.source_image_sha256===p.sha256;
+ const raw=(p.unverified_observer_text_pose_hints||[]);
+ const candidate=valid?x.recommended_pose_id:(raw.length===1?raw[0]:'UNREVIEWED');
+ const pose=POSES.some(t=>t[0]===candidate)?candidate:'UNREVIEWED';
+ return {pose,life_stage:valid&&LIFE_STAGES.includes(x.recommended_life_stage)?x.recommended_life_stage:'UNKNOWN',
+   behaviour:(valid?x.recommended_behaviours:(p.unverified_observer_behaviour_hints||[])).slice(0,56),
+   anatomy:(valid?x.recommended_visible_anatomy:[]).slice(0,36),
+   basis:valid?'VALIDATED_HASH_BOUND_VISUAL_PREANALYSIS':raw.length||((p.unverified_observer_behaviour_hints||[]).length)?'UNVERIFIED_OBSERVER_TEXT':'NO_VISUAL_PREANALYSIS',
+   confidence:valid?x.confidence||'UNKNOWN':'NONE',
+   auto_approved:false};
+}
+function seedProposal(spec,p,linkOnly){
+ const sug=suggestions(p);
+ return {photo_key:p.photo_key,scientific_name:spec.scientific_name,
+  source_url:p.source_url||null,photo_sha256:linkOnly?null:p.sha256||null,
+  photographer_attribution:p.attribution||'UNKNOWN',licence_code:p.license_code||'UNKNOWN',
+  review_doctrine:REVIEW_DOCTRINE,reference_access:linkOnly?'SOURCE_LINK_ONLY':'ARCHIVED_CANDIDATE',
+  keep_research_candidate:true,retain_suggested_classifications:true,
+  recommended_pose_id:sug.pose,recommended_life_stage:sug.life_stage,
+  recommended_behaviours:sug.behaviour,recommended_visible_anatomy:sug.anatomy,
+  recommendation_basis:sug.basis,recommendation_confidence:sug.confidence,
+  reviewed_by_human:false,human_visual_confirmation:false,
+  species_verified:false,rights_checked:false,approved_for_imagegen:false,
+  decision:'PENDING',requested_decision:'PENDING',sex:'UNKNOWN',pose_id:'UNREVIEWED',
+  life_stage:'UNKNOWN',notes:'',review_gate:'RESEARCH_KEEP_ONLY_NOT_PRODUCTION_APPROVED'};
+}
+function seedPendingReviews(){
+ let n=0;
+ for(const spec of Object.values(dataset.species||{})){
+  for(const [rows,linkOnly] of [[photosFrom(spec),false],[leadsFrom(spec),true]]){
+   for(const p of rows){
+    if(!/^inat:\d+$/.test(p.photo_key||''))continue;
+    if(decisions[p.photo_key]===undefined){decisions[p.photo_key]=seedProposal(spec,p,linkOnly);n++}
+   }
+  }
+ }
+ if(n)save();
+ return n;
+}
+function isExportable(d){return !!d&&(d.keep_research_candidate===true||reviewIsEntered(d)||d.reviewed_by_human===true)}
+function exportRecords(){return Object.values(decisions).filter(isExportable).map(d=>({...d,approved_for_imagegen:false}))}
+
 function leadCard(p){
+ const spec=Object.values(dataset.species||{}).find(s=>leadsFrom(s).includes(p));
+ const d=decisions[p.photo_key]||{};
  const article=create('article',undefined,'photo');
  const info=create('div',undefined,'info');
  info.append(create('strong','Research-only link '+String(p.photo_key||'')));
  info.append(create('small','No copy stored in GitHub · Licence: '+(p.license_code||'UNKNOWN')));
+ const checkLabel=create('label',undefined,'check');const check=create('input');check.type='checkbox';check.checked=d.keep_research_candidate!==false;
+ checkLabel.append(check,create('span','Keep research source link · suggested ON'));info.append(checkLabel);
+ check.addEventListener('change',()=>{decisions[p.photo_key]={...d,keep_research_candidate:check.checked,
+  retain_suggested_classifications:true,review_doctrine:REVIEW_DOCTRINE,
+  reviewed_by_human:true,source_url:p.source_url,reference_access:'SOURCE_LINK_ONLY',
+  approved_for_imagegen:false};save()});
  info.append(create('small','Source: '+(p.attribution||'Photographer unconfirmed')));
  const link=safeUrl(p.source_url,'www.inaturalist.org');
  if(link){const a=create('a','Open original observation to inspect pose, sex and anatomy');
    a.href=link;a.target='_blank';a.rel='noopener noreferrer';info.append(a)}
+ info.append(create('small','Species: '+(spec?.scientific_name||'UNRESOLVED')+' · Observation ID: '+(p.observation_id||'unknown')+' · Photo ID: '+(p.photo_id||'unknown')));
+ info.append(create('small','Text-only pose clues: '+(p.unverified_observer_text_pose_hints||[]).join(', ')+'; behaviour clues: '+(p.unverified_observer_behaviour_hints||[]).join(', ')));
  info.append(create('small','Available for research now. Open the original page; no photograph or pose has been downloaded, visually checked, or approved here.'));
  article.append(info);return article;
 }
-function stats(){let names=Object.values(dataset.species||{});$('#speciesCount').textContent=names.length;$('#candidateCount').textContent=names.reduce((a,x)=>a+photosFrom(x).length,0);$('#sourceLeadCount').textContent=names.reduce((a,x)=>a+leadsFrom(x).length,0);$('#floorCount').textContent=names.filter(x=>photosFrom(x).length>=9).length;const n=Object.values(decisions).filter(reviewIsEntered).length;$('#decisionCount').textContent=n;$('#reviewedLabel').textContent=n+' decisions'}
-function reviewIsEntered(d){return !!d&&(!!d.sex&&d.sex!=='UNKNOWN'||!!d.decision&&d.decision!=='PENDING'||!!d.pose_id&&d.pose_id!=='UNREVIEWED'||!!d.notes?.trim()||!!d.reject_reason?.trim())}
+function stats(){let names=Object.values(dataset.species||{});$('#speciesCount').textContent=names.length;$('#candidateCount').textContent=names.reduce((a,x)=>a+photosFrom(x).length,0);$('#sourceLeadCount').textContent=names.reduce((a,x)=>a+leadsFrom(x).length,0);$('#floorCount').textContent=names.filter(x=>photosFrom(x).length>=9).length;const n=Object.values(decisions).filter(reviewIsEntered).length;$('#decisionCount').textContent=n;}
+function reviewIsEntered(d){return !!d&&(d.reviewed_by_human===true||!!d.sex&&d.sex!=='UNKNOWN'||!!d.decision&&d.decision!=='PENDING'||!!d.pose_id&&d.pose_id!=='UNREVIEWED'||!!d.notes?.trim()||!!d.reject_reason?.trim())}
 function reviewDecisionChoice(d){return d.requested_decision || (d.decision==='ACCEPT_FEMALE'||d.decision==='ACCEPT_MALE'?'ACCEPT_REFERENCE':d.decision)||'PENDING'}
 function reviewSex(d){return d.sex || (d.decision==='ACCEPT_FEMALE'?'FEMALE':d.decision==='ACCEPT_MALE'?'MATURE_MALE':'UNKNOWN')}
-function imageCard(spec,p){const key=p.photo_key;if(typeof key!=='string'||!/^inat:\d+$/.test(key))return create('div','Invalid photo entry','photo');const d=decisions[key]||{decision:'PENDING',species_verified:false,rights_checked:false,notes:''};const box=create('article',undefined,'photo');const src=imgUrl(p.thumbnail_url);if(src){const im=create('img');im.loading='lazy';im.src=src;im.alt='Unreviewed candidate photograph for '+spec.scientific_name;box.append(im)}
+function imageCard(spec,p){const key=p.photo_key;if(typeof key!=='string'||!/^inat:\d+$/.test(key))return create('div','Invalid photo entry','photo');const d=decisions[key]||seedProposal(spec,p,false);const sug=suggestions(p);const box=create('article',undefined,'photo');const src=imgUrl(p.thumbnail_url);if(src){const im=create('img');im.loading='lazy';im.src=src;im.alt='Unreviewed candidate photograph for '+spec.scientific_name;box.append(im)}
 const info=create('div',undefined,'info');info.append(create('strong','Photo '+key));info.append(create('small',p.attribution||'Photographer unknown'));info.append(create('small','Licence metadata: '+(p.license_code||'UNKNOWN')+' (verify original terms)'));
+info.append(create('small','Species: '+spec.scientific_name+' · Observation: '+(p.observation_id||'UNKNOWN')+' · Photo ID: '+(p.photo_id||'UNKNOWN')));
+info.append(create('small','Media: '+(p.width||'?')+' × '+(p.height||'?')+' · SHA256: '+(p.sha256||'unavailable')));
+info.append(create('small','Reference state: archived candidate, source verified for catalogue only. No species/sex/rights or ImageGen approval.'));
+const retainLabel=create('label',undefined,'check');const retainBox=create('input');retainBox.type='checkbox';retainBox.checked=d.keep_research_candidate!==false;
+retainLabel.append(retainBox,create('span','Keep this photo in the research packet — preselected'));info.append(retainLabel);
+const suggestLabel=create('label',undefined,'check');const suggestBox=create('input');suggestBox.type='checkbox';suggestBox.checked=d.retain_suggested_classifications!==false;
+suggestLabel.append(suggestBox,create('span','Keep proposed classifications — preselected, editable'));info.append(suggestLabel);
+info.append(create('small','Suggestion basis: '+sug.basis+' · confidence: '+sug.confidence+'. Caption clues are NOT visual analysis.'));
 const link=safeUrl(p.source_url,'www.inaturalist.org');if(link){const a=create('a','Open original iNaturalist observation');a.href=link;a.target='_blank';a.rel='noopener noreferrer';info.append(a)}
 // The archive ZIP is NOT a review JSON or installable APK. Keep it out of the mobile review controls.
 info.append(create('label','Sex or maturity — save independently of approval'));
 const sexSelect=create('select');
 for(const [value,title] of [['UNKNOWN','Uncertain / not classified'],['FEMALE','Female'],['MATURE_MALE','Mature male'],['JUVENILE_SUBADULT','Juvenile / subadult']]){const opt=create('option',title);opt.value=value;sexSelect.append(opt)}
 sexSelect.value=reviewSex(d);info.append(sexSelect);
+info.append(create('small','Recommended stage: '+((p.preanalysis?.analysis_method==='VALIDATED_VISUAL_ANALYSIS'&&p.preanalysis?.source_image_sha256===p.sha256)?(p.preanalysis.recommended_life_stage||'UNKNOWN'):'UNKNOWN — not visually analysed')));
 info.append(create('small','Your sex classification saves immediately. It does not approve a photograph or assert independently verified sex.'));
 info.append(create('label','Photo suitability / your review decision'));
 const select=create('select');
@@ -102,7 +167,18 @@ select.value=reviewDecisionChoice(d);info.append(select);
 const reviewStatus=create('small','', 'review-status');info.append(reviewStatus);
 info.append(create('label','Camera pose — review the actual photo'));const poseSelect=create('select');
 for(const [value,title] of POSES){const opt=create('option',title);opt.value=value;poseSelect.append(opt)}
-poseSelect.value=POSES.some(x=>x[0]===d.pose_id)?d.pose_id:'UNREVIEWED';info.append(poseSelect);
+poseSelect.value=POSES.some(x=>x[0]===d.pose_id)&&d.pose_id!=='UNREVIEWED'?d.pose_id:sug.pose;info.append(poseSelect);
+info.append(create('small','Preselected suggestion: '+sug.pose+' · source: '+sug.basis+'. Not yet human-verified.'));
+info.append(create('label','Life-stage suggestion (edit if necessary)'));
+const stageSelect=create('select');
+for(const id of LIFE_STAGES){const opt=create('option',id.replaceAll('_',' '));opt.value=id;stageSelect.append(opt)}
+stageSelect.value=LIFE_STAGES.includes(d.life_stage)&&d.life_stage!=='UNKNOWN'?d.life_stage:sug.life_stage;info.append(stageSelect);
+info.append(create('label','Behaviour suggestions (comma separated, editable)'));
+const behaviours=create('textarea');behaviours.rows=2;
+behaviours.value=Array.isArray(d.behaviours)?d.behaviours.join(', '):sug.behaviour.join(', ');info.append(behaviours);
+info.append(create('label','Visible anatomy suggestions (comma separated, editable)'));
+const anatomy=create('textarea');anatomy.rows=2;
+anatomy.value=Array.isArray(d.visible_anatomy)?d.visible_anatomy.join(', '):sug.anatomy.join(', ');info.append(anatomy);
 info.append(create('small','Pose-only labels can be exported separately. They do not verify sex, taxonomy, image rights or generation readiness.'));
 const verification=create('details');verification.className='details-checks';
 const verifySummary=create('summary','Optional production verification — species and licence');
@@ -126,7 +202,16 @@ const update=()=>{
   const eligibleIntent=choice==='ACCEPT_REFERENCE';
   const readyForReview=speciesbox.checked===true&&rightsbox.checked===true;
   const effective=eligibleIntent&&!readyForReview?'NEEDS_RESEARCH':choice;
-  const rec={photo_key:key,scientific_name:spec.scientific_name,photo_sha256:p.sha256,
+  const splitTags=v=>[...new Set(v.split(',').map(x=>x.trim().toUpperCase().replace(/[^A-Z0-9_]/g,'_')).filter(x=>/^[A-Z0-9_]{3,80}$/.test(x)))].slice(0,56);
+  const rec={...d,photo_key:key,scientific_name:spec.scientific_name,photo_sha256:p.sha256,
+    source_url:p.source_url,photographer_attribution:p.attribution,licence_code:p.license_code,
+    review_doctrine:REVIEW_DOCTRINE,keep_research_candidate:retainBox.checked,
+    retain_suggested_classifications:suggestBox.checked,
+    recommended_pose_id:sug.pose,recommended_life_stage:sug.life_stage,
+    recommended_behaviours:sug.behaviour,recommended_visible_anatomy:sug.anatomy,
+    recommendation_basis:sug.basis,recommendation_confidence:sug.confidence,
+    life_stage:stageSelect.value,behaviours:splitTags(behaviours.value),visible_anatomy:splitTags(anatomy.value),
+    reviewed_by_human:true,human_visual_confirmation:true,
     decision:effective,requested_decision:choice,
     sex:sexSelect.value,sex_verification:'USER_OBSERVATION_NOT_INDEPENDENTLY_VERIFIED',
     species_verified:speciesbox.checked,rights_checked:rightsbox.checked,
@@ -137,10 +222,12 @@ const update=()=>{
       eligibleIntent?(readyForReview?'USER_REQUESTED_PENDING_PRIVATE_VALIDATION':'IDENTITY_OR_RIGHTS_CHECK_REQUIRED'):'UNAPPROVED_CANDIDATE'};
   decisions[key]=rec;save();
   reviewStatus.textContent=eligibleIntent&&!readyForReview?'Sex/pose saved. Suitability request held until both species and licence checks.':
-    'Saved on this device. Use APK top Save to Drive to export.';
+    'Saved on this device. Use APK bottom Save to Drive to export.';
 };
-[select,sexSelect,poseSelect,speciesbox,rightsbox].forEach(c=>c.addEventListener('change',()=>{if(c===select&&select.value!=='REJECT')rejectReason.value='';update()}));
+[select,sexSelect,poseSelect,stageSelect,retainBox,suggestBox,speciesbox,rightsbox].forEach(c=>c.addEventListener('change',()=>{if(c===select&&select.value!=='REJECT')rejectReason.value='';update()}));
 notes.addEventListener('input',update);
+behaviours.addEventListener('change',update);
+anatomy.addEventListener('change',update);
 rejectReason.addEventListener('input',()=>{if(select.value==='REJECT'&&rejectReason.value.trim().length>=3)update()});
 rejectButton.addEventListener('click',()=>{
   if(rejectReason.value.trim().length<3){reviewStatus.textContent='Enter a reason before rejecting this photo.';rejectReason.focus();return}
@@ -230,13 +317,13 @@ async function load(){
       if(!res.ok)throw Error('HTTP '+res.status);
       const obj=await res.json();
       if(obj.schema!=='VNMV1_PUBLIC_PHOTO_CANDIDATES_V1'||!obj.species||typeof obj.species!=='object')throw Error('Unrecognized index');
-      dataset=obj;render();notify('Research index loaded · '+Object.keys(obj.species).length+' species · '+(obj.discovered_candidate_count||0)+' archived photos; '+(obj.unlicensed_link_research_lead_count||0)+' link-only leads.');
+      dataset=obj;seedPendingReviews();render();notify('Research index loaded · '+Object.keys(obj.species).length+' species · '+(obj.discovered_candidate_count||0)+' archived photos; '+(obj.unlicensed_link_research_lead_count||0)+' link-only leads.');
       return;
     }catch(err){lastError=String(err)}
   }
   render();notify('Public research index unavailable ('+lastError+'). Open index JSON offline.');
 }
-$('#indexUpload').addEventListener('change',async event=>{const f=event.target.files?.[0];if(!f)return;try{const o=JSON.parse(await f.text());if(o.schema!=='VNMV1_PUBLIC_PHOTO_CANDIDATES_V1'||typeof o.species!=='object')throw Error('Invalid index');dataset=o;speciesCursor=0;render();notify('Loaded local index: '+f.name)}catch(e){notify('Could not load index: '+e.message)}});
+$('#indexUpload').addEventListener('change',async event=>{const f=event.target.files?.[0];if(!f)return;try{const o=JSON.parse(await f.text());if(o.schema!=='VNMV1_PUBLIC_PHOTO_CANDIDATES_V1'||typeof o.species!=='object')throw Error('Invalid index');dataset=o;speciesCursor=0;seedPendingReviews();render();notify('Loaded local index: '+f.name)}catch(e){notify('Could not load index: '+e.message)}});
 $('#filter').addEventListener('input',()=>{speciesCursor=0;render()});
 $('#statusFilter').addEventListener('change',()=>{speciesCursor=0;render()});
 $('#reload').addEventListener('click',load);
@@ -265,6 +352,6 @@ $('#reviewUpload').addEventListener('change',async event=>{
  }catch(error){notify('Cannot import review JSON: '+error.message)}
  finally{event.target.value=''}
 });
-$('#export').addEventListener('click',()=>{const rows=Object.values(decisions).filter(reviewIsEntered);const body={schema:'VNMV1_HUMAN_PHOTO_REVIEW_DECISIONS_V1',camera_pose_vocabulary:'VNMV1_CAMERA_VIEW_RESEARCH_NEEDS_V1',status:'USER_SUBMITTED_NOT_YET_IMPORTED_OR_PROMOTED',exported_at:new Date().toISOString(),records:rows};const blob=new Blob([JSON.stringify(body,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='VNMV1_reference_decisions_'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);notify('Exported '+rows.length+' decisions. Import into your private production review workflow.')});
+$('#export').addEventListener('click',()=>{const rows=exportRecords();const body={schema:'VNMV1_HUMAN_PHOTO_REVIEW_DECISIONS_V1',camera_pose_vocabulary:'VNMV1_CAMERA_VIEW_RESEARCH_NEEDS_V1',status:'USER_SUBMITTED_NOT_YET_IMPORTED_OR_PROMOTED',exported_at:new Date().toISOString(),records:rows};const blob=new Blob([JSON.stringify(body,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='VNMV1_reference_decisions_'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);notify('Exported '+rows.length+' decisions. Import into your private production review workflow.')});
 load();
 </script></body></html>
