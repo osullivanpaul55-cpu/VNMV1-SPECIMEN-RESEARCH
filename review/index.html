@@ -73,6 +73,7 @@ function photosFrom(x){return Array.isArray(x.candidates)?x.candidates:[]}
 function leadsFrom(x){return Array.isArray(x.link_only_leads)?x.link_only_leads:[]}
 const REVIEW_DOCTRINE='VNMV1_UNIFIED_REFERENCE_REVIEW_DOCTRINE_V1';
 const LIFE_STAGES=['UNKNOWN','MATURE_MALE','ADULT_FEMALE_MATURE','ADULT_FEMALE_YOUNGER','JUVENILE_SPIDERLING'];
+const SUITABILITY=new Set(['PENDING','ACCEPT_REFERENCE','STRUCTURAL_ONLY','NEEDS_RESEARCH','REJECT']);
 const RESEMBLES=[['NOT_ASSESSED','Not assessed yet'],['STRONGLY','Strongly resembles my card original'],['PARTLY','Partly resembles my card original'],['POORLY','Little resemblance'],['DOES_NOT_RESEMBLE','Does not resemble my specimen'],['NO_ORIGINAL_AVAILABLE','Cannot compare — original not visible']];
 function suggestions(p){
  const x=p.preanalysis||{};
@@ -89,7 +90,8 @@ function suggestions(p){
    anatomy:(Array.isArray(valid?x.recommended_visible_anatomy:[])?(valid?x.recommended_visible_anatomy:[]):[]).slice(0,36),
    basis:verified?'VALIDATED_HASH_BOUND_VISUAL_PREANALYSIS':visualDraft?'CHATGPT_HASH_BOUND_VISUAL_DRAFT_NOT_VERIFIED':raw.length||((p.unverified_observer_behaviour_hints||[]).length)?'UNVERIFIED_OBSERVER_TEXT':'NO_VISUAL_PREANALYSIS',
    confidence:valid?x.confidence||'UNKNOWN':(raw.length||((p.unverified_observer_behaviour_hints||[]).length)?'LOW_TEXT_ONLY':'NONE'),
-   visible_note:valid?String(x.visible_image_notes||'').slice(0,900):'',auto_approved:false};
+   recommended_suitability:valid&&SUITABILITY.has(x.recommended_suitability)?x.recommended_suitability:'PENDING',
+   visible_note:valid?String(x.recommended_visual_notes||x.visible_image_notes||'').slice(0,900):'',auto_approved:false};
 }
 function seedProposal(spec,p,linkOnly){
  const sug=suggestions(p);
@@ -101,6 +103,7 @@ function seedProposal(spec,p,linkOnly){
   recommended_pose_id:sug.pose,recommended_sex:sug.sex,recommended_life_stage:sug.life_stage,
   recommended_behaviours:sug.behaviour,recommended_visible_anatomy:sug.anatomy,
   recommendation_basis:sug.basis,recommendation_confidence:sug.confidence,
+  recommended_suitability:sug.recommended_suitability,recommended_visual_notes:sug.visible_note,
   reviewed_by_human:false,human_visual_confirmation:false,
   species_verified:false,rights_checked:false,approved_for_imagegen:false,
   decision:'PENDING',requested_decision:'PENDING',sex:sug.sex,pose_id:sug.pose,resembles_original:'NOT_ASSESSED',resembles_notes:'',
@@ -220,10 +223,16 @@ resembles.value=d.resembles_original||'NOT_ASSESSED';info.append(resembles);
 const resemblesNotes=create('textarea');resemblesNotes.rows=2;resemblesNotes.value=d.resembles_notes||'';resemblesNotes.placeholder='Visual similarities and differences: colour, proportions, markings, eyes, hairs…';
 info.append(create('label','Resemblance notes (editable)'));info.append(resemblesNotes);
 info.append(create('small','Compare the private original at the top of the Android app. No automatic pixel comparison is claimed.'));
-info.append(create('label','Photo suitability / your review decision'));
+info.append(create('label','Photo suitability — AI recommendation, editable'));
+if(sug.recommended_suitability!=='PENDING')
+ info.append(create('small','AI recommendation: '+sug.recommended_suitability.replaceAll('_',' ')+
+  ' · provisional research use; not your approval, not a species/rights verification.'));
 const select=create('select');
 for(const [value,title] of [['PENDING','Pending'],['ACCEPT_REFERENCE','Suitable reference — request approval'],['STRUCTURAL_ONLY','General anatomy / structural only'],['NEEDS_RESEARCH','Needs more research'],['REJECT','Reject']]){const opt=create('option',title);opt.value=value;select.append(opt)}
-select.value=reviewDecisionChoice(d);info.append(select);
+const isUntouchedAI=d.proposal_prepopulated_not_human_reviewed===true&&d.reviewed_by_human!==true;
+select.value=isUntouchedAI&&sug.recommended_suitability!=='PENDING'?
+ sug.recommended_suitability:reviewDecisionChoice(d);
+info.append(select);
 const reviewStatus=create('small','', 'review-status');info.append(reviewStatus);
 info.append(create('label','Camera pose — review the actual photo'));const poseSelect=create('select');
 for(const [value,title] of POSES){const opt=create('option',title);opt.value=value;poseSelect.append(opt)}
@@ -261,7 +270,8 @@ const detailNotes=create('textarea');detailNotes.rows=2;detailNotes.value=d.anat
 detailBox.append(detailNotes);
 detailBox.append(create('small','No pixel-coordinate markers are invented. Source-specific positions must be anchored to inspected images or existing registered Human Gold. Unreviewed photo-text suggestions stay unverified.'));
 info.append(detailBox);
-info.append(create('label','Notes or anatomy correction'));const notes=create('textarea');notes.value=d.notes||'';notes.placeholder='For example: female, lighting exaggerates orange; pedipalps obscured…';info.append(notes);
+info.append(create('label','AI visual notes — edit if necessary'));const notes=create('textarea');
+notes.value=d.notes||(isUntouchedAI?sug.visible_note:'');notes.placeholder='For example: female, lighting exaggerates orange; pedipalps obscured…';info.append(notes);
 info.append(create('label','Rejection reason (required if rejected)'));
 const rejectReason=create('textarea');rejectReason.value=d.reject_reason||'';rejectReason.placeholder='Why should this photo not be used? e.g. wrong species, blurred, poor anatomy';info.append(rejectReason);
 const rejectButton=create('button','Reject this photo');rejectButton.className='reject-action';rejectButton.type='button';info.append(rejectButton);
@@ -283,6 +293,8 @@ const update=()=>{
     recommended_pose_id:sug.pose,recommended_sex:sug.sex,recommended_life_stage:sug.life_stage,
     recommended_behaviours:sug.behaviour,recommended_visible_anatomy:sug.anatomy,
     recommendation_basis:sug.basis,recommendation_confidence:sug.confidence,
+    recommended_suitability:sug.recommended_suitability,recommended_visual_notes:sug.visible_note,
+    proposal_prepopulated_not_human_reviewed:false,
     life_stage:stageSelect.value,resembles_original:resembles.value,resembles_notes:resemblesNotes.value,behaviours:splitTags(behaviours.value),visible_anatomy:splitTags(anatomy.value),
     reviewed_by_human:true,human_visual_confirmation:true,
     decision:effective,requested_decision:choice,
@@ -395,7 +407,8 @@ function bindVisualDrafts(){
    Object.assign(d,{recommended_pose_id:sug.pose,recommended_sex:sug.sex,
     recommended_life_stage:sug.life_stage,recommended_visible_anatomy:sug.anatomy,
     recommended_behaviours:sug.behaviour,recommendation_basis:sug.basis,
-    recommendation_confidence:sug.confidence,sex:sug.sex,pose_id:sug.pose,
+    recommendation_confidence:sug.confidence,recommended_suitability:sug.recommended_suitability,
+    recommended_visual_notes:sug.visible_note,sex:sug.sex,pose_id:sug.pose,
     life_stage:sug.life_stage,visible_anatomy:sug.anatomy,behaviours:sug.behaviour});
    changed++;
   }
