@@ -25,7 +25,7 @@
 <body><main>
 <details id="reviewSettings" class="review-settings"><summary>VNMV1 Reference Review <span>Tools & progress ▾</span></summary>
 <header><div><h1>VNMV1 · Specimen reference review</h1><p class="muted">Independent photo research • one species pool • human-reviewed decisions</p></div><div class="muted">Candidate references only · No image generation</div></header>
-<div class="note"><strong>Quick review:</strong> select sex, pose, notes or Reject for each photograph. Your notes save on the phone automatically. Swipe horizontally to change species; scroll downward through photos for that species. References and available text-based suggestions are preselected for retention. Correct our proposals where necessary; biological and photo rights approval remain separate. Licence/identity checks are only needed later for production eligibility.</div>
+<div class="note"><strong>Quick review:</strong> select sex, pose, notes or Reject for each photograph. Your notes and Resembles assessment save on the phone automatically. Swipe horizontally to change species; scroll downward through photos for that species. References and available text-based suggestions are preselected for retention. Correct our proposals where necessary; biological and photo rights approval remain separate. Licence/identity checks are only needed later for production eligibility.</div>
 <section class="stats" aria-label="Research counts"><div class="stat"><b id="speciesCount">0</b><span>Species in index</span></div><div class="stat"><b id="candidateCount">0</b><span>Photo candidates</span></div><div class="stat"><b id="sourceLeadCount">0</b><span>Research-only photo links</span></div><div class="stat"><b id="decisionCount">0</b><span>Decisions entered</span></div><div class="stat"><b id="floorCount">0</b><span>Species with 9+ candidates</span></div></section>
 <div class="controls"><input id="filter" type="search" placeholder="Find species…" aria-label="Filter species"><select id="statusFilter" aria-label="Filter research state"><option value="all">All species</option><option value="photos" selected>With photographs or research links</option><option value="under">Fewer than nine candidates</option><option value="decided">My reviewed photographs</option></select><button class="secondary" id="reload">Refresh public index</button></div>
 <div class="controls"><label class="upload" for="reviewUpload">Import saved review JSON</label><input id="reviewUpload" type="file" accept="application/json,.json"><button class="secondary" id="openHelp" type="button">Where do I save?</button></div>
@@ -72,13 +72,15 @@ function photosFrom(x){return Array.isArray(x.candidates)?x.candidates:[]}
 function leadsFrom(x){return Array.isArray(x.link_only_leads)?x.link_only_leads:[]}
 const REVIEW_DOCTRINE='VNMV1_UNIFIED_REFERENCE_REVIEW_DOCTRINE_V1';
 const LIFE_STAGES=['UNKNOWN','MATURE_MALE','ADULT_FEMALE_MATURE','ADULT_FEMALE_YOUNGER','JUVENILE_SPIDERLING'];
+const RESEMBLES=[['NOT_ASSESSED','Not assessed yet'],['STRONGLY','Strongly resembles my card original'],['PARTLY','Partly resembles my card original'],['POORLY','Little resemblance'],['DOES_NOT_RESEMBLE','Does not resemble my specimen'],['NO_ORIGINAL_AVAILABLE','Cannot compare — original not visible']];
 function suggestions(p){
  const x=p.preanalysis||{};
  const valid=x.analysis_method==='VALIDATED_VISUAL_ANALYSIS'&&x.source_image_sha256===p.sha256;
  const raw=(p.unverified_observer_text_pose_hints||[]);
  const candidate=valid?x.recommended_pose_id:(raw.length===1?raw[0]:'UNREVIEWED');
  const pose=POSES.some(t=>t[0]===candidate)?candidate:'UNREVIEWED';
- return {pose,life_stage:valid&&LIFE_STAGES.includes(x.recommended_life_stage)?x.recommended_life_stage:'UNKNOWN',
+ const visualSex=valid&&['FEMALE','MATURE_MALE','JUVENILE_SUBADULT'].includes(x.recommended_sex)?x.recommended_sex:'UNKNOWN';
+ return {pose,sex:visualSex,life_stage:valid&&LIFE_STAGES.includes(x.recommended_life_stage)?x.recommended_life_stage:'UNKNOWN',
    behaviour:(valid?x.recommended_behaviours:(p.unverified_observer_behaviour_hints||[])).slice(0,56),
    anatomy:(valid?x.recommended_visible_anatomy:[]).slice(0,36),
    basis:valid?'VALIDATED_HASH_BOUND_VISUAL_PREANALYSIS':raw.length||((p.unverified_observer_behaviour_hints||[]).length)?'UNVERIFIED_OBSERVER_TEXT':'NO_VISUAL_PREANALYSIS',
@@ -92,12 +94,12 @@ function seedProposal(spec,p,linkOnly){
   photographer_attribution:p.attribution||'UNKNOWN',licence_code:p.license_code||'UNKNOWN',
   review_doctrine:REVIEW_DOCTRINE,reference_access:linkOnly?'SOURCE_LINK_ONLY':'ARCHIVED_CANDIDATE',
   keep_research_candidate:true,retain_suggested_classifications:true,
-  recommended_pose_id:sug.pose,recommended_life_stage:sug.life_stage,
+  recommended_pose_id:sug.pose,recommended_sex:sug.sex,recommended_life_stage:sug.life_stage,
   recommended_behaviours:sug.behaviour,recommended_visible_anatomy:sug.anatomy,
   recommendation_basis:sug.basis,recommendation_confidence:sug.confidence,
   reviewed_by_human:false,human_visual_confirmation:false,
   species_verified:false,rights_checked:false,approved_for_imagegen:false,
-  decision:'PENDING',requested_decision:'PENDING',sex:'UNKNOWN',pose_id:'UNREVIEWED',
+  decision:'PENDING',requested_decision:'PENDING',sex:'UNKNOWN',pose_id:'UNREVIEWED',resembles_original:'NOT_ASSESSED',resembles_notes:'',
   life_stage:'UNKNOWN',notes:'',review_gate:'RESEARCH_KEEP_ONLY_NOT_PRODUCTION_APPROVED'};
 }
 function seedPendingReviews(){
@@ -144,7 +146,13 @@ function leadCard(p){
  info.append(create('label','Sex classification'));
  const sex=create('select');for(const [v,label] of [['UNKNOWN','Unknown / not assessed'],['FEMALE','Female'],['MATURE_MALE','Mature male'],['JUVENILE_SUBADULT','Juvenile / subadult']]){
    const opt=create('option',label);opt.value=v;sex.append(opt)}
- sex.value=d.sex||'UNKNOWN';info.append(sex);
+ sex.value=d.sex&&d.sex!=='UNKNOWN'?d.sex:sug.sex;info.append(sex);
+ info.append(create('label','Resembles my card original? (compare the photographs first)'));
+ const resembles=create('select');for(const [v,label] of RESEMBLES){const opt=create('option',label);opt.value=v;resembles.append(opt)}
+ resembles.value=d.resembles_original||'NOT_ASSESSED';info.append(resembles);
+ info.append(create('label','Resemblance notes / differences'));
+ const resemblesNotes=create('textarea');resemblesNotes.value=d.resembles_notes||'';resemblesNotes.placeholder='Colour, eyes, hairs, sex, size, body proportions compared with my original';info.append(resemblesNotes);
+ info.append(create('small','Resemblance is a personal appearance comparison, not proof of species, sex or licence.'));
  info.append(create('label','Behaviour suggestions (comma separated)'));
  const behavior=create('textarea');behavior.value=Array.isArray(d.behaviours)?d.behaviours.join(', '):sug.behaviour.join(', ');info.append(behavior);
  info.append(create('label','Visible anatomy (comma separated)'));
@@ -161,23 +169,24 @@ function leadCard(p){
    photo_sha256:null,reference_access:'SOURCE_LINK_ONLY',review_doctrine:REVIEW_DOCTRINE,
    keep_research_candidate:check.checked,retain_suggested_classifications:suggestCheck.checked,
    reviewed_by_human:true,human_visual_confirmation:looked.checked,
-   recommended_pose_id:sug.pose,recommended_life_stage:sug.life_stage,
+   recommended_pose_id:sug.pose,recommended_sex:sug.sex,recommended_life_stage:sug.life_stage,
    recommended_behaviours:sug.behaviour,recommended_visible_anatomy:sug.anatomy,
    recommendation_basis:sug.basis,recommendation_confidence:sug.confidence,
    pose_id:pose.value,pose_review_status:looked.checked?'HUMAN_LABEL_NOT_INDEPENDENTLY_PROMOTED':'UNVERIFIED_NOT_VISUALLY_REVIEWED',
-   sex:sex.value,life_stage:stage.value,behaviours:toTags(behavior.value),visible_anatomy:toTags(anatomy.value),
+   sex:sex.value,life_stage:stage.value,resembles_original:resembles.value,resembles_notes:resemblesNotes.value,behaviours:toTags(behavior.value),visible_anatomy:toTags(anatomy.value),
    notes:notes.value,decision:'PENDING',requested_decision:'PENDING',
    species_verified:false,rights_checked:false,approved_for_imagegen:false,
    review_gate:'RESEARCH_LINK_ONLY_NOT_PRODUCTION_APPROVED'};
   save();
  };
- [check,suggestCheck,pose,stage,sex,looked,behavior,anatomy].forEach(x=>x.addEventListener('change',update));
+ [check,suggestCheck,pose,stage,sex,looked,behavior,anatomy,resembles].forEach(x=>x.addEventListener('change',update));
  notes.addEventListener('change',update);
+ resemblesNotes.addEventListener('input',update);
  info.append(create('small','No licence, identity, anatomical or ImageGen approval is implied by selecting a proposal.'));
  article.append(info);return article;
 }
 function stats(){let names=Object.values(dataset.species||{});$('#speciesCount').textContent=names.length;$('#candidateCount').textContent=names.reduce((a,x)=>a+photosFrom(x).length,0);$('#sourceLeadCount').textContent=names.reduce((a,x)=>a+leadsFrom(x).length,0);$('#floorCount').textContent=names.filter(x=>photosFrom(x).length>=9).length;const n=Object.values(decisions).filter(reviewIsEntered).length;$('#decisionCount').textContent=n;}
-function reviewIsEntered(d){return !!d&&(d.reviewed_by_human===true||!!d.sex&&d.sex!=='UNKNOWN'||!!d.decision&&d.decision!=='PENDING'||!!d.pose_id&&d.pose_id!=='UNREVIEWED'||!!d.notes?.trim()||!!d.reject_reason?.trim())}
+function reviewIsEntered(d){return !!d&&(d.resembles_original&&d.resembles_original!=='NOT_ASSESSED'||d.reviewed_by_human===true||!!d.sex&&d.sex!=='UNKNOWN'||!!d.decision&&d.decision!=='PENDING'||!!d.pose_id&&d.pose_id!=='UNREVIEWED'||!!d.notes?.trim()||!!d.reject_reason?.trim())}
 function reviewDecisionChoice(d){return d.requested_decision || (d.decision==='ACCEPT_FEMALE'||d.decision==='ACCEPT_MALE'?'ACCEPT_REFERENCE':d.decision)||'PENDING'}
 function reviewSex(d){return d.sex || (d.decision==='ACCEPT_FEMALE'?'FEMALE':d.decision==='ACCEPT_MALE'?'MATURE_MALE':'UNKNOWN')}
 function imageCard(spec,p){const key=p.photo_key;if(typeof key!=='string'||!/^inat:\d+$/.test(key))return create('div','Invalid photo entry','photo');const d=decisions[key]||seedProposal(spec,p,false);const sug=suggestions(p);const box=create('article',undefined,'photo');const src=imgUrl(p.thumbnail_url);if(src){const im=create('img');im.loading='lazy';im.src=src;im.alt='Unreviewed candidate photograph for '+spec.scientific_name;box.append(im)}
@@ -195,9 +204,16 @@ const link=safeUrl(p.source_url,'www.inaturalist.org');if(link){const a=create('
 info.append(create('label','Sex or maturity — save independently of approval'));
 const sexSelect=create('select');
 for(const [value,title] of [['UNKNOWN','Uncertain / not classified'],['FEMALE','Female'],['MATURE_MALE','Mature male'],['JUVENILE_SUBADULT','Juvenile / subadult']]){const opt=create('option',title);opt.value=value;sexSelect.append(opt)}
-sexSelect.value=reviewSex(d);info.append(sexSelect);
+sexSelect.value=reviewSex(d)!=='UNKNOWN'?reviewSex(d):sug.sex;info.append(sexSelect);
+info.append(create('small','Suggested sex: '+sug.sex+' · evidence '+sug.basis+'. Unknown means no visual sex inference has been run.'));
 info.append(create('small','Recommended stage: '+((p.preanalysis?.analysis_method==='VALIDATED_VISUAL_ANALYSIS'&&p.preanalysis?.source_image_sha256===p.sha256)?(p.preanalysis.recommended_life_stage||'UNKNOWN'):'UNKNOWN — not visually analysed')));
 info.append(create('small','Your sex classification saves immediately. It does not approve a photograph or assert independently verified sex.'));
+info.append(create('label','Resembles my card original?'));
+const resembles=create('select');for(const [id,label] of RESEMBLES){const o=create('option',label);o.value=id;resembles.append(o)}
+resembles.value=d.resembles_original||'NOT_ASSESSED';info.append(resembles);
+const resemblesNotes=create('textarea');resemblesNotes.rows=2;resemblesNotes.value=d.resembles_notes||'';resemblesNotes.placeholder='Visual similarities and differences: colour, proportions, markings, eyes, hairs…';
+info.append(create('label','Resemblance notes (editable)'));info.append(resemblesNotes);
+info.append(create('small','Compare the private original at the top of the Android app. No automatic pixel comparison is claimed.'));
 info.append(create('label','Photo suitability / your review decision'));
 const select=create('select');
 for(const [value,title] of [['PENDING','Pending'],['ACCEPT_REFERENCE','Suitable reference — request approval'],['STRUCTURAL_ONLY','General anatomy / structural only'],['NEEDS_RESEARCH','Needs more research'],['REJECT','Reject']]){const opt=create('option',title);opt.value=value;select.append(opt)}
@@ -258,10 +274,10 @@ const update=()=>{
     source_url:p.source_url,photographer_attribution:p.attribution,licence_code:p.license_code,
     review_doctrine:REVIEW_DOCTRINE,keep_research_candidate:retainBox.checked,
     retain_suggested_classifications:suggestBox.checked,
-    recommended_pose_id:sug.pose,recommended_life_stage:sug.life_stage,
+    recommended_pose_id:sug.pose,recommended_sex:sug.sex,recommended_life_stage:sug.life_stage,
     recommended_behaviours:sug.behaviour,recommended_visible_anatomy:sug.anatomy,
     recommendation_basis:sug.basis,recommendation_confidence:sug.confidence,
-    life_stage:stageSelect.value,behaviours:splitTags(behaviours.value),visible_anatomy:splitTags(anatomy.value),
+    life_stage:stageSelect.value,resembles_original:resembles.value,resembles_notes:resemblesNotes.value,behaviours:splitTags(behaviours.value),visible_anatomy:splitTags(anatomy.value),
     reviewed_by_human:true,human_visual_confirmation:true,
     decision:effective,requested_decision:choice,
     sex:sexSelect.value,sex_verification:'USER_OBSERVATION_NOT_INDEPENDENTLY_VERIFIED',
@@ -277,8 +293,9 @@ const update=()=>{
   reviewStatus.textContent=eligibleIntent&&!readyForReview?'Sex/pose saved. Suitability request held until both species and licence checks.':
     'Saved on this device. Use APK bottom Save to Drive to export.';
 };
-[select,sexSelect,poseSelect,stageSelect,retainBox,suggestBox,speciesbox,rightsbox,detailStatus].forEach(c=>c.addEventListener('change',()=>{if(c===select&&select.value!=='REJECT')rejectReason.value='';update()}));
+[select,sexSelect,poseSelect,stageSelect,retainBox,suggestBox,speciesbox,rightsbox,detailStatus,resembles].forEach(c=>c.addEventListener('change',()=>{if(c===select&&select.value!=='REJECT')rejectReason.value='';update()}));
 notes.addEventListener('input',update);
+resemblesNotes.addEventListener('input',update);
 behaviours.addEventListener('change',update);
 anatomy.addEventListener('change',update);
 detailNotes.addEventListener('change',update);
