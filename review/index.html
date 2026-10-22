@@ -221,7 +221,7 @@ $('#reviewUpload').addEventListener('change',async event=>{
    if(review.records.length>10000)throw Error('Too many records');
    const imported={};
    for(const record of review.records){
-     if(!record||typeof record!=='object'||!/^inat:\\d+$/.test(record.photo_key))continue;
+     if(!record||typeof record!=='object'||!/^inat:\d+$/.test(record.photo_key))continue;
      const r={...record,approved_for_imagegen:false};
      if(r.decision==='REJECT'&&(!r.reject_reason||String(r.reject_reason).trim().length<3))continue;
      imported[record.photo_key]=r;
