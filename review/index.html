@@ -40,6 +40,7 @@
 <script>
 'use strict';
 let dataset={schema:'VNMV1_PUBLIC_PHOTO_CANDIDATES_V1',species:{}},speciesCursor=0,visibleSpecies=[];
+let visualDrafts={},lastIndexLoad=0;
 const $=s=>document.querySelector(s), KEY='vnmv1-photo-review-v1';
 const POSES=[
 ['UNREVIEWED','Camera pose not reviewed'],
@@ -75,7 +76,10 @@ const LIFE_STAGES=['UNKNOWN','MATURE_MALE','ADULT_FEMALE_MATURE','ADULT_FEMALE_Y
 const RESEMBLES=[['NOT_ASSESSED','Not assessed yet'],['STRONGLY','Strongly resembles my card original'],['PARTLY','Partly resembles my card original'],['POORLY','Little resemblance'],['DOES_NOT_RESEMBLE','Does not resemble my specimen'],['NO_ORIGINAL_AVAILABLE','Cannot compare — original not visible']];
 function suggestions(p){
  const x=p.preanalysis||{};
- const valid=x.analysis_method==='VALIDATED_VISUAL_ANALYSIS'&&x.source_image_sha256===p.sha256;
+ const bound=!!p.sha256&&x.source_image_sha256===p.sha256;
+ const verified=bound&&x.analysis_method==='VALIDATED_VISUAL_ANALYSIS';
+ const visualDraft=bound&&x.analysis_method==='CHATGPT_VISUAL_DRAFT';
+ const valid=verified||visualDraft;
  const raw=(p.unverified_observer_text_pose_hints||[]);
  const candidate=valid?x.recommended_pose_id:(raw.length===1?raw[0]:'UNREVIEWED');
  const pose=POSES.some(t=>t[0]===candidate)?candidate:'UNREVIEWED';
@@ -83,9 +87,9 @@ function suggestions(p){
  return {pose,sex:visualSex,life_stage:valid&&LIFE_STAGES.includes(x.recommended_life_stage)?x.recommended_life_stage:'UNKNOWN',
    behaviour:(Array.isArray(valid?x.recommended_behaviours:p.unverified_observer_behaviour_hints)?(valid?x.recommended_behaviours:p.unverified_observer_behaviour_hints):[]).slice(0,56),
    anatomy:(Array.isArray(valid?x.recommended_visible_anatomy:[])?(valid?x.recommended_visible_anatomy:[]):[]).slice(0,36),
-   basis:valid?'VALIDATED_HASH_BOUND_VISUAL_PREANALYSIS':raw.length||((p.unverified_observer_behaviour_hints||[]).length)?'UNVERIFIED_OBSERVER_TEXT':'NO_VISUAL_PREANALYSIS',
+   basis:verified?'VALIDATED_HASH_BOUND_VISUAL_PREANALYSIS':visualDraft?'CHATGPT_HASH_BOUND_VISUAL_DRAFT_NOT_VERIFIED':raw.length||((p.unverified_observer_behaviour_hints||[]).length)?'UNVERIFIED_OBSERVER_TEXT':'NO_VISUAL_PREANALYSIS',
    confidence:valid?x.confidence||'UNKNOWN':(raw.length||((p.unverified_observer_behaviour_hints||[]).length)?'LOW_TEXT_ONLY':'NONE'),
-   auto_approved:false};
+   visible_note:valid?String(x.visible_image_notes||'').slice(0,900):'',auto_approved:false};
 }
 function seedProposal(spec,p,linkOnly){
  const sug=suggestions(p);
@@ -186,7 +190,7 @@ function leadCard(p){
  article.append(info);return article;
 }
 function stats(){let names=Object.values(dataset.species||{});$('#speciesCount').textContent=names.length;$('#candidateCount').textContent=names.reduce((a,x)=>a+photosFrom(x).length,0);$('#sourceLeadCount').textContent=names.reduce((a,x)=>a+leadsFrom(x).length,0);$('#floorCount').textContent=names.filter(x=>photosFrom(x).length>=9).length;const n=Object.values(decisions).filter(reviewIsEntered).length;$('#decisionCount').textContent=n;}
-function reviewIsEntered(d){return !!d&&(d.resembles_original&&d.resembles_original!=='NOT_ASSESSED'||d.reviewed_by_human===true||!!d.sex&&d.sex!=='UNKNOWN'||!!d.decision&&d.decision!=='PENDING'||!!d.pose_id&&d.pose_id!=='UNREVIEWED'||!!d.notes?.trim()||!!d.reject_reason?.trim())}
+function reviewIsEntered(d){return !!d&&(!d.proposal_prepopulated_not_human_reviewed||d.reviewed_by_human===true)&&(d.resembles_original&&d.resembles_original!=='NOT_ASSESSED'||d.reviewed_by_human===true||!!d.sex&&d.sex!=='UNKNOWN'||!!d.decision&&d.decision!=='PENDING'||!!d.pose_id&&d.pose_id!=='UNREVIEWED'||!!d.notes?.trim()||!!d.reject_reason?.trim())}
 function reviewDecisionChoice(d){return d.requested_decision || (d.decision==='ACCEPT_FEMALE'||d.decision==='ACCEPT_MALE'?'ACCEPT_REFERENCE':d.decision)||'PENDING'}
 function reviewSex(d){return d.sex || (d.decision==='ACCEPT_FEMALE'?'FEMALE':d.decision==='ACCEPT_MALE'?'MATURE_MALE':'UNKNOWN')}
 function imageCard(spec,p){const key=p.photo_key;if(typeof key!=='string'||!/^inat:\d+$/.test(key))return create('div','Invalid photo entry','photo');const d=decisions[key]||seedProposal(spec,p,false);const sug=suggestions(p);const box=create('article',undefined,'photo');const src=imgUrl(p.thumbnail_url);if(src){const im=create('img');im.loading='lazy';im.src=src;im.alt='Unreviewed candidate photograph for '+spec.scientific_name;box.append(im)}
@@ -199,6 +203,7 @@ retainLabel.append(retainBox,create('span','Keep this photo in the research pack
 const suggestLabel=create('label',undefined,'check');const suggestBox=create('input');suggestBox.type='checkbox';suggestBox.checked=d.retain_suggested_classifications!==false;
 suggestLabel.append(suggestBox,create('span','Keep proposed classifications — preselected, editable'));info.append(suggestLabel);
 info.append(create('small','Research starter (editable): KEEP as candidate · suggested sex '+sug.sex+' · pose '+sug.pose+' · stage '+sug.life_stage+' · Resembles NOT ASSESSED. Basis: '+sug.basis+' / confidence '+sug.confidence+'. These do not claim a visual scan.'));
+if(sug.visible_note){const ai=create('div',undefined,'review-status');ai.append(create('strong','AI photo observations — check & correct'));ai.append(create('small',sug.visible_note));info.append(ai)}
 const link=safeUrl(p.source_url,'www.inaturalist.org');if(link){const a=create('a','Open original iNaturalist observation');a.href=link;a.target='_blank';a.rel='noopener noreferrer';info.append(a)}
 // The archive ZIP is NOT a review JSON or installable APK. Keep it out of the mobile review controls.
 info.append(create('label','Sex or maturity — save independently of approval'));
@@ -206,7 +211,8 @@ const sexSelect=create('select');
 for(const [value,title] of [['UNKNOWN','Uncertain / not classified'],['FEMALE','Female'],['MATURE_MALE','Mature male'],['JUVENILE_SUBADULT','Juvenile / subadult']]){const opt=create('option',title);opt.value=value;sexSelect.append(opt)}
 sexSelect.value=reviewSex(d)!=='UNKNOWN'?reviewSex(d):sug.sex;info.append(sexSelect);
 info.append(create('small','Suggested sex: '+sug.sex+' · evidence '+sug.basis+'. Unknown means no visual sex inference has been run.'));
-info.append(create('small','Recommended stage: '+((p.preanalysis?.analysis_method==='VALIDATED_VISUAL_ANALYSIS'&&p.preanalysis?.source_image_sha256===p.sha256)?(p.preanalysis.recommended_life_stage||'UNKNOWN'):'UNKNOWN — not visually analysed')));
+info.append(create('small','Recommended stage: '+sug.life_stage+' · '+sug.basis));
+if(sug.visible_note){const ai=create('div',undefined,'review-status');ai.append(create('strong','AI photo observations — check & correct'));ai.append(create('small',sug.visible_note));info.append(ai)}
 info.append(create('small','Your sex classification saves immediately. It does not approve a photograph or assert independently verified sex.'));
 info.append(create('label','Resembles my card original?'));
 const resembles=create('select');for(const [id,label] of RESEMBLES){const o=create('option',label);o.value=id;resembles.append(o)}
@@ -375,6 +381,43 @@ $('#results').addEventListener('touchend',event=>{
  if(Math.abs(dx)>65&&Math.abs(dx)>Math.abs(dy)*1.5)changeSpecies(dx<0?1:-1);
 },{passive:true});
 
+function bindVisualDrafts(){
+ let matched=0,changed=0;
+ for(const spec of Object.values(dataset.species||{}))for(const p of photosFrom(spec)){
+  const x=visualDrafts[p.photo_key];
+  if(!x||x.source_image_sha256!==p.sha256||x.analysis_method!=='CHATGPT_VISUAL_DRAFT')continue;
+  if(p.preanalysis?.analysis_method==='VALIDATED_VISUAL_ANALYSIS')continue;
+  p.preanalysis=x;matched++;
+  const d=decisions[p.photo_key];
+  if(d?.proposal_prepopulated_not_human_reviewed===true&&d.reviewed_by_human!==true
+    &&!d.notes?.trim()&&(!d.resembles_original||d.resembles_original==='NOT_ASSESSED')){
+   const sug=suggestions(p);
+   Object.assign(d,{recommended_pose_id:sug.pose,recommended_sex:sug.sex,
+    recommended_life_stage:sug.life_stage,recommended_visible_anatomy:sug.anatomy,
+    recommended_behaviours:sug.behaviour,recommendation_basis:sug.basis,
+    recommendation_confidence:sug.confidence,sex:sug.sex,pose_id:sug.pose,
+    life_stage:sug.life_stage,visible_anatomy:sug.anatomy,behaviours:sug.behaviour});
+   changed++;
+  }
+ }
+ if(changed)save();
+ return matched;
+}
+async function loadVisualDrafts(){
+ for(const url of [
+  'https://raw.githubusercontent.com/osullivanpaul55-cpu/VNMV1-SPECIMEN-RESEARCH/main/data/photo_visual_reviews.json',
+  '../data/photo_visual_reviews.json']){
+  try{
+   const res=await fetch(url,{cache:'no-store'});if(!res.ok)continue;
+   const data=await res.json();
+   if(data.schema!=='VNMV1_PUBLIC_VISUAL_RECOMMENDATIONS_V1'||!data.photos||typeof data.photos!=='object')continue;
+   if(Object.keys(data.photos).length>25000)throw Error('Too many visual drafts');
+   visualDrafts=data.photos;const applied=bindVisualDrafts();render();
+   if(applied)notify(applied+' hash-matched AI visual drafts loaded · correct the suggestions.');
+   return;
+  }catch(e){}
+ }
+}
 async function load(){
   // Workflow-authenticated commits do not automatically trigger Pages.
   // Read the current public main-branch index first, with static-site fallback.
@@ -389,7 +432,7 @@ async function load(){
       if(!res.ok)throw Error('HTTP '+res.status);
       const obj=await res.json();
       if(obj.schema!=='VNMV1_PUBLIC_PHOTO_CANDIDATES_V1'||!obj.species||typeof obj.species!=='object')throw Error('Unrecognized index');
-      dataset=obj;seedPendingReviews();render();notify('Research index loaded · '+Object.keys(obj.species).length+' species · '+(obj.discovered_candidate_count||0)+' archived photos; '+(obj.unlicensed_link_research_lead_count||0)+' link-only leads.');
+      dataset=obj;lastIndexLoad=Date.now();seedPendingReviews();bindVisualDrafts();render();loadVisualDrafts();notify('Research index loaded · '+Object.keys(obj.species).length+' species · '+(obj.discovered_candidate_count||0)+' archived photos; '+(obj.unlicensed_link_research_lead_count||0)+' link-only leads.');
       return;
     }catch(err){lastError=String(err)}
   }
@@ -399,6 +442,8 @@ $('#indexUpload').addEventListener('change',async event=>{const f=event.target.f
 $('#filter').addEventListener('input',()=>{speciesCursor=0;render()});
 $('#statusFilter').addEventListener('change',()=>{speciesCursor=0;render()});
 $('#reload').addEventListener('click',load);
+setInterval(()=>{if(document.visibilityState==='visible'&&Date.now()-lastIndexLoad>15*60*1000)load()},60000);
+window.addEventListener('focus',()=>{if(Date.now()-lastIndexLoad>15*60*1000)load()});
 $('#prevSpecies').addEventListener('click',()=>changeSpecies(-1));
 $('#nextSpecies').addEventListener('click',()=>changeSpecies(1));
 $('#openHelp').addEventListener('click',()=>notify("APK: use its fixed bottom SAVE JSON → DRIVE button and select Google Drive > folder 09. Browser only: use Download backup review JSON then manually upload it in Drive. Photo archive ZIP files are not review JSON."));
