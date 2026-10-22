@@ -81,10 +81,10 @@ function suggestions(p){
  const pose=POSES.some(t=>t[0]===candidate)?candidate:'UNREVIEWED';
  const visualSex=valid&&['FEMALE','MATURE_MALE','JUVENILE_SUBADULT'].includes(x.recommended_sex)?x.recommended_sex:'UNKNOWN';
  return {pose,sex:visualSex,life_stage:valid&&LIFE_STAGES.includes(x.recommended_life_stage)?x.recommended_life_stage:'UNKNOWN',
-   behaviour:(valid?x.recommended_behaviours:(p.unverified_observer_behaviour_hints||[])).slice(0,56),
-   anatomy:(valid?x.recommended_visible_anatomy:[]).slice(0,36),
+   behaviour:(Array.isArray(valid?x.recommended_behaviours:p.unverified_observer_behaviour_hints)?(valid?x.recommended_behaviours:p.unverified_observer_behaviour_hints):[]).slice(0,56),
+   anatomy:(Array.isArray(valid?x.recommended_visible_anatomy:[])?(valid?x.recommended_visible_anatomy:[]):[]).slice(0,36),
    basis:valid?'VALIDATED_HASH_BOUND_VISUAL_PREANALYSIS':raw.length||((p.unverified_observer_behaviour_hints||[]).length)?'UNVERIFIED_OBSERVER_TEXT':'NO_VISUAL_PREANALYSIS',
-   confidence:valid?x.confidence||'UNKNOWN':'NONE',
+   confidence:valid?x.confidence||'UNKNOWN':(raw.length||((p.unverified_observer_behaviour_hints||[]).length)?'LOW_TEXT_ONLY':'NONE'),
    auto_approved:false};
 }
 function seedProposal(spec,p,linkOnly){
@@ -99,8 +99,8 @@ function seedProposal(spec,p,linkOnly){
   recommendation_basis:sug.basis,recommendation_confidence:sug.confidence,
   reviewed_by_human:false,human_visual_confirmation:false,
   species_verified:false,rights_checked:false,approved_for_imagegen:false,
-  decision:'PENDING',requested_decision:'PENDING',sex:'UNKNOWN',pose_id:'UNREVIEWED',resembles_original:'NOT_ASSESSED',resembles_notes:'',
-  life_stage:'UNKNOWN',notes:'',review_gate:'RESEARCH_KEEP_ONLY_NOT_PRODUCTION_APPROVED'};
+  decision:'PENDING',requested_decision:'PENDING',sex:sug.sex,pose_id:sug.pose,resembles_original:'NOT_ASSESSED',resembles_notes:'',
+  life_stage:sug.life_stage,behaviours:sug.behaviour,visible_anatomy:sug.anatomy,notes:'',proposal_prepopulated_not_human_reviewed:true,review_gate:'RESEARCH_KEEP_ONLY_NOT_PRODUCTION_APPROVED'};
 }
 function seedPendingReviews(){
  let n=0;
@@ -198,7 +198,7 @@ const retainLabel=create('label',undefined,'check');const retainBox=create('inpu
 retainLabel.append(retainBox,create('span','Keep this photo in the research packet — preselected'));info.append(retainLabel);
 const suggestLabel=create('label',undefined,'check');const suggestBox=create('input');suggestBox.type='checkbox';suggestBox.checked=d.retain_suggested_classifications!==false;
 suggestLabel.append(suggestBox,create('span','Keep proposed classifications — preselected, editable'));info.append(suggestLabel);
-info.append(create('small','Suggestion basis: '+sug.basis+' · confidence: '+sug.confidence+'. Caption clues are NOT visual analysis.'));
+info.append(create('small','Research starter (editable): KEEP as candidate · suggested sex '+sug.sex+' · pose '+sug.pose+' · stage '+sug.life_stage+' · Resembles NOT ASSESSED. Basis: '+sug.basis+' / confidence '+sug.confidence+'. These do not claim a visual scan.'));
 const link=safeUrl(p.source_url,'www.inaturalist.org');if(link){const a=create('a','Open original iNaturalist observation');a.href=link;a.target='_blank';a.rel='noopener noreferrer';info.append(a)}
 // The archive ZIP is NOT a review JSON or installable APK. Keep it out of the mobile review controls.
 info.append(create('label','Sex or maturity — save independently of approval'));
