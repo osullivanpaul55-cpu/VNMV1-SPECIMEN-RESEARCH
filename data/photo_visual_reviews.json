@@ -1,6 +1,6 @@
 {
   "schema": "VNMV1_PUBLIC_VISUAL_RECOMMENDATIONS_V1",
-  "revision": 11,
+  "revision": 12,
   "status": "ALL_387_PUBLIC_CONTACT_SHEET_VISUAL_DRAFTS_READY_FOR_USER_CORRECTION",
   "photos": {
     "inat:114448505": {
@@ -352,8 +352,8 @@
       "reviewed_source_photo_id": "99336289",
       "source_image_sha256": "353cb58a5fa508954a6af4f9926b8eff7ae3db760403863798430f284e7336c9",
       "recommended_pose_id": "DORSAL_TOP_DOWN",
-      "recommended_sex": "UNKNOWN",
-      "recommended_life_stage": "UNKNOWN",
+      "recommended_sex": "MATURE_MALE",
+      "recommended_life_stage": "MATURE_MALE",
       "recommended_visible_anatomy": [
         "CARAPACE",
         "ABDOMEN",
@@ -361,7 +361,7 @@
         "SETAL_HAIRS"
       ],
       "recommended_behaviours": [],
-      "visible_image_notes": "Spider photographed from an elevated angle on granular orange and grey earth. Long jointed legs and a dark central body are distinguishable; carapace-to-abdomen details have shadow and no trustworthy sex structures visible.",
+      "visible_image_notes": "Spider photographed from an elevated angle on granular orange and grey earth. Long jointed legs and a dark central body are distinguishable; carapace-to-abdomen details have shadow and no trustworthy sex structures visible. User reviewed photo in the APK and identified a mature male, citing just-visible tibial spurs and palpal emboli. Preserve this user correction; confirm on pinch-zoom/source image before taxonomic certification.",
       "confidence": "MEDIUM",
       "resembles_original": "NOT_ASSESSED",
       "reviewed_by_human": false,
@@ -369,10 +369,19 @@
       "limitation": "Medium thumbnail/contact sheet inspection; archive hash pointer obtained from research index, not separately verified against displayed compressed thumbnail. No private original photographed.",
       "recommended_suitability": "ACCEPT_REFERENCE",
       "suitability_recommendation_status": "AI_VISUAL_PROVISIONAL_NOT_HUMAN_APPROVED",
-      "recommended_visual_notes": "Spider photographed from an elevated angle on granular orange and grey earth. Long jointed legs and a dark central body are distinguishable; carapace-to-abdomen details have shadow and no trustworthy sex structures visible.",
+      "recommended_visual_notes": "Spider photographed from an elevated angle on granular orange and grey earth. Long jointed legs and a dark central body are distinguishable; carapace-to-abdomen details have shadow and no trustworthy sex structures visible. User identifies mature male from apparent tibial spurs and palpal emboli.",
       "recommended_resemblance": "NOT_ASSESSED",
       "reference_use_status": "RESEARCH_PROPOSAL_ONLY",
-      "imagegen_approval_status": "NOT_APPROVED"
+      "imagegen_approval_status": "NOT_APPROVED",
+      "user_reported_sex": "MATURE_MALE",
+      "user_reported_stage": "MATURE_MALE",
+      "user_reported_morphology": [
+        "TIBIAL_SPURS_VISIBLE_USER_REPORT",
+        "PALPAL_EMBOLI_VISIBLE_USER_REPORT"
+      ],
+      "sex_evidence_provenance": "USER_INSPECTED_REFERENCE_PHOTO_2026_10_22",
+      "sex_confidence_basis": "USER_VISUAL_REPORT_NOT_INDEPENDENT_MACRO_VERIFIED",
+      "sex_verification_status": "USER_IDENTIFIED_PENDING_MACRO_CONFIRMATION"
     },
     "inat:242252521": {
       "analysis_method": "CHATGPT_VISUAL_DRAFT",
@@ -11175,5 +11184,5 @@
       "limitations": "Contact-sheet public image inspection; exact archive SHA from research index, not independently rehashed from displayed preview; sex, species identity and private original resemblance not verified."
     }
   },
-  "notes": "387/387 indexed public photo references have draft visual assessments at available preview/contact-sheet resolution. 267 new per-photo notes added; 120 previous analyses preserved. No user approvals, reliable sex claims or private-original resemblance comparisons inferred."
+  "notes": "Contains public photo AI drafts plus separately attributed user-observed mature male on inat:99336289. User report is not represented as independently confirmed AI anatomy."
 }
