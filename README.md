@@ -32,6 +32,14 @@ The fresh-history PUBLIC repository is now created and deployed. The first five-
 5. Trigger Actions → **Five public specimen reference researchers** → Run workflow. An automatic daily schedule is included; scheduled jobs can be delayed or skipped by the provider.
 6. Connect the existing private repository by setting its repository variable `VNMV1_PUBLIC_RESEARCH_REPO` to `osullivanpaul55-cpu/VNMV1-SPECIMEN-RESEARCH` (or the actual owner/name). Only the **private** importer may associate photos with user cards or Human Gold.
 
+## Research immediately when a photo has no licence metadata
+
+The five workers now **include missing or restrictive photo-licence references as link-only research leads** in each species entry (`link_only_leads`). These can be searched, grouped by species, and opened from the mobile review website immediately—no permission check is needed just to retain the citation and ask a researcher to inspect the original public source. Observer descriptions are unverified hints, not verified pose/sex evidence.
+
+Unknown/right-restricted source photos are **not downloaded, displayed as hosted images, redistributed in Release ZIP files, or promoted to image-generation inputs**. Their records carry source URL, photographer attribution where supplied, licence state `UNKNOWN` or original terms, and `RESEARCH_LINK_AVAILABLE_NOW`. Non-licence photos remain accessible via source links for research without waiting; approval for copying/publishing remains separate. Photo-level CC0/CC BY candidates continue through the downloadable archive lane.
+
+The mobile website separates **Archived photo candidates** from **Research-only photo links**; users can open the latter and assess pose or anatomy at the source. The installed Gold Android APK remains a separate integration.
+
 ## Licence and data separation
 
 Only iNaturalist photo candidates with **photo-level** CC0 or CC BY codes are downloaded. Research grade is community ID evidence only; CC metadata is not a legal review. Preserve attribution and original link with every redistributed photograph. *Do not assume a CC BY 4.0 licence version unless the photo/source explicitly supports it*. Licence terms, photographer claims, and downstream model use require human review. Code in this repository is separate from the photographers' licences.
