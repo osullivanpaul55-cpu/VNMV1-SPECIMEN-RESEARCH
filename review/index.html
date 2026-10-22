@@ -35,7 +35,7 @@
 <div id="notification" role="status" aria-live="polite"></div>
 </details>
 <nav id="speciesNav" class="navstrip" aria-label="Specimen navigation"><button id="prevSpecies" type="button">◀ Previous</button><strong id="speciesPosition">Specimen 0/0</strong><button id="nextSpecies" type="button">Next ▶</button></nav>
-<div class="mobile-tips">Swipe ← → to change species · Scroll ↓ for the next photograph</div>
+<div class="mobile-tips">Swipe ← → to change species · Opens at Photo 1 · Scroll ↓ for the next photograph</div>
 <div id="results"></div>
 </main>
 <div id="photoZoom" hidden role="dialog" aria-modal="true" aria-label="Zoom reference photograph"><div class="zoom-controls"><span id="zoomTitle">Reference photo · Pinch to zoom</span><button id="zoomClose" class="zoom-close" type="button">✕ Close</button></div><div class="zoom-stage" id="zoomStage"><img id="zoomImage" alt="Enlarged photograph"></div><div class="zoom-controls"><span class="zoom-tip">Two fingers: zoom · One finger: drag · Double-tap: reset</span><button id="zoomReset" type="button">Reset</button></div></div>
@@ -382,7 +382,18 @@ function changeSpecies(delta){
   if(next===speciesCursor)return;
   speciesCursor=next;
   render();
-  window.scrollTo({top:0,behavior:'auto'});
+  // Advance directly to PHOTO 1, not the top of Tools, statistics or the page.
+  // Run after the new species DOM has been laid out so sticky navigation is measured correctly.
+  requestAnimationFrame(()=>{
+    requestAnimationFrame(()=>{
+      const first=$('#results .photo')||$('#results .species')||$('#results');
+      const nav=$('#speciesNav');
+      if(!first)return;
+      const navHeight=nav&&!nav.hidden?nav.getBoundingClientRect().height:0;
+      const y=first.getBoundingClientRect().top+window.scrollY-navHeight-7;
+      window.scrollTo({top:Math.max(0,y),behavior:'instant'});
+    });
+  });
 }
 function render(){
  stats();
