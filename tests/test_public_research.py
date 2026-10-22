@@ -215,6 +215,17 @@ class PublicTests(unittest.TestCase):
         self.assertIn("keep_research_candidate:retainBox.checked",html)
         self.assertIn("human_visual_confirmation:true",html)
         self.assertIn("source_url:p.source_url",html)
+    def test_link_only_photo_can_be_corrected_without_rehosting(self):
+        html=(BASE/'review/index.html').read_text()
+        self.assertIn('OPEN ORIGINAL PHOTOGRAPH',html)
+        self.assertIn('I inspected the actual photograph on its original website',html)
+        self.assertIn("reference_access:'SOURCE_LINK_ONLY'",html)
+        self.assertIn("photo_sha256:null",html)
+        self.assertIn("recommended_pose_id:sug.pose",html)
+        self.assertIn("life_stage:stage.value",html)
+        self.assertIn("behaviours:toTags(behavior.value)",html)
+        self.assertIn("visible_anatomy:toTags(anatomy.value)",html)
+        self.assertIn("rights_checked:false,approved_for_imagegen:false",html)
     def test_review_exports_pose_only_labels(self):
         page=(BASE/'review/index.html').read_text()
         self.assertIn('WALKING_AWAY_REAR_OBLIQUE',page)
