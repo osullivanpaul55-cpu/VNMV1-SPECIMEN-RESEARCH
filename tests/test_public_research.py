@@ -136,7 +136,7 @@ class PublicTests(unittest.TestCase):
         html=(BASE/'review/index.html').read_text()
         self.assertIn('Download backup review JSON',html)
         self.assertIn('localStorage',html)
-        self.assertIn('Research-only link',html)
+        self.assertIn('Research-only source',html)
         self.assertIn('rights_checked',html)
         self.assertNotIn('GITHUB_TOKEN',html)
     def test_public_actions_have_no_secret_exfil(self):
