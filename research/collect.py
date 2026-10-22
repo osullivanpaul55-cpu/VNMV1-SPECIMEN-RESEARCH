@@ -10,7 +10,7 @@ from urllib.request import Request, urlopen
 from PIL import Image, UnidentifiedImageError
 from pose_reference import unverified_text_pose_hints, unverified_text_behaviour_hints, research_needs
 
-SHARDS=5; MAX_IMAGE_BYTES=5_000_000; ALLOWED={'cc0','cc-by'}
+SHARDS=5; MAX_IMAGE_BYTES=5_000_000; ALLOWED={'cc0','cc-by'}; MAX_LINK_LEADS_PER_SPECIES_PER_CYCLE=30
 HOSTS={'static.inaturalist.org','inaturalist-open-data.s3.amazonaws.com','inaturalist-open-data.s3.us-west-2.amazonaws.com'}
 API='https://api.inaturalist.org/v1/observations'
 UA='VNMV1-SPECIMEN-RESEARCH/1.0 (open CC metadata research; public provenance and attribution)'
@@ -68,7 +68,7 @@ def inspect_image(b:bytes)->tuple[str,int,int,int]:
 def discover(taxon:str,seen:set[str],api_fetch=fetch,pages:int=8,per_page:int=25)->list[dict]:
     results=[];checked=set()
     for page in range(1,pages+1):
-        qs=urlencode({'taxon_name':taxon,'quality_grade':'research','photos':'true','photo_license':'cc0,cc-by','per_page':per_page,'page':page})
+        qs=urlencode({'taxon_name':taxon,'quality_grade':'research','photos':'true','per_page':per_page,'page':page})
         payload=json.loads(api_fetch(API+'?'+qs,3_000_000))
         obs=payload.get('results',[])
         if not isinstance(obs,list):raise ValueError('INVALID_OBSERVATION_RESPONSE')
@@ -79,16 +79,20 @@ def discover(taxon:str,seen:set[str],api_fetch=fetch,pages:int=8,per_page:int=25
             if not isinstance(oid,int):continue
             for p in ob.get('photos',[]):
                 lic=(p.get('license_code') or '').lower();pid=p.get('id'); url=image_url(p.get('url'))
-                if lic not in ALLOWED or not isinstance(pid,int) or not url:continue
+                if not isinstance(pid,int):continue
+                allowed=lic in ALLOWED and url is not None
                 key=f'inat:{pid}'
                 if key in seen or key in checked:continue
                 checked.add(key)
                 results.append({'photo_key':key,'observation_id':oid,'photo_id':pid,'taxon':taxon,
-                  'license_code':lic,'license_url':p.get('license_url'),
+                  'link_only':not allowed,'redistribution_allowed_by_collector':allowed,
+                  'license_code':lic or 'UNKNOWN','license_url':p.get('license_url'),
+                  'license_research_status':'UNKNOWN_NO_LICENSE_METADATA' if not lic else ('CC0_OR_CC_BY_CANDIDATE' if allowed else 'NON_ARCHIVABLE_RIGHTS_NOT_CLEARED'),
+                  'research_use_status':'USE_SOURCE_LINK_IMMEDIATELY_FOR_RESEARCH',
                   'license_version':'UNVERIFIED_SOURCE_CHECK_REQUIRED',
                   'attribution':p.get('attribution') or (ob.get('user') or {}).get('login') or 'UNKNOWN',
                   'source_url':f'https://www.inaturalist.org/observations/{oid}',
-                  'thumbnail_url':url,'sex':'UNKNOWN_UNVERIFIED',
+                  'thumbnail_url':url if allowed else None,'sex':'UNKNOWN_UNVERIFIED',
                   'taxon_authority':'COMMUNITY_RESEARCH_GRADE_NOT_USER_APPROVED',
                   'rights_verdict':'CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED',
                   'review_state':'PENDING',
@@ -123,14 +127,23 @@ def prioritize_reference_diversity(candidates:list[dict], prior:list[dict])->lis
 
 def research_species(spec:dict,previous:dict,out:Path,max_per_species:int=12,discovery=discover,download=fetch)->dict:
     taxon=spec['name'];key=spec['key'];old=(previous.get('species') or {}).get(key,{})
-    prior=old.get('candidates',[]);seen={v.get('photo_key') for v in prior}
-    accepted=[];rejections=[];phashes=[];obs_counts={}
+    prior=old.get('candidates',[]);old_leads=old.get('link_only_leads',[])
+    seen={v.get('photo_key') for v in prior}|{v.get('photo_key') for v in old_leads}
+    accepted=[];links=[];rejections=[];phashes=[];obs_counts={}
     # Every return is candidate-only; never auto-promote species, sex or licence.
     try: found=discovery(taxon,seen)
     except Exception as exc:
-        return {'key':key,'taxon':taxon,'status':'RETRY_DISCOVERY','new_candidates':[], 'rejections':[str(exc)[:140]]}
-    for c in prioritize_reference_diversity(found,prior):
-        if len(accepted)>=max_per_species:break
+        return {'key':key,'taxon':taxon,'status':'RETRY_DISCOVERY','new_candidates':[],'new_link_leads':[], 'rejections':[str(exc)[:140]]}
+    for c in prioritize_reference_diversity(found,prior+old_leads):
+        if c.get('link_only') or c.get('license_code') not in ALLOWED:
+            if len(links)<MAX_LINK_LEADS_PER_SPECIES_PER_CYCLE:
+                # Link metadata is immediately useful for research and human
+                # Gold review. Never download or archive unknown-rights pixels.
+                links.append({k:v for k,v in c.items() if k!='thumbnail_url'}|
+                  {'link_only':True,'research_use_status':'RESEARCH_LINK_AVAILABLE_NOW',
+                   'media_copied_to_public_repo':False,'approved_for_imagegen':False})
+            continue
+        if len(accepted)>=max_per_species:continue
         # Multiple independent frames from one observation may show different angles.
         # Allow up to three, but do not mistake them for three specimens.
         if obs_counts.get(c['observation_id'],0)>=3:continue
@@ -149,8 +162,8 @@ def research_species(spec:dict,previous:dict,out:Path,max_per_species:int=12,dis
             obs_counts[c['observation_id']]=obs_counts.get(c['observation_id'],0)+1;phashes.append({'sha256':digest,'phash':dh})
         except Exception as exc:
             rejections.append({'key':c.get('photo_key'),'reason':str(exc)[:140]})
-    return {'key':key,'taxon':taxon,'status':'REVIEW_REQUIRED' if accepted else ('ALREADY_COLLECTED_OR_NO_NEW_LEADS' if prior else 'NO_CANDIDATES'),
-            'new_candidates':accepted,'rejections':rejections[:20],
+    return {'key':key,'taxon':taxon,'status':'REVIEW_REQUIRED' if accepted else ('LINK_RESEARCH_READY' if links else ('ALREADY_COLLECTED_OR_NO_NEW_LEADS' if (prior or old_leads) else 'NO_CANDIDATES')),
+            'new_candidates':accepted,'new_link_leads':links,'rejections':rejections[:20],
             'camera_view_research_needs':research_needs(),
             'behaviour_research_hints_are_unverified':True}
 
@@ -162,7 +175,9 @@ def run(seed:dict,index:dict,shard:int,cycle:int,per_worker:int,limit:int,out:Pa
         print(spec['name'], row['status'],len(row['new_candidates']),flush=True)
     report={'schema':'VNMV1_PUBLIC_PHOTO_RESEARCH_SHARD_V1','shard':shard,'cycle':cycle,'species_processed':len(rows),
             'camera_view_research_standard':research_needs(),
-            'downloaded_candidates':sum(len(r['new_candidates']) for r in rows),'approvals':0,'imagegen_invocations':0,'species':rows}
+            'downloaded_candidates':sum(len(r['new_candidates']) for r in rows),
+            'new_link_only_research_leads':sum(len(r.get('new_link_leads',[])) for r in rows),
+            'approvals':0,'imagegen_invocations':0,'species':rows}
     (out/'report.json').write_text(json.dumps(report,indent=2)+'\n')
     return report
 
