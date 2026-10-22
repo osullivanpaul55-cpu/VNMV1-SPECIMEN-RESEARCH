@@ -1,0 +1,10 @@
+{
+  "schema": "VNMV1_PUBLIC_BEHAVIOUR_LITERATURE_CANDIDATES_V1",
+  "last_cycle": -1,
+  "named_species_in_seed": 195,
+  "species_searched": 0,
+  "species_with_literature_leads": 0,
+  "research_completed_first_sweep": false,
+  "last_research_at_utc": null,
+  "species": {}
+}
