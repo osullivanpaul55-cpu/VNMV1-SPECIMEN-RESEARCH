@@ -26,8 +26,8 @@
 <details id="reviewSettings" class="review-settings"><summary>VNMV1 Reference Review <span>Tools & progress ▾</span></summary>
 <header><div><h1>VNMV1 · Specimen reference review</h1><p class="muted">Independent photo research • one species pool • human-reviewed decisions</p></div><div class="muted">Candidate references only · No image generation</div></header>
 <div class="note"><strong>Quick review:</strong> select sex, pose, notes or Reject for each photograph. Your notes save on the phone automatically. Swipe horizontally to change species; scroll downward through photos for that species. Licence/identity checks are only needed later for production eligibility.</div>
-<section class="stats" aria-label="Research counts"><div class="stat"><b id="speciesCount">0</b><span>Species in index</span></div><div class="stat"><b id="candidateCount">0</b><span>Photo candidates</span></div><div class="stat"><b id="decisionCount">0</b><span>Decisions entered</span></div><div class="stat"><b id="floorCount">0</b><span>Species with 9+ candidates</span></div></section>
-<div class="controls"><input id="filter" type="search" placeholder="Find species…" aria-label="Filter species"><select id="statusFilter" aria-label="Filter research state"><option value="all">All species</option><option value="photos" selected>With photographs</option><option value="under">Fewer than nine candidates</option><option value="decided">My reviewed photographs</option></select><button class="secondary" id="reload">Refresh public index</button></div>
+<section class="stats" aria-label="Research counts"><div class="stat"><b id="speciesCount">0</b><span>Species in index</span></div><div class="stat"><b id="candidateCount">0</b><span>Photo candidates</span></div><div class="stat"><b id="sourceLeadCount">0</b><span>Research-only photo links</span></div><div class="stat"><b id="decisionCount">0</b><span>Decisions entered</span></div><div class="stat"><b id="floorCount">0</b><span>Species with 9+ candidates</span></div></section>
+<div class="controls"><input id="filter" type="search" placeholder="Find species…" aria-label="Filter species"><select id="statusFilter" aria-label="Filter research state"><option value="all">All species</option><option value="photos" selected>With photographs or research links</option><option value="under">Fewer than nine candidates</option><option value="decided">My reviewed photographs</option></select><button class="secondary" id="reload">Refresh public index</button></div>
 <div class="controls"><label class="upload" for="reviewUpload">Import saved review JSON</label><input id="reviewUpload" type="file" accept="application/json,.json"><button class="secondary" id="openHelp" type="button">Where do I save?</button></div>
 <details id="advancedIndex"><summary>Advanced: load offline research index</summary><input style="max-width:180px" id="indexUpload" type="file" accept="application/json,.json"></details>
 <div class="controls"><button id="export" type="button">Download backup review JSON</button><small>This is a manual browser backup, NOT the Android Drive upload. In the APK, use the fixed bottom SAVE JSON → DRIVE button.</small></div>
@@ -69,7 +69,20 @@ function imgUrl(url){for(const h of ['static.inaturalist.org','inaturalist-open-
 function save(){try{localStorage.setItem(KEY,JSON.stringify(decisions))}catch(_){notify('Browser storage unavailable; export your review regularly.')}stats()}
 function notify(message){$('#notification').textContent=message}
 function photosFrom(x){return Array.isArray(x.candidates)?x.candidates:[]}
-function stats(){let names=Object.values(dataset.species||{});$('#speciesCount').textContent=names.length;$('#candidateCount').textContent=names.reduce((a,x)=>a+photosFrom(x).length,0);$('#floorCount').textContent=names.filter(x=>photosFrom(x).length>=9).length;const n=Object.values(decisions).filter(reviewIsEntered).length;$('#decisionCount').textContent=n;$('#reviewedLabel').textContent=n+' decisions'}
+function leadsFrom(x){return Array.isArray(x.link_only_leads)?x.link_only_leads:[]}
+function leadCard(p){
+ const article=create('article',undefined,'photo');
+ const info=create('div',undefined,'info');
+ info.append(create('strong','Research-only link '+String(p.photo_key||'')));
+ info.append(create('small','No copy stored in GitHub · Licence: '+(p.license_code||'UNKNOWN')));
+ info.append(create('small','Source: '+(p.attribution||'Photographer unconfirmed')));
+ const link=safeUrl(p.source_url,'www.inaturalist.org');
+ if(link){const a=create('a','Open original observation to inspect pose, sex and anatomy');
+   a.href=link;a.target='_blank';a.rel='noopener noreferrer';info.append(a)}
+ info.append(create('small','Available for research now. Open the original page; no photograph or pose has been downloaded, visually checked, or approved here.'));
+ article.append(info);return article;
+}
+function stats(){let names=Object.values(dataset.species||{});$('#speciesCount').textContent=names.length;$('#candidateCount').textContent=names.reduce((a,x)=>a+photosFrom(x).length,0);$('#sourceLeadCount').textContent=names.reduce((a,x)=>a+leadsFrom(x).length,0);$('#floorCount').textContent=names.filter(x=>photosFrom(x).length>=9).length;const n=Object.values(decisions).filter(reviewIsEntered).length;$('#decisionCount').textContent=n;$('#reviewedLabel').textContent=n+' decisions'}
 function reviewIsEntered(d){return !!d&&(!!d.sex&&d.sex!=='UNKNOWN'||!!d.decision&&d.decision!=='PENDING'||!!d.pose_id&&d.pose_id!=='UNREVIEWED'||!!d.notes?.trim()||!!d.reject_reason?.trim())}
 function reviewDecisionChoice(d){return d.requested_decision || (d.decision==='ACCEPT_FEMALE'||d.decision==='ACCEPT_MALE'?'ACCEPT_REFERENCE':d.decision)||'PENDING'}
 function reviewSex(d){return d.sex || (d.decision==='ACCEPT_FEMALE'?'FEMALE':d.decision==='ACCEPT_MALE'?'MATURE_MALE':'UNKNOWN')}
@@ -148,7 +161,7 @@ function render(){
  visibleSpecies=Object.values(dataset.species||{}).filter(spec=>{
    const photos=photosFrom(spec);
    if(!String(spec.scientific_name||'').toLowerCase().includes(query))return false;
-   if(filter==='photos'&&photos.length===0)return false;
+   if(filter==='photos'&&photos.length===0&&leadsFrom(spec).length===0)return false;
    if(filter==='under'&&photos.length>=9)return false;
    if(filter==='decided'&&!photos.some(p=>reviewIsEntered(decisions[p.photo_key])))return false;
    return true;
@@ -163,10 +176,10 @@ function render(){
    $('#speciesPosition').textContent='No matching specimens';
    root.append(create('div','No species match your filters. Open Tools & progress to change the filter.','empty'));return;
  }
- const spec=visibleSpecies[speciesCursor],photos=photosFrom(spec);
+ const spec=visibleSpecies[speciesCursor],photos=photosFrom(spec),leads=leadsFrom(spec);
  $('#speciesPosition').textContent=(spec.scientific_name||'Unknown species')+' · '+(speciesCursor+1)+'/'+count;
  const card=create('section',undefined,'species');
- card.append(create('div',photos.length+' photo candidates · Unapproved references','specdetails'));
+ card.append(create('div',photos.length+' archived photo candidates · '+leads.length+' link-only research leads','specdetails'));
  if(photos.length){
    const gallery=create('div',undefined,'photos');
    for(let i=0;i<photos.length;i++){
@@ -176,7 +189,14 @@ function render(){
      gallery.append(photo);
    }
    card.append(gallery);
- }else card.append(create('p','No reference photographs yet; this species needs further research.'));
+ }else if(!leads.length)card.append(create('p','No references yet; this species needs further research.'));
+ if(leads.length){
+   const details=create('details');details.className='details-archive';
+   const summary=create('summary','Research source links ('+leads.length+') · includes missing and unverified licences');details.append(summary);
+   const gallery=create('div',undefined,'photos');
+   for(const p of leads)gallery.append(leadCard(p));
+   details.append(gallery);card.append(details);
+ }
  root.append(card);
 }
 function navigateWithinImage(event){
@@ -210,7 +230,7 @@ async function load(){
       if(!res.ok)throw Error('HTTP '+res.status);
       const obj=await res.json();
       if(obj.schema!=='VNMV1_PUBLIC_PHOTO_CANDIDATES_V1'||!obj.species||typeof obj.species!=='object')throw Error('Unrecognized index');
-      dataset=obj;render();notify('Research index loaded · '+Object.keys(obj.species).length+' species · '+(obj.discovered_candidate_count||0)+' photo candidates.');
+      dataset=obj;render();notify('Research index loaded · '+Object.keys(obj.species).length+' species · '+(obj.discovered_candidate_count||0)+' archived photos; '+(obj.unlicensed_link_research_lead_count||0)+' link-only leads.');
       return;
     }catch(err){lastError=String(err)}
   }
