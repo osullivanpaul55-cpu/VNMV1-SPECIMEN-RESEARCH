@@ -1,0 +1,40 @@
+name: Validate researched-photo review fields
+on:
+  pull_request:
+    paths:
+      - 'review/index.html'
+      - 'tests/test_review_field_colours.py'
+      - '.github/workflows/review-ui-validation.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'review/index.html'
+      - 'tests/test_review_field_colours.py'
+      - '.github/workflows/review-ui-validation.yml'
+permissions:
+  contents: read
+jobs:
+  validate-review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify proposal/review status, privacy and one-tap confirmation
+        run: python3 -m unittest discover -s tests -p 'test_review_field_colours.py' -v
+      - name: Check embedded JavaScript parses without running it
+        shell: bash
+        run: |
+          node <<'JS'
+          const fs=require('fs'),vm=require('vm');
+          const html=fs.readFileSync('review/index.html','utf8');
+          const scripts=[...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)];
+          if(scripts.length!==1)throw Error('EXPECTED_ONE_REVIEW_SCRIPT');
+          for(const script of scripts)new vm.Script(script[1]);
+          console.log('Review JavaScript syntax: PASS');
+          JS

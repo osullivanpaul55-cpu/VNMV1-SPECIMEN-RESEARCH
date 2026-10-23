@@ -18,6 +18,18 @@ class ReviewColourTests(unittest.TestCase):
   self.assertIn("sex.value!=='UNKNOWN'",html)
   self.assertIn("sexSelect.value!=='UNKNOWN'",html)
   self.assertIn("resembles.value!=='NOT_ASSESSED'",html)
+ def test_photo_batch_confirmation_never_approves_unverified_fields(self):
+  html=PAGE.read_text()
+  self.assertIn("I checked this photo’s proposed sex, pose, stage and suitability (one tap)",html)
+  self.assertIn("photo_visual_fields_confirmed:photoChecked.checked",html)
+  self.assertIn("['sex','pose_id','life_stage','suitability']",html)
+  self.assertIn("photoChecked.addEventListener('change'",html)
+  self.assertIn("select.value!=='PENDING'",html)
+  self.assertIn("poseSelect.value!=='UNREVIEWED'",html)
+  self.assertIn("stageSelect.value!=='UNKNOWN'",html)
+  self.assertIn("species_verified:speciesbox.checked",html)
+  self.assertIn("rights_checked:rightsbox.checked",html)
+  self.assertIn("approved_for_imagegen:false",html)
  def test_research_link_only_no_hidden_visual_approval(self):
   html=PAGE.read_text()
   self.assertIn("I inspected the actual photograph on its original website",html)
