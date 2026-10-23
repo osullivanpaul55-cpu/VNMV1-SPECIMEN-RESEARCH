@@ -1,0 +1,17 @@
+{
+  "schema": "VNMV1_PUBLIC_RESEARCH_RUN_REQUEST_V1",
+  "request_id": "526_ORIGINAL_RESEARCH_REFERENCE_EXPANSION_20261023",
+  "requested_date": "2026-10-23",
+  "requested_by": "VNMV1_USER_IN_CHAT",
+  "purpose": "Run the next five public species-reference research shards to support private original image comparison and anatomical pose/behavior research. Collect safely archiveable candidate reference photos and source-link leads, retaining observer name and source provenance.",
+  "track": "NEXT_CYCLE_UNVISITED_SPECIES",
+  "workers": 5,
+  "species_per_worker": 4,
+  "public_archive_photo_rights": "CC0_OR_CC_BY_ONLY",
+  "unknown_licence": "SOURCE_LINK_ONLY_NO_PUBLIC_BYTES",
+  "private_526_original_photos": "NOT_UPLOADED_OR_DISCLOSED",
+  "review_use": "UNVERIFIED_TAXON_AND_POSE_RESEARCH_LEADS",
+  "automated_specimen_identity_approvals": 0,
+  "automated_visual_approvals": 0,
+  "imagegen_calls": 0
+}
