@@ -313,6 +313,14 @@ const retainLabel=create('label',undefined,'check');const retainBox=create('inpu
 retainLabel.append(retainBox,create('span','Keep this photo in research'));researchOptions.append(retainLabel);
 const suggestLabel=create('label',undefined,'check');const suggestBox=create('input');suggestBox.type='checkbox';suggestBox.checked=d.retain_suggested_classifications!==false;
 suggestLabel.append(suggestBox,create('span','Keep suggested labels (editable)'));researchOptions.append(suggestLabel);
+const provenance=create('div',
+ 'Visual source: '+(p.preanalysis?.reviewed_actual_image===true&&p.preanalysis?.source_image_sha256===p.sha256
+ ? 'actual photo inspected, suggestions not production-approved':'unverified suggestion · inspect photo'),
+ 'review-colour-text compact-ai');
+reviewFieldTint(provenance,!!p.sha256&&p.preanalysis?.source_image_sha256===p.sha256&&
+ p.preanalysis?.reviewed_actual_image===true &&
+ ['MEDIUM','HIGH','VERY_HIGH'].includes(String(sug.confidence||'').toUpperCase()));
+info.append(provenance);
 info.append(create('div','AI: '+sug.pose.replaceAll('_',' ').toLowerCase()+
  ' · sex '+sug.sex.replaceAll('_',' ').toLowerCase()+' · '+sug.confidence.toLowerCase()+' confidence','compact-ai'));
 if(sug.visible_note){const aiNotes=create('details');aiNotes.className='ai-extra';aiNotes.append(create('summary','AI visual observations ▾'));aiNotes.append(create('small',sug.visible_note));info.append(aiNotes)}
@@ -389,9 +397,16 @@ const rejectReason=create('textarea');rejectReason.value=d.reject_reason||'';rej
 const rejectButton=create('button','Reject this photo');rejectButton.className='reject-action';rejectButton.type='button';rejectDetails.append(rejectButton);
 rejectDetails.open=select.value==='REJECT';info.append(rejectDetails);
 const touched=new Set(Array.isArray(d.reviewed_fields)?d.reviewed_fields:[]);
+const visual=p.preanalysis||{};
+const visualHashMatched=!!p.sha256&&visual.source_image_sha256===p.sha256&&
+ visual.reviewed_actual_image===true&&
+ ['VALIDATED_VISUAL_ANALYSIS','CHATGPT_VISUAL_DRAFT'].includes(visual.analysis_method);
+const aiFieldReviewed=visualHashMatched&&
+ ['MEDIUM','HIGH','VERY_HIGH'].includes(String(sug.confidence||'').toUpperCase());
+const aiReviewedFields=new Set(['sex','pose_id','life_stage','suitability','behaviours','visible_anatomy','notes']);
 const updateColours=()=>{
  const tint=(el,key,valid,required=true)=>reviewFieldTint(el,
-   touched.has(key)&&valid,required);
+   (touched.has(key)||(aiFieldReviewed&&aiReviewedFields.has(key)))&&valid,required);
  tint(sexSelect,'sex',sexSelect.value!=='UNKNOWN');
  tint(resembles,'resembles_original',resembles.value!=='NOT_ASSESSED');
  tint(resemblesNotes,'resembles_notes',resemblesNotes.value.trim().length>0,false);
