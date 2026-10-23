@@ -350,6 +350,12 @@ select.value=isUntouchedAI&&sug.recommended_suitability!=='PENDING'?
  sug.recommended_suitability:reviewDecisionChoice(d);
 info.append(select);
 const reviewStatus=create('small','', 'review-status');info.append(reviewStatus);
+const photoCheckedLabel=create('label',undefined,'check');
+const photoChecked=create('input');photoChecked.type='checkbox';
+photoChecked.checked=d.photo_visual_fields_confirmed===true;
+photoCheckedLabel.append(photoChecked,create('span',
+ 'I checked this photo’s proposed sex, pose, stage and suitability (one tap)'));
+info.append(photoCheckedLabel);
 info.append(create('label','Camera pose — review the actual photo'));const poseSelect=create('select');
 for(const [value,title] of POSES){const opt=create('option',title);opt.value=value;poseSelect.append(opt)}
 poseSelect.value=POSES.some(x=>x[0]===d.pose_id)&&d.pose_id!=='UNREVIEWED'?d.pose_id:sug.pose;info.append(poseSelect);
@@ -419,6 +425,7 @@ const updateColours=()=>{
  tint(detailStatus,'anatomy_followup_status',detailStatus.value!=='CONFLICT_HELD',false);
  tint(detailNotes,'anatomy_followup_notes',detailNotes.value.trim().length>0,false);
  tint(rejectReason,'reject_reason',select.value==='REJECT'&&rejectReason.value.trim().length>=3,select.value==='REJECT');
+ reviewFieldTint(photoCheckedLabel,photoChecked.checked);
  reviewFieldTint(retainLabel,touched.has('keep_research_candidate'));
  reviewFieldTint(suggestLabel,touched.has('retain_suggested_classifications'));
  reviewFieldTint(specieslabel,touched.has('species_verified')&&speciesbox.checked, false);
@@ -446,6 +453,7 @@ const update=()=>{
     proposal_prepopulated_not_human_reviewed:false,
     life_stage:stageSelect.value,resembles_original:resembles.value,resembles_notes:resemblesNotes.value,behaviours:splitTags(behaviours.value),visible_anatomy:splitTags(anatomy.value),
     reviewed_fields:[...touched].sort(),reviewed_by_human:true,human_visual_confirmation:true,
+    photo_visual_fields_confirmed:photoChecked.checked,
     decision:effective,requested_decision:choice,
     sex:sexSelect.value,sex_verification:'USER_OBSERVATION_NOT_INDEPENDENTLY_VERIFIED',
     species_verified:speciesbox.checked,rights_checked:rightsbox.checked,
@@ -465,6 +473,13 @@ const reviewControls=[
  [retainBox,'keep_research_candidate'],[suggestBox,'retain_suggested_classifications'],
  [speciesbox,'species_verified'],[rightsbox,'rights_checked'],
  [detailStatus,'anatomy_followup_status'],[resembles,'resembles_original']];
+photoChecked.addEventListener('change',()=>{
+ for(const key of ['sex','pose_id','life_stage','suitability']){
+  if(photoChecked.checked)touched.add(key);
+  else touched.delete(key);
+ }
+ update();
+});
 reviewControls.forEach(([el,key])=>el.addEventListener('change',()=>{
  touched.add(key);
  if(el===select&&select.value!=='REJECT')rejectReason.value='';
