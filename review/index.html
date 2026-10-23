@@ -31,6 +31,15 @@
 #notification:empty{display:none}
 @media(max-width:600px){.species{border:0;background:transparent;padding:2px;margin:3px 0 10px}.photo img{aspect-ratio:4/3}.photo .info{padding:10px}}
 .tap-zoom{cursor:zoom-in;touch-action:pan-y}#photoZoom{position:fixed;inset:0;z-index:1000;background:rgba(3,8,15,.98);display:flex;flex-direction:column;align-items:stretch;justify-content:center;overscroll-behavior:contain}#photoZoom[hidden]{display:none!important}#photoZoom .zoom-controls{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;gap:12px;background:#102238}#photoZoom .zoom-stage{flex:1;min-height:0;display:grid;place-items:center;overflow:hidden;touch-action:none;position:relative}#photoZoom .zoom-stage img{max-width:100%;max-height:100%;object-fit:contain;transform-origin:center;touch-action:none;user-select:none;pointer-events:none}#photoZoom .zoom-close{background:#744048;font-weight:700}#photoZoom .zoom-tip{font-size:.83rem;color:#d5e5f5}
+
+/* Evidence-first review colours. A proposal alone is never green. */
+.review-green{background:#274c40!important;border:1px solid #638f75!important;color:#edfff2!important}
+.review-red{background:#56323a!important;border:1px solid #ba7882!important;color:#fff1f2!important}
+.review-colour-text{padding:5px 7px;border-radius:7px;line-height:1.4}
+.review-legend{display:flex;flex-wrap:wrap;gap:8px;margin:6px 1px 9px;font-size:.76rem}
+.review-legend>span{padding:5px 8px;border-radius:8px}
+.photo .info select.review-green,.photo .info textarea.review-green{background:#274c40!important;color:#edfff2!important}
+.photo .info select.review-red,.photo .info textarea.review-red{background:#56323a!important;color:#fff1f2!important}
 </style></head>
 <body><main>
 <details id="reviewSettings" class="review-settings"><summary>VNMV1 Reference Review <span>Tools & progress ▾</span></summary>
@@ -46,6 +55,7 @@
 <nav id="speciesNav" class="navstrip" aria-label="Specimen navigation"><button id="prevSpecies" type="button">◀ Previous</button><strong id="speciesPosition">Specimen 0/0</strong><button id="nextSpecies" type="button">Next ▶</button></nav>
 <div class="quick-save"><span>Edits save on this phone</span><button id="saveQuick" type="button">Save / Export JSON</button></div>
 <div class="mobile-tips">Swipe ← → to change species · Opens at Photo 1 · Scroll ↓ for the next photograph</div>
+<div class="review-legend"><span class="review-green">Green: checked and resolved</span><span class="review-red">Red: suggested, unknown or still needs review</span></div>
 <div id="results"></div>
 </main>
 <div id="photoZoom" hidden role="dialog" aria-modal="true" aria-label="Zoom reference photograph"><div class="zoom-controls"><span id="zoomTitle">Reference photo · Pinch to zoom</span><button id="zoomClose" class="zoom-close" type="button">✕ Close</button></div><div class="zoom-stage" id="zoomStage"><img id="zoomImage" alt="Enlarged photograph"></div><div class="zoom-controls"><span class="zoom-tip">Two fingers: zoom · One finger: drag · Double-tap: reset</span><button id="zoomReset" type="button">Reset</button></div></div>
@@ -210,19 +220,36 @@ function leadCard(p){
  info.append(create('label','Behaviour suggestions (comma separated)'));
  const behavior=create('textarea');behavior.value=Array.isArray(d.behaviours)?d.behaviours.join(', '):sug.behaviour.join(', ');info.append(behavior);
  info.append(create('label','Visible anatomy (comma separated)'));
- const anatomy=create('textarea');anatomy.value=Array.isArray(d.visible_anatomy)?d.visible_anatomy.join(', '):sug.anatomy.join(', ');advancedReview.append(anatomy);
+ const anatomy=create('textarea');anatomy.value=Array.isArray(d.visible_anatomy)?d.visible_anatomy.join(', '):sug.anatomy.join(', ');info.append(anatomy);
  info.append(create('label','Corrections and source notes'));
  const notes=create('textarea');notes.value=d.notes||'';info.append(notes);
  const lookedLabel=create('label',undefined,'check');const looked=create('input');looked.type='checkbox';looked.checked=d.human_visual_confirmation===true;
  lookedLabel.append(looked,create('span','I inspected the actual photograph on its original website'));info.append(lookedLabel);
  const toTags=v=>[...new Set(v.split(',').map(x=>x.trim().toUpperCase().replace(/[^A-Z0-9_]/g,'_')).filter(x=>/^[A-Z0-9_]{3,80}$/.test(x)))].slice(0,56);
+ const touched=new Set(Array.isArray(d.reviewed_fields)?d.reviewed_fields:[]);
+ const updateColours=()=>{
+  const actual=looked.checked;
+  const tint=(el,field,ok,required=true)=>reviewFieldTint(el,
+    touched.has(field)&&ok&&actual,required);
+  tint(pose,'pose_id',pose.value!=='UNREVIEWED');
+  tint(stage,'life_stage',stage.value!=='UNKNOWN');
+  tint(sex,'sex',sex.value!=='UNKNOWN');
+  tint(resembles,'resembles_original',resembles.value!=='NOT_ASSESSED');
+  tint(resemblesNotes,'resembles_notes',resemblesNotes.value.trim().length>0,false);
+  tint(behavior,'behaviours',behavior.value.trim().length>0,false);
+  tint(anatomy,'visible_anatomy',anatomy.value.trim().length>0,false);
+  tint(notes,'notes',notes.value.trim().length>0,false);
+  reviewFieldTint(lookedLabel,actual);
+  reviewFieldTint(checkLabel,actual&&touched.has('keep_research_candidate'));
+  reviewFieldTint(suggestLabel,actual&&touched.has('retain_suggested_classifications'));
+ };
  const update=()=>{
   decisions[p.photo_key]={...d,photo_key:p.photo_key,
    scientific_name:spec?.scientific_name||'UNRESOLVED',
    source_url:p.source_url,photographer_attribution:p.attribution,licence_code:p.license_code||'UNKNOWN',
    photo_sha256:null,reference_access:'SOURCE_LINK_ONLY',review_doctrine:REVIEW_DOCTRINE,
    keep_research_candidate:check.checked,retain_suggested_classifications:suggestCheck.checked,
-   reviewed_by_human:true,human_visual_confirmation:looked.checked,
+   reviewed_fields:[...touched].sort(),reviewed_by_human:true,human_visual_confirmation:looked.checked,
    recommended_pose_id:sug.pose,recommended_sex:sug.sex,recommended_life_stage:sug.life_stage,
    recommended_behaviours:sug.behaviour,recommended_visible_anatomy:sug.anatomy,
    recommendation_basis:sug.basis,recommendation_confidence:sug.confidence,
@@ -231,11 +258,15 @@ function leadCard(p){
    notes:notes.value,decision:'PENDING',requested_decision:'PENDING',
    species_verified:false,rights_checked:false,approved_for_imagegen:false,
    review_gate:'RESEARCH_LINK_ONLY_NOT_PRODUCTION_APPROVED'};
-  save();
+  save();updateColours();
  };
- [check,suggestCheck,pose,stage,sex,looked,behavior,anatomy,resembles].forEach(x=>x.addEventListener('change',update));
- notes.addEventListener('change',update);
- resemblesNotes.addEventListener('input',update);
+ const controls=[[check,'keep_research_candidate'],[suggestCheck,'retain_suggested_classifications'],
+  [pose,'pose_id'],[stage,'life_stage'],[sex,'sex'],[looked,'human_visual_confirmation'],
+  [behavior,'behaviours'],[anatomy,'visible_anatomy'],[resembles,'resembles_original']];
+ for(const [el,key] of controls)el.addEventListener('change',()=>{touched.add(key);update()});
+ notes.addEventListener('input',()=>{touched.add('notes');update()});
+ resemblesNotes.addEventListener('input',()=>{touched.add('resembles_notes');update()});
+ updateColours();
  info.append(create('small','No licence, identity, anatomical or ImageGen approval is implied by selecting a proposal.'));
  article.append(info);return article;
 }
@@ -253,6 +284,16 @@ function stats(){
     &&x.analysis_method==='CHATGPT_VISUAL_DRAFT';
  }).length;
  $('#aiDraftCount').textContent=checked+' / '+photos.length;
+}
+function reviewFieldTint(el,complete,active=true){
+ if(!el)return;
+ el.classList.remove('review-green','review-red');
+ if(active)el.classList.add(complete?'review-green':'review-red');
+ el.setAttribute('data-review-state',!active?'OPTIONAL':complete?'REVIEWED':'NEEDS_REVIEW');
+}
+function fieldIsMarked(record,field){return Array.isArray(record?.reviewed_fields)&&record.reviewed_fields.includes(field)}
+function displayFieldStatus(record,field,valid,visualConfirmed=true){
+ return fieldIsMarked(record,field)&&valid&&visualConfirmed;
 }
 function reviewIsEntered(d){return !!d&&(!d.proposal_prepopulated_not_human_reviewed||d.reviewed_by_human===true)&&(d.resembles_original&&d.resembles_original!=='NOT_ASSESSED'||d.reviewed_by_human===true||!!d.sex&&d.sex!=='UNKNOWN'||!!d.decision&&d.decision!=='PENDING'||!!d.pose_id&&d.pose_id!=='UNREVIEWED'||!!d.notes?.trim()||!!d.reject_reason?.trim())}
 function reviewDecisionChoice(d){return d.requested_decision || (d.decision==='ACCEPT_FEMALE'||d.decision==='ACCEPT_MALE'?'ACCEPT_REFERENCE':d.decision)||'PENDING'}
@@ -272,6 +313,14 @@ const retainLabel=create('label',undefined,'check');const retainBox=create('inpu
 retainLabel.append(retainBox,create('span','Keep this photo in research'));researchOptions.append(retainLabel);
 const suggestLabel=create('label',undefined,'check');const suggestBox=create('input');suggestBox.type='checkbox';suggestBox.checked=d.retain_suggested_classifications!==false;
 suggestLabel.append(suggestBox,create('span','Keep suggested labels (editable)'));researchOptions.append(suggestLabel);
+const provenance=create('div',
+ 'Visual source: '+(p.preanalysis?.reviewed_actual_image===true&&p.preanalysis?.source_image_sha256===p.sha256
+ ? 'actual photo inspected, suggestions not production-approved':'unverified suggestion · inspect photo'),
+ 'review-colour-text compact-ai');
+reviewFieldTint(provenance,!!p.sha256&&p.preanalysis?.source_image_sha256===p.sha256&&
+ p.preanalysis?.reviewed_actual_image===true &&
+ ['MEDIUM','HIGH','VERY_HIGH'].includes(String(sug.confidence||'').toUpperCase()));
+info.append(provenance);
 info.append(create('div','AI: '+sug.pose.replaceAll('_',' ').toLowerCase()+
  ' · sex '+sug.sex.replaceAll('_',' ').toLowerCase()+' · '+sug.confidence.toLowerCase()+' confidence','compact-ai'));
 if(sug.visible_note){const aiNotes=create('details');aiNotes.className='ai-extra';aiNotes.append(create('summary','AI visual observations ▾'));aiNotes.append(create('small',sug.visible_note));info.append(aiNotes)}
@@ -347,6 +396,34 @@ rejectDetails.append(create('label','Rejection reason (required if rejected)'));
 const rejectReason=create('textarea');rejectReason.value=d.reject_reason||'';rejectReason.placeholder='Why should this photo not be used?';rejectDetails.append(rejectReason);
 const rejectButton=create('button','Reject this photo');rejectButton.className='reject-action';rejectButton.type='button';rejectDetails.append(rejectButton);
 rejectDetails.open=select.value==='REJECT';info.append(rejectDetails);
+const touched=new Set(Array.isArray(d.reviewed_fields)?d.reviewed_fields:[]);
+const visual=p.preanalysis||{};
+const visualHashMatched=!!p.sha256&&visual.source_image_sha256===p.sha256&&
+ visual.reviewed_actual_image===true&&
+ ['VALIDATED_VISUAL_ANALYSIS','CHATGPT_VISUAL_DRAFT'].includes(visual.analysis_method);
+const aiFieldReviewed=visualHashMatched&&
+ ['MEDIUM','HIGH','VERY_HIGH'].includes(String(sug.confidence||'').toUpperCase());
+const aiReviewedFields=new Set(['sex','pose_id','life_stage','suitability','behaviours','visible_anatomy','notes']);
+const updateColours=()=>{
+ const tint=(el,key,valid,required=true)=>reviewFieldTint(el,
+   (touched.has(key)||(aiFieldReviewed&&aiReviewedFields.has(key)))&&valid,required);
+ tint(sexSelect,'sex',sexSelect.value!=='UNKNOWN');
+ tint(resembles,'resembles_original',resembles.value!=='NOT_ASSESSED');
+ tint(resemblesNotes,'resembles_notes',resemblesNotes.value.trim().length>0,false);
+ tint(select,'suitability',select.value!=='PENDING');
+ tint(poseSelect,'pose_id',poseSelect.value!=='UNREVIEWED');
+ tint(stageSelect,'life_stage',stageSelect.value!=='UNKNOWN');
+ tint(behaviours,'behaviours',behaviours.value.trim().length>0,false);
+ tint(anatomy,'visible_anatomy',anatomy.value.trim().length>0,false);
+ tint(notes,'notes',notes.value.trim().length>0,false);
+ tint(detailStatus,'anatomy_followup_status',detailStatus.value!=='CONFLICT_HELD',false);
+ tint(detailNotes,'anatomy_followup_notes',detailNotes.value.trim().length>0,false);
+ tint(rejectReason,'reject_reason',select.value==='REJECT'&&rejectReason.value.trim().length>=3,select.value==='REJECT');
+ reviewFieldTint(retainLabel,touched.has('keep_research_candidate'));
+ reviewFieldTint(suggestLabel,touched.has('retain_suggested_classifications'));
+ reviewFieldTint(specieslabel,touched.has('species_verified')&&speciesbox.checked, false);
+ reviewFieldTint(rightslabel,touched.has('rights_checked')&&rightsbox.checked,false);
+ };
 const update=()=>{
   const choice=select.value;
   const rejection=rejectReason.value.trim();
@@ -368,7 +445,7 @@ const update=()=>{
     recommended_suitability:sug.recommended_suitability,recommended_visual_notes:sug.visible_note,
     proposal_prepopulated_not_human_reviewed:false,
     life_stage:stageSelect.value,resembles_original:resembles.value,resembles_notes:resemblesNotes.value,behaviours:splitTags(behaviours.value),visible_anatomy:splitTags(anatomy.value),
-    reviewed_by_human:true,human_visual_confirmation:true,
+    reviewed_fields:[...touched].sort(),reviewed_by_human:true,human_visual_confirmation:true,
     decision:effective,requested_decision:choice,
     sex:sexSelect.value,sex_verification:'USER_OBSERVATION_NOT_INDEPENDENTLY_VERIFIED',
     species_verified:speciesbox.checked,rights_checked:rightsbox.checked,
@@ -379,20 +456,32 @@ const update=()=>{
     anatomical_coordinate_review:'NOT_REQUIRED_BY_DEFAULT',atlas_pose_role:'STRUCTURAL_STAGING_AND_QA_ONLY',
     approved_for_imagegen:false,review_gate:choice==='REJECT'?'REJECTED':
       eligibleIntent?(readyForReview?'USER_REQUESTED_PENDING_PRIVATE_VALIDATION':'IDENTITY_OR_RIGHTS_CHECK_REQUIRED'):'UNAPPROVED_CANDIDATE'};
-  decisions[key]=rec;save();
+  decisions[key]=rec;save();updateColours();
   reviewStatus.textContent=eligibleIntent&&!readyForReview?'Sex/pose saved. Suitability request held until both species and licence checks.':
     'Saved on this device. Use APK bottom Save to Drive to export.';
 };
-[select,sexSelect,poseSelect,stageSelect,retainBox,suggestBox,speciesbox,rightsbox,detailStatus,resembles].forEach(c=>c.addEventListener('change',()=>{if(c===select&&select.value!=='REJECT')rejectReason.value='';if(c===select&&select.value==='REJECT')rejectDetails.open=true;update()}));
-notes.addEventListener('input',update);
-resemblesNotes.addEventListener('input',update);
-behaviours.addEventListener('change',update);
-anatomy.addEventListener('change',update);
-detailNotes.addEventListener('change',update);
-rejectReason.addEventListener('input',()=>{if(select.value==='REJECT'&&rejectReason.value.trim().length>=3)update()});
+const reviewControls=[
+ [select,'suitability'],[sexSelect,'sex'],[poseSelect,'pose_id'],[stageSelect,'life_stage'],
+ [retainBox,'keep_research_candidate'],[suggestBox,'retain_suggested_classifications'],
+ [speciesbox,'species_verified'],[rightsbox,'rights_checked'],
+ [detailStatus,'anatomy_followup_status'],[resembles,'resembles_original']];
+reviewControls.forEach(([el,key])=>el.addEventListener('change',()=>{
+ touched.add(key);
+ if(el===select&&select.value!=='REJECT')rejectReason.value='';
+ if(el===select&&select.value==='REJECT')rejectDetails.open=true;
+ update()
+}));
+for(const [el,key] of [[notes,'notes'],[resemblesNotes,'resembles_notes'],
+ [behaviours,'behaviours'],[anatomy,'visible_anatomy'],[detailNotes,'anatomy_followup_notes']])
+ el.addEventListener('input',()=>{touched.add(key);update()});
+rejectReason.addEventListener('input',()=>{
+ touched.add('reject_reason');
+ if(select.value==='REJECT'&&rejectReason.value.trim().length>=3)update()
+});
+updateColours();
 rejectButton.addEventListener('click',()=>{
   if(rejectReason.value.trim().length<3){reviewStatus.textContent='Enter a reason before rejecting this photo.';rejectReason.focus();return}
-  select.value='REJECT';update();notify('Rejected and excluded from approved ImageGen references.');
+  touched.add('suitability');select.value='REJECT';update();notify('Rejected and excluded from approved ImageGen references.');
 });
 box.append(info);return box}
 let navSequence=0;
