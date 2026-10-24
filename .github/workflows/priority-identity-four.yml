@@ -1,0 +1,111 @@
+name: Four public identity evidence runners (110-case support)
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/priority-identity-four.yml'
+      - 'research/priority_identity_four_lanes.py'
+      - 'research/priority_identity_taxon_leads.json'
+      - 'research/merge_priority_identity_four_lanes.py'
+      - 'tests/test_priority_identity_four_lanes.py'
+permissions:
+  contents: read
+concurrency:
+  group: vnmv1-public-priority-identity-four
+  cancel-in-progress: false
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate exact public research partition and fail-closed approval gates
+        run: python -m unittest discover -s tests -p test_priority_identity_four_lanes.py -v
+
+  taxon-name-research:
+    needs: certify
+    runs-on: ubuntu-latest
+    timeout-minutes: 23
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        shard: [0, 1, 2, 3]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Research one strictly disjoint set of public taxon names
+        env:
+          SHARD: ${{ matrix.shard }}
+        run: |
+          python research/priority_identity_four_lanes.py \
+            --seed research/priority_identity_taxon_leads.json \
+            --shard "$SHARD" --out "out/shard-$SHARD.json"
+      - name: Archive public name evidence for private reconciliation
+        uses: actions/upload-artifact@v4
+        with:
+          name: identity-evidence-${{ matrix.shard }}
+          path: out/shard-${{ matrix.shard }}.json
+          retention-days: 14
+          if-no-files-found: error
+
+  merge-into-research-only-index:
+    needs: taxon-name-research
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 2
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: identity-evidence-*
+          path: four-output
+          merge-multiple: false
+      - name: Require all four shards and prohibit false identity claims
+        run: |
+          python research/merge_priority_identity_four_lanes.py \
+            --seed research/priority_identity_taxon_leads.json \
+            --shards four-output \
+            --out data/priority_identity_taxon_evidence.json
+      - name: Persist only public-source name evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'VNMV1 public taxon evidence bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/priority_identity_taxon_evidence.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'research: checkpoint four public identity evidence lanes [skip ci]'
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          echo 'Four-shard evidence index not committed' >&2
+          exit 1
+      - name: Make clear what was and was not resolved
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          d=json.load(open("data/priority_identity_taxon_evidence.json"))
+          print("## 110 pending identity cases — public research support")
+          print("- Independent public research jobs: 4")
+          print("- Distinct candidate taxon name leads:", d["public_name_leads_looked_up"])
+          print("- GBIF source responses:",d["successful_gbif_api_responses"])
+          print("- Retriable source failures:",d["source_unavailable_retry_required"])
+          print("- Original specimens visually inspected in GitHub:",0)
+          print("- Specimen-level identities approved:",0)
+          print("- No card IDs, private original photographs, Human Gold, Drive IDs, sex, localities or paid model calls")
+          print("- Import is research-only and cannot turn red items green before original-photo review.")
+          PY
