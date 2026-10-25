@@ -510,7 +510,7 @@ function leadCard(p){
  reviewDetails.append(reviewSummary,reviewBody);
  info.append(create('strong','Research-only source '+String(p.photo_key||'')),reviewDetails);
  reviewBody.append(create('small','Original image is not copied into GitHub or APK · Licence: '+(p.license_code||'UNKNOWN')));
- reviewBody.append(create('small',preview?'Source-hosted preview shown for inspection; this does not approve reuse or ImageGen.':'No direct image URL is available here; inspect the linked source page.'));
+ reviewBody.append(create('small',previews.length?'Inline source-hosted photo shown for inspection; this does not approve reuse or ImageGen.':'Source page preview appears above when the publisher permits embedding; the original link remains below.'));
  reviewBody.append(create('small','Source: '+(p.attribution||'Photographer unconfirmed')));
  const link=safeReferenceUrl(p.source_url);
  if(link){const a=create('a','OPEN ORIGINAL PHOTOGRAPH — inspect the source page');
