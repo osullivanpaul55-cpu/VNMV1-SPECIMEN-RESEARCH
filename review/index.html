@@ -125,7 +125,8 @@ function safeRemotePreviewUrl(url,sourceType=''){
   const inat=SAFE_PREVIEW_INAT_HOSTS.has(host)&&/^\/photos\/\d+\//i.test(path)&&/\.(?:jpe?g|png|webp)$/i.test(path);
   const commonsThumb=host==='upload.wikimedia.org'&&path.startsWith('/wikipedia/commons/');
   const commonsFilePath=host==='commons.wikimedia.org'&&path.startsWith('/wiki/Special:FilePath/');
-  if(inat||commonsThumb||commonsFilePath||sourceType==='GBIF_OCCURRENCE_MEDIA_PAGE')return u.href;
+  const arachnoboardsFull=host==='arachnoboards.com'&&/^\/gallery\/[^/]+\.\d+\/full$/i.test(path);
+  if(inat||commonsThumb||commonsFilePath||arachnoboardsFull||sourceType==='GBIF_OCCURRENCE_MEDIA_PAGE')return u.href;
   return null;
  }catch(_){return null}
 }
@@ -142,6 +143,9 @@ function leadPreviewUrls(p){
  if(source){
   try{
    const u=new URL(source);
+   if(u.hostname==='arachnoboards.com'&&/^\/gallery\/[^/]+\.\d+\/?$/i.test(u.pathname)){
+    add(u.href.replace(/\/+$/,'')+'/full');
+   }
    if(/\.(?:jpe?g|png|webp)$/i.test(u.pathname))add(u.href);
    const file=u.hostname==='commons.wikimedia.org'?u.pathname.match(/^\/wiki\/File(?::|%3A)(.+)$/i):null;
    if(file){
