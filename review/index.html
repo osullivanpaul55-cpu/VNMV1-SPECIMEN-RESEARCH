@@ -25,7 +25,7 @@
 .photo-source,.research-options,.advanced-review,.ai-extra,.reject-detail{border:1px solid #37495e;border-radius:8px;background:#172536;margin:7px 0;padding:0 9px}
 .photo-source>summary,.research-options>summary,.advanced-review>summary,.ai-extra>summary,.reject-detail>summary{cursor:pointer;font-size:.84rem;color:#d3e7ff;padding:9px 2px}
 .photo-source[open],.research-options[open],.advanced-review[open],.ai-extra[open],.reject-detail[open]{padding-bottom:8px}
-.photo .info>label{font-size:.84rem;margin-top:8px}.photo .info>small{font-size:.78rem;margin:4px 0;color:#acc1d5}.photo .compact-ai{font-size:.79rem;color:#c6def9;margin:5px 0}
+.photo .info>label{font-size:.84rem;margin-top:8px}.photo .info>small{font-size:.78rem;margin:4px 0;color:#acc1d5}.source-page-viewer iframe{display:block;width:100%;height:min(58vh,560px);min-height:300px;border:1px solid #465a72;border-radius:8px;background:#fff}.source-page-viewer>small{color:#a9bdd1}.photo .compact-ai{font-size:.79rem;color:#c6def9;margin:5px 0}
 .photo select{padding:10px 8px;min-height:44px}.photo textarea{min-height:52px}
 .quick-save{position:fixed;z-index:850;left:50%;bottom:calc(12px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:min(560px,calc(100vw - 20px));display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 10px;font-size:.73rem;color:#aabed4;background:rgba(20,32,48,.97);border:1px solid #45617d;border-radius:14px;box-shadow:0 8px 25px rgba(0,0,0,.48);backdrop-filter:blur(8px)}
 .quick-save>span{flex:1;min-width:0;line-height:1.25}
@@ -129,24 +129,45 @@ function safeRemotePreviewUrl(url,sourceType=''){
   return null;
  }catch(_){return null}
 }
-function leadPreviewUrl(p){
- for(const value of [p.review_preview_url,p.preview_image_url,p.thumbnail_url]){
-  const preview=safeRemotePreviewUrl(value,p.source_type);if(preview)return preview;
- }
- const inat=String(p.photo_key||'').match(/^inat:(\d+)$/);
- if(inat)return safeRemotePreviewUrl('https://static.inaturalist.org/photos/'+inat[1]+'/medium.jpg','INATURALIST');
+function leadPreviewUrls(p){
+ const previews=[];
+ const add=value=>{
+  const preview=safeRemotePreviewUrl(value,p.source_type);
+  if(preview&&!previews.includes(preview))previews.push(preview);
+ };
+ for(const value of [p.review_preview_url,p.preview_image_url,p.thumbnail_url])add(value);
+ const inat=String(p.photo_key||'').match(/^inat:(\\d+)$/);
+ if(inat)add('https://static.inaturalist.org/photos/'+inat[1]+'/medium.jpg');
  const source=safeReferenceUrl(p.source_url);
  if(source){
   try{
-   const u=new URL(source),file=u.hostname==='commons.wikimedia.org'?u.pathname.match(/^\/wiki\/File(?::|%3A)(.+)$/i):null;
+   const u=new URL(source);
+   if(/\\.(?:jpe?g|png|webp)$/i.test(u.pathname))add(u.href);
+   const file=u.hostname==='commons.wikimedia.org'?u.pathname.match(/^\\/wiki\\/File(?::|%3A)(.+)$/i):null;
    if(file){
     const title=decodeURIComponent(file[1]).replaceAll('_',' ');
-    const preview=safeRemotePreviewUrl('https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(title)+'?width=640','WIKIMEDIA_COMMONS_FILE_PAGE');
-    if(preview)return preview;
+    add('https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(title)+'?width=640');
    }
   }catch(_){}
  }
- return safeRemotePreviewUrl(p.secondary_source_url,p.source_type);
+ add(p.secondary_source_url);
+ return previews;
+}
+function createSourcePageViewer(p,openInitially=false){
+ const source=safeReferenceUrl(p?.source_url);
+ if(!source)return null;
+ const details=create('details',undefined,'photo-source source-page-viewer');
+ const frame=document.createElement('iframe');
+ frame.loading='lazy';frame.referrerPolicy='no-referrer';
+ frame.setAttribute('sandbox','allow-scripts allow-forms allow-same-origin');
+ frame.title='Source page: '+String(p.source_title||p.photo_key||'photo reference');
+ const load=()=>{if(details.open&&!frame.dataset.loaded){frame.dataset.loaded='true';frame.src=source}};
+ details.append(create('summary','Source page preview · open in this viewer'),
+  create('small','The publisher may block embedded pages. If the preview is blank, use the original source link below.'),frame);
+ details.addEventListener('toggle',load);
+ details.open=openInitially;
+ if(openInitially)load();
+ return {details,show(){details.open=true;load()}};
 }
 // Photo lightbox: zoom only the photograph, not the review controls.
 let zoomScale=1,zoomX=0,zoomY=0;
@@ -455,16 +476,24 @@ function leadCard(p){
  const d=decisions[p.photo_key]||seedProposal(spec||{scientific_name:'UNRESOLVED'},p,true);
  const sug=suggestions(p);
  const article=create('article',undefined,'photo');article.dataset.photoKey=String(p.photo_key||'');article.dataset.needsReview=String(photoNeedsAttention(spec||{scientific_name:'UNRESOLVED'},p,true));
- const preview=leadPreviewUrl(p);
- if(preview){
+ const previews=leadPreviewUrls(p);
+ const sourceViewer=createSourcePageViewer(p,previews.length===0);
+ if(previews.length){
   const image=create('img');image.loading='lazy';image.decoding='async';image.referrerPolicy='no-referrer';
-  image.src=preview;image.alt='Source-hosted photo preview for '+(spec?.scientific_name||'unresolved research source');
+  image.src=previews[0];image.alt='Source-hosted photo preview for '+(spec?.scientific_name||'unresolved research source');
   image.className='tap-zoom';image.title='Tap to pinch-zoom';
-  image.addEventListener('click',()=>openPhotoZoom(preview,String(p.photo_key||'Source photo')+' · '+(spec?.scientific_name||'')));
-  const fallback=create('small','Inline preview unavailable from the source; open the original photograph below.');fallback.hidden=true;
-  image.addEventListener('error',()=>{image.hidden=true;fallback.hidden=false});
+  image.addEventListener('click',()=>openPhotoZoom(image.src,String(p.photo_key||'Source photo')+' · '+(spec?.scientific_name||'')));
+  const fallback=create('small','Remote image previews were unavailable; showing the source page here when the publisher permits it.');fallback.hidden=true;
+  let previewIndex=0;
+  image.addEventListener('error',()=>{
+   if(previewIndex+1<previews.length){image.src=previews[++previewIndex];return}
+   image.hidden=true;fallback.hidden=false;sourceViewer?.show();
+  });
   article.append(image,fallback);
+ }else{
+  article.append(create('small','No direct image URL is available. The source page is shown here when its publisher permits embedding.'));
  }
+ if(sourceViewer)article.append(sourceViewer.details);
  const info=create('div',undefined,'info');
  const confidence=String(sug.confidence||'UNKNOWN').toUpperCase();
  const hasBoundVisual=!!p.sha256&&p.preanalysis?.reviewed_actual_image===true&&p.preanalysis?.source_image_sha256===p.sha256;
