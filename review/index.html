@@ -337,7 +337,7 @@ function findOrCreateCatalogSpecies(name,key,status='RESEARCH_CANDIDATE_UNVERIFI
 }
 async function fetchCatalogJSON(sources){
  for(const source of sources){
-  try{const response=await fetch(source,{cache:'no-store'});if(!response.ok)continue;return await response.json()}catch(_){}
+  try{const requestUrl=source+(source.includes('?')?'&':'?')+'v='+Date.now();const response=await fetch(requestUrl,{cache:'no-store'});if(!response.ok)continue;return await response.json()}catch(_){}
  }
  return null;
 }
@@ -736,7 +736,8 @@ async function loadVisualDrafts(){
   'https://raw.githubusercontent.com/osullivanpaul55-cpu/VNMV1-SPECIMEN-RESEARCH/main/data/photo_visual_reviews.json',
   '../data/photo_visual_reviews.json']){
   try{
-   const res=await fetch(url,{cache:'no-store'});if(!res.ok)continue;
+   const requestUrl=url+(url.includes('?')?'&':'?')+'v='+Date.now();
+   const res=await fetch(requestUrl,{cache:'no-store'});if(!res.ok)continue;
    const data=await res.json();
    if(data.schema!=='VNMV1_PUBLIC_VISUAL_RECOMMENDATIONS_V1'||!data.photos||typeof data.photos!=='object')continue;
    if(Object.keys(data.photos).length>25000)throw Error('Too many visual drafts');
@@ -756,7 +757,8 @@ async function load(){
   let lastError='Unknown error';
   for(const source of sources){
     try{
-      const res=await fetch(source,{cache:'no-store'});
+      const requestUrl=source+(source.includes('?')?'&':'?')+'v='+Date.now();
+      const res=await fetch(requestUrl,{cache:'no-store'});
       if(!res.ok)throw Error('HTTP '+res.status);
       const obj=await res.json();
       if(obj.schema!=='VNMV1_PUBLIC_PHOTO_CANDIDATES_V1'||!obj.species||typeof obj.species!=='object')throw Error('Unrecognized index');
