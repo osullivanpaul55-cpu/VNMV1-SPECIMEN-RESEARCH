@@ -19,7 +19,7 @@ from urllib.request import Request, urlopen
 SEED_SCHEMA = "VNMV1_PUBLIC_ROSTER_TAXON_NAME_LEADS_V1"
 RESULT_SCHEMA = "VNMV1_PUBLIC_ROSTER_TAXON_NAME_EVIDENCE_V1"
 SOURCE = "GBIF_SPECIES_MATCH_API"
-SAFE_NAME = re.compile(r"^[\w .(),'\"/×?–—\-:]+$", re.UNICODE)
+SAFE_NAME = re.compile(r"^[\w .(),;'\"/×?–—\-:]+$", re.UNICODE)
 USER_AGENT = "VNMV1-public-roster-taxonomy-research/1.0 (taxon names only)"
 
 def load_seed(path: Path) -> list[str]:
