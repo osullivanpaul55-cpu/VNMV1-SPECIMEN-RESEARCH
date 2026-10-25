@@ -90,7 +90,7 @@ const POSE_V11 = {
 let decisions={};try{decisions=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(_){decisions={}}
 const create=(name,text,cls)=>{const a=document.createElement(name);if(text!==undefined)a.textContent=String(text);if(cls)a.className=cls;return a};
 function safeUrl(url,hostname){try{const u=new URL(url);return u.protocol==='https:'&&u.hostname===hostname?u.href:null}catch(_){return null}}
-const SAFE_REFERENCE_HOSTS=new Set(['www.inaturalist.org','inaturalist.org','commons.wikimedia.org','doi.org','peckhamia.com','www.morphmarket.com','spidershoppe.com','www.gbif.org','wsc.nmbe.ch']);
+const SAFE_REFERENCE_HOSTS=new Set(['www.inaturalist.org','inaturalist.org','commons.wikimedia.org','doi.org','peckhamia.com','www.morphmarket.com','spidershoppe.com','www.gbif.org','wsc.nmbe.ch','arachnoboards.com','www.tarantupedia.com','www.onelovetarantulas.com','thespidershop.co.uk','franksbuggin661.com','tydyeexotic.com','spiderfarm.co.uk','westsidetarantulas.com','tarantulaforum.com','themotherofspiders.com','www.joelsartore.com','tarantulas.base.shop','fearnottarantulas.com','www.theraphosia.de','www.8pawstarantulas.com','legacy.tarantulacanada.ca','spaspiders.co.uk']);
 function safeReferenceUrl(url){try{const u=new URL(url);return u.protocol==='https:'&&SAFE_REFERENCE_HOSTS.has(u.hostname)?u.href:null}catch(_){return null}}
 function imgUrl(url){for(const h of ['static.inaturalist.org','inaturalist-open-data.s3.amazonaws.com','inaturalist-open-data.s3.us-west-2.amazonaws.com']){const u=safeUrl(url,h);if(u)return u}return null}
 // Photo lightbox: zoom only the photograph, not the review controls.
@@ -360,6 +360,7 @@ async function loadReferenceCatalog(){
    const spec=findOrCreateCatalogSpecies(row.name,row.key);
    spec.taxon_status=row.taxon_status||spec.taxon_status;
    spec.rank=row.rank||spec.rank;
+   if(row.user_review_note)spec.user_review_note=row.user_review_note;
    spec.source_searches=mergeByUrl(spec.source_searches,row.source_searches||generatedSearches(row.name));
    spec.curated_reference_leads=mergeCurated(spec.curated_reference_leads,row.curated_reference_leads);
   }
@@ -369,6 +370,7 @@ async function loadReferenceCatalog(){
    spec.taxon_status='UNRESOLVED_RESEARCH_UNIT';
    const extra=Array.isArray(unit.additional_reference_sources)?unit.additional_reference_sources:[];
    spec.source_searches=mergeByUrl(spec.source_searches,[...(unit.source_searches||[]),...extra]);
+   spec.curated_reference_leads=mergeCurated(spec.curated_reference_leads,unit.curated_reference_leads);
    spec.user_review_note=unit.user_note||'Identity remains unresolved.';
   }
  }
