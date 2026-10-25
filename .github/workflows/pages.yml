@@ -8,6 +8,8 @@ on:
     branches: [main]
     paths:
       - 'data/index.json'
+      - 'data/card_registry.json'
+      - 'data/photo_visual_reviews.json'
       - 'research/coverage_report.py'
       - 'research/species_seed.json'
       - 'research/species_reference_extension.json'
@@ -46,6 +48,8 @@ jobs:
           fi
           cp review/index.html _site/review/index.html
           cp data/index.json _site/data/index.json
+          cp data/card_registry.json _site/data/card_registry.json
+          cp data/photo_visual_reviews.json _site/data/photo_visual_reviews.json
           cp data/species_coverage.csv _site/data/species_coverage.csv
           cp data/species_coverage_summary.json _site/data/species_coverage_summary.json
           printf '%s\n' '<!doctype html><html lang="en"><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=./review/"><title>VNMV1 Reference Review</title><a href="./review/">Open specimen review</a></html>' > _site/index.html
