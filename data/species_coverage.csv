@@ -111,7 +111,7 @@ e3ea9755ed07b5b2bb92f505c182b0c7,Hierodula membranacea,CURRENT_SEED_OR_EXTENSION
 05e6c847f9fad1e0,Hogna maderiana,CURRENT_SEED_OR_EXTENSION,True,True,0,21,0,21,21,9,12,15,0,0,0,21,0,0,0,0,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":2,""cc-by-nc"":19}"
 6c1d0d77f0fd0889,Hogna radiata,CURRENT_SEED_OR_EXTENSION,True,True,18,30,0,30,48,9,12,15,0,0,0,48,18,0,0,0,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":6,""cc-by"":18,""cc-by-nc"":23,""cc-by-sa"":1}"
 20c33dcdd20ac741,Holconia murrayensis,CURRENT_SEED_OR_EXTENSION,True,True,18,30,0,30,48,9,12,15,0,0,0,48,18,0,0,0,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":7,""cc-by"":1,""cc-by-nc"":22,""cc-by-nc-nd"":1,""cc0"":17}"
-d6da746da4c597e4077e018ae871202f,Hyllus brevitarsis,CURRENT_SEED_OR_EXTENSION,True,True,0,0,0,0,0,9,12,15,9,12,15,0,0,0,0,3,0,NO_REFERENCE_RECORDS,{}
+d6da746da4c597e4077e018ae871202f,Hyllus brevitarsis,CURRENT_SEED_OR_EXTENSION,True,True,18,30,0,30,48,9,12,15,0,0,0,48,18,0,0,3,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":6,""cc-by"":14,""cc-by-nc"":24,""cc0"":4}"
 7d968a3319cdf2ca,Hyllus diardi,CURRENT_SEED_OR_EXTENSION,True,True,23,60,0,60,83,9,12,15,0,0,0,83,23,0,4,2,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":12,""cc-by"":20,""cc-by-nc"":47,""cc-by-nc-nd"":1,""cc0"":3}"
 0fd8f753870f8eeb0b19e7cfcf06229c,Hyllus giganteus,CURRENT_SEED_OR_EXTENSION,True,True,6,30,0,30,36,9,12,15,0,0,0,36,6,0,0,2,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":1,""cc-by"":2,""cc-by-nc"":27,""cc-by-nc-nd"":1,""cc-by-nc-sa"":1,""cc0"":4}"
 09c7cf17bdf3a2511e4b6132cc5435c2,Hyllus semicupreus,CURRENT_SEED_OR_EXTENSION,True,True,18,30,0,30,48,9,12,15,0,0,0,48,18,0,0,3,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":6,""cc-by"":17,""cc-by-nc"":24,""cc0"":1}"
@@ -168,7 +168,7 @@ ea4cfd0ae468b6ed,Nhandu chromatus,CURRENT_SEED_OR_EXTENSION,True,True,0,0,0,0,0,
 d0dcdcd4e4779a5c58ff12c8d6ab9bd3,Ornithoctonus costalis,CURRENT_SEED_OR_EXTENSION,True,True,0,2,1,3,3,9,12,15,6,9,12,3,0,0,0,2,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":1,""UNKNOWN_PENDING_VERIFICATION"":1,""cc-by-nc"":1}"
 e774125d44e8935aa1e37543d5a6e84f,Orthetrum cancellatum,CURRENT_SEED_OR_EXTENSION,True,True,18,30,1,31,49,9,12,15,0,0,0,49,18,0,0,2,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":2,""UNKNOWN_PENDING_VERIFICATION"":1,""cc-by"":17,""cc-by-nc"":26,""cc-by-sa"":2,""cc0"":1}"
 c58552aa94c9b7a2,Pachistopelma bromelicola,CURRENT_SEED_OR_EXTENSION,True,True,0,0,0,0,0,9,12,15,9,12,15,0,0,0,0,0,0,NO_REFERENCE_RECORDS,{}
-25cd3638de7e4d896c8f08950e33ce14,Pachyrhynchus congestus,CURRENT_SEED_OR_EXTENSION,True,True,0,0,1,1,1,9,12,15,8,11,14,1,0,0,0,2,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN_PENDING_VERIFICATION"":1}"
+25cd3638de7e4d896c8f08950e33ce14,Pachyrhynchus congestus,CURRENT_SEED_OR_EXTENSION,True,True,6,30,1,31,37,9,12,15,0,0,0,37,6,0,0,2,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":2,""UNKNOWN_PENDING_VERIFICATION"":1,""cc-by"":6,""cc-by-nc"":28}"
 45bc1434ad2ff605,Pamphobeteus antinous,CURRENT_SEED_OR_EXTENSION,True,True,0,10,0,10,10,9,12,15,0,2,5,10,0,0,0,0,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":10}"
 9f29b28be974a6fe,Pamphobeteus fortis,CURRENT_SEED_OR_EXTENSION,True,True,2,30,0,30,32,9,12,15,0,0,0,32,2,0,0,0,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":7,""cc-by"":2,""cc-by-nc"":14,""cc-by-nc-sa"":9}"
 6a539dfbb24aa2a6,Pamphobeteus insignis,CURRENT_SEED_OR_EXTENSION,True,True,0,6,0,6,6,9,12,15,3,6,9,6,0,0,0,0,0,PENDING_HUMAN_REVIEW,"{""cc-by-nc"":4,""cc-by-nc-sa"":2}"
@@ -183,7 +183,7 @@ e1e7af0250120239,Pelinobius muticus,CURRENT_SEED_OR_EXTENSION,True,True,0,30,0,3
 8849d1f580b4043ed55adbb537374551,Phalacrognathus muelleri,CURRENT_SEED_OR_EXTENSION,True,True,0,0,1,1,1,9,12,15,8,11,14,1,0,0,0,2,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN_PENDING_VERIFICATION"":1}"
 aef39363fad0b0ed,Phidippus audax,CURRENT_SEED_OR_EXTENSION,True,True,36,60,1,61,97,9,12,15,0,0,0,97,36,0,2,2,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":14,""UNKNOWN_PENDING_VERIFICATION"":1,""cc-by"":30,""cc-by-nc"":45,""cc-by-nc-nd"":1,""cc0"":6}"
 81a12f33cf1827b8,Phidippus johnsoni,CURRENT_SEED_OR_EXTENSION,True,True,16,60,0,60,76,9,12,15,0,0,0,76,16,0,1,2,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":13,""cc-by"":13,""cc-by-nc"":47,""cc0"":3}"
-4bcdd7fe77f636af27856a68e7a6546e,Phidippus mystaceus,CURRENT_SEED_OR_EXTENSION,True,True,0,0,1,1,1,9,12,15,8,11,14,1,0,0,0,2,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN_PENDING_VERIFICATION"":1}"
+4bcdd7fe77f636af27856a68e7a6546e,Phidippus mystaceus,CURRENT_SEED_OR_EXTENSION,True,True,17,30,1,31,48,9,12,15,0,0,0,48,17,0,1,2,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":8,""UNKNOWN_PENDING_VERIFICATION"":1,""cc-by"":11,""cc-by-nc"":22,""cc0"":6}"
 e0fa2260254354336a82fa472a152a5a,Phidippus otiosus,CURRENT_SEED_OR_EXTENSION,True,True,18,30,1,31,49,9,12,15,0,0,0,49,18,0,2,2,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":10,""UNKNOWN_PENDING_VERIFICATION"":1,""cc-by"":11,""cc-by-nc"":18,""cc-by-sa"":2,""cc0"":7}"
 426f1aeb5c927661,Phidippus regius,CURRENT_SEED_OR_EXTENSION,True,True,23,60,0,60,83,9,12,15,0,0,0,83,23,0,2,2,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":15,""cc-by"":19,""cc-by-nc"":45,""cc0"":4}"
 0944bc33335df84b,Phlogiellus baeri,CURRENT_SEED_OR_EXTENSION,True,True,0,30,0,30,30,9,12,15,0,0,0,30,0,0,0,0,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":15,""cc-by-nc"":15}"
@@ -214,8 +214,8 @@ b3500f6c11a47fa4,Poecilotheria smithi,CURRENT_SEED_OR_EXTENSION,True,True,0,1,0,
 410dffc1d7024163,Poecilotheria vittata,CURRENT_SEED_OR_EXTENSION,True,True,1,26,0,26,27,9,12,15,0,0,0,27,1,0,0,0,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":8,""cc-by"":1,""cc-by-nc"":18}"
 1e609862639634fb,Psalmopoeus cambridgei,CURRENT_SEED_OR_EXTENSION,True,True,0,0,0,0,0,9,12,15,9,12,15,0,0,0,0,0,0,NO_REFERENCE_RECORDS,{}
 1c841cb5fd4082dd,Psalmopoeus ecclesiasticus,CURRENT_SEED_OR_EXTENSION,True,True,0,0,0,0,0,9,12,15,9,12,15,0,0,0,0,0,0,NO_REFERENCE_RECORDS,{}
-fa65658713b31f89,Psalmopoeus irminia,CURRENT_SEED_OR_EXTENSION,True,True,0,0,0,0,0,9,12,15,9,12,15,0,0,0,0,0,0,NO_REFERENCE_RECORDS,{}
-6ad42e6ab6ce6350,Psalmopoeus pulcher,CURRENT_SEED_OR_EXTENSION,True,True,0,0,0,0,0,9,12,15,9,12,15,0,0,0,0,0,0,NO_REFERENCE_RECORDS,{}
+fa65658713b31f89,Psalmopoeus irminia,CURRENT_SEED_OR_EXTENSION,True,True,4,30,0,30,34,9,12,15,0,0,0,34,4,0,2,0,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":13,""cc-by"":4,""cc-by-nc"":16,""cc-by-nc-nd"":1}"
+6ad42e6ab6ce6350,Psalmopoeus pulcher,CURRENT_SEED_OR_EXTENSION,True,True,18,30,0,30,48,9,12,15,0,0,0,48,18,0,1,0,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":10,""cc-by"":13,""cc-by-nc"":20,""cc0"":5}"
 12b7831d5c67d7f0,Psalmopoeus reduncus,CURRENT_SEED_OR_EXTENSION,True,True,7,30,0,30,37,9,12,15,0,0,0,37,7,0,0,0,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":6,""cc-by"":4,""cc-by-nc"":24,""cc0"":3}"
 241d040655888932,Psalmopoeus victori,CURRENT_SEED_OR_EXTENSION,True,True,0,0,0,0,0,9,12,15,9,12,15,0,0,0,0,0,0,NO_REFERENCE_RECORDS,{}
 5baa881eea446773,Psednocnemis brachyramosa,CURRENT_SEED_OR_EXTENSION,True,True,0,0,0,0,0,9,12,15,9,12,15,0,0,0,0,0,0,NO_REFERENCE_RECORDS,{}
@@ -234,7 +234,7 @@ b789b7a8d6865b11,Selenocosmia aruana,CURRENT_SEED_OR_EXTENSION,True,True,0,0,0,0
 907caf4dcada789d,Selenocosmia kovariki,CURRENT_SEED_OR_EXTENSION,True,True,0,0,0,0,0,9,12,15,9,12,15,0,0,0,0,0,0,NO_REFERENCE_RECORDS,{}
 d88bb99fa21011b5,Sicarius thomisoides,CURRENT_SEED_OR_EXTENSION,True,True,18,30,0,30,48,9,12,15,0,0,0,48,18,0,0,0,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":8,""cc-by"":17,""cc-by-nc"":22,""cc0"":1}"
 e3e5a84eb4c0607e,Stichoplastoris obelix,CURRENT_SEED_OR_EXTENSION,True,True,0,5,0,5,5,9,12,15,4,7,10,5,0,0,0,0,0,PENDING_HUMAN_REVIEW,"{""cc-by-nc"":4,""cc-by-sa"":1}"
-19be4bffa466a977,Stromatopelma calceatum,CURRENT_SEED_OR_EXTENSION,True,True,0,0,0,0,0,9,12,15,9,12,15,0,0,0,0,0,0,NO_REFERENCE_RECORDS,{}
+19be4bffa466a977,Stromatopelma calceatum,CURRENT_SEED_OR_EXTENSION,True,True,2,30,0,30,32,9,12,15,0,0,0,32,2,0,0,0,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":5,""cc-by-nc"":24,""cc-by-nc-sa"":1,""cc0"":2}"
 02ef4e9807ad377956d5e044c69f98b8,Sungaya inexpectata,CURRENT_SEED_OR_EXTENSION,True,True,1,1,1,2,3,9,12,15,6,9,12,3,1,0,0,2,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN_PENDING_VERIFICATION"":1,""cc-by"":1,""cc-by-nc"":1}"
 250d5768077b234aabcf7113828c726f,Sympetrum danae,CURRENT_SEED_OR_EXTENSION,True,True,18,30,1,31,49,9,12,15,0,0,0,49,18,0,0,2,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":5,""UNKNOWN_PENDING_VERIFICATION"":1,""cc-by"":14,""cc-by-nc"":25,""cc0"":4}"
 188667bef5d309d8,Taksinus bambus,CURRENT_SEED_OR_EXTENSION,True,True,0,4,0,4,4,9,12,15,5,8,11,4,0,0,0,0,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":1,""cc-by-nc"":3}"
@@ -243,9 +243,9 @@ e3e5a84eb4c0607e,Stichoplastoris obelix,CURRENT_SEED_OR_EXTENSION,True,True,0,5,
 ef56f36e8f0166a9,Theraphosa apophysis,CURRENT_SEED_OR_EXTENSION,True,True,7,30,0,30,37,9,12,15,0,0,0,37,7,0,0,0,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":13,""cc-by"":7,""cc-by-nc"":17}"
 681fb0af0cb06494,Theraphosa blondi,CURRENT_SEED_OR_EXTENSION,True,True,4,30,0,30,34,9,12,15,0,0,0,34,4,0,0,0,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":8,""cc-by"":4,""cc-by-nc"":22}"
 fb839ed3658e6a88,Theraphosa stirmi,CURRENT_SEED_OR_EXTENSION,True,True,0,0,0,0,0,9,12,15,9,12,15,0,0,0,0,0,0,NO_REFERENCE_RECORDS,{}
-2260edac37e4af30,Thrigmopoeus truculentus,CURRENT_SEED_OR_EXTENSION,True,True,0,0,0,0,0,9,12,15,9,12,15,0,0,0,0,0,0,NO_REFERENCE_RECORDS,{}
+2260edac37e4af30,Thrigmopoeus truculentus,CURRENT_SEED_OR_EXTENSION,True,True,13,30,0,30,43,9,12,15,0,0,0,43,13,0,4,0,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":4,""cc-by"":13,""cc-by-nc"":24,""cc-by-nc-nd"":2}"
 4015bb7667233e02,Tliltocatl albopilosus,CURRENT_SEED_OR_EXTENSION,True,True,18,30,0,30,48,9,12,15,0,0,0,48,18,0,1,0,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":7,""cc-by"":18,""cc-by-nc"":22,""cc-by-nc-nd"":1}"
-4d0beb7bd1878881,Tliltocatl kahlenbergi,CURRENT_SEED_OR_EXTENSION,True,True,0,0,0,0,0,9,12,15,9,12,15,0,0,0,0,0,0,NO_REFERENCE_RECORDS,{}
+4d0beb7bd1878881,Tliltocatl kahlenbergi,CURRENT_SEED_OR_EXTENSION,True,True,18,30,0,30,48,9,12,15,0,0,0,48,18,0,0,0,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":4,""cc-by"":12,""cc-by-nc"":25,""cc-by-nc-nd"":1,""cc0"":6}"
 243149cc5e179159,Tliltocatl vagans,CURRENT_SEED_OR_EXTENSION,True,True,18,30,0,30,48,9,12,15,0,0,0,48,18,0,1,0,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":9,""cc-by"":13,""cc-by-nc"":21,""cc0"":5}"
 8af99d9b7cd127a001861857356dc3d5,Tramea lacerata,CURRENT_SEED_OR_EXTENSION,True,True,18,30,1,31,49,9,12,15,0,0,0,49,18,0,4,2,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":4,""UNKNOWN_PENDING_VERIFICATION"":1,""cc-by"":15,""cc-by-nc"":26,""cc0"":3}"
 5f592845010db47aec220fdac4d708f1,Trithemis annulata,CURRENT_SEED_OR_EXTENSION,True,True,16,30,1,31,47,9,12,15,0,0,0,47,16,0,0,2,0,PENDING_HUMAN_REVIEW,"{""UNKNOWN"":8,""UNKNOWN_PENDING_VERIFICATION"":1,""cc-by"":16,""cc-by-nc"":21,""cc-by-nc-nd"":1}"
