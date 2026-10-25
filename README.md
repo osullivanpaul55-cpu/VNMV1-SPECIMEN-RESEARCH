@@ -1,6 +1,8 @@
 # VNMV1 Specimen Research — Public-Safe Research Repository
 
-This is the **public component only** of the VNMV1 natural-history reference research programme. It contains an unchanged 195-name base seed plus a separate 73-name species/subspecies extension and four unresolved genus/locality research units for an existing 526-card research roster, five no-paid-model photo research workers, provenance/copyright filters, durable GitHub Release archive assets, a mobile-friendly human review webpage, and unit tests. It contains **no original card specimen photographs, Human Gold annotations, per-card species/sex mapping, personal Google Drive data, paid API credentials or image-generation executor**.
+This is the **public component only** of the VNMV1 natural-history reference research programme. It contains an unchanged 195-name base seed plus a separate 73-name species/subspecies extension and four unresolved genus/locality research units for an existing 526-card research roster, five no-paid-model photo research workers, provenance/copyright filters, durable GitHub Release archive assets, a mobile-friendly human review webpage, and unit tests. It contains **no original card specimen photographs, Human Gold annotations, per-card photo-level identity or sex verification, personal Google Drive data, paid API credentials or image-generation executor**.
+
+The public reviewer now includes the best available card identity label from prior project reconciliation for all 526 card IDs. Labels retain the source's formal, informal, higher-taxon, or conflict level and do not verify the individual card photograph.
 
 **WARNING: All photos are unapproved research candidates**, regardless of community research-grade status. Do not assert specimen sex, exact species identity, licence fitness for a particular commercial AI workflow, or approval to generate from any public index field. The public queue never makes those decisions.
 
@@ -15,7 +17,7 @@ This is the **public component only** of the VNMV1 natural-history reference res
 - Every completed run publishes five GitHub **Release ZIP assets**, plus a credits manifest, not just expiring Actions artifacts. The public `data/index.json` links to these archived ZIPs and contains SHA-256 hashes and source URLs; `review/index.html` offers visual/biological review. Release archives remain available while the project and those Releases are maintained; this is **not an unconditional permanence or unlimited-storage guarantee**. Mirror important approved assets separately.
 - The GitHub Actions artifacts are short-lived transport buffers (seven days). **Release ZIPs** are the durable public candidate archive.
 - If named taxa are exhausted, the workflow revisits for more sources. It never fabricates missing six-photo female or male sets.
-- Species pools share research across multiple private cards, but the mapping remains private. 236 of 526 cards currently lack a usable research-species key in the separate private roster; they are explicitly unresolved, not magically covered by 195 species research queries.
+- Species pools share research across cards. The public registry now has a card identity label for all 526 card IDs; 236 still lack a shared research-species key, and informal, higher-taxon, or disputed labels retain their recorded level. Card labels do not establish that the original photo or individual specimen was verified.
 
 ## Deployment status — 21 October 2026
 
