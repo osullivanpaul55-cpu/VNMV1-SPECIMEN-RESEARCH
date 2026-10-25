@@ -169,6 +169,8 @@ def compile_coverage(index: dict, seed: dict | None = None, extension: dict | No
         "distinct_photo_source_records": candidate_total + link_total,
         "unresolved_extension_research_units": len(unresolved),
         "unresolved_extension_search_pages": sum(len(row.get("source_searches", [])) for row in unresolved),
+        "unresolved_extension_photo_page_leads": sum(len(row.get("curated_reference_leads", [])) for row in unresolved),
+        "unresolved_extension_taxa_with_photo_page_leads": sum(bool(row.get("curated_reference_leads")) for row in unresolved),
         "taxa_below_minimum_target": sum(row["distinct_photo_source_records"] < MINIMUM_TARGET for row in rows if row["in_current_catalog"]),
         "taxa_at_or_above_preferred_target": sum(row["distinct_photo_source_records"] >= PREFERRED_TARGET for row in rows if row["in_current_catalog"]),
         "minimum_target": MINIMUM_TARGET, "preferred_target": PREFERRED_TARGET,
