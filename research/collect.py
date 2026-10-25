@@ -170,7 +170,7 @@ def discover(taxon:str,seen:set[str],api_fetch=fetch,pages:int=8,per_page:int=25
                   'license_version':'UNVERIFIED_SOURCE_CHECK_REQUIRED',
                   'attribution':p.get('attribution') or (ob.get('user') or {}).get('login') or 'UNKNOWN',
                   'source_url':f'https://www.inaturalist.org/observations/{oid}',
-                  'thumbnail_url':url if allowed else None,'sex':'UNKNOWN_UNVERIFIED',
+                  'review_preview_url':url,'thumbnail_url':url if allowed else None,'sex':'UNKNOWN_UNVERIFIED',
                   'taxon_authority':authority,
                   'rights_verdict':'CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED',
                   'review_state':'PENDING',
@@ -195,7 +195,7 @@ def discover_commons(taxon:str,seen:set[str],api_fetch=fetch,limit:int=12)->list
     for term,match_mode in queries:
         params={'action':'query','format':'json','formatversion':'2','generator':'search',
             'gsrsearch':term,'gsrnamespace':'6','gsrlimit':str(min(50,max(10,limit*2))),
-            'prop':'imageinfo','iiprop':'url|extmetadata',
+            'prop':'imageinfo','iiprop':'url|extmetadata','iiurlwidth':'640',
             'iiextmetadatafilter':'Artist|Credit|LicenseShortName|LicenseUrl'}
         payload=json.loads(api_fetch(COMMONS_API+'?'+urlencode(params),3_000_000))
         pages=(payload.get('query') or {}).get('pages',[])
@@ -227,7 +227,7 @@ def discover_commons(taxon:str,seen:set[str],api_fetch=fetch,limit:int=12)->list
                 warnings.append('UNQUOTED_TEXT_MATCH_REQUIRES_EXTRA_TAXON_CHECK')
             results.append({'photo_key':photo_key,'photo_id':page_id,'taxon':taxon,
                 'source_title':str(page.get('title') or '')[:500],
-                'source_url':source_url,'source_type':'WIKIMEDIA_COMMONS_FILE_PAGE',
+                'source_url':source_url,'review_preview_url':info.get('thumburl') or info.get('url'),'source_type':'WIKIMEDIA_COMMONS_FILE_PAGE',
                 'source_search_term':taxon,'source_search_query':term,'source_search_mode':match_mode,
                 'taxon_match_status':'TEXT_SEARCH_MATCH_NOT_TAXONOMICALLY_VERIFIED',
                 'taxon_authority':'WIKIMEDIA_TEXT_SEARCH_NOT_USER_APPROVED',
@@ -299,6 +299,7 @@ def discover_gbif(taxon:str,seen:set[str],api_fetch=fetch,limit:int=12)->list[di
             results.append({'photo_key':photo_key,'photo_id':media_tag,'observation_id':str(occurrence_id),
                 'taxon':taxon,'source_title':str(item.get('title') or occurrence.get('scientificName') or '')[:500],
                 'source_url':gbif_url,'secondary_source_url':media_reference or None,
+                'review_preview_url':item.get('identifier') or None,
                 'source_type':'GBIF_OCCURRENCE_MEDIA_PAGE','source_search_term':taxon,
                 'source_search_mode':'GBIF_SCIENTIFIC_NAME_WITH_STILL_IMAGE_FILTER',
                 'source_taxon_name':str(occurrence.get('scientificName') or ''),
