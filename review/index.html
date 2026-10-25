@@ -3,6 +3,8 @@
 <title>VNMV1 Reference Review</title><style>
 :root{color-scheme:dark;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:#0e1420;color:#e9eef7}*{box-sizing:border-box}body{margin:0;background:linear-gradient(170deg,#0d1728,#101622 55%);min-height:100vh}main{max-width:900px;margin:auto;padding:8px 12px 36px}header{padding:14px 0 16px;border-bottom:1px solid #334257;display:flex;gap:15px;justify-content:space-between;align-items:center;flex-wrap:wrap}h1{font-size:1.4rem;line-height:1.3;margin:0}p{line-height:1.55;color:#aabbcd;margin:.6em 0}.muted{font-size:.9rem;color:#9dabbe}.stats{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}.stat{background:#1b283b;border:1px solid #314156;border-radius:12px;padding:11px;min-width:130px}.stat b{display:block;font-size:1.3rem;color:#f9fafc}.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:18px 0}input,select,button{font:inherit}input[type=search]{flex:1;min-width:170px}input[type=search],select{background:#1c2737;border:1px solid #536079;padding:10px;border-radius:9px;color:#f4f6fb}button,.upload{border-radius:9px;background:#315980;border:1px solid #658db1;color:white;padding:10px 13px;font-weight:600;cursor:pointer}button:disabled{opacity:.5;cursor:not-allowed}.secondary{background:#212f42}.species{border:1px solid #354457;background:#162031;border-radius:14px;padding:14px;margin:16px 0}h2{font-size:1.1rem;margin:0 0 8px}.specdetails{font-size:.85rem;color:#9ab0c7;margin:3px 0 14px}.photos{display:flex;flex-direction:column;gap:16px}.photo{border:1px solid #3d4d61;border-radius:11px;overflow:hidden;background:#1b2a3b}.photo img{width:100%;aspect-ratio:4/3;object-fit:contain;background:#0a1019}.photo .info{padding:11px} .photo .review-status{border-left:2px solid #789abd;padding-left:8px;margin-top:6px;color:#cbe1f7}.photo small{display:block;margin:5px 0;color:#c5d1e0;overflow-wrap:anywhere}.photo a{color:#99ccff}label{display:block;font-size:.86rem;margin:9px 0 4px;color:#d0d9e4}label.check{display:flex;gap:7px;align-items:flex-start}.photo select{width:100%}.photo textarea{width:100%;resize:vertical;min-height:62px;border-radius:8px;border:1px solid #576985;background:#182237;color:white;padding:7px}.note{padding:12px 14px;border-left:3px solid #789abd;background:#1a293c;margin:16px 0}.toplink{font-size:.85rem;color:#a8d0ff}.empty{text-align:center;padding:35px 14px;color:#a7b7c9;border:1px dashed #435269;border-radius:11px}.sticky{position:sticky;bottom:0;background:#111b29f2;border-top:1px solid #405169;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 16px;margin:0 -14px -90px;z-index:3}.sticky>div{min-width:0;flex:1}.sticky small{display:block;color:#afc1d4;line-height:1.3;overflow-wrap:anywhere}.sticky button{flex-shrink:0}#notification{color:#d8e6f8;font-size:.9rem}button.reject-action{width:100%;margin-top:10px;background:#743039;border:1px solid #ba6772;color:white}.navstrip{display:flex;align-items:center;justify-content:space-between;gap:8px;background:#1a293c;border:1px solid #3c5370;border-radius:12px;padding:6px; margin:6px 0;position:sticky;top:0;z-index:4}
 .navstrip button{padding:8px 9px;min-width:70px}.navstrip strong{font-size:.95rem;line-height:1.25;text-align:center;flex:1}
+.navstrip{flex-wrap:wrap}
+.card-jump{flex:0 0 100%;display:flex;align-items:center;justify-content:center;gap:8px;padding:2px 0 1px}.card-jump label{display:inline;margin:0;font-size:.78rem;white-space:nowrap}.card-jump input{width:78px;min-height:40px;padding:7px 8px;border-radius:8px;border:1px solid #536079;background:#1c2737;color:#f4f6fb}.card-jump button{padding:7px 12px;min-width:52px}
 #speciesPosition,#photoPosition{overflow-wrap:anywhere}
 .mobile-tips{font-size:.78rem;color:#b7cbe1;margin:2px 0 5px;text-align:center}
 .details-checks summary,.details-archive summary{cursor:pointer;color:#b9d4f7;padding:9px 0}
@@ -51,11 +53,11 @@
 <div class="controls"><input id="filter" type="search" placeholder="Find a card number or taxon…" aria-label="Filter cards and taxa"><select id="statusFilter" aria-label="Filter research state"><option value="all" selected>All cards and taxon candidates</option><option value="photos">With photographs or research links</option><option value="under">Fewer than 9 photo references</option><option value="decided">My reviewed photographs</option></select><button class="secondary" id="reload">Refresh public index</button></div>
 <div class="controls"><label class="upload" for="reviewUpload">Import saved review JSON</label><input id="reviewUpload" type="file" accept="application/json,.json"><button class="secondary" id="openHelp" type="button">Where do I save?</button></div>
 <details id="advancedIndex"><summary>Advanced: load offline research index</summary><input style="max-width:180px" id="indexUpload" type="file" accept="application/json,.json"></details>
-<div class="controls"><button id="export" type="button">Download backup review JSON</button><small>This is a manual browser backup, NOT the Android Drive upload. In the APK, use the fixed bottom SAVE JSON → DRIVE button.</small></div>
+<div class="controls"><button id="export" type="button">Download backup review JSON</button><small>Browser edits autosave on this device, not to Drive. Download a backup here, then upload it to Drive or import it on another device.</small></div>
 <div id="notification" role="status" aria-live="polite"></div>
 </details>
-<nav id="speciesNav" class="navstrip" aria-label="Specimen navigation"><button id="prevSpecies" type="button">◀ Previous</button><strong id="speciesPosition">Specimen 0/0</strong><button id="nextSpecies" type="button">Next ▶</button></nav>
-<div class="quick-save"><span>Edits save on this phone</span><button id="saveQuick" type="button">Save / Export JSON</button></div>
+<nav id="speciesNav" class="navstrip" aria-label="Specimen navigation"><button id="prevSpecies" type="button">◀ Previous</button><strong id="speciesPosition">Specimen 0/0</strong><button id="nextSpecies" type="button">Next ▶</button><div class="card-jump"><label for="cardJump">Card #</label><input id="cardJump" type="number" min="1" step="1" inputmode="numeric" placeholder="12" aria-label="Card number, for example 12"><button id="jumpToCard" type="button">Go</button></div></nav>
+<div class="quick-save"><span>Edits autosave in this browser · not Drive</span><button id="saveQuick" type="button">Save / Export JSON</button></div>
 <div class="mobile-tips">Swipe ← → to change species · Opens at Photo 1 · Scroll ↓ for the next photograph</div>
 <div class="review-legend"><span class="review-green">Green: checked and resolved</span><span class="review-red">Red: suggested, unknown or still needs review</span></div>
 <p id="scopeNote" class="muted"></p>
@@ -720,6 +722,27 @@ function changeSpecies(delta){
  setTimeout(()=>anchorToFirstPhoto(id),130);
  setTimeout(()=>anchorToFirstPhoto(id),350);
 }
+function cardNumberFor(spec){
+ if(spec?.review_unit_type!=='CARD')return null;
+ const digits=String(spec.review_unit_id||'').match(/\d+/);
+ return digits?Number(digits[0]):null;
+}
+function jumpToCard(){
+ const raw=$('#cardJump').value.trim();
+ if(!/^\d+$/.test(raw)){notify('Enter a card number using digits, for example 12.');return}
+ const number=Number(raw);
+ if(!Number.isSafeInteger(number)||number<1){notify('Enter a card number greater than zero.');return}
+ let index=visibleSpecies.findIndex(spec=>cardNumberFor(spec)===number);
+ if(index<0&&($('#filter').value.trim()||$('#statusFilter').value!=='all')){
+  $('#filter').value='';$('#statusFilter').value='all';render();
+  index=visibleSpecies.findIndex(spec=>cardNumberFor(spec)===number);
+ }
+ if(index<0){notify('Card '+String(number).padStart(4,'0')+' is not in the current review index.');return}
+ const id=++navSequence;speciesCursor=index;render();
+ requestAnimationFrame(()=>{anchorToFirstPhoto(id);requestAnimationFrame(()=>anchorToFirstPhoto(id))});
+ setTimeout(()=>anchorToFirstPhoto(id),130);setTimeout(()=>anchorToFirstPhoto(id),350);
+ notify('Opened Card_'+String(number).padStart(4,'0'));
+}
 function render(){
  stats();
  const query=$('#filter').value.trim().toLowerCase(),filter=$('#statusFilter').value;
@@ -859,7 +882,9 @@ setInterval(()=>{if(document.visibilityState==='visible'&&Date.now()-lastIndexLo
 window.addEventListener('focus',()=>{if(Date.now()-lastIndexLoad>15*60*1000)load()});
 $('#prevSpecies').addEventListener('click',()=>changeSpecies(-1));
 $('#nextSpecies').addEventListener('click',()=>changeSpecies(1));
-$('#openHelp').addEventListener('click',()=>notify("APK: use its fixed bottom SAVE JSON → DRIVE button and select Google Drive > folder 09. Browser only: use Download backup review JSON then manually upload it in Drive. Photo archive ZIP files are not review JSON."));
+$('#jumpToCard').addEventListener('click',jumpToCard);
+$('#cardJump').addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();jumpToCard()}});
+$('#openHelp').addEventListener('click',()=>notify("This web page autosaves to this browser on this device; it does not sync to Drive. Download the review JSON, upload it to Drive manually, then import it on another device. The Android app has a separate Drive save flow."));
 $('#reviewUpload').addEventListener('change',async event=>{
  const file=event.target.files?.[0];if(!file)return;
  try{
@@ -887,7 +912,7 @@ $('#saveQuick').addEventListener('click',()=>{
   window.location.href='vnmv1-review://save';
  }else{
   $('#export').click();
-  notify('Photo JSON downloaded. For ALL card identities and private original reviews, use the Android app Save All to Drive button.');
+  notify('Photo-review JSON downloaded. Upload it to Drive manually or import it on another device; edits are saved locally in this browser only.');
  }
 });
 $('#export').addEventListener('click',()=>{const rows=exportRecords();const body={schema:'VNMV1_HUMAN_PHOTO_REVIEW_DECISIONS_V1',camera_pose_vocabulary:'VNMV1_CAMERA_VIEW_RESEARCH_NEEDS_V1',status:'USER_SUBMITTED_NOT_YET_IMPORTED_OR_PROMOTED',exported_at:new Date().toISOString(),records:rows};const blob=new Blob([JSON.stringify(body,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='VNMV1_reference_decisions_'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);notify('Exported '+rows.length+' decisions. Import into your private production review workflow.')});
