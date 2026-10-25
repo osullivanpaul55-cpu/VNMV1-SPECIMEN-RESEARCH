@@ -1,10 +1,10 @@
 {
   "schema": "VNMV1_PUBLIC_CARD_RESEARCH_REGISTRY_V1",
-  "revision": 1,
-  "origin": "Research candidate name index; no original photos, hashes, private identity evidence or source-sex claims",
+  "revision": 2,
+  "origin": "Best available per-card identity labels from prior project reconciliation; research_taxon remains the shared species research key. Labels preserve historical, informal, higher-taxon, or disputed levels and do not imply photo-level specimen verification.",
   "card_count": 526,
-  "named": 290,
-  "unresolved": 236,
+  "named": 526,
+  "unresolved": 0,
   "cards": {
     "Card_0001": {
       "research_taxon": "Abdomegaphobema mesomelas",
@@ -36,11 +36,26 @@
     },
     "Card_0008": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Aphonopelma chalcodes",
+      "card_common_label": "Desert Blonde",
+      "card_identity_level": "FORMAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this formal card label. The original image has not been independently verified.",
+      "historical_identity_label": "Aphonophelma chalcodes"
     },
     "Card_0009": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Aphonophelma diamondback",
+      "card_common_label": "Desert diamondback",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0010": {
       "research_taxon": "Aphonopelma gabeli",
@@ -56,7 +71,15 @@
     },
     "Card_0013": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Aphonophelma california",
+      "card_common_label": "Johnny cash tarantula",
+      "card_identity_level": "FORMAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this formal card label. The original image has not been independently verified.",
+      "historical_identity_label": "Aphonophelma johnnycashi"
     },
     "Card_0014": {
       "research_taxon": "Aphonopelma moderatum",
@@ -76,7 +99,15 @@
     },
     "Card_0018": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Aphonopelma sp.",
+      "card_common_label": "Guatemala Blue",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Aphonopelma sp. guatemala"
     },
     "Card_0019": {
       "research_taxon": "Atypus karschi",
@@ -116,7 +147,15 @@
     },
     "Card_0028": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Brachypelma mexican golden",
+      "card_common_label": "Mexican golden red-rump",
+      "card_identity_level": "FORMAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this formal card label. The original image has not been independently verified.",
+      "historical_identity_label": "Brachypelma albiceps"
     },
     "Card_0029": {
       "research_taxon": "Brachypelma albiceps",
@@ -136,7 +175,15 @@
     },
     "Card_0033": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Brachyphelma mexican orange",
+      "card_common_label": "Mexican orange beauty",
+      "card_identity_level": "FORMAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this formal card label. The original image has not been independently verified.",
+      "historical_identity_label": "Brachyphelma baumgarteni"
     },
     "Card_0034": {
       "research_taxon": "Brachypelma baumgarteni",
@@ -172,31 +219,84 @@
     },
     "Card_0042": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Bumba sp. guyana",
+      "card_common_label": "Brazillian red-head",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0043": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Bumba cf. tapajos",
+      "card_common_label": "#N/A",
+      "card_identity_level": "HIGHER_TAXON_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Bumba c.f tapajos"
     },
     "Card_0044": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Bumba cf. tapajos",
+      "card_common_label": "#N/A",
+      "card_identity_level": "HIGHER_TAXON_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Bumba c.f tapajos"
     },
     "Card_0045": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Calommata cf. signata",
+      "card_common_label": "Big-tooth spider",
+      "card_identity_level": "HIGHER_TAXON_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0046": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Calommata cf. signata",
+      "card_common_label": "Big-tooth spider",
+      "card_identity_level": "HIGHER_TAXON_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0047": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Cardiopelma sp. Mascatum (historical hobby identity)",
+      "card_common_label": "Black mask tarantula",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Cardiopelma sp. mascatum"
     },
     "Card_0048": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Caribena puerto rican",
+      "card_common_label": "Puerto rican pink-toe",
+      "card_identity_level": "FORMAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this formal card label. The original image has not been independently verified.",
+      "historical_identity_label": "Caribena laeta"
     },
     "Card_0049": {
       "research_taxon": "Caribena versicolor",
@@ -204,11 +304,27 @@
     },
     "Card_0050": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ceratogyrus great horned",
+      "card_common_label": "Great horned baboon",
+      "card_identity_level": "FORMAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this formal card label. The original image has not been independently verified.",
+      "historical_identity_label": "Ceratogyrus attonitifer"
     },
     "Card_0051": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ceratogyrus greater horned",
+      "card_common_label": "Greater horned baboon",
+      "card_identity_level": "FORMAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this formal card label. The original image has not been independently verified.",
+      "historical_identity_label": "Ceratogyrus brachycephalus"
     },
     "Card_0052": {
       "research_taxon": "Ceratogyrus darlingi",
@@ -216,7 +332,15 @@
     },
     "Card_0053": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ceratogyrus burst horned",
+      "card_common_label": "Burst horned baboon",
+      "card_identity_level": "FORMAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this formal card label. The original image has not been independently verified.",
+      "historical_identity_label": "Ceratogyrus darlingi"
     },
     "Card_0054": {
       "research_taxon": "Ceratogyrus marshalli",
@@ -256,7 +380,15 @@
     },
     "Card_0063": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Chilobrachys sp.",
+      "card_common_label": "Dark earth-tiger",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Chilobrachys sp. kaeng krachan"
     },
     "Card_0064": {
       "research_taxon": "Melopoeus minax",
@@ -288,15 +420,39 @@
     },
     "Card_0071": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Cyclosternum sp.",
+      "card_common_label": "Colombian yellow stripe",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Cyclosternum sp. putamayo"
     },
     "Card_0072": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Cyclosternum ecuadorian",
+      "card_common_label": "Ecuadorian yellow-banded",
+      "card_identity_level": "FORMAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this formal card label. The original image has not been independently verified.",
+      "historical_identity_label": "Cyclosternum schmardae"
     },
     "Card_0073": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Cymbiapophysa elox",
+      "card_common_label": "Ecuadorian dwarf",
+      "card_identity_level": "FORMAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this formal card label. The original image has not been independently verified.",
+      "historical_identity_label": "Cymbiapophysa velox"
     },
     "Card_0074": {
       "research_taxon": "Cyriocosmus elegans",
@@ -328,7 +484,15 @@
     },
     "Card_0081": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Cyriopagopus sp. Bach Ma",
+      "card_common_label": "Bach Ma Earth Tiger",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Cyriopagopus sp. bach-ma"
     },
     "Card_0082": {
       "research_taxon": "Melopoeus albostriatus",
@@ -352,15 +516,38 @@
     },
     "Card_0087": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Chilobrachys sp. Valhalla",
+      "card_common_label": "Green earthtiger",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0088": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Cyriopagopus sp. Bach Ma",
+      "card_common_label": "Green earthtiger",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Chilobrachys sp. valhalla"
     },
     "Card_0089": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Cyriopagopus sp. Bach Ma",
+      "card_common_label": "Bach Ma Earth Tiger",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Cyriopagopus sp. bach-ma"
     },
     "Card_0090": {
       "research_taxon": "Melopoeus vonwirthi",
@@ -368,7 +555,14 @@
     },
     "Card_0091": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Davus sp. Oaxaca",
+      "card_common_label": "Oaxaca White Tiger",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0092": {
       "research_taxon": "Encyocratella olivacea",
@@ -404,7 +598,14 @@
     },
     "Card_0100": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Euathlus sp. Smaragd Tiger",
+      "card_common_label": "Dwarf flame",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0101": {
       "research_taxon": "Euathlus truculentus",
@@ -428,19 +629,48 @@
     },
     "Card_0106": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Gandanameno sp.",
+      "card_common_label": "Velvet spider",
+      "card_identity_level": "HIGHER_TAXON_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0107": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Grammostola sp. Maule",
+      "card_common_label": "Chillean blush beauty",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0108": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Grammostola sp. Maule",
+      "card_common_label": "Chillean blush beauty",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0109": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Aphonopelma sp.",
+      "card_common_label": "Guatemalan Blue",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Aphonopelma sp. guatemalan blue"
     },
     "Card_0110": {
       "research_taxon": "Heterothele villosella",
@@ -460,7 +690,14 @@
     },
     "Card_0114": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Harpactira sp. Silaka",
+      "card_common_label": "Silaka four-spot baboon",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0115": {
       "research_taxon": "Heterometrus longimanus",
@@ -484,11 +721,23 @@
     },
     "Card_0120": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Megaphobema sp. White",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0121": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Megaphobema sp. White",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0122": {
       "research_taxon": "Monocentropus lambertoni",
@@ -512,67 +761,184 @@
     },
     "Card_0127": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ornithoctoninae sp. Veronica Dwarf",
+      "card_common_label": "Veronica-dwarf earth tiger",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Ornithoctoninae sp. veronica-dwarf"
     },
     "Card_0128": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ornithoctoninae sp. Veronica",
+      "card_common_label": "Veronica earth tiger",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0129": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ornithoctoninae sp. Viridis",
+      "card_common_label": "Viridis black-femur",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0130": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ornithoctoninae sp. Ho Chi Minh",
+      "card_common_label": "Ho chi minge earthtiger",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0131": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ornithoctoninae sp. Ho Chi Minh",
+      "card_common_label": "Ho Chi Minh earth tiger",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0132": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ornithoctoninae sp. Bac Kan",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0133": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ornithoctoninae sp. Siam Satu",
+      "card_common_label": "Beautiful spider",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0134": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ornithoctoninae sp. Nhen Dep",
+      "card_common_label": "Beautiful spider",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0135": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ornithoctoninae sp. Nhen Dep",
+      "card_common_label": "Beautiful spider",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0136": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ornithoctonus sp. Khao Sok",
+      "card_common_label": "Velvet earthtiger",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Ornithoctonus sp. khoa sok"
     },
     "Card_0137": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ornithoctonus sp. Khao Sok",
+      "card_common_label": "Velvet earthtiger",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Ornithoctonus sp. khoa sok"
     },
     "Card_0138": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ornithoctonus sp. Ranong",
+      "card_common_label": "Thai blue-violet",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Ornithoctonus sp. rangong"
     },
     "Card_0139": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ornithoctonus sp. Ranong",
+      "card_common_label": "Thai blue-violet",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Ornithoctonus sp. rangong"
     },
     "Card_0140": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Amblypygi sp.",
+      "card_common_label": "Tailless whip scorpion",
+      "card_identity_level": "HIGHER_TAXON_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0141": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Amblypygi sp.",
+      "card_common_label": "Taylor Swift scorpion",
+      "card_identity_level": "HIGHER_TAXON_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0142": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Neischnocolus sp. Panama",
+      "card_common_label": "Sunburst dwarf tarantula",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Ami/ neischnocolus sp. panama"
     },
     "Card_0143": {
       "research_taxon": "Anqasha picta",
@@ -584,11 +950,23 @@
     },
     "Card_0145": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Anqasha sp. Blue",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0146": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Anqasha sp. Blue",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0147": {
       "research_taxon": "Aphonopelma bicoloratum",
@@ -604,11 +982,25 @@
     },
     "Card_0150": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Avicularia braunshauseni",
+      "card_common_label": "Goliath pink-toe",
+      "card_identity_level": "FORMAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this formal card label. The original image has not been independently verified."
     },
     "Card_0151": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Avicularia aurantiaca",
+      "card_common_label": "Peruvian yellow banded",
+      "card_identity_level": "FORMAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this formal card label. The original image has not been independently verified."
     },
     "Card_0152": {
       "research_taxon": "Avicularia avicularia",
@@ -624,7 +1016,14 @@
     },
     "Card_0155": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Avicularia metallica",
+      "card_common_label": "Metalic pink-toe tarantula",
+      "card_identity_level": "FORMAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this formal card label. The original image has not been independently verified."
     },
     "Card_0156": {
       "research_taxon": "Avicularia minatrix",
@@ -632,7 +1031,14 @@
     },
     "Card_0157": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Avicularia sp. Peru Purple",
+      "card_common_label": "Purple Pink-Toe",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0158": {
       "research_taxon": "Avicularia rufa",
@@ -660,303 +1066,827 @@
     },
     "Card_0164": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Brachionopus sp.",
+      "card_identity_level": "Brachionopus sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0165": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Catumiri argentinense / parvum",
+      "card_common_label": "Argentinian sweet dwarf",
+      "card_identity_level": "Catumiri argentinense / parvum",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0166": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Chilobrachys sp. aladdin",
+      "card_common_label": "Magic carpet earth-tiger",
+      "card_identity_level": "Chilobrachys sp. aladdin",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0167": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Cyriocosmus elegans",
+      "card_common_label": "Trinidad Dwarf beauty",
+      "card_identity_level": "Cyriocosmus elegans",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0168": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Cyriocosmus elegans",
+      "card_common_label": "Trinidad Dwarf beauty",
+      "card_identity_level": "Cyriocosmus elegans",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0169": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Cyriocosmus leetzi",
+      "card_common_label": "Colombian dwarf-tiger",
+      "card_identity_level": "Cyriocosmus leetzi",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0170": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Cyriocosmus leetzi",
+      "card_common_label": "Colombian dwarf-tiger",
+      "card_identity_level": "Cyriocosmus leetzi",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0171": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Cyriocosmus sp. oronegro",
+      "card_common_label": "Pink love heart",
+      "card_identity_level": "Cyriocosmus sp. oronegro",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0172": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Cyriocosmus sp. oronegro",
+      "card_common_label": "Blue love heart",
+      "card_identity_level": "Cyriocosmus sp. oronegro",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0173": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Cyriocosmus perezmilesi",
+      "card_common_label": "Bolivian dwarf beauty",
+      "card_identity_level": "Cyriocosmus perezmilesi",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0174": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Cyriocosmus perezmilesi",
+      "card_common_label": "Bolivian dwarf beauty",
+      "card_identity_level": "Cyriocosmus perezmilesi",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0175": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Cyriocosmus sp. oronegro",
+      "card_common_label": "Orange love heart",
+      "card_identity_level": "Cyriocosmus sp. oronegro",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0176": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Scolopendra galapagoensis",
+      "card_common_label": "Darwins goliath centepede",
+      "card_identity_level": "Scolopendra galapagoensis",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0177": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Davus pentaloris",
+      "card_common_label": "Costa Rican Tiger-rump",
+      "card_identity_level": "Davus pentaloris",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0178": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Davus sp. chiapas",
+      "card_common_label": "Chiapas Tiger",
+      "card_identity_level": "Davus sp. Chiapas",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0179": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Scolopendra dehaani",
+      "card_common_label": "Cherry red",
+      "card_identity_level": "Scolopendra dehaani",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0180": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Dolichothele diamantinenthis",
+      "card_common_label": "Brazillian blue dwarf beauty",
+      "card_identity_level": "Dolichothele diamantinensis",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0181": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Dolichothele elexis",
+      "card_common_label": "Brazilian bronze dwarf beauty",
+      "card_identity_level": "Dolichothele exilis",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0182": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Dolichothele rufoniger",
+      "card_common_label": "Neon Pink-purple",
+      "card_identity_level": "Dolichothele rufoniger",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0183": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Dolomedes okefinokensis",
+      "card_common_label": "Giant fishing spider",
+      "card_identity_level": "Dolomedes okefinokensis",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0184": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Dolomedes triton",
+      "card_common_label": "Six spotted fishing spider",
+      "card_identity_level": "Dolomedes triton",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0185": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Encyocratella olivacea",
+      "card_common_label": "Tanzanian black & olive baboon",
+      "card_identity_level": "Encyocratella olivacea",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0186": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ephebopus cyanognathus",
+      "card_common_label": "Blue-fang tarantula",
+      "card_identity_level": "Ephebopus cyanognathus",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0187": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ephebopus uataman",
+      "card_common_label": "Emerald Skeleton",
+      "card_identity_level": "Ephebopus uatuman",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0188": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ephebopus uataman",
+      "card_common_label": "Emerald Skeleton",
+      "card_identity_level": "Ephebopus uatuman",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0189": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Euathlus manicata gold",
+      "card_common_label": "Chilean gold burst",
+      "card_identity_level": "Euathlus manicatus",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0190": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Euathlus manicata green",
+      "card_common_label": "Emerald flame",
+      "card_identity_level": "Euathlus manicatus",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0191": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Euathlus truculentus",
+      "card_common_label": "Chillean blue femur",
+      "card_identity_level": "Euathlus truculentus",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0192": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Grammostola actaeon",
+      "card_common_label": "Wooly-black tarantula",
+      "card_identity_level": "Grammostola actaeon",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0193": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Grammostola alticeps",
+      "card_common_label": "Brazilian greysmoke",
+      "card_identity_level": "Grammostola alticeps",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0194": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Grammostola anthricena",
+      "card_common_label": "Giant tawny-red",
+      "card_identity_level": "Grammostola anthracina",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0195": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Grammostola grossa",
+      "card_common_label": "Giant pampas silver",
+      "card_identity_level": "Grammostola grossa",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0196": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Grammostola iheringi",
+      "card_common_label": "Entre Rios tarantula",
+      "card_identity_level": "Grammostola iheringi",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0197": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Grammostola pulchra",
+      "card_common_label": "Brazilian Black",
+      "card_identity_level": "Grammostola pulchra",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0198": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Grammostola pulcripes",
+      "card_common_label": "Chaco golden-knee",
+      "card_identity_level": "Grammostola pulchripes",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0199": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Grammostola quirgoai",
+      "card_common_label": "Uruguayan Tarantula",
+      "card_identity_level": "Grammostola quirogai",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0200": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Grammostola rosea",
+      "card_common_label": "Chillie Rose",
+      "card_identity_level": "Grammostola rosea",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0201": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Grammostola rosea",
+      "card_common_label": "Chillie Rose",
+      "card_identity_level": "Grammostola rosea",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0202": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Chromatopelma cyaneopubescens",
+      "card_common_label": "GBB / Greenbottle Blue",
+      "card_identity_level": "Chromatopelma cyaneopubescens",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0203": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Goliathus goliatus",
+      "card_common_label": "Giant flower beetle",
+      "card_identity_level": "Goliathus goliatus",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0204": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Grammostola sp. concepcion",
+      "card_common_label": "Chilliean Lava Cream",
+      "card_identity_level": "Grammostola sp. Concepción",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0205": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Grammostola pulchra",
+      "card_common_label": "Brazilian Black",
+      "card_identity_level": "Grammostola pulchra",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0206": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Grammostola pulcripes",
+      "card_common_label": "Chaco golden-knee",
+      "card_identity_level": "Grammostola pulchripes",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0207": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Grammostola pulchra",
+      "card_common_label": "Brazilian Black",
+      "card_identity_level": "Grammostola pulchra",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0208": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Harpactira atra",
+      "card_common_label": "Black baboon",
+      "card_identity_level": "Harpactira atra",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0209": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Harpactira baviana",
+      "card_common_label": "Purcells baboon",
+      "card_identity_level": "Harpactira baviana",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0210": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Heteropoda boiei",
+      "card_common_label": "Malaysian green huntsman",
+      "card_identity_level": "Heteropoda boiei",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0211": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Harpactira cafreriana",
+      "card_common_label": "Cape copper baboon",
+      "card_identity_level": "Harpactira cafreriana",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0212": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Homoeomma chilense",
+      "card_common_label": "Chilean flame",
+      "card_identity_level": "Homoeomma chilense",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0213": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Harpactira chrysogaster",
+      "card_common_label": "South African habitat variant",
+      "card_identity_level": "Harpactira chrysogaster",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0214": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Hysterocrates crassipes",
+      "card_common_label": "Mouse-brown baboon",
+      "card_identity_level": "Hysterocrates crassipes",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0215": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Harpactira curator",
+      "card_common_label": "Malvern starburst baboon",
+      "card_identity_level": "Harpactira curator",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0216": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Harpactira dictator",
+      "card_common_label": "Dictator baboon",
+      "card_identity_level": "Harpactira dictator",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0217": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Harpactira dictator",
+      "card_common_label": "Dictator baboon",
+      "card_identity_level": "Harpactira dictator",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0218": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Haplopelma doriae",
+      "card_common_label": "Borneo Giant",
+      "card_identity_level": "Haplopelma doriae",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0219": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Hysterocrates elephantiasis",
+      "card_common_label": "Elephant-legged baboon",
+      "card_identity_level": "Hysterocrates elephantiasis",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0220": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Heterothele gabonensis",
+      "card_common_label": "Gabon Blue-Dwarf baboon",
+      "card_identity_level": "Heterothele gabonensis",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0221": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Hysterocrates gigas",
+      "card_common_label": "Goliath grand baboon",
+      "card_identity_level": "Hysterocrates gigas",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0222": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Hyllus giganteus",
+      "card_common_label": "Giant jumper",
+      "card_identity_level": "Hyllus giganteus",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0223": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Hysterocrates gigas",
+      "card_common_label": "Rusty red baboon",
+      "card_identity_level": "Hysterocrates gigas",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0224": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Hysterocrates cf. hercules",
+      "card_common_label": "Goliath Baboon",
+      "card_identity_level": "Hysterocrates cf. hercules",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0225": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Haplocosmia himalayana",
+      "card_common_label": "Himalayan earthtiger",
+      "card_identity_level": "Haplocosmia himalayana",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0226": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Heteropoda javana",
+      "card_common_label": "Orange huntsman",
+      "card_identity_level": "Heteropoda javana",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0227": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Haplopelma schmidti/ ke bang",
+      "card_common_label": "Chinese giant gold",
+      "card_identity_level": "Cyriopagopus schmidti cf. Ke Bang",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0228": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Hysterocrates laticeps",
+      "card_common_label": "Nigerian-brown baboon",
+      "card_identity_level": "Hysterocrates laticeps",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0229": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Holothele longipes ecuador venezuela peru",
+      "card_common_label": "Multi-country variants",
+      "card_identity_level": "Holothele longipes",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0230": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Heteropoda lunula",
+      "card_common_label": "Lightening huntsman",
+      "card_identity_level": "Heteropoda lunula",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0231": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Heteroscodra maculata",
+      "card_common_label": "Togo star-burst baboon",
+      "card_identity_level": "Heteroscodra maculata",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0232": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Heteroscodra maculata",
+      "card_common_label": "Togo star-burst baboon",
+      "card_identity_level": "Heteroscodra maculata",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0233": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Harpactira marksi",
+      "card_common_label": "Elizabethfontein Baboon",
+      "card_identity_level": "Harpactira marksi",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0234": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Harpactira namaquensis",
+      "card_common_label": "Namibian baboon",
+      "card_identity_level": "Harpactira namaquensis",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0235": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Harmonicon oiapoqueae",
+      "card_common_label": "Devil curtain web spider",
+      "card_identity_level": "Harmonicon oiapoqueae",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0236": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Homeomma sp. orellanai",
+      "card_common_label": "Yellow flame",
+      "card_identity_level": "Homoeomma sp. orellanai",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0237": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Harpactira pulchripes",
+      "card_common_label": "Golden blue-leg baboon",
+      "card_identity_level": "Harpactira pulchripes",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0238": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Harpactira pulchripes",
+      "card_common_label": "Golden blue-leg baboon",
+      "card_identity_level": "Harpactira pulchripes",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0239": {
       "research_taxon": "Hysterocrates scepticus",
@@ -972,7 +1902,14 @@
     },
     "Card_0242": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Hapalopus sp. colombia",
+      "card_common_label": "Pumpkin-patch tarantula",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0243": {
       "research_taxon": "Hapalopus vangoghi",
@@ -996,7 +1933,14 @@
     },
     "Card_0248": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Haplocosmia sp. black femur",
+      "card_common_label": "Napalese black-femur",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0249": {
       "research_taxon": "Melopoeus hainanus",
@@ -1008,11 +1952,25 @@
     },
     "Card_0251": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Haplopelma robustum",
+      "card_common_label": "Malaysian blue-femur",
+      "card_identity_level": "nomen dubium",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0252": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Haplopelma robustum",
+      "card_common_label": "Malaysian blue-femur",
+      "card_identity_level": "nomen dubium",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0253": {
       "research_taxon": "Melopoeus schmidti",
@@ -1052,7 +2010,14 @@
     },
     "Card_0262": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Homoeomma sp. blue",
+      "card_identity_level": "Lucky Flip",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Homeomma sp. blue / chilense / peruvianum"
     },
     "Card_0263": {
       "research_taxon": "Hyllus diardi",
@@ -1092,7 +2057,15 @@
     },
     "Card_0272": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Liphistius sp.",
+      "card_common_label": "Thai golden beauty",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Liphistius sp. bicoloripes"
     },
     "Card_0273": {
       "research_taxon": "Lasiodora benedeni",
@@ -1108,15 +2081,37 @@
     },
     "Card_0276": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Lasiodora itabunae",
+      "card_common_label": "Itabunae Scarlett Birdeater",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0277": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Liphistius sp.",
+      "card_common_label": "Thai black trapdoor",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Liphistius sp. jarunji"
     },
     "Card_0278": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Liphistius sp. Khao Luang",
+      "card_common_label": "Giant trapdoor",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0279": {
       "research_taxon": "Lasiodora klugi",
@@ -1132,7 +2127,15 @@
     },
     "Card_0282": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Liphistius sp.",
+      "card_common_label": "Ornate trapdoor",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Liphistius sp. ornatus"
     },
     "Card_0283": {
       "research_taxon": "Lasiodora parahybana",
@@ -1160,15 +2163,39 @@
     },
     "Card_0289": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Liphistius sp.",
+      "card_common_label": "Thai bi-color trapdoor",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Liphistius sp. surat"
     },
     "Card_0290": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Liphistius sp.",
+      "card_common_label": "Tiger trapdoor",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Liphistius sp. tamarat"
     },
     "Card_0291": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Liphistius sp.",
+      "card_common_label": "Thai golden trapdoor",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Liphistius sp. yangae"
     },
     "Card_0292": {
       "research_taxon": "Lasiodora sertaneja",
@@ -1208,7 +2235,15 @@
     },
     "Card_0301": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Megaphobema ecuadorian brown",
+      "card_common_label": "Ecuadorian brown velvet",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified.",
+      "historical_identity_label": "Megaphobema velvetsoma"
     },
     "Card_0302": {
       "research_taxon": "Macrothele calpeiana",
@@ -1220,15 +2255,37 @@
     },
     "Card_0304": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Melopoeus sp. purple",
+      "card_common_label": "Purple zebra",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0305": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Melopoeus sp. purple",
+      "card_common_label": "Purple zebra",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0306": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Scolopendra sp.",
+      "card_common_label": "Mint legs",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Scolopendra sp. guangxi"
     },
     "Card_0307": {
       "research_taxon": "Nhandu chromatus",
@@ -1288,19 +2345,49 @@
     },
     "Card_0321": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Melognathus sp. central mindanao",
+      "card_common_label": "Mindanao giant earth-tiger",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0322": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Melognathus sp. haribon tiger",
+      "card_common_label": "Haribon eagle",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0323": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ornithoctoninae sp.",
+      "card_common_label": "Vietnamese blue-blaze",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Ornithoctoninae sp. hon-sej"
     },
     "Card_0324": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ornithoctoninae sp.",
+      "card_common_label": "Prison des Abeilles Earth-tiger",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Ornithoctoninae sp. laos"
     },
     "Card_0325": {
       "research_taxon": "Taksinus bambus",
@@ -1308,23 +2395,59 @@
     },
     "Card_0326": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ornithoctoninae sp.",
+      "card_common_label": "Phan Cay",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Ornithoctoninae sp. phan cay"
     },
     "Card_0327": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ornithoctoninae sp.",
+      "card_common_label": "Phan Cay red",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Ornithoctoninae sp. phan cay red"
     },
     "Card_0328": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Melognathus sp. south mindanao",
+      "card_common_label": "Mindanao earth-tiger",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0329": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ornithoctoninae sp. vendula",
+      "card_common_label": "Vietnamese chevron",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0330": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ornithoctoninae sp. Vietnam silver",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0331": {
       "research_taxon": "Omothymus violaceopes",
@@ -1344,7 +2467,15 @@
     },
     "Card_0335": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ornithoctoninae sp.",
+      "card_common_label": "Malthai trapdoor earth-tiger",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Ornithoctoninae sp. malthai"
     },
     "Card_0336": {
       "research_taxon": "Phrixotrichus scrofa",
@@ -1352,11 +2483,26 @@
     },
     "Card_0337": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ornithoctonus aureotibialis",
+      "card_identity_level": "FORMAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this formal card label. The original image has not been independently verified.",
+      "historical_identity_label": "Ornithoctonus sp. uthai/ surat thani / costalis"
     },
     "Card_0338": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Phormingochilus sp.",
+      "card_common_label": "Borneo Black",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Phormingochilus sp. arboricola"
     },
     "Card_0339": {
       "research_taxon": "Pamphobeteus antinous",
@@ -1364,7 +2510,15 @@
     },
     "Card_0340": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Pamphobeteus sp.",
+      "card_common_label": "Chicken spider",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Pamphobeteus sp. arana pollito"
     },
     "Card_0341": {
       "research_taxon": "Phormictopus atrichomatus",
@@ -1376,7 +2530,14 @@
     },
     "Card_0343": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Phormictopus sp. azul",
+      "card_common_label": "Dominican Blue",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0344": {
       "research_taxon": "Phlogiellus baeri",
@@ -1388,7 +2549,14 @@
     },
     "Card_0346": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Amazonius burgessi",
+      "card_common_label": "Colombian tree spider",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0347": {
       "research_taxon": "Psalmopoeus cambridgei",
@@ -1404,7 +2572,15 @@
     },
     "Card_0350": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Lampropelma sp.",
+      "card_common_label": "Sulawesi black",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Lampropelma carpenteri"
     },
     "Card_0351": {
       "research_taxon": "Phormictopus cautus",
@@ -1420,23 +2596,58 @@
     },
     "Card_0354": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Pamphobeteus sp. Costa",
+      "card_common_label": "Costa giant-purple tarantula",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0355": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Pamphobeteus sp. Pema",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0356": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Pamphobeteus sp. Pema",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0357": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Pamphobeteus sp. affinis",
+      "card_common_label": "Pamphobeteus sp. affinis (type 1/2)",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Pamphobetus sp. affinis"
     },
     "Card_0358": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Phormingochilus sp. Sabah blue",
+      "card_common_label": "Sabbah blue",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Phormingochilus sp. sabbah blue"
     },
     "Card_0359": {
       "research_taxon": "Phormingochilus everetti",
@@ -1448,7 +2659,14 @@
     },
     "Card_0361": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Phormingochilus sp. Akcaya",
+      "card_common_label": "Akcaya earthtiger",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0362": {
       "research_taxon": "Poecilotheria subfusca",
@@ -1472,7 +2690,14 @@
     },
     "Card_0367": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Selenocosmiinae sp. kordillera",
+      "card_common_label": "North Luzon Peach Blue",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0368": {
       "research_taxon": "Theraphosa blondi",
@@ -1480,11 +2705,25 @@
     },
     "Card_0369": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Theraphosinae sp. roatan",
+      "card_common_label": "Roatan Island Purple",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0370": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Theraphosidae sp. Colombia",
+      "card_common_label": "Tesla-tower tarantula",
+      "card_identity_level": "higher taxon",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0371": {
       "research_taxon": "Ewok kimraykawasaki",
@@ -1492,7 +2731,14 @@
     },
     "Card_0372": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Thrigmopoeus sp. Kali",
+      "card_common_label": "Kali earthtiger",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0373": {
       "research_taxon": "Thrigmopoeus truculentus",
@@ -1516,7 +2762,14 @@
     },
     "Card_0378": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Xenesthis sp. light",
+      "card_common_label": "Xenesthis Light",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0379": {
       "research_taxon": "Poecilotheria metallica",
@@ -1544,11 +2797,26 @@
     },
     "Card_0385": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Phlogius goliath",
+      "card_common_label": "Australian Goliath",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0386": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Phormictopus sp. green femur",
+      "card_common_label": "Green femur / gold carapace",
+      "card_identity_level": "informal sp.",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified.",
+      "historical_identity_label": "Phormictopus sp. green femur / gold carapace"
     },
     "Card_0387": {
       "research_taxon": "Poecilotheria hanumavilasumica",
@@ -1556,15 +2824,36 @@
     },
     "Card_0388": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Psednocnemis hoggi",
+      "card_common_label": "Malaysian purple -femur",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0389": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Psednocnemis hoggi",
+      "card_common_label": "Malaysian purple-femur",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0390": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Psednocnemis hoggi",
+      "card_common_label": "Psednocnemis hoggi — Lucky Flip",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0391": {
       "research_taxon": "Pamphobeteus insignis",
@@ -1580,7 +2869,14 @@
     },
     "Card_0394": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Pamphobeteus sp. light",
+      "card_common_label": "Mascara light, giant birdeater",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0395": {
       "research_taxon": "Pterinochilus lugardi",
@@ -1588,7 +2884,14 @@
     },
     "Card_0396": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Pamphobeteus sp. Machala",
+      "card_common_label": "Purple Bloom Tarantula",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0397": {
       "research_taxon": "Poecilotheria metallica",
@@ -1616,7 +2919,14 @@
     },
     "Card_0403": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Pamphobeteus platyomma",
+      "card_common_label": "Brazilian pink-bloom",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0404": {
       "research_taxon": "Psalmopoeus pulcher",
@@ -1660,23 +2970,56 @@
     },
     "Card_0414": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Pseudohapalopus sp. blue",
+      "card_common_label": "Colombian blue-bottle",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0415": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Theraphosidae sp. Panama",
+      "card_common_label": "Lava spider",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0416": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Theraphosidae sp. Panama",
+      "card_common_label": "Lava spider",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0417": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Phormingochilus sp. Sabah blue",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0418": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Phormingochilus sp. Sabah red",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0419": {
       "research_taxon": "Poecilotheria subfusca",
@@ -1720,11 +3063,25 @@
     },
     "Card_0429": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Pamphobeteus sp. manganegra",
+      "card_common_label": "Manganegra giant birdeater",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0430": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Pamphobeteus cascada",
+      "card_common_label": "Cascada birdeater",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0431": {
       "research_taxon": "Psalmopoeus ecclesiasticus",
@@ -1740,47 +3097,124 @@
     },
     "Card_0434": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Pamphobeteus sp. hexa",
+      "card_common_label": "Hexa Birdeater",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0435": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Pamphobeteus sp. light",
+      "card_common_label": "Mascara light, giant birdeater",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0436": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Pamphobeteus mascara",
+      "card_common_label": "Mascara giant birdeater",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0437": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Pamphobeteus petersi",
+      "card_common_label": "Red bloom birdeater",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0438": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Pamphobeteus sp. Santo Domingo",
+      "card_common_label": "Goliath",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0439": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Pamphobeteus sp. aquatica",
+      "card_common_label": "Frozen-flame birdeater",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0440": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Pamphobeteus sp. aquatica",
+      "card_common_label": "Frozen-flame birdeater",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0441": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Pamphobeteus sp. coca",
+      "card_common_label": "Ecuadorian coca lineage",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0442": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Pamphobeteus sp. coca",
+      "card_common_label": "Ecuadorian coca lineage",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0443": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Parabuthus transvaalicus",
+      "card_common_label": "Transvaal Thick-tail scorpion",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0444": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Parabuthus transvaalicus",
+      "card_common_label": "Transvaal Thick-tail scorpion",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0445": {
       "research_taxon": "Phidippus audax",
@@ -1796,11 +3230,25 @@
     },
     "Card_0448": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Phormictopus sp. green femur",
+      "card_common_label": "Green femur / gold carapace",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0449": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Phormictopus sp. green femur",
+      "card_common_label": "Green femur / gold carapace",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0450": {
       "research_taxon": "Poecilotheria rufilata",
@@ -1808,11 +3256,25 @@
     },
     "Card_0451": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Pseudohapalopus sp. blue",
+      "card_common_label": "Colombian blue-bottle / cbb",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0452": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Psytalla horrida",
+      "card_common_label": "King assassin bug",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0453": {
       "research_taxon": "Phrixotrichus vulpinus",
@@ -1824,7 +3286,14 @@
     },
     "Card_0455": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Sericopelma sp. Boquete",
+      "card_common_label": "Boquete lineage",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0456": {
       "research_taxon": "Stromatopelma calceatum",
@@ -1832,11 +3301,25 @@
     },
     "Card_0457": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Scolopendra dehaani",
+      "card_common_label": "Giant Vietnamese centipede",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0458": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Scolopendra gigantea",
+      "card_common_label": "Peruvian giant yellow-leg",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0459": {
       "research_taxon": "Selenocosmia kovariki",
@@ -1848,23 +3331,58 @@
     },
     "Card_0461": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Sericopelma sp. Santa Catalina",
+      "card_common_label": "Santa Catalina lineage",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0462": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Scolopendra subspinipes",
+      "card_common_label": "Giant Pacific centipede",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0463": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Pamphobeteus sp. Santo Domingo",
+      "card_common_label": "Small",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0464": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Sericopelma sp. Boquete",
+      "card_common_label": "Boquete lineage",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0465": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Sericopelma sp. Santa Catalina",
+      "card_common_label": "Santa Catalina lineage",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0466": {
       "research_taxon": "Sicarius thomisoides",
@@ -1936,11 +3454,24 @@
     },
     "Card_0483": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ewokki cyaneolum",
+      "card_common_label": "Cobalt red-rump",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0484": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Theraphosidae sp. Firestripe",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0485": {
       "research_taxon": "Tliltocatl kahlenbergi",
@@ -1968,7 +3499,14 @@
     },
     "Card_0491": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Thrixopelma pruriens",
+      "card_common_label": "Peruvian green-velvet",
+      "card_identity_level": "species",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this card label at the source's recorded identity level. The original image has not been independently verified."
     },
     "Card_0492": {
       "research_taxon": "Tapinauchenius rasti",
@@ -1980,19 +3518,46 @@
     },
     "Card_0494": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Tapinauchenius sanctivincenti",
+      "card_identity_level": "IDENTITY_CONFLICT",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this formal card label. The original image has not been independently verified.",
+      "historical_identity_label": "Tapinauchenius sanctivincent"
     },
     "Card_0495": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Theraphosidae sp. Firestripe",
+      "card_identity_level": "HIGHER_TAXON_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0496": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Thrigmopoeinae sp. cinnamon",
+      "card_common_label": "Ghats Mountains",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0497": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Theraphosidae sp. mandarin",
+      "card_common_label": "Orange blush tarantula",
+      "card_identity_level": "HIGHER_TAXON_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0498": {
       "research_taxon": "Theraphosa stirmi",
@@ -2004,31 +3569,77 @@
     },
     "Card_0500": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Tapinauchenius plumipes",
+      "card_common_label": "Purple tree spider",
+      "card_identity_level": "FORMAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this formal card label. The original image has not been independently verified.",
+      "historical_identity_label": "Tapinauchenius violaceus"
     },
     "Card_0501": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Heteropoda sp. thai caves",
+      "card_common_label": "Giant cave huntsman",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0502": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Thrixopelma cyaneoleum sp. blue",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0503": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Thrixopelma pruriens",
+      "card_common_label": "Peruvian green-velvet",
+      "card_identity_level": "FORMAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation records this formal card label. The original image has not been independently verified."
     },
     "Card_0504": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Thrixopelma cyaneoleum sp. blue",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0505": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Thrixopelma cyaneoleum sp. red",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0506": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Thrixopelma cyaneoleum sp. red",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0507": {
       "research_taxon": "Tliltocatl kahlenbergi",
@@ -2048,7 +3659,13 @@
     },
     "Card_0511": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Ornithoctoninae sp. vietnam silver",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0512": {
       "research_taxon": "Xenesthis immanis",
@@ -2060,35 +3677,86 @@
     },
     "Card_0514": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Xenesthis sp. megascopula",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0515": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Xenesthis sp. megascopula",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0516": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Xenesthis sp. · Colombian black",
+      "card_identity_level": "IDENTITY_CONFLICT",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation flags a species-level conflict; this label preserves the genus and card's locality/hobby name without choosing between the recorded species proposals. The original image is not independently verified.",
+      "historical_identity_label": "Xenesthis tenebris"
     },
     "Card_0517": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Xenesthis sp. blue",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0518": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Xenesthis sp. bright",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0519": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Xenesthis sp. white",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0520": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Xenesthis tenebris (historical label)",
+      "card_common_label": "Colombian lesser-black",
+      "card_identity_level": "IDENTITY_CONFLICT",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The source retains this as a historical/hobby label while formal taxonomic resolution is pending. The original image is not independently verified.",
+      "historical_identity_label": "Xenesthis tenebris"
     },
     "Card_0521": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Xenesthis sp. light",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0522": {
       "research_taxon": "Ybyrapora diversipes",
@@ -2100,7 +3768,14 @@
     },
     "Card_0524": {
       "research_taxon": null,
-      "identity_status": "UNRESOLVED"
+      "identity_status": "CARD_LABEL_RECONCILED",
+      "card_identity_label": "Pseudohapalopus sp. colombia",
+      "card_common_label": "Yellow blue-bottle",
+      "card_identity_level": "HISTORICAL_IDENTITY_READY",
+      "identity_scope": "PRIOR_CARD_LABEL_RECONCILIATION",
+      "photo_identity_status": "NOT_INDEPENDENTLY_VERIFIED",
+      "card_identity_source": "prior_project_per_card_reconciliation",
+      "card_identity_note": "The prior reconciliation retains this historical, informal, or higher-taxon lineage. No unsupported formal species assignment is added; the original image is not independently verified."
     },
     "Card_0525": {
       "research_taxon": "Ybyrapora sooretama",
@@ -2110,5 +3785,10 @@
       "research_taxon": "Ybyrapora sooretama",
       "identity_status": "RESEARCH_CANDIDATE_UNVERIFIED"
     }
-  }
+  },
+  "card_identity_label_count": 526,
+  "identity_label_unresolved": 0,
+  "research_taxon_count": 290,
+  "research_taxon_unresolved": 236,
+  "identity_label_source": "prior_project_per_card_reconciliation"
 }
