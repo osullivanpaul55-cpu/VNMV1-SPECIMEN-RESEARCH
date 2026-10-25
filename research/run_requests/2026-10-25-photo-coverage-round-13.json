@@ -1,0 +1,11 @@
+{
+  "schema": "VNMV1_PUBLIC_PHOTO_RESEARCH_REQUEST_V1",
+  "request_id": "20261025_coverage_gap_round_13",
+  "purpose": "Increase photo and individual source-page coverage for the taxa still below the nine-reference minimum.",
+  "minimum_distinct_photo_or_source_records": 9,
+  "preferred_distinct_photo_or_source_records": 12,
+  "preferred_maximum": 15,
+  "source_scope": "Exact species-level iNaturalist observations plus GBIF still-image occurrence records and Commons file pages matched by species-name text; prioritize the taxa with the lowest current reference counts and preserve source type, underlying photo links, taxon-match warning, attribution, and licence claims.",
+  "copy_policy": "Archive only photo-level CC0 or CC BY iNaturalist candidate files; keep GBIF and Commons media pages, all other rights, and unknown rights as source links for owner review.",
+  "approval_status": "NOT_APPROVED_PENDING_HUMAN_REVIEW"
+}
