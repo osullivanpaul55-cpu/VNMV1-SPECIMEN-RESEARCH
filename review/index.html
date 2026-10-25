@@ -65,9 +65,17 @@
 <div id="results"></div>
 </main>
 <div id="photoZoom" hidden role="dialog" aria-modal="true" aria-label="Zoom reference photograph"><div class="zoom-controls"><span id="zoomTitle">Reference photo · Pinch to zoom</span><button id="zoomClose" class="zoom-close" type="button">✕ Close</button></div><div class="zoom-stage" id="zoomStage"><img id="zoomImage" alt="Enlarged photograph"></div><div class="zoom-controls"><span class="zoom-tip">Two fingers: zoom · One finger: drag · Double-tap: reset</span><button id="zoomReset" type="button">Reset</button></div></div>
-<script src="https://accounts.google.com/gsi/client"></script>
 <script>
 'use strict';
+const googleDriveClientLibrary=document.createElement('script');
+googleDriveClientLibrary.src='https://accounts.google.com/gsi/client';
+googleDriveClientLibrary.async=true;
+const runningInReviewApk=navigator.userAgent.includes('VNMV1ReviewAndroid/11');
+const driveUploadButton=document.getElementById('saveQuick');
+if(driveUploadButton&&!runningInReviewApk)driveUploadButton.disabled=true;
+googleDriveClientLibrary.onload=()=>{if(driveUploadButton&&!runningInReviewApk)driveUploadButton.disabled=false};
+googleDriveClientLibrary.onerror=()=>{if(driveUploadButton&&!runningInReviewApk)driveUploadButton.disabled=false};
+document.head.appendChild(googleDriveClientLibrary);
 let dataset={schema:'VNMV1_PUBLIC_PHOTO_CANDIDATES_V1',species:{}},speciesCursor=0,visibleSpecies=[];
 let visualDrafts={},lastIndexLoad=0;
 const $=s=>document.querySelector(s), KEY='vnmv1-photo-review-v1';
