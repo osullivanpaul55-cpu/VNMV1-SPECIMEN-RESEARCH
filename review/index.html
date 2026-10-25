@@ -53,11 +53,11 @@
 <div class="controls"><input id="filter" type="search" placeholder="Find a card number or taxon…" aria-label="Filter cards and taxa"><select id="statusFilter" aria-label="Filter research state"><option value="all" selected>All cards and taxon candidates</option><option value="photos">With photographs or research links</option><option value="under">Fewer than 9 photo references</option><option value="decided">My reviewed photographs</option></select><button class="secondary" id="reload">Refresh public index</button></div>
 <div class="controls"><label class="upload" for="reviewUpload">Import saved review JSON</label><input id="reviewUpload" type="file" accept="application/json,.json"><button class="secondary" id="openHelp" type="button">Where do I save?</button></div>
 <details id="advancedIndex"><summary>Advanced: load offline research index</summary><input style="max-width:180px" id="indexUpload" type="file" accept="application/json,.json"></details>
-<div class="controls"><button id="export" type="button">Download backup review JSON</button><small>Browser edits autosave on this device, not to Drive. Download a backup here, then upload it to Drive or import it on another device.</small></div>
+<div class="controls"><button id="export" type="button">Download backup review JSON</button><small>Tap Save JSON to Drive to open the system share menu, choose Google Drive and the destination folder. Each save is a dated JSON snapshot; download is available if file sharing is unsupported.</small></div>
 <div id="notification" role="status" aria-live="polite"></div>
 </details>
 <nav id="speciesNav" class="navstrip" aria-label="Specimen navigation"><button id="prevSpecies" type="button">◀ Previous</button><strong id="speciesPosition">Specimen 0/0</strong><button id="nextSpecies" type="button">Next ▶</button><div class="card-jump"><label for="cardJump">Card #</label><input id="cardJump" type="number" min="1" step="1" inputmode="numeric" placeholder="12" aria-label="Card number, for example 12"><button id="jumpToCard" type="button">Go</button></div></nav>
-<div class="quick-save"><span>Edits autosave in this browser · not Drive</span><button id="saveQuick" type="button">Save / Export JSON</button></div>
+<div class="quick-save"><span>Local autosave · tap to send a dated JSON backup</span><button id="saveQuick" type="button">Save JSON to Drive</button></div>
 <div class="mobile-tips">Swipe ← → to change species · Opens at Photo 1 · Scroll ↓ for the next photograph</div>
 <div class="review-legend"><span class="review-green">Green: checked and resolved</span><span class="review-red">Red: suggested, unknown or still needs review</span></div>
 <p id="scopeNote" class="muted"></p>
@@ -884,7 +884,7 @@ $('#prevSpecies').addEventListener('click',()=>changeSpecies(-1));
 $('#nextSpecies').addEventListener('click',()=>changeSpecies(1));
 $('#jumpToCard').addEventListener('click',jumpToCard);
 $('#cardJump').addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();jumpToCard()}});
-$('#openHelp').addEventListener('click',()=>notify("This web page autosaves to this browser on this device; it does not sync to Drive. Download the review JSON, upload it to Drive manually, then import it on another device. The Android app has a separate Drive save flow."));
+$('#openHelp').addEventListener('click',()=>notify("Tap Save JSON to Drive. The system share menu opens with a dated review JSON attached; choose Google Drive, select your folder and tap Save. If file sharing is unavailable, use Download backup review JSON. Local autosave continues in this browser."));
 $('#reviewUpload').addEventListener('change',async event=>{
  const file=event.target.files?.[0];if(!file)return;
  try{
@@ -907,15 +907,38 @@ $('#reviewUpload').addEventListener('change',async event=>{
  }catch(error){notify('Cannot import review JSON: '+error.message)}
  finally{event.target.value=''}
 });
-$('#saveQuick').addEventListener('click',()=>{
+function buildReviewExport(){
+ const rows=exportRecords(),exportedAt=new Date();
+ const body={schema:'VNMV1_HUMAN_PHOTO_REVIEW_DECISIONS_V1',camera_pose_vocabulary:'VNMV1_CAMERA_VIEW_RESEARCH_NEEDS_V1',status:'USER_SUBMITTED_NOT_YET_IMPORTED_OR_PROMOTED',exported_at:exportedAt.toISOString(),records:rows};
+ const timestamp=exportedAt.toISOString().replace(/[:.]/g,'-');
+ return {rows,json:JSON.stringify(body,null,2),filename:'VNMV1_reference_decisions_'+timestamp+'.json'};
+}
+function downloadReviewExport(data){
+ const blob=new Blob([data.json],{type:'application/json'}),a=document.createElement('a');
+ a.href=URL.createObjectURL(blob);a.download=data.filename;a.click();
+ setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+}
+async function saveQuickReview(){
  if(navigator.userAgent.includes('VNMV1ReviewAndroid/11')){
-  window.location.href='vnmv1-review://save';
- }else{
-  $('#export').click();
-  notify('Photo-review JSON downloaded. Upload it to Drive manually or import it on another device; edits are saved locally in this browser only.');
+  window.location.href='vnmv1-review://save';return;
  }
-});
-$('#export').addEventListener('click',()=>{const rows=exportRecords();const body={schema:'VNMV1_HUMAN_PHOTO_REVIEW_DECISIONS_V1',camera_pose_vocabulary:'VNMV1_CAMERA_VIEW_RESEARCH_NEEDS_V1',status:'USER_SUBMITTED_NOT_YET_IMPORTED_OR_PROMOTED',exported_at:new Date().toISOString(),records:rows};const blob=new Blob([JSON.stringify(body,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='VNMV1_reference_decisions_'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);notify('Exported '+rows.length+' decisions. Import into your private production review workflow.')});
+ const data=buildReviewExport();
+ try{
+  const file=new File([data.json],data.filename,{type:'application/json'});
+  if(navigator.share&&navigator.canShare&&navigator.canShare({files:[file]})){
+   notify('Choose Google Drive in the share menu, then select your review folder and tap Save.');
+   await navigator.share({files:[file],title:'VNMV1 photo review backup',text:'Choose Google Drive, then select your private VNMV1 review folder and tap Save.'});
+   notify('The share menu closed. If you chose Drive, verify the dated JSON in the folder you selected.');
+   return;
+  }
+ }catch(error){
+  if(error&&error.name==='AbortError'){notify('Sharing cancelled. No file was sent.');return}
+ }
+ downloadReviewExport(data);
+ notify('File sharing is unavailable here, so the review JSON was downloaded for manual upload to Drive.');
+}
+$('#saveQuick').addEventListener('click',saveQuickReview);
+$('#export').addEventListener('click',()=>{const data=buildReviewExport();downloadReviewExport(data);notify('Downloaded '+data.rows.length+' photo review decisions as '+data.filename+'.')});
 const pageParams=new URLSearchParams(window.location.search);
 const initialTaxon=(pageParams.get('taxon')||pageParams.get('q')||'').trim();
 if(initialTaxon)$('#filter').value=initialTaxon;
