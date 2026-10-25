@@ -59,7 +59,7 @@
 <header><div><h1>VNMV1 · Specimen reference review</h1><p class="muted">Independent photo research • one species pool • human-reviewed decisions · <a href="../data/species_coverage.csv">Download per-species coverage</a></p></div><div class="muted">Candidate references only · No image generation</div></header>
 <div class="note"><strong>Quick review:</strong> choose specimen type, pose, notes or Reject for each photograph. Edits save on this phone automatically; use Save JSON to Drive for a backup. Use Previous/Next or Card # to change species; scroll downward through photos for that species. References and available text-based suggestions are preselected for retention. Correct our proposals where necessary. <strong>Photo coverage:</strong> aim for at least 9 distinct individual photo/source records per named taxon where available; target 12, preferably 12–15. The under-9 filter counts individual photo records and individual source-photo leads, but not search pages or duplicates. A documented source shortage stays visible for research. User review can establish card identity only at the taxonomic rank supported by the photo; sex/stage and photo-use rights remain separate.</div>
 <section class="stats" aria-label="Research counts"><div class="stat"><b id="speciesCount">0</b><span>Review entries</span></div><div class="stat"><b id="candidateCount">0</b><span>Photo candidates</span></div><div class="stat"><b id="sourceLeadCount">0</b><span>Research-only photo links</span></div><div class="stat"><b id="decisionCount">0</b><span>Decisions entered</span></div><div class="stat"><b id="needsReviewCount">0</b><span>Photos needing review</span></div><div class="stat"><b id="aiDraftCount">0</b><span>AI draft reviews</span></div><div class="stat"><b id="floorCount">0</b><span>Species with 9+ photo references</span></div></section>
-<div class="controls"><input id="filter" type="search" placeholder="Find a card number or taxon…" aria-label="Filter cards and taxa"><select id="statusFilter" aria-label="Filter research state"><option value="all" selected>All cards and taxon candidates</option><option value="photos">With photographs or research links</option><option value="under">Fewer than 9 photo references</option><option value="decided">My reviewed photographs</option><option value="needs">Needs review (red / unsure)</option></select><button class="secondary" id="reload">Refresh public index</button></div>
+<div class="controls"><input id="filter" type="search" placeholder="Find a card number or taxon…" aria-label="Filter cards and taxa"><select id="statusFilter" aria-label="Filter research state"><option value="all" selected>All cards and taxon candidates</option><option value="identity">Identity unresolved</option><option value="photos">With photographs or research links</option><option value="under">Fewer than 9 photo references</option><option value="decided">My reviewed photographs</option><option value="needs">Needs review (red / unsure)</option></select><button class="secondary" id="reload">Refresh public index</button></div>
 <div class="controls"><label class="upload" for="reviewUpload">Import saved review JSON</label><input id="reviewUpload" type="file" accept="application/json,.json"><button class="secondary" id="openHelp" type="button">Where do I save?</button></div>
 <details id="advancedIndex"><summary>Advanced: load offline research index</summary><input style="max-width:180px" id="indexUpload" type="file" accept="application/json,.json"></details>
 <div class="controls"><button id="export" type="button">Download backup review JSON</button><small>This button only downloads a copy. Use Save JSON to Drive for a direct upload.</small></div>
@@ -764,6 +764,8 @@ function sourceSearchCard(spec){
 }
 function stats(){
  const names=Object.values(dataset.species||{});
+ const unresolvedIdentityCount=names.filter(spec=>spec?.review_unit_type==='CARD'&&!spec?.research_taxon).length;
+ const identityFilter=$('#statusFilter option[value="identity"]');if(identityFilter)identityFilter.textContent='Identity unresolved ('+unresolvedIdentityCount+')';
  const photoMap=new Map();
  for(const spec of names)for(const p of photosFrom(spec))if(p?.photo_key&&!photoMap.has(p.photo_key))photoMap.set(p.photo_key,p);
  const photos=[...photoMap.values()];
@@ -1142,6 +1144,7 @@ function render(){
  visibleSpecies=Object.values(dataset.species||{}).filter(spec=>{
    const photos=photosFrom(spec),label=reviewUnitLabel(spec).toLowerCase();
    if(query&&!((label+' '+String(spec.research_taxon||'').toLowerCase()).includes(query)))return false;
+   if(filter==='identity'&&!(spec?.review_unit_type==='CARD'&&!spec?.research_taxon))return false;
    if(filter==='photos'&&photos.length===0&&leadsFrom(spec).length===0&&searchesFrom(spec).length===0)return false;
    if(filter==='under'&&photoReferenceCount(spec)>=PHOTO_REFERENCE_MIN)return false;
    if(filter==='decided'&&!photos.concat(leadsFrom(spec)).some(p=>reviewIsEntered(decisions[p.photo_key])))return false;
