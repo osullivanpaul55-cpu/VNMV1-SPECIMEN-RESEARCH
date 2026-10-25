@@ -193,8 +193,7 @@ def write_report(index_path: Path, csv_path: Path, summary_path: Path, seed_path
         writer = csv.DictWriter(stream, fieldnames=FIELDS, extrasaction="ignore")
         writer.writeheader()
         writer.writerows(report["species"])
-    summary_path.write_text(json.dumps(report["summary"], indent=2, ensure_ascii=False) + "
-", encoding="utf-8")
+    summary_path.write_text(json.dumps(report["summary"], indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     return report["summary"]
 
 def main() -> None:
