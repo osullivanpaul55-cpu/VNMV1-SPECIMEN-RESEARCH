@@ -3250,7 +3250,7 @@
     },
     {
       "name": "Amazonius burgessi",
-      "key": "roster-gbif:11594093",
+      "key": "roster-gbif-11594093",
       "rank": "SPECIES",
       "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
       "intake_group": "Current roster exact accepted GBIF name match",
@@ -3269,7 +3269,7 @@
     },
     {
       "name": "Cyriopagopus minax",
-      "key": "roster-gbif:9377414",
+      "key": "roster-gbif-9377414",
       "rank": "SPECIES",
       "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
       "intake_group": "Current roster exact accepted GBIF name match",
@@ -3288,7 +3288,7 @@
     },
     {
       "name": "Hysterocrates gigas",
-      "key": "roster-gbif:2154022",
+      "key": "roster-gbif-2154022",
       "rank": "SPECIES",
       "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
       "intake_group": "Current roster exact accepted GBIF name match",
@@ -3307,7 +3307,7 @@
     },
     {
       "name": "Lasiodora itabunae",
-      "key": "roster-gbif:2153942",
+      "key": "roster-gbif-2153942",
       "rank": "SPECIES",
       "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
       "intake_group": "Current roster exact accepted GBIF name match",
@@ -3326,7 +3326,7 @@
     },
     {
       "name": "Orphnaecus dichromatus",
-      "key": "roster-gbif:8404951",
+      "key": "roster-gbif-8404951",
       "rank": "SPECIES",
       "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
       "intake_group": "Current roster exact accepted GBIF name match",
@@ -3345,7 +3345,7 @@
     },
     {
       "name": "Orphnaecus philippinus",
-      "key": "roster-gbif:7570845",
+      "key": "roster-gbif-7570845",
       "rank": "SPECIES",
       "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
       "intake_group": "Current roster exact accepted GBIF name match",
@@ -3364,7 +3364,7 @@
     },
     {
       "name": "Pamphobeteus petersi",
-      "key": "roster-gbif:2153920",
+      "key": "roster-gbif-2153920",
       "rank": "SPECIES",
       "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
       "intake_group": "Current roster exact accepted GBIF name match",
@@ -3383,7 +3383,7 @@
     },
     {
       "name": "Parabuthus transvaalicus",
-      "key": "roster-gbif:6894340",
+      "key": "roster-gbif-6894340",
       "rank": "SPECIES",
       "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
       "intake_group": "Current roster exact accepted GBIF name match",
@@ -3402,7 +3402,7 @@
     },
     {
       "name": "Psytalla horrida",
-      "key": "roster-gbif:8833702",
+      "key": "roster-gbif-8833702",
       "rank": "SPECIES",
       "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
       "intake_group": "Current roster exact accepted GBIF name match",
@@ -3421,7 +3421,7 @@
     },
     {
       "name": "Scolopendra dehaani",
-      "key": "roster-gbif:9358987",
+      "key": "roster-gbif-9358987",
       "rank": "SPECIES",
       "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
       "intake_group": "Current roster exact accepted GBIF name match",
@@ -3440,7 +3440,7 @@
     },
     {
       "name": "Scolopendra gigantea",
-      "key": "roster-gbif:5179388",
+      "key": "roster-gbif-5179388",
       "rank": "SPECIES",
       "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
       "intake_group": "Current roster exact accepted GBIF name match",
@@ -3459,7 +3459,7 @@
     },
     {
       "name": "Scolopendra subspinipes",
-      "key": "roster-gbif:5179562",
+      "key": "roster-gbif-5179562",
       "rank": "SPECIES",
       "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
       "intake_group": "Current roster exact accepted GBIF name match",
@@ -3478,7 +3478,7 @@
     },
     {
       "name": "Tapinauchenius sanctivincenti",
-      "key": "roster-gbif:2153896",
+      "key": "roster-gbif-2153896",
       "rank": "SPECIES",
       "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
       "intake_group": "Current roster exact accepted GBIF name match",
@@ -3497,7 +3497,7 @@
     },
     {
       "name": "Thrixopelma pruriens",
-      "key": "roster-gbif:2153778",
+      "key": "roster-gbif-2153778",
       "rank": "SPECIES",
       "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
       "intake_group": "Current roster exact accepted GBIF name match",
