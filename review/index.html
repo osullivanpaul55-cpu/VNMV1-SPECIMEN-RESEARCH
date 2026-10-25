@@ -751,8 +751,8 @@ async function load(){
   // Workflow-authenticated commits do not automatically trigger Pages.
   // Read the current public main-branch index first, with static-site fallback.
   const sources=[
-    'https://raw.githubusercontent.com/osullivanpaul55-cpu/VNMV1-SPECIMEN-RESEARCH/main/data/index.json',
-    '../data/index.json'
+    '../data/index.json',
+    'https://raw.githubusercontent.com/osullivanpaul55-cpu/VNMV1-SPECIMEN-RESEARCH/main/data/index.json'
   ];
   let lastError='Unknown error';
   for(const source of sources){
