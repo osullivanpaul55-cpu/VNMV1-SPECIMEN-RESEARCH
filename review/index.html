@@ -53,22 +53,25 @@
 <div class="controls"><input id="filter" type="search" placeholder="Find a card number or taxon…" aria-label="Filter cards and taxa"><select id="statusFilter" aria-label="Filter research state"><option value="all" selected>All cards and taxon candidates</option><option value="photos">With photographs or research links</option><option value="under">Fewer than 9 photo references</option><option value="decided">My reviewed photographs</option></select><button class="secondary" id="reload">Refresh public index</button></div>
 <div class="controls"><label class="upload" for="reviewUpload">Import saved review JSON</label><input id="reviewUpload" type="file" accept="application/json,.json"><button class="secondary" id="openHelp" type="button">Where do I save?</button></div>
 <details id="advancedIndex"><summary>Advanced: load offline research index</summary><input style="max-width:180px" id="indexUpload" type="file" accept="application/json,.json"></details>
-<div class="controls"><button id="export" type="button">Download backup review JSON</button><small>Tap Save JSON to Drive to open the system share menu, choose Google Drive and the destination folder. Each save is a dated JSON snapshot; download is available if file sharing is unsupported.</small></div>
+<div class="controls"><button id="export" type="button">Download backup review JSON</button><small>This button only downloads a copy. Use Save JSON to Drive for a direct upload.</small></div>
+<details id="driveSetup" class="photo-source"><summary>One-time Google Drive setup</summary><p>Direct upload needs a Google OAuth Web application Client ID. In <a href="https://console.cloud.google.com/apis/credentials" target="_blank" rel="noopener">Google Cloud credentials</a>, enable the Google Drive API, configure the OAuth consent screen, create a Web application OAuth Client ID, and add this exact Authorized JavaScript origin: <code>https://osullivanpaul55-cpu.github.io</code>. If the app is in testing, add your Google account as a test user. Paste the Client ID below. Do not paste a client secret. The Client ID is public and is stored only in this browser.</p><label for="driveClientId">Google OAuth Client ID</label><input id="driveClientId" type="text" autocomplete="off" inputmode="url" placeholder="…apps.googleusercontent.com" style="width:100%;padding:10px;border-radius:8px"><div class="controls"><button id="saveDriveSetup" type="button">Save Drive setup on this phone</button><button id="clearDriveSetup" type="button" class="secondary">Clear saved Drive setup</button></div><p id="driveSetupState" class="muted"></p></details>
 <div id="notification" role="status" aria-live="polite"></div>
 </details>
 <nav id="speciesNav" class="navstrip" aria-label="Specimen navigation"><button id="prevSpecies" type="button">◀ Previous</button><strong id="speciesPosition">Specimen 0/0</strong><button id="nextSpecies" type="button">Next ▶</button><div class="card-jump"><label for="cardJump">Card #</label><input id="cardJump" type="number" min="1" step="1" inputmode="numeric" placeholder="12" aria-label="Card number, for example 12"><button id="jumpToCard" type="button">Go</button></div></nav>
-<div class="quick-save"><span>Local autosave · tap to send a dated JSON backup</span><button id="saveQuick" type="button">Save JSON to Drive</button></div>
+<div class="quick-save"><span>Local autosave · tap to upload a dated JSON backup</span><button id="saveQuick" type="button">Save JSON to Drive</button></div>
 <div class="mobile-tips">Swipe ← → to change species · Opens at Photo 1 · Scroll ↓ for the next photograph</div>
 <div class="review-legend"><span class="review-green">Green: checked and resolved</span><span class="review-red">Red: suggested, unknown or still needs review</span></div>
 <p id="scopeNote" class="muted"></p>
 <div id="results"></div>
 </main>
 <div id="photoZoom" hidden role="dialog" aria-modal="true" aria-label="Zoom reference photograph"><div class="zoom-controls"><span id="zoomTitle">Reference photo · Pinch to zoom</span><button id="zoomClose" class="zoom-close" type="button">✕ Close</button></div><div class="zoom-stage" id="zoomStage"><img id="zoomImage" alt="Enlarged photograph"></div><div class="zoom-controls"><span class="zoom-tip">Two fingers: zoom · One finger: drag · Double-tap: reset</span><button id="zoomReset" type="button">Reset</button></div></div>
+<script src="https://accounts.google.com/gsi/client"></script>
 <script>
 'use strict';
 let dataset={schema:'VNMV1_PUBLIC_PHOTO_CANDIDATES_V1',species:{}},speciesCursor=0,visibleSpecies=[];
 let visualDrafts={},lastIndexLoad=0;
 const $=s=>document.querySelector(s), KEY='vnmv1-photo-review-v1';
+const DRIVE_CLIENT_KEY='vnmv1-google-oauth-client-id-v1',DRIVE_FOLDER_KEY='vnmv1-drive-backup-folder-id-v1';
 const POSES=[
 ['UNREVIEWED','Camera pose not reviewed'],
 ['FRONTAL','1 · Frontal / eye-level'],
@@ -884,7 +887,7 @@ $('#prevSpecies').addEventListener('click',()=>changeSpecies(-1));
 $('#nextSpecies').addEventListener('click',()=>changeSpecies(1));
 $('#jumpToCard').addEventListener('click',jumpToCard);
 $('#cardJump').addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();jumpToCard()}});
-$('#openHelp').addEventListener('click',()=>notify("Tap Save JSON to Drive. The system share menu opens with a dated review JSON attached; choose Google Drive, select your folder and tap Save. If file sharing is unavailable, use Download backup review JSON. Local autosave continues in this browser."));
+$('#openHelp').addEventListener('click',()=>notify("Save JSON to Drive uploads a dated JSON directly into a VNMV1 Reference Review Backups folder. The first use asks Google for permission. Direct upload requires the one-time Google OAuth Client ID under Tools & progress > One-time Google Drive setup. Download backup remains a separate manual option."));
 $('#reviewUpload').addEventListener('change',async event=>{
  const file=event.target.files?.[0];if(!file)return;
  try{
@@ -918,24 +921,126 @@ function downloadReviewExport(data){
  a.href=URL.createObjectURL(blob);a.download=data.filename;a.click();
  setTimeout(()=>URL.revokeObjectURL(a.href),1000);
 }
+function validDriveClientId(value){return /^[A-Za-z0-9_-]+\.apps\.googleusercontent\.com$/.test(value)}
+function requestDriveAccessToken(clientId){
+ return new Promise((resolve,reject)=>{
+  if(!window.google?.accounts?.oauth2){reject(Error('Google sign-in could not load. Check your connection and reload.'));return}
+  let finished=false;
+  const timer=setTimeout(()=>{if(!finished){finished=true;reject(Error('Google authorization did not finish. Please try again.'))}},30000);
+  try{
+   const client=google.accounts.oauth2.initTokenClient({
+    client_id:clientId,
+    scope:'https://www.googleapis.com/auth/drive.file',
+    callback:response=>{
+     if(finished)return;finished=true;clearTimeout(timer);
+     if(response?.access_token)resolve(response.access_token);
+     else reject(Error(response?.error_description||response?.error||'Google did not grant Drive access.'));
+    }
+   });
+   // Called synchronously from the Save button gesture so Google can open its consent window.
+   client.requestAccessToken({prompt:''});
+  }catch(error){finished=true;clearTimeout(timer);reject(error)}
+ });
+}
+async function driveApiFailure(response,action){
+ let detail='';
+ try{const body=await response.json();detail=body?.error?.message||''}catch(_){}
+ throw Error(action+' failed'+(detail?': '+detail:' (HTTP '+response.status+').'));
+}
+async function ensureDriveBackupFolder(token){
+ let folderId='';
+ try{folderId=localStorage.getItem(DRIVE_FOLDER_KEY)||''}catch(_){}
+ if(folderId){
+  try{
+   const check=await fetch('https://www.googleapis.com/drive/v3/files/'+encodeURIComponent(folderId)+'?fields=id,name,mimeType',{
+    headers:{Authorization:'Bearer '+token}
+   });
+   if(check.ok)return folderId;
+  }catch(_){}
+  try{localStorage.removeItem(DRIVE_FOLDER_KEY)}catch(_){}
+ }
+ const response=await fetch('https://www.googleapis.com/drive/v3/files?fields=id,name',{
+  method:'POST',
+  headers:{Authorization:'Bearer '+token,'Content-Type':'application/json'},
+  body:JSON.stringify({name:'VNMV1 Reference Review Backups',mimeType:'application/vnd.google-apps.folder'})
+ });
+ if(!response.ok)await driveApiFailure(response,'Creating the Drive backup folder');
+ const folder=await response.json();
+ if(!folder.id)throw Error('Google Drive did not return a backup-folder ID.');
+ try{localStorage.setItem(DRIVE_FOLDER_KEY,folder.id)}catch(_){}
+ return folder.id;
+}
+async function uploadReviewToDrive(token,data){
+ const folderId=await ensureDriveBackupFolder(token);
+ const boundary='vnmv1_review_'+Date.now()+'_'+Math.random().toString(16).slice(2);
+ const metadata={name:data.filename,mimeType:'application/json',parents:[folderId]};
+ const body='--'+boundary+'\r\n'+
+  'Content-Type: application/json; charset=UTF-8\r\n\r\n'+JSON.stringify(metadata)+'\r\n'+
+  '--'+boundary+'\r\n'+
+  'Content-Type: application/json; charset=UTF-8\r\n\r\n'+data.json+'\r\n'+
+  '--'+boundary+'--';
+ const response=await fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id,name,webViewLink',{
+  method:'POST',
+  headers:{Authorization:'Bearer '+token,'Content-Type':'multipart/related; boundary='+boundary},
+  body
+ });
+ if(!response.ok)await driveApiFailure(response,'Uploading the review JSON');
+ const saved=await response.json();
+ if(!saved.id)throw Error('Google Drive did not confirm the uploaded file.');
+ return saved;
+}
+function notifyDriveUpload(message,url){
+ const box=$('#notification');box.replaceChildren(document.createTextNode(message));
+ if(url&&/^https:\/\/drive\.google\.com\//.test(url)){
+  const link=document.createElement('a');link.href=url;link.target='_blank';link.rel='noopener';link.textContent=' Open in Drive';box.append(link);
+ }
+}
+function showDriveSetup(){
+ $('#reviewSettings').open=true;$('#driveSetup').open=true;
+ notify('Direct Drive upload needs a one-time OAuth Client ID. Enter it under One-time Google Drive setup. No file was downloaded.');
+ $('#driveClientId').focus();
+}
+function saveDriveSetup(){
+ const input=$('#driveClientId'),clientId=input.value.trim();
+ if(!validDriveClientId(clientId)){notify('That does not look like a Google OAuth Client ID ending in .apps.googleusercontent.com.');return}
+ let previous='';
+ try{previous=localStorage.getItem(DRIVE_CLIENT_KEY)||''}catch(_){}
+ try{
+  localStorage.setItem(DRIVE_CLIENT_KEY,clientId);
+  if(previous!==clientId)localStorage.removeItem(DRIVE_FOLDER_KEY);
+ }catch(_){notify('This browser could not save the Drive setup. Check browser storage settings.');return}
+ $('#driveSetupState').textContent='Drive setup saved on this phone. The first upload will ask Google for permission.';
+ notify('Google Drive setup saved on this phone. Tap Save JSON to Drive; the first upload will ask for Drive permission.');
+}
+function clearDriveSetup(){
+ try{localStorage.removeItem(DRIVE_CLIENT_KEY);localStorage.removeItem(DRIVE_FOLDER_KEY)}catch(_){}
+ $('#driveClientId').value='';$('#driveSetupState').textContent='No Drive Client ID is saved on this phone.';
+ notify('Drive setup cleared from this phone.');
+}
+try{
+ const savedClient=localStorage.getItem(DRIVE_CLIENT_KEY)||'';
+ $('#driveClientId').value=savedClient;
+ $('#driveSetupState').textContent=savedClient?'Drive setup is saved on this phone.':'Direct upload needs a one-time Google OAuth Client ID.';
+}catch(_){}
+$('#saveDriveSetup').addEventListener('click',saveDriveSetup);
+$('#clearDriveSetup').addEventListener('click',clearDriveSetup);
 async function saveQuickReview(){
  if(navigator.userAgent.includes('VNMV1ReviewAndroid/11')){
   window.location.href='vnmv1-review://save';return;
  }
+ let clientId='';
+ try{clientId=localStorage.getItem(DRIVE_CLIENT_KEY)||''}catch(_){}
+ if(!validDriveClientId(clientId)){showDriveSetup();return}
  const data=buildReviewExport();
  try{
-  const file=new File([data.json],data.filename,{type:'application/json'});
-  if(navigator.share&&navigator.canShare&&navigator.canShare({files:[file]})){
-   notify('Choose Google Drive in the share menu, then select your review folder and tap Save.');
-   await navigator.share({files:[file],title:'VNMV1 photo review backup',text:'Choose Google Drive, then select your private VNMV1 review folder and tap Save.'});
-   notify('The share menu closed. If you chose Drive, verify the dated JSON in the folder you selected.');
-   return;
-  }
+  notify('Connecting to Google Drive…');
+  const token=await requestDriveAccessToken(clientId);
+  notify('Uploading '+data.filename+' to Google Drive…');
+  const saved=await uploadReviewToDrive(token,data);
+  notifyDriveUpload('Uploaded '+(saved.name||data.filename)+' to VNMV1 Reference Review Backups.',saved.webViewLink);
  }catch(error){
-  if(error&&error.name==='AbortError'){notify('Sharing cancelled. No file was sent.');return}
+  notify('Drive upload failed: '+(error?.message||String(error))+' No file was downloaded.');
  }
- downloadReviewExport(data);
- notify('File sharing is unavailable here, so the review JSON was downloaded for manual upload to Drive.');
 }
 $('#saveQuick').addEventListener('click',saveQuickReview);
 $('#export').addEventListener('click',()=>{const data=buildReviewExport();downloadReviewExport(data);notify('Downloaded '+data.rows.length+' photo review decisions as '+data.filename+'.')});
