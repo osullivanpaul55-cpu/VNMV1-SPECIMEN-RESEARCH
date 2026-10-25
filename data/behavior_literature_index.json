@@ -1,11 +1,11 @@
 {
   "schema": "VNMV1_PUBLIC_BEHAVIOUR_LITERATURE_CANDIDATES_V1",
-  "last_cycle": 1,
+  "last_cycle": 2,
   "named_species_in_seed": 195,
-  "species_searched": 48,
-  "species_with_literature_leads": 23,
+  "species_searched": 72,
+  "species_with_literature_leads": 30,
   "research_completed_first_sweep": false,
-  "last_research_at_utc": "2026-10-25T13:59:46.039035+00:00",
+  "last_research_at_utc": "2026-10-25T22:01:49.592468+00:00",
   "species": {
     "f3787c4b515c0a91": {
       "research_taxon": "Abdomegaphobema mesomelas",
@@ -981,8 +981,320 @@
       "publication_leads": [],
       "no_automatic_behavior_confirmation": true,
       "no_media_or_rights_permissions_implied": true
+    },
+    "d5aab94695c19b71": {
+      "research_taxon": "Chromatopelma cyaneopubescens",
+      "taxon_key": "d5aab94695c19b71",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.11646/zootaxa.5660.2.5",
+          "url": "https://doi.org/10.11646/zootaxa.5660.2.5",
+          "title": "New species of Jambu Miglio, Perafn &amp; Prez-Miles, 2024 and Guyruita Guadanucci, Lucas, Indicatti &amp; Yamamoto, 2007 (Araneae: Theraphosidae) from Brazil, with notes on Hapalopus Ausserer, 1875.",
+          "published_year": 2025,
+          "behavior_text_hints_unverified": [
+            "COLEOPTERA_DEFENSIVE_ABDOMEN"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "28b290574818a2a4": {
+      "research_taxon": "Cilantica devamatha",
+      "taxon_key": "28b290574818a2a4",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "3d67658c67e7b8d9": {
+      "research_taxon": "Citharacanthus cyaneus",
+      "taxon_key": "3d67658c67e7b8d9",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "585e9d19537e9bb8": {
+      "research_taxon": "Cyriocosmus elegans",
+      "taxon_key": "585e9d19537e9bb8",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "807da919e162c17f": {
+      "research_taxon": "Cyriocosmus giganteus",
+      "taxon_key": "807da919e162c17f",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "523bae6ba16814db": {
+      "research_taxon": "Cyriocosmus leetzi",
+      "taxon_key": "523bae6ba16814db",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "1ea2db4800232574": {
+      "research_taxon": "Cyriocosmus perezmilesi",
+      "taxon_key": "1ea2db4800232574",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "a094a1628028bf48": {
+      "research_taxon": "Cyriocosmus sellatus",
+      "taxon_key": "a094a1628028bf48",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "c036a0b5b154ee5b": {
+      "research_taxon": "Encyocratella olivacea",
+      "taxon_key": "c036a0b5b154ee5b",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.3389/fphar.2021.789570",
+          "url": "https://doi.org/10.3389/fphar.2021.789570",
+          "title": "The Tarantula Venom Peptide Eo1a Binds to the Domain II S3-S4 Extracellular Loop of Voltage-Gated Sodium Channel Na&lt;sub&gt;V&lt;/sub&gt;1.8 to Enhance Activation.",
+          "published_year": 2021,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "dec9982e1dda8401": {
+      "research_taxon": "Ephebopus cyanognathus",
+      "taxon_key": "dec9982e1dda8401",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "63f31c9be949e735": {
+      "research_taxon": "Ephebopus murinus",
+      "taxon_key": "63f31c9be949e735",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "b720e168e46a45ca": {
+      "research_taxon": "Ephebopus rufescens",
+      "taxon_key": "b720e168e46a45ca",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "89d7defd9acf612f": {
+      "research_taxon": "Eresus walckenaeri",
+      "taxon_key": "89d7defd9acf612f",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1111/j.1095-8312.2005.00516.x",
+          "url": "https://doi.org/10.1111/j.1095-8312.2005.00516.x",
+          "title": "Genetic cohesion of Eresus walckenaeri (Araneae, Eresidae) in the eastern Mediterranean",
+          "published_year": 2005,
+          "behavior_text_hints_unverified": [
+            "SPIDERLING_DISPERSAL"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "b28875820c54b42e": {
+      "research_taxon": "Euathlus manicatus",
+      "taxon_key": "b28875820c54b42e",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "ffe239d36d2ed81a": {
+      "research_taxon": "Euathlus truculentus",
+      "taxon_key": "ffe239d36d2ed81a",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1016/j.cbpa.2011.04.003",
+          "url": "https://doi.org/10.1016/j.cbpa.2011.04.003",
+          "title": "Energy metabolism and the postprandial response of the Chilean tarantulas, Euathlus truculentus (Araneae: Theraphosidae).",
+          "published_year": 2011,
+          "behavior_text_hints_unverified": [
+            "PREY_CAPTURE",
+            "FEEDING",
+            "AMBLYPYGI_RAPTORY_PEDIPALP_STRIKE",
+            "CHILOPODA_FORCIPULE_STRIKE"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "308b3298f6bdcd2a": {
+      "research_taxon": "Eucratoscelus constrictus",
+      "taxon_key": "308b3298f6bdcd2a",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1124/mol.110.070540",
+          "url": "https://doi.org/10.1124/mol.110.070540",
+          "title": "A novel family of insect-selective peptide neurotoxins targeting insect large-conductance calcium-activated K+ channels isolated from the venom of the theraphosid spider Eucratoscelus constrictus.",
+          "published_year": 2011,
+          "behavior_text_hints_unverified": [
+            "TURRET_CONSTRUCTION"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "ece2902150d6ce31": {
+      "research_taxon": "Eucratoscelus pachypus",
+      "taxon_key": "ece2902150d6ce31",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "afe5d4688d54ed62": {
+      "research_taxon": "Eupalaestrus campestratus",
+      "taxon_key": "afe5d4688d54ed62",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "31a244aed0fb3415": {
+      "research_taxon": "Ewok kimraykawasaki",
+      "taxon_key": "31a244aed0fb3415",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "b13f2f4cb58b71f7": {
+      "research_taxon": "Gigathele gigas",
+      "taxon_key": "b13f2f4cb58b71f7",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1038/s44386-026-00050-9",
+          "url": "https://doi.org/10.1038/s44386-026-00050-9",
+          "title": "Spider venom peptides Ht1a and Gg1a are toxic to honeybee parasite &lt;i&gt;Varroa destructor&lt;/i&gt; by topical application.",
+          "published_year": 2026,
+          "behavior_text_hints_unverified": [
+            "FUNNEL_WEB_BUILDING"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.21203/rs.3.rs-8255275/v1",
+          "url": "https://doi.org/10.21203/rs.3.rs-8255275/v1",
+          "title": "Spider venom peptides Ht1a and Gg1a are toxic to honeybee parasite Varroa destructor by topical application",
+          "published_year": 2025,
+          "behavior_text_hints_unverified": [
+            "FUNNEL_WEB_BUILDING"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "6a29c7c840e1500b": {
+      "research_taxon": "Hapalopus planetearth",
+      "taxon_key": "6a29c7c840e1500b",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.11646/zootaxa.5722.4.1",
+          "url": "https://doi.org/10.11646/zootaxa.5722.4.1",
+          "title": "&lt;b&gt;Description of seven new species of Theraphosidae (Araneae, Theraphosinae; Ischnocolinae) from Ecuador, along with the identification of a new variation of type I urticating setae&lt;/b&gt;.",
+          "published_year": 2025,
+          "behavior_text_hints_unverified": [
+            "URTICATING_SETAE_RELEASE"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "82d12550dc127b3b": {
+      "research_taxon": "Hapalopus vangoghi",
+      "taxon_key": "82d12550dc127b3b",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "e3cab69db7e4f893": {
+      "research_taxon": "Harpactira gigas",
+      "taxon_key": "e3cab69db7e4f893",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "a4684cf47f08ed9d": {
+      "research_taxon": "Harpactira hamiltoni",
+      "taxon_key": "a4684cf47f08ed9d",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
     }
   },
   "species_processed_this_run": 24,
-  "species_with_literature_leads_this_run": 9
+  "species_with_literature_leads_this_run": 7
 }
