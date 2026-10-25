@@ -916,5 +916,8 @@ $('#saveQuick').addEventListener('click',()=>{
  }
 });
 $('#export').addEventListener('click',()=>{const rows=exportRecords();const body={schema:'VNMV1_HUMAN_PHOTO_REVIEW_DECISIONS_V1',camera_pose_vocabulary:'VNMV1_CAMERA_VIEW_RESEARCH_NEEDS_V1',status:'USER_SUBMITTED_NOT_YET_IMPORTED_OR_PROMOTED',exported_at:new Date().toISOString(),records:rows};const blob=new Blob([JSON.stringify(body,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='VNMV1_reference_decisions_'+new Date().toISOString().slice(0,10)+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);notify('Exported '+rows.length+' decisions. Import into your private production review workflow.')});
+const pageParams=new URLSearchParams(window.location.search);
+const initialTaxon=(pageParams.get('taxon')||pageParams.get('q')||'').trim();
+if(initialTaxon)$('#filter').value=initialTaxon;
 load();
 </script></body></html>
