@@ -34,10 +34,18 @@ def compile_archive(shard_root:Path,previous:dict,out:Path,tag:str,repo:str)->di
                 prior_keys={x.get('photo_key') for x in link_leads}
                 for lead in row.get('new_link_leads',[]):
                     lkey=lead.get('photo_key');lurl=lead.get('source_url')
-                    if not isinstance(lkey,str) or not re.fullmatch(r'inat:[0-9]{1,15}',lkey):
+                    if not isinstance(lkey,str):
                         raise ValueError('BAD_LINK_PHOTO_KEY')
-                    if not isinstance(lurl,str) or not re.fullmatch(r'https://www\.inaturalist\.org/observations/[0-9]{1,15}',lurl):
-                        raise ValueError('BAD_LINK_OBSERVATION')
+                    if not isinstance(lurl,str):
+                        raise ValueError('BAD_LINK_SOURCE_URL')
+                    if re.fullmatch(r'inat:[0-9]{1,15}',lkey):
+                        if not re.fullmatch(r'https://www\.inaturalist\.org/observations/[0-9]{1,15}',lurl):
+                            raise ValueError('BAD_LINK_OBSERVATION')
+                    elif re.fullmatch(r'commons:[0-9a-f]{12}:[0-9]{1,15}',lkey):
+                        if not re.fullmatch(r'https://commons\.wikimedia\.org/wiki/File:[^?#]{1,1000}',lurl):
+                            raise ValueError('BAD_LINK_COMMONS_FILE_PAGE')
+                    else:
+                        raise ValueError('BAD_LINK_PHOTO_KEY')
                     if lkey in prior_keys or lkey in key_seen:continue
                     if lead.get('license_code') in ('cc0','cc-by') and lead.get('redistribution_allowed_by_collector'):
                         raise ValueError('ELIGIBLE_PHOTO_MISCLASSIFIED_AS_LINK')
@@ -49,7 +57,7 @@ def compile_archive(shard_root:Path,previous:dict,out:Path,tag:str,repo:str)->di
                     public.update({'link_only':True,'media_copied_to_public_repo':False,
                         'research_use_status':'RESEARCH_LINK_AVAILABLE_NOW',
                         'approved_for_imagegen':False})
-                    link_leads.append(public);prior_keys.add(lkey);links_added+=1
+                    link_leads.append(public);prior_keys.add(lkey);key_seen.add(lkey);links_added+=1
                 for c in row['new_candidates']:
                     path=c['archive_member']
                     if not re.fullmatch(r'media/(?:[0-9a-f]{16}|[0-9a-f]{32})/[0-9]{1,15}\.(jpg|png|webp)',path):raise ValueError('BAD_ARCHIVE_MEMBER')
