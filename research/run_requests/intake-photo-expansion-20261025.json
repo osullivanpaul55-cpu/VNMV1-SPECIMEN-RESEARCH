@@ -2,7 +2,7 @@
   "schema": "VNMV1_PUBLIC_PHOTO_RESEARCH_REQUEST_V1",
   "status": "REQUESTED",
   "purpose": "Continue public photo candidate collection for the expanded taxon catalog",
-  "requested_at": "2026-10-25T10:01:00Z",
-  "request_generation": 2,
-  "rerun_reason": "Retry photo collection after source-link review check was repaired"
+  "requested_at": "2026-10-25T10:03:00Z",
+  "request_generation": 3,
+  "rerun_reason": "Retry cycle after archive path validation accepts extended taxon keys"
 }
