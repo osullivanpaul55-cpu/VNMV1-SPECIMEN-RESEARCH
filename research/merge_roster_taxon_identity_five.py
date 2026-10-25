@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 from datetime import datetime, timezone
@@ -112,7 +113,7 @@ def merge(seed_path: Path, shard_dir: Path, species_path: Path,
             continue
         eligible_matches += 1
         canonical, usage_key = match
-        key = "roster-gbif-" + usage_key
+        key = hashlib.sha256(("roster-gbif:" + usage_key).encode("utf-8")).hexdigest()[:16]
         canonical_key = norm(canonical)
         if canonical_key in existing_names or canonical_key in accepted_names or key in existing_keys:
             continue
