@@ -15,6 +15,7 @@ SHARDS=5; MAX_IMAGE_BYTES=5_000_000; ALLOWED={'cc0','cc-by'}; MAX_LINK_LEADS_PER
 HOSTS={'static.inaturalist.org','inaturalist-open-data.s3.amazonaws.com','inaturalist-open-data.s3.us-west-2.amazonaws.com'}
 API='https://api.inaturalist.org/v1/observations'
 COMMONS_API='https://commons.wikimedia.org/w/api.php'
+GBIF_API='https://api.gbif.org/v1/occurrence/search'
 UA='VNMV1-SPECIMEN-RESEARCH/1.0 (open CC metadata research; public provenance and attribution)'
 
 def sha(data:bytes)->str:return hashlib.sha256(data).hexdigest()
@@ -186,17 +187,12 @@ def _commons_text(meta:dict,key:str)->str:
     return unescape(re.sub(r'<[^>]*>',' ',str(value or ''))).replace('\\n',' ').strip()[:700]
 
 def discover_commons(taxon:str,seen:set[str],api_fetch=fetch,limit:int=12)->list[dict]:
-    """Find Wikimedia Commons file pages by text search, as link-only review leads.
-
-    A Commons search match does not verify the photographed taxon, the photo,
-    the attribution, or the licence. Keep the page link and metadata claim for
-    the human reviewer; never download its pixels through this route.
-    """
+    """Find Commons file pages by text search, keeping every hit as an unverified source link."""
     if limit<=0:return []
     results=[];checked=set()
     taxon_tag=hashlib.sha256(taxon.casefold().encode('utf-8')).hexdigest()[:12]
-    queries=[f'"{taxon}"',taxon]
-    for term in queries:
+    queries=[(f'"{taxon}"','EXACT_PHRASE'),(taxon,'UNQUOTED_TEXT')]
+    for term,match_mode in queries:
         params={'action':'query','format':'json','formatversion':'2','generator':'search',
             'gsrsearch':term,'gsrnamespace':'6','gsrlimit':str(min(50,max(10,limit*2))),
             'prop':'imageinfo','iiprop':'url|extmetadata',
@@ -225,10 +221,15 @@ def discover_commons(taxon:str,seen:set[str],api_fetch=fetch,limit:int=12)->list
             credit=_commons_text(meta,'Credit')
             license_claim=_commons_text(meta,'LicenseShortName')
             license_url=_commons_text(meta,'LicenseUrl')
+            warnings=['TEXT_SEARCH_MATCH_ONLY','PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED',
+                'LICENCE_AND_ATTRIBUTION_CLAIMS_REQUIRE_SOURCE_CHECK']
+            if match_mode=='UNQUOTED_TEXT':
+                warnings.append('UNQUOTED_TEXT_MATCH_REQUIRES_EXTRA_TAXON_CHECK')
             results.append({'photo_key':photo_key,'photo_id':page_id,'taxon':taxon,
                 'source_title':str(page.get('title') or '')[:500],
                 'source_url':source_url,'source_type':'WIKIMEDIA_COMMONS_FILE_PAGE',
-                'source_search_term':taxon,'taxon_match_status':'TEXT_SEARCH_MATCH_NOT_TAXONOMICALLY_VERIFIED',
+                'source_search_term':taxon,'source_search_query':term,'source_search_mode':match_mode,
+                'taxon_match_status':'TEXT_SEARCH_MATCH_NOT_TAXONOMICALLY_VERIFIED',
                 'taxon_authority':'WIKIMEDIA_TEXT_SEARCH_NOT_USER_APPROVED',
                 'observation_quality_grade':None,'link_only':True,
                 'redistribution_allowed_by_collector':False,
@@ -239,8 +240,80 @@ def discover_commons(taxon:str,seen:set[str],api_fetch=fetch,limit:int=12)->list
                 'research_use_status':'RESEARCH_LINK_AVAILABLE_NOW',
                 'license_version':'UNVERIFIED_SOURCE_CHECK_REQUIRED',
                 'attribution':artist or credit or 'Photographer or credit unconfirmed',
-                'candidate_warning':['TEXT_SEARCH_MATCH_ONLY','PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED',
-                    'LICENCE_AND_ATTRIBUTION_CLAIMS_REQUIRE_SOURCE_CHECK'],
+                'candidate_warning':warnings,
+                'rights_verdict':'CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED',
+                'review_state':'PENDING','pose_id':'UNREVIEWED',
+                'pose_review_status':'VISUAL_REVIEW_REQUIRED','thumbnail_url':None,
+                'media_copied_to_public_repo':False,'approved_for_imagegen':False,
+                'reviewed_by_human':False})
+            if len(results)>=limit:return results
+    return results
+
+def _normalized_taxon_text(value:str)->str:
+    return re.sub(r'\s+',' ',re.sub(r'[^a-z0-9]+',' ',str(value or '').casefold())).strip()
+
+def discover_gbif(taxon:str,seen:set[str],api_fetch=fetch,limit:int=12)->list[dict]:
+    """Find GBIF occurrence pages carrying still-image media; keep media link-only."""
+    if limit<=0:return []
+    params={'scientificName':taxon,'mediaType':'StillImage','limit':str(min(100,max(12,limit*3)))}
+    payload=json.loads(api_fetch(GBIF_API+'?'+urlencode(params),3_000_000))
+    rows=payload.get('results',[])
+    if not isinstance(rows,list):raise ValueError('INVALID_GBIF_OCCURRENCE_RESPONSE')
+    target=_normalized_taxon_text(taxon);target_words=target.split()
+    if len(target_words)<2:return []
+    core=' '.join(target_words[:2])
+    tag=hashlib.sha256(taxon.casefold().encode('utf-8')).hexdigest()[:12]
+    results=[];checked=set()
+    for occurrence in rows:
+        if not isinstance(occurrence,dict):continue
+        rank=str(occurrence.get('taxonRank') or '').upper()
+        if rank not in {'SPECIES','SUBSPECIES'}:continue
+        names=[occurrence.get('scientificName'),occurrence.get('acceptedScientificName'),
+               occurrence.get('verbatimScientificName')]
+        normalized=[_normalized_taxon_text(name) for name in names if name]
+        if not any(core in name for name in normalized):continue
+        exact=any(name==target or name.startswith(target+' ') for name in normalized)
+        occurrence_id=occurrence.get('key')
+        if not isinstance(occurrence_id,(int,str)) or not str(occurrence_id).isdigit():continue
+        media=occurrence.get('media') or []
+        if not isinstance(media,list):continue
+        for media_index,item in enumerate(media):
+            if not isinstance(item,dict) or item.get('type') not in (None,'StillImage'):continue
+            media_reference=str(item.get('references') or '')
+            inat_photo=re.search(r'/photos/([0-9]+)(?:$|[/?#])',media_reference)
+            if inat_photo and f'inat:{inat_photo.group(1)}' in seen:continue
+            identity=str(item.get('identifier') or media_reference or
+                item.get('title') or f'{occurrence_id}:{media_index}')
+            media_tag=hashlib.sha256(identity.encode('utf-8')).hexdigest()[:12]
+            photo_key=f'gbif:{tag}:{occurrence_id}:{media_tag}'
+            if photo_key in seen or photo_key in checked:continue
+            checked.add(photo_key)
+            gbif_url=f'https://www.gbif.org/occurrence/{occurrence_id}'
+            source_license=str(item.get('license') or occurrence.get('license') or '')
+            creator=str(item.get('creator') or item.get('rightsHolder') or
+                occurrence.get('rightsHolder') or occurrence.get('recordedBy') or
+                'Photographer or rights holder unconfirmed')
+            warnings=['GBIF_OCCURRENCE_NOT_USER_APPROVED','PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED',
+                'LICENCE_AND_ATTRIBUTION_CLAIMS_REQUIRE_SOURCE_CHECK']
+            if not exact:warnings.append('SPECIES_NAME_VARIANT_REQUIRES_TAXON_REVIEW')
+            results.append({'photo_key':photo_key,'photo_id':media_tag,'observation_id':str(occurrence_id),
+                'taxon':taxon,'source_title':str(item.get('title') or occurrence.get('scientificName') or '')[:500],
+                'source_url':gbif_url,'secondary_source_url':media_reference or None,
+                'source_type':'GBIF_OCCURRENCE_MEDIA_PAGE','source_search_term':taxon,
+                'source_search_mode':'GBIF_SCIENTIFIC_NAME_WITH_STILL_IMAGE_FILTER',
+                'source_taxon_name':str(occurrence.get('scientificName') or ''),
+                'source_accepted_taxon_name':str(occurrence.get('acceptedScientificName') or ''),
+                'taxon_match_status':'SPECIES_NAME_MATCH_NOT_USER_APPROVED' if exact else 'GENUS_SPECIES_NAME_VARIANT_REQUIRES_REVIEW',
+                'taxon_authority':'GBIF_OCCURRENCE_NOT_USER_APPROVED',
+                'observation_quality_grade':None,'link_only':True,
+                'redistribution_allowed_by_collector':False,
+                'license_code':'UNKNOWN_PENDING_VERIFICATION',
+                'license_url':source_license or None,
+                'source_license_claim':source_license or 'No licence claim returned in GBIF media metadata',
+                'license_research_status':'GBIF_MEDIA_METADATA_CLAIM_NOT_INDEPENDENTLY_VERIFIED',
+                'research_use_status':'RESEARCH_LINK_AVAILABLE_NOW',
+                'license_version':'UNVERIFIED_SOURCE_CHECK_REQUIRED','attribution':creator,
+                'candidate_warning':warnings,
                 'rights_verdict':'CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED',
                 'review_state':'PENDING','pose_id':'UNREVIEWED',
                 'pose_review_status':'VISUAL_REVIEW_REQUIRED','thumbnail_url':None,
@@ -253,9 +326,14 @@ def discover_all_sources(taxon:str,seen:set[str])->list[dict]:
     results=[];errors=[]
     try:results.extend(discover(taxon,seen))
     except Exception as exc:errors.append('INAT:'+type(exc).__name__)
-    available=max(0,15-len(seen)-len({str(x.get('photo_key')) for x in results if x.get('photo_key')}))
+    used=seen|{str(x.get('photo_key')) for x in results if x.get('photo_key')}
+    available=max(0,15-len(seen)-len(results))
     if available:
-        used=seen|{str(x.get('photo_key')) for x in results if x.get('photo_key')}
+        try:results.extend(discover_gbif(taxon,used,limit=min(12,available)))
+        except Exception as exc:errors.append('GBIF:'+type(exc).__name__)
+    used=seen|{str(x.get('photo_key')) for x in results if x.get('photo_key')}
+    available=max(0,15-len(seen)-len(results))
+    if available:
         try:results.extend(discover_commons(taxon,used,limit=min(12,available)))
         except Exception as exc:errors.append('COMMONS:'+type(exc).__name__)
     if errors and not results:raise ValueError('SOURCE_DISCOVERY_FAILED:'+','.join(errors))
