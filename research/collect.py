@@ -16,6 +16,44 @@ API='https://api.inaturalist.org/v1/observations'
 UA='VNMV1-SPECIMEN-RESEARCH/1.0 (open CC metadata research; public provenance and attribution)'
 
 def sha(data:bytes)->str:return hashlib.sha256(data).hexdigest()
+def merge_seed_with_extension(seed:dict, extension:dict)->dict:
+    """Merge exact accepted taxa into a deterministic block for the next research cycles."""
+    if seed.get('schema')!='VNMV1_PUBLIC_RESEARCH_SPECIES_SEED_V1':
+        raise ValueError('INVALID_SPECIES_SEED')
+    if extension.get('schema')!='VNMV1_PUBLIC_RESEARCH_REFERENCE_EXTENSION_V1':
+        raise ValueError('INVALID_REFERENCE_EXTENSION')
+    base=list(seed.get('species') or [])
+    by_name={str(x.get('name','')).strip().casefold():x for x in base}
+    extension_rows=[]
+    extension_names=set()
+    for row in extension.get('species') or []:
+        if not isinstance(row,dict):
+            raise ValueError('INVALID_EXTENSION_SPECIES')
+        name=str(row.get('name','')).strip()
+        rank=str(row.get('rank','')).upper()
+        key=str(row.get('key','')).strip()
+        if not name or not key or rank not in {'SPECIES','SUBSPECIES'}:
+            raise ValueError('EXTENSION_REQUIRES_EXACT_ACCEPTED_TAXA')
+        normalized=name.casefold()
+        if normalized in extension_names:
+            raise ValueError('DUPLICATE_EXTENSION_TAXON')
+        extension_names.add(normalized)
+        merged=dict(by_name.get(normalized) or {})
+        merged.update(row)
+        merged['name']=name
+        merged['key']=by_name.get(normalized,{}).get('key',key)
+        merged['taxon_status']='RESEARCH_CANDIDATE_UNVERIFIED'
+        extension_rows.append(merged)
+    remaining=[row for row in base if str(row.get('name','')).strip().casefold() not in extension_names]
+    position=extension.get('insert_extension_species_at',len(remaining))
+    if not isinstance(position,int) or position<0:
+        raise ValueError('INVALID_EXTENSION_INSERT_POSITION')
+    position=min(position,len(remaining))
+    combined=remaining[:position]+extension_rows+remaining[position:]
+    if len(combined)!=len({row.get('key') for row in combined}):
+        raise ValueError('DUPLICATE_MERGED_TAXON_KEY')
+    return {**seed,'unique_research_taxa':len(combined),'species':combined}
+
 def choose_species(seed:dict, shard:int,cycle:int,per_worker:int,previous:dict)->list[dict]:
     species=seed['species']
     if seed.get('schema')!='VNMV1_PUBLIC_RESEARCH_SPECIES_SEED_V1' or len(species)!=len({v['key'] for v in species}):raise ValueError('INVALID_SPECIES_SEED')
@@ -183,9 +221,13 @@ def run(seed:dict,index:dict,shard:int,cycle:int,per_worker:int,limit:int,out:Pa
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--seed',type=Path,required=True);p.add_argument('--index',type=Path,required=True)
+    p.add_argument('--extension',type=Path)
     p.add_argument('--shard',type=int,required=True);p.add_argument('--cycle',type=int,required=True)
     p.add_argument('--species-per-worker',type=int,default=4);p.add_argument('--max-photos',type=int,default=12)
     p.add_argument('--out',type=Path,required=True);a=p.parse_args()
     if not 1<=a.max_photos<=18:raise SystemExit('Bad photo limit')
-    run(json.loads(a.seed.read_text()),json.loads(a.index.read_text()),a.shard,a.cycle,a.species_per_worker,a.max_photos,a.out)
+    seed=json.loads(a.seed.read_text())
+    if a.extension:
+        seed=merge_seed_with_extension(seed,json.loads(a.extension.read_text()))
+    run(seed,json.loads(a.index.read_text()),a.shard,a.cycle,a.species_per_worker,a.max_photos,a.out)
 if __name__=='__main__':main()
