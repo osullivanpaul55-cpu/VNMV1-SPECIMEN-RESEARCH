@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>VNMV1 Reference Review</title><style>
-:root{color-scheme:dark;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:#0e1420;color:#e9eef7}*{box-sizing:border-box}body{margin:0;background:linear-gradient(170deg,#0d1728,#101622 55%);min-height:100vh}main{max-width:900px;margin:auto;padding:8px 12px 36px}header{padding:14px 0 16px;border-bottom:1px solid #334257;display:flex;gap:15px;justify-content:space-between;align-items:center;flex-wrap:wrap}h1{font-size:1.4rem;line-height:1.3;margin:0}p{line-height:1.55;color:#aabbcd;margin:.6em 0}.muted{font-size:.9rem;color:#9dabbe}.stats{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}.stat{background:#1b283b;border:1px solid #314156;border-radius:12px;padding:11px;min-width:130px}.stat b{display:block;font-size:1.3rem;color:#f9fafc}.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:18px 0}input,select,button{font:inherit}input[type=search]{flex:1;min-width:170px}input[type=search],select{background:#1c2737;border:1px solid #536079;padding:10px;border-radius:9px;color:#f4f6fb}button,.upload{border-radius:9px;background:#315980;border:1px solid #658db1;color:white;padding:10px 13px;font-weight:600;cursor:pointer}button:disabled{opacity:.5;cursor:not-allowed}.secondary{background:#212f42}.species{border:1px solid #354457;background:#162031;border-radius:14px;padding:14px;margin:16px 0}h2{font-size:1.1rem;margin:0 0 8px}.specdetails{font-size:.85rem;color:#9ab0c7;margin:3px 0 14px}.photos{display:flex;flex-direction:column;gap:16px}.photo{border:1px solid #3d4d61;border-radius:11px;overflow:hidden;background:#1b2a3b}.photo img{width:100%;aspect-ratio:4/3;object-fit:contain;background:#0a1019}.photo .info{padding:11px} .photo .review-status{border-left:2px solid #789abd;padding-left:8px;margin-top:6px;color:#cbe1f7}.photo small{display:block;margin:5px 0;color:#c5d1e0;overflow-wrap:anywhere}.photo a{color:#99ccff}label{display:block;font-size:.86rem;margin:9px 0 4px;color:#d0d9e4}label.check{display:flex;gap:7px;align-items:flex-start}.photo select{width:100%}.photo textarea{width:100%;resize:vertical;min-height:62px;border-radius:8px;border:1px solid #576985;background:#182237;color:white;padding:7px}.note{padding:12px 14px;border-left:3px solid #789abd;background:#1a293c;margin:16px 0}.toplink{font-size:.85rem;color:#a8d0ff}.empty{text-align:center;padding:35px 14px;color:#a7b7c9;border:1px dashed #435269;border-radius:11px}.sticky{position:sticky;bottom:0;background:#111b29f2;border-top:1px solid #405169;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 16px;margin:0 -14px -90px;z-index:3}.sticky>div{min-width:0;flex:1}.sticky small{display:block;color:#afc1d4;line-height:1.3;overflow-wrap:anywhere}.sticky button{flex-shrink:0}#notification{color:#d8e6f8;font-size:.9rem}button.reject-action{width:100%;margin-top:10px;background:#743039;border:1px solid #ba6772;color:white}.navstrip{display:flex;align-items:center;justify-content:space-between;gap:8px;background:#1a293c;border:1px solid #3c5370;border-radius:12px;padding:6px; margin:6px 0;position:sticky;top:0;z-index:4}
+:root{color-scheme:dark;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;background:#0e1420;color:#e9eef7}*{box-sizing:border-box}body{margin:0;background:linear-gradient(170deg,#0d1728,#101622 55%);min-height:100vh}main{max-width:900px;margin:auto;padding:8px 12px 124px}header{padding:14px 0 16px;border-bottom:1px solid #334257;display:flex;gap:15px;justify-content:space-between;align-items:center;flex-wrap:wrap}h1{font-size:1.4rem;line-height:1.3;margin:0}p{line-height:1.55;color:#aabbcd;margin:.6em 0}.muted{font-size:.9rem;color:#9dabbe}.stats{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0}.stat{background:#1b283b;border:1px solid #314156;border-radius:12px;padding:11px;min-width:130px}.stat b{display:block;font-size:1.3rem;color:#f9fafc}.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:18px 0}input,select,button{font:inherit}input[type=search]{flex:1;min-width:170px}input[type=search],select{background:#1c2737;border:1px solid #536079;padding:10px;border-radius:9px;color:#f4f6fb}button,.upload{border-radius:9px;background:#315980;border:1px solid #658db1;color:white;padding:10px 13px;font-weight:600;cursor:pointer}button:disabled{opacity:.5;cursor:not-allowed}.secondary{background:#212f42}.species{border:1px solid #354457;background:#162031;border-radius:14px;padding:14px;margin:16px 0}h2{font-size:1.1rem;margin:0 0 8px}.specdetails{font-size:.85rem;color:#9ab0c7;margin:3px 0 14px}.photos{display:flex;flex-direction:column;gap:16px}.photo{border:1px solid #3d4d61;border-radius:11px;overflow:hidden;background:#1b2a3b}.photo img{width:100%;aspect-ratio:4/3;object-fit:contain;background:#0a1019}.photo .info{padding:11px} .photo .review-status{border-left:2px solid #789abd;padding-left:8px;margin-top:6px;color:#cbe1f7}.photo small{display:block;margin:5px 0;color:#c5d1e0;overflow-wrap:anywhere}.photo a{color:#99ccff}label{display:block;font-size:.86rem;margin:9px 0 4px;color:#d0d9e4}label.check{display:flex;gap:7px;align-items:flex-start}.photo select{width:100%}.photo textarea{width:100%;resize:vertical;min-height:62px;border-radius:8px;border:1px solid #576985;background:#182237;color:white;padding:7px}.note{padding:12px 14px;border-left:3px solid #789abd;background:#1a293c;margin:16px 0}.toplink{font-size:.85rem;color:#a8d0ff}.empty{text-align:center;padding:35px 14px;color:#a7b7c9;border:1px dashed #435269;border-radius:11px}.sticky{position:sticky;bottom:0;background:#111b29f2;border-top:1px solid #405169;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 16px;margin:0 -14px -90px;z-index:3}.sticky>div{min-width:0;flex:1}.sticky small{display:block;color:#afc1d4;line-height:1.3;overflow-wrap:anywhere}.sticky button{flex-shrink:0}#notification{color:#d8e6f8;font-size:.9rem}button.reject-action{width:100%;margin-top:10px;background:#743039;border:1px solid #ba6772;color:white}.navstrip{display:flex;align-items:center;justify-content:space-between;gap:8px;background:#1a293c;border:1px solid #3c5370;border-radius:12px;padding:6px; margin:6px 0;position:sticky;top:0;z-index:4}
 .navstrip button{padding:8px 9px;min-width:70px}.navstrip strong{font-size:.95rem;line-height:1.25;text-align:center;flex:1}
 .navstrip{flex-wrap:wrap}
 .card-jump{flex:0 0 100%;display:flex;align-items:center;justify-content:center;gap:8px;padding:2px 0 1px}.card-jump label{display:inline;margin:0;font-size:.78rem;white-space:nowrap}.card-jump input{width:78px;min-height:40px;padding:7px 8px;border-radius:8px;border:1px solid #536079;background:#1c2737;color:#f4f6fb}.card-jump button{padding:7px 12px;min-width:52px}
@@ -27,8 +27,13 @@
 .photo-source[open],.research-options[open],.advanced-review[open],.ai-extra[open],.reject-detail[open]{padding-bottom:8px}
 .photo .info>label{font-size:.84rem;margin-top:8px}.photo .info>small{font-size:.78rem;margin:4px 0;color:#acc1d5}.photo .compact-ai{font-size:.79rem;color:#c6def9;margin:5px 0}
 .photo select{padding:10px 8px;min-height:44px}.photo textarea{min-height:52px}
-.quick-save{display:flex;align-items:center;justify-content:space-between;gap:9px;padding:6px 0;font-size:.73rem;color:#aabed4}
-.quick-save button{font-size:.82rem;padding:8px 10px;white-space:nowrap}
+.quick-save{position:fixed;z-index:850;left:50%;bottom:calc(12px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:min(560px,calc(100vw - 20px));display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 10px;font-size:.73rem;color:#aabed4;background:rgba(20,32,48,.97);border:1px solid #45617d;border-radius:14px;box-shadow:0 8px 25px rgba(0,0,0,.48);backdrop-filter:blur(8px)}
+.quick-save>span{flex:1;min-width:0;line-height:1.25}
+.quick-save small{display:block;font-size:.68rem;white-space:normal}
+.quick-save button{font-size:.82rem;padding:9px 12px;min-height:44px;white-space:nowrap}
+.photo-review-details{margin:7px 0;border:1px solid #394d65;border-radius:9px;background:#142235;padding:0 9px}
+.photo-review-details>summary{cursor:pointer;padding:9px 7px;border-radius:7px;font-weight:650}
+.photo-review-body{padding:2px 0 8px}
 
 #notification:empty{display:none}
 @media(max-width:600px){.species{border:0;background:transparent;padding:2px;margin:3px 0 10px}.photo img{aspect-ratio:4/3}.photo .info{padding:10px}}
@@ -48,7 +53,7 @@
 <body><main>
 <details id="reviewSettings" class="review-settings"><summary>VNMV1 Reference Review <span>Tools & progress ▾</span></summary>
 <header><div><h1>VNMV1 · Specimen reference review</h1><p class="muted">Independent photo research • one species pool • human-reviewed decisions · <a href="../data/species_coverage.csv">Download per-species coverage</a></p></div><div class="muted">Candidate references only · No image generation</div></header>
-<div class="note"><strong>Quick review:</strong> select sex, pose, notes or Reject for each photograph. Your notes and Resembles assessment save on the phone automatically. Swipe horizontally to change species; scroll downward through photos for that species. References and available text-based suggestions are preselected for retention. Correct our proposals where necessary. <strong>Photo coverage:</strong> aim for at least 9 distinct individual photo/source records per named taxon where available; target 12, preferably 12–15. The under-9 filter counts individual photo records and individual source-photo leads, but not search pages or duplicates. A documented source shortage stays visible for research. User review can establish card identity only at the taxonomic rank supported by the photo; sex/stage and photo-use rights remain separate.</div>
+<div class="note"><strong>Quick review:</strong> select sex, pose, notes or Reject for each photograph. Your notes and Resembles assessment save on the phone automatically. Use Previous/Next or Card # to change species; scroll downward through photos for that species. References and available text-based suggestions are preselected for retention. Correct our proposals where necessary. <strong>Photo coverage:</strong> aim for at least 9 distinct individual photo/source records per named taxon where available; target 12, preferably 12–15. The under-9 filter counts individual photo records and individual source-photo leads, but not search pages or duplicates. A documented source shortage stays visible for research. User review can establish card identity only at the taxonomic rank supported by the photo; sex/stage and photo-use rights remain separate.</div>
 <section class="stats" aria-label="Research counts"><div class="stat"><b id="speciesCount">0</b><span>Review entries</span></div><div class="stat"><b id="candidateCount">0</b><span>Photo candidates</span></div><div class="stat"><b id="sourceLeadCount">0</b><span>Research-only photo links</span></div><div class="stat"><b id="decisionCount">0</b><span>Decisions entered</span></div><div class="stat"><b id="aiDraftCount">0</b><span>AI draft reviews</span></div><div class="stat"><b id="floorCount">0</b><span>Species with 9+ photo references</span></div></section>
 <div class="controls"><input id="filter" type="search" placeholder="Find a card number or taxon…" aria-label="Filter cards and taxa"><select id="statusFilter" aria-label="Filter research state"><option value="all" selected>All cards and taxon candidates</option><option value="photos">With photographs or research links</option><option value="under">Fewer than 9 photo references</option><option value="decided">My reviewed photographs</option></select><button class="secondary" id="reload">Refresh public index</button></div>
 <div class="controls"><label class="upload" for="reviewUpload">Import saved review JSON</label><input id="reviewUpload" type="file" accept="application/json,.json"><button class="secondary" id="openHelp" type="button">Where do I save?</button></div>
@@ -58,8 +63,8 @@
 <div id="notification" role="status" aria-live="polite"></div>
 </details>
 <nav id="speciesNav" class="navstrip" aria-label="Specimen navigation"><button id="prevSpecies" type="button">◀ Previous</button><strong id="speciesPosition">Specimen 0/0</strong><button id="nextSpecies" type="button">Next ▶</button><div class="card-jump"><label for="cardJump">Card #</label><input id="cardJump" type="number" min="1" step="1" inputmode="numeric" placeholder="12" aria-label="Card number, for example 12"><button id="jumpToCard" type="button">Go</button></div></nav>
-<div class="quick-save"><span>Autosave to this phone · tap to upload a dated JSON backup<br><small id="saveState" role="status" aria-live="polite">Loading saved reviews…</small></span><button id="saveQuick" type="button">Save JSON to Drive</button></div>
-<div class="mobile-tips">Swipe ← → to change species · Opens at Photo 1 · Scroll ↓ for the next photograph</div>
+<div class="quick-save"><span>Autosave on this phone<br><small id="saveState" role="status" aria-live="polite">Loading saved reviews…</small></span><button id="saveQuick" type="button">Save JSON to Drive</button></div>
+<div class="mobile-tips">Use Previous / Next or Card # to change species · Scroll down for the next photograph</div>
 <div class="review-legend"><span class="review-green">Green: checked and resolved</span><span class="review-red">Red: suggested, unknown or still needs review</span></div>
 <p id="scopeNote" class="muted"></p>
 <div id="results"></div>
@@ -342,6 +347,26 @@ function photoReferenceCount(spec){
 }
 const REVIEW_DOCTRINE='VNMV1_UNIFIED_REFERENCE_REVIEW_DOCTRINE_V1';
 const LIFE_STAGES=['UNKNOWN','MATURE_MALE','ADULT_FEMALE_MATURE','ADULT_FEMALE_YOUNGER','JUVENILE_SPIDERLING'];
+const SPECIMEN_TYPE_OPTIONS=[
+ {id:'UNKNOWN',label:'Uncertain / not classified',sex:'UNKNOWN',life_stage:'UNKNOWN'},
+ {id:'MATURE_MALE',label:'Mature male',sex:'MATURE_MALE',life_stage:'MATURE_MALE'},
+ {id:'ADULT_FEMALE_FRESH',label:'Adult female · fresh — shiny, smaller abdomen',sex:'FEMALE',life_stage:'ADULT_FEMALE_YOUNGER'},
+ {id:'ADULT_FEMALE_OLD',label:'Adult female · old — duller, fuller abdomen',sex:'FEMALE',life_stage:'ADULT_FEMALE_MATURE'},
+ {id:'JUVENILE',label:'Juvenile',sex:'JUVENILE_SUBADULT',life_stage:'JUVENILE_SPIDERLING'},
+ {id:'SPIDERLING',label:'Spiderling',sex:'JUVENILE_SUBADULT',life_stage:'JUVENILE_SPIDERLING'}
+];
+function reviewSpecimenType(record,suggestion){
+ const saved=record?.specimen_type;
+ if(SPECIMEN_TYPE_OPTIONS.some(item=>item.id===saved))return saved;
+ const sex=record?.sex&&record.sex!=='UNKNOWN'?record.sex:(suggestion?.sex||'UNKNOWN');
+ const stage=record?.life_stage&&record.life_stage!=='UNKNOWN'?record.life_stage:(suggestion?.life_stage||'UNKNOWN');
+ if(sex==='MATURE_MALE'||stage==='MATURE_MALE')return 'MATURE_MALE';
+ if(sex==='FEMALE'&&stage==='ADULT_FEMALE_YOUNGER')return 'ADULT_FEMALE_FRESH';
+ if(sex==='FEMALE'&&stage==='ADULT_FEMALE_MATURE')return 'ADULT_FEMALE_OLD';
+ if(sex==='JUVENILE_SUBADULT'||stage==='JUVENILE_SPIDERLING')return 'JUVENILE';
+ return 'UNKNOWN';
+}
+function specimenTypeFields(id){return SPECIMEN_TYPE_OPTIONS.find(item=>item.id===id)||SPECIMEN_TYPE_OPTIONS[0]}
 const SUITABILITY=new Set(['PENDING','ACCEPT_REFERENCE','STRUCTURAL_ONLY','HABITAT_ONLY','NEEDS_RESEARCH','REJECT']);
 const RESEMBLES=[['NOT_ASSESSED','Not assessed yet'],['STRONGLY','Strongly resembles my card original'],['PARTLY','Partly resembles my card original'],['POORLY','Little resemblance'],['DOES_NOT_RESEMBLE','Does not resemble my specimen'],['NO_ORIGINAL_AVAILABLE','Cannot compare — original not visible']];
 function suggestions(p){
@@ -410,51 +435,56 @@ function leadCard(p){
   article.append(image,fallback);
  }
  const info=create('div',undefined,'info');
- info.append(create('strong','Research-only source '+String(p.photo_key||'')));
- info.append(create('small','Original image is not copied into GitHub or APK · Licence: '+(p.license_code||'UNKNOWN')));
- info.append(create('small',preview?'Source-hosted preview shown for inspection; this does not approve reuse or ImageGen.':'No direct image URL is available here; inspect the linked source page.'));
- info.append(create('small','Source: '+(p.attribution||'Photographer unconfirmed')));
+ const confidence=String(sug.confidence||'UNKNOWN').toUpperCase();
+ const hasBoundVisual=!!p.sha256&&p.preanalysis?.reviewed_actual_image===true&&p.preanalysis?.source_image_sha256===p.sha256;
+ const highConfidence=['HIGH','VERY_HIGH'].includes(confidence)&&hasBoundVisual;
+ const greenReview=d?.reviewed_by_human===true&&d?.human_visual_confirmation===true&&Array.isArray(d.reviewed_fields)&&d.reviewed_fields.length>0&&d.pose_id&&d.pose_id!=='UNREVIEWED'&&reviewSpecimenType(d,sug)!=='UNKNOWN';
+ const reviewDetails=create('details',undefined,'photo-review-details');reviewDetails.open=!(highConfidence||greenReview);
+ const reviewSummary=create('summary',highConfidence?'High-confidence visual draft · expand to inspect':greenReview?'Human-reviewed · green · expand to inspect':'Needs review · '+confidence.toLowerCase()+' confidence');
+ reviewFieldTint(reviewSummary,highConfidence||greenReview);
+ const reviewBody=create('div',undefined,'photo-review-body');
+ reviewDetails.append(reviewSummary,reviewBody);
+ info.append(create('strong','Research-only source '+String(p.photo_key||'')),reviewDetails);
+ reviewBody.append(create('small','Original image is not copied into GitHub or APK · Licence: '+(p.license_code||'UNKNOWN')));
+ reviewBody.append(create('small',preview?'Source-hosted preview shown for inspection; this does not approve reuse or ImageGen.':'No direct image URL is available here; inspect the linked source page.'));
+ reviewBody.append(create('small','Source: '+(p.attribution||'Photographer unconfirmed')));
  const link=safeReferenceUrl(p.source_url);
  if(link){const a=create('a','OPEN ORIGINAL PHOTOGRAPH — inspect the source page');
-   a.href=link;a.target='_blank';a.rel='noopener noreferrer';info.append(a)}
+   a.href=link;a.target='_blank';a.rel='noopener noreferrer';reviewBody.append(a)}
  const related=safeReferenceUrl(p.secondary_source_url);
  if(related&&related!==link){const b=create('a','OPEN UNDERLYING PHOTO SOURCE');
-   b.href=related;b.target='_blank';b.rel='noopener noreferrer';info.append(b)}
- if(p.source_title)info.append(create('small','File page: '+p.source_title));
- if(p.source_license_claim)info.append(create('small','Intake licence claim: '+p.source_license_claim+' · not independently verified.'));
- if(Array.isArray(p.candidate_warning))for(const warning of p.candidate_warning)info.append(create('small','Review flag: '+warning));
+   b.href=related;b.target='_blank';b.rel='noopener noreferrer';reviewBody.append(b)}
+ if(p.source_title)reviewBody.append(create('small','File page: '+p.source_title));
+ if(p.source_license_claim)reviewBody.append(create('small','Intake licence claim: '+p.source_license_claim+' · not independently verified.'));
+ if(Array.isArray(p.candidate_warning))for(const warning of p.candidate_warning)reviewBody.append(create('small','Review flag: '+warning));
  const gradeNote=p.observation_quality_grade?' · Observation grade: '+p.observation_quality_grade+'; community status is a discovery clue, not taxonomic approval':'';
- info.append(create('small','Species: '+(spec?.scientific_name||'UNRESOLVED')+' · Source type: '+(p.source_type||'LINK_ONLY')+gradeNote+' · Rights and photo identity remain pending your review.'));
- info.append(create('small','Text-only pose clues: '+(p.unverified_observer_text_pose_hints||[]).join(', ')+'; behaviour clues: '+(p.unverified_observer_behaviour_hints||[]).join(', ')));
+ reviewBody.append(create('small','Species: '+(spec?.scientific_name||'UNRESOLVED')+' · Source type: '+(p.source_type||'LINK_ONLY')+gradeNote+' · Rights and photo identity remain pending your review.'));
+ reviewBody.append(create('small','Text-only pose clues: '+(p.unverified_observer_text_pose_hints||[]).join(', ')+'; behaviour clues: '+(p.unverified_observer_behaviour_hints||[]).join(', ')));
  const checkLabel=create('label',undefined,'check');const check=create('input');check.type='checkbox';check.checked=d.keep_research_candidate!==false;
- checkLabel.append(check,create('span','Keep this source link · preselected'));info.append(checkLabel);
+ checkLabel.append(check,create('span','Keep this source link · preselected'));reviewBody.append(checkLabel);
  const suggestLabel=create('label',undefined,'check');const suggestCheck=create('input');suggestCheck.type='checkbox';suggestCheck.checked=d.retain_suggested_classifications!==false;
- suggestLabel.append(suggestCheck,create('span','Retain research suggestions · preselected'));info.append(suggestLabel);
- info.append(create('small','Evidence: '+sug.basis+' · No visual preanalysis is supplied for this source-linked photo. Inspect the inline preview or open the source before editing.'));
- info.append(create('label','Pose suggestion (correct after viewing source)'));
+ suggestLabel.append(suggestCheck,create('span','Retain research suggestions · preselected'));reviewBody.append(suggestLabel);
+ reviewBody.append(create('small','Evidence: '+sug.basis+' · No visual preanalysis is supplied for this source-linked photo. Inspect the inline preview or open the source before editing.'));
+ reviewBody.append(create('label','Pose suggestion (correct after viewing source)'));
  const pose=create('select');for(const [v,label] of POSES){const opt=create('option',label);opt.value=v;pose.append(opt)}
- pose.value=d.pose_id&&d.pose_id!=='UNREVIEWED'?d.pose_id:sug.pose;info.append(pose);
- info.append(create('label','Life-stage suggestion'));
- const stage=create('select');for(const v of LIFE_STAGES){const opt=create('option',v.replaceAll('_',' '));opt.value=v;stage.append(opt)}
- stage.value=d.life_stage&&d.life_stage!=='UNKNOWN'?d.life_stage:sug.life_stage;info.append(stage);
- info.append(create('label','Sex classification'));
- const sex=create('select');for(const [v,label] of [['UNKNOWN','Unknown / not assessed'],['FEMALE','Female'],['MATURE_MALE','Mature male'],['JUVENILE_SUBADULT','Juvenile / subadult']]){
-   const opt=create('option',label);opt.value=v;sex.append(opt)}
- sex.value=d.sex&&d.sex!=='UNKNOWN'?d.sex:sug.sex;info.append(sex);
- info.append(create('label','Resembles my card original? (compare the photographs first)'));
+ pose.value=d.pose_id&&d.pose_id!=='UNREVIEWED'?d.pose_id:sug.pose;reviewBody.append(pose);
+ reviewBody.append(create('label','Specimen type — choose one'));
+ const specimenType=create('select');for(const item of SPECIMEN_TYPE_OPTIONS){const opt=create('option',item.label);opt.value=item.id;specimenType.append(opt)}
+ specimenType.value=reviewSpecimenType(d,sug);reviewBody.append(specimenType);
+ reviewBody.append(create('label','Resembles my card original? (compare the photographs first)'));
  const resembles=create('select');for(const [v,label] of RESEMBLES){const opt=create('option',label);opt.value=v;resembles.append(opt)}
- resembles.value=d.resembles_original||'NOT_ASSESSED';info.append(resembles);
- info.append(create('label','Resemblance notes / differences'));
- const resemblesNotes=create('textarea');resemblesNotes.value=d.resembles_notes||'';resemblesNotes.placeholder='Colour, eyes, hairs, sex, size, body proportions compared with my original';info.append(resemblesNotes);
- info.append(create('small','Resemblance is a personal appearance comparison, not proof of species, sex or licence.'));
- info.append(create('label','Behaviour suggestions (comma separated)'));
- const behavior=create('textarea');behavior.value=Array.isArray(d.behaviours)?d.behaviours.join(', '):sug.behaviour.join(', ');info.append(behavior);
- info.append(create('label','Visible anatomy (comma separated)'));
- const anatomy=create('textarea');anatomy.value=Array.isArray(d.visible_anatomy)?d.visible_anatomy.join(', '):sug.anatomy.join(', ');info.append(anatomy);
- info.append(create('label','Corrections and source notes'));
- const notes=create('textarea');notes.value=d.notes||'';info.append(notes);
+ resembles.value=d.resembles_original||'NOT_ASSESSED';reviewBody.append(resembles);
+ reviewBody.append(create('label','Resemblance notes / differences'));
+ const resemblesNotes=create('textarea');resemblesNotes.value=d.resembles_notes||'';resemblesNotes.placeholder='Colour, eyes, hairs, sex, size, body proportions compared with my original';reviewBody.append(resemblesNotes);
+ reviewBody.append(create('small','Resemblance is a personal appearance comparison, not proof of species, sex or licence.'));
+ reviewBody.append(create('label','Behaviour suggestions (comma separated)'));
+ const behavior=create('textarea');behavior.value=Array.isArray(d.behaviours)?d.behaviours.join(', '):sug.behaviour.join(', ');reviewBody.append(behavior);
+ reviewBody.append(create('label','Visible anatomy (comma separated)'));
+ const anatomy=create('textarea');anatomy.value=Array.isArray(d.visible_anatomy)?d.visible_anatomy.join(', '):sug.anatomy.join(', ');reviewBody.append(anatomy);
+ reviewBody.append(create('label','Corrections and source notes'));
+ const notes=create('textarea');notes.value=d.notes||'';reviewBody.append(notes);
  const lookedLabel=create('label',undefined,'check');const looked=create('input');looked.type='checkbox';looked.checked=d.human_visual_confirmation===true;
- lookedLabel.append(looked,create('span','I inspected the actual photograph on its original website or in the inline source preview'));info.append(lookedLabel);
+ lookedLabel.append(looked,create('span','I inspected the actual photograph on its original website or in the inline source preview'));reviewBody.append(lookedLabel);
  const toTags=v=>[...new Set(v.split(',').map(x=>x.trim().toUpperCase().replace(/[^A-Z0-9_]/g,'_')).filter(x=>/^[A-Z0-9_]{3,80}$/.test(x)))].slice(0,56);
  const touched=new Set(Array.isArray(d.reviewed_fields)?d.reviewed_fields:[]);
  const updateColours=()=>{
@@ -462,8 +492,8 @@ function leadCard(p){
   const tint=(el,field,ok,required=true)=>reviewFieldTint(el,
     touched.has(field)&&ok&&actual,required);
   tint(pose,'pose_id',pose.value!=='UNREVIEWED');
-  tint(stage,'life_stage',stage.value!=='UNKNOWN');
-  tint(sex,'sex',sex.value!=='UNKNOWN');
+  const typeReviewed=touched.has('specimen_type')||(touched.has('sex')&&touched.has('life_stage'));
+  reviewFieldTint(specimenType,typeReviewed&&specimenType.value!=='UNKNOWN'&&actual);
   tint(resembles,'resembles_original',resembles.value!=='NOT_ASSESSED');
   tint(resemblesNotes,'resembles_notes',resemblesNotes.value.trim().length>0,false);
   tint(behavior,'behaviours',behavior.value.trim().length>0,false);
@@ -472,8 +502,14 @@ function leadCard(p){
   reviewFieldTint(lookedLabel,actual);
   reviewFieldTint(checkLabel,actual&&touched.has('keep_research_candidate'));
   reviewFieldTint(suggestLabel,actual&&touched.has('retain_suggested_classifications'));
+  const current=decisions[p.photo_key]||d;
+  const green=current?.reviewed_by_human===true&&current?.human_visual_confirmation===true&&Array.isArray(current.reviewed_fields)&&current.reviewed_fields.length>0&&current.pose_id&&current.pose_id!=='UNREVIEWED'&&reviewSpecimenType(current,sug)!=='UNKNOWN';
+  reviewSummary.textContent=highConfidence?'High-confidence visual draft · expand to inspect':green?'Human-reviewed · green · expand to inspect':'Needs review · '+confidence.toLowerCase()+' confidence';
+  reviewFieldTint(reviewSummary,highConfidence||green);
+  if(highConfidence||green)reviewDetails.open=false;
  };
  const update=()=>{
+  const specimenDetails=specimenTypeFields(specimenType.value);
   decisions[p.photo_key]={...d,photo_key:p.photo_key,
    scientific_name:spec?.scientific_name||'UNRESOLVED',
    source_url:p.source_url,photographer_attribution:p.attribution,licence_code:p.license_code||'UNKNOWN',
@@ -484,7 +520,7 @@ function leadCard(p){
    recommended_behaviours:sug.behaviour,recommended_visible_anatomy:sug.anatomy,
    recommendation_basis:sug.basis,recommendation_confidence:sug.confidence,
    pose_id:pose.value,pose_review_status:looked.checked?'HUMAN_LABEL_NOT_INDEPENDENTLY_PROMOTED':'UNVERIFIED_NOT_VISUALLY_REVIEWED',
-   sex:sex.value,life_stage:stage.value,resembles_original:resembles.value,resembles_notes:resemblesNotes.value,behaviours:toTags(behavior.value),visible_anatomy:toTags(anatomy.value),
+   specimen_type:specimenType.value,sex:specimenDetails.sex,life_stage:specimenDetails.life_stage,resembles_original:resembles.value,resembles_notes:resemblesNotes.value,behaviours:toTags(behavior.value),visible_anatomy:toTags(anatomy.value),
    notes:notes.value,decision:'PENDING',requested_decision:'PENDING',
    species_verified:false,rights_checked:false,approved_for_imagegen:false,
    review_gate:'RESEARCH_LINK_ONLY_NOT_PRODUCTION_APPROVED'};
@@ -499,13 +535,17 @@ function leadCard(p){
   });
  };
  const controls=[[check,'keep_research_candidate'],[suggestCheck,'retain_suggested_classifications'],
-  [pose,'pose_id'],[stage,'life_stage'],[sex,'sex'],[looked,'human_visual_confirmation'],
+  [pose,'pose_id'],[specimenType,'specimen_type'],[looked,'human_visual_confirmation'],
   [behavior,'behaviours'],[anatomy,'visible_anatomy'],[resembles,'resembles_original']];
- for(const [el,key] of controls)el.addEventListener('change',()=>{touched.add(key);update()});
+ for(const [el,key] of controls)el.addEventListener('change',()=>{
+  touched.add(key);
+  if(el===specimenType){touched.add('sex');touched.add('life_stage')}
+  update()
+ });
  notes.addEventListener('input',()=>{touched.add('notes');update()});
  resemblesNotes.addEventListener('input',()=>{touched.add('resembles_notes');update()});
  updateColours();
- info.append(create('small','No licence, identity, anatomical or ImageGen approval is implied by selecting a proposal.'));
+ reviewBody.append(create('small','No licence, identity, anatomical or ImageGen approval is implied by selecting a proposal.'));
  article.append(info);return article;
 }
 function generatedSearches(name){
@@ -698,7 +738,18 @@ function reviewIsEntered(d){return !!d&&(!d.proposal_prepopulated_not_human_revi
 function reviewDecisionChoice(d){return d.requested_decision || (d.decision==='ACCEPT_FEMALE'||d.decision==='ACCEPT_MALE'?'ACCEPT_REFERENCE':d.decision)||'PENDING'}
 function reviewSex(d){return d.sex || (d.decision==='ACCEPT_FEMALE'?'FEMALE':d.decision==='ACCEPT_MALE'?'MATURE_MALE':'UNKNOWN')}
 function imageCard(spec,p){const key=p.photo_key;if(typeof key!=='string'||!/^inat:\d+$/.test(key))return create('div','Invalid photo entry','photo');const d=decisions[key]||seedProposal(spec,p,false);const sug=suggestions(p);const box=create('article',undefined,'photo');const src=imgUrl(p.thumbnail_url);if(src){const im=create('img');im.loading='lazy';im.src=src;im.alt='Reference photo for '+spec.scientific_name;im.className='tap-zoom';im.title='Tap to pinch-zoom';im.addEventListener('click',()=>openPhotoZoom(src,key+' · '+spec.scientific_name));box.append(im)}
-const info=create('div',undefined,'info');info.append(create('strong','Photo '+key));
+const info=create('div',undefined,'info');
+const confidence=String(sug.confidence||'UNKNOWN').toUpperCase();
+const hasBoundVisual=!!p.sha256&&p.preanalysis?.reviewed_actual_image===true&&p.preanalysis?.source_image_sha256===p.sha256;
+const highConfidence=['HIGH','VERY_HIGH'].includes(confidence)&&hasBoundVisual;
+const reviewSpecimen=reviewSpecimenType(d,sug);
+const greenReview=d?.reviewed_by_human===true&&d?.photo_visual_fields_confirmed===true&&reviewSpecimen!=='UNKNOWN'&&d.pose_id&&d.pose_id!=='UNREVIEWED'&&d.decision&&d.decision!=='PENDING';
+const reviewDetails=create('details',undefined,'photo-review-details');reviewDetails.open=!(highConfidence||greenReview);
+const reviewSummary=create('summary',highConfidence?'High-confidence visual draft · expand to inspect':greenReview?'Human-reviewed · green · expand to inspect':'Needs review · '+confidence.toLowerCase()+' confidence');
+reviewFieldTint(reviewSummary,highConfidence||greenReview);
+const reviewBody=create('div',undefined,'photo-review-body');
+reviewDetails.append(reviewSummary,reviewBody);
+info.append(create('strong','Photo '+key),reviewDetails);
 const sourceDetails=create('details');sourceDetails.className='photo-source';
 sourceDetails.append(create('summary','Source, photographer, licence & photo details ▾'));
 sourceDetails.append(create('small',p.attribution||'Photographer unknown'));
@@ -720,50 +771,44 @@ const provenance=create('div',
 reviewFieldTint(provenance,!!p.sha256&&p.preanalysis?.source_image_sha256===p.sha256&&
  p.preanalysis?.reviewed_actual_image===true &&
  ['MEDIUM','HIGH','VERY_HIGH'].includes(String(sug.confidence||'').toUpperCase()));
-info.append(provenance);
-info.append(create('div','AI: '+sug.pose.replaceAll('_',' ').toLowerCase()+
+reviewBody.append(provenance);
+reviewBody.append(create('div','AI: '+sug.pose.replaceAll('_',' ').toLowerCase()+
  ' · sex '+sug.sex.replaceAll('_',' ').toLowerCase()+' · '+sug.confidence.toLowerCase()+' confidence','compact-ai'));
-if(sug.visible_note){const aiNotes=create('details');aiNotes.className='ai-extra';aiNotes.append(create('summary','AI visual observations ▾'));aiNotes.append(create('small',sug.visible_note));info.append(aiNotes)}
+if(sug.visible_note){const aiNotes=create('details');aiNotes.className='ai-extra';aiNotes.append(create('summary','AI visual observations ▾'));aiNotes.append(create('small',sug.visible_note));reviewBody.append(aiNotes)}
 const link=safeUrl(p.source_url,'www.inaturalist.org');if(link){const a=create('a','View original iNaturalist record');a.href=link;a.target='_blank';a.rel='noopener noreferrer';sourceDetails.append(a)}
-info.append(sourceDetails);info.append(researchOptions);
+reviewBody.append(sourceDetails);reviewBody.append(researchOptions);
 // The archive ZIP is NOT a review JSON or installable APK. Keep it out of the mobile review controls.
-info.append(create('label','Sex or maturity — save independently of approval'));
-const sexSelect=create('select');
-for(const [value,title] of [['UNKNOWN','Uncertain / not classified'],['FEMALE','Female'],['MATURE_MALE','Mature male'],['JUVENILE_SUBADULT','Juvenile / subadult']]){const opt=create('option',title);opt.value=value;sexSelect.append(opt)}
-sexSelect.value=reviewSex(d)!=='UNKNOWN'?reviewSex(d):sug.sex;info.append(sexSelect);
+reviewBody.append(create('label','Specimen type — choose one'));
+const specimenType=create('select');
+for(const item of SPECIMEN_TYPE_OPTIONS){const opt=create('option',item.label);opt.value=item.id;specimenType.append(opt)}
+specimenType.value=reviewSpecimen;reviewBody.append(specimenType);
 
-
-
-
-info.append(create('label','Resembles my card original?'));
+reviewBody.append(create('label','Resembles my card original?'));
 const resembles=create('select');for(const [id,label] of RESEMBLES){const o=create('option',label);o.value=id;resembles.append(o)}
-resembles.value=d.resembles_original||'NOT_ASSESSED';info.append(resembles);
+resembles.value=d.resembles_original||'NOT_ASSESSED';reviewBody.append(resembles);
 const resemblesNotes=create('textarea');resemblesNotes.rows=2;resemblesNotes.value=d.resembles_notes||'';resemblesNotes.placeholder='Visual similarities and differences: colour, proportions, markings, eyes, hairs…';
-info.append(create('label','Resemblance notes (editable)'));info.append(resemblesNotes);
+reviewBody.append(create('label','Resemblance notes (editable)'));reviewBody.append(resemblesNotes);
 
-info.append(create('label','Photo suitability — AI recommendation, editable'));
-if(sug.recommended_suitability!=='PENDING')info.append(create('small','Preselected: '+sug.recommended_suitability.replaceAll('_',' ').toLowerCase()+' · not yet approved.'));
+reviewBody.append(create('label','Photo suitability — AI recommendation, editable'));
+if(sug.recommended_suitability!=='PENDING')reviewBody.append(create('small','Preselected: '+sug.recommended_suitability.replaceAll('_',' ').toLowerCase()+' · not yet approved.'));
 const select=create('select');
 for(const [value,title] of [['PENDING','Pending'],['ACCEPT_REFERENCE','Suitable reference — request approval'],['STRUCTURAL_ONLY','General anatomy / structural only'],['HABITAT_ONLY','Habitat / silk structure only — no specimen anatomy'],['NEEDS_RESEARCH','Needs more research'],['REJECT','Reject']]){const opt=create('option',title);opt.value=value;select.append(opt)}
 const isUntouchedAI=d.proposal_prepopulated_not_human_reviewed===true&&d.reviewed_by_human!==true;
 select.value=isUntouchedAI&&sug.recommended_suitability!=='PENDING'?
  sug.recommended_suitability:reviewDecisionChoice(d);
-info.append(select);
-const reviewStatus=create('small','', 'review-status');info.append(reviewStatus);
+reviewBody.append(select);
+const reviewStatus=create('small','', 'review-status');reviewBody.append(reviewStatus);
 const photoCheckedLabel=create('label',undefined,'check');
 const photoChecked=create('input');photoChecked.type='checkbox';
 photoChecked.checked=d.photo_visual_fields_confirmed===true;
 photoCheckedLabel.append(photoChecked,create('span',
- 'I checked this photo’s proposed sex, pose, stage and suitability (one tap)'));
-info.append(photoCheckedLabel);
-info.append(create('label','Camera pose — review the actual photo'));const poseSelect=create('select');
+ 'I checked this photo’s proposed specimen type, pose and suitability (one tap)'));
+reviewBody.append(photoCheckedLabel);
+reviewBody.append(create('label','Camera pose — review the actual photo'));const poseSelect=create('select');
 for(const [value,title] of POSES){const opt=create('option',title);opt.value=value;poseSelect.append(opt)}
-poseSelect.value=POSES.some(x=>x[0]===d.pose_id)&&d.pose_id!=='UNREVIEWED'?d.pose_id:sug.pose;info.append(poseSelect);
+poseSelect.value=POSES.some(x=>x[0]===d.pose_id)&&d.pose_id!=='UNREVIEWED'?d.pose_id:sug.pose;reviewBody.append(poseSelect);
 
-info.append(create('label','Life-stage suggestion (edit if necessary)'));
-const stageSelect=create('select');
-for(const id of LIFE_STAGES){const opt=create('option',id.replaceAll('_',' '));opt.value=id;stageSelect.append(opt)}
-stageSelect.value=LIFE_STAGES.includes(d.life_stage)&&d.life_stage!=='UNKNOWN'?d.life_stage:sug.life_stage;info.append(stageSelect);
+
 const advancedReview=create('details');advancedReview.className='advanced-review';
 advancedReview.append(create('summary','More: behaviour, anatomy & verification ▾'));
 advancedReview.append(create('label','Behaviour suggestions (comma separated, editable)'));
@@ -771,7 +816,7 @@ const behaviours=create('textarea');behaviours.rows=2;
 behaviours.value=Array.isArray(d.behaviours)?d.behaviours.join(', '):sug.behaviour.join(', ');advancedReview.append(behaviours);
 advancedReview.append(create('label','Visible anatomy suggestions (comma separated, editable)'));
 const anatomy=create('textarea');anatomy.rows=2;
-anatomy.value=Array.isArray(d.visible_anatomy)?d.visible_anatomy.join(', '):sug.anatomy.join(', ');info.append(anatomy);
+anatomy.value=Array.isArray(d.visible_anatomy)?d.visible_anatomy.join(', '):sug.anatomy.join(', ');reviewBody.append(anatomy);
 
 const verification=create('details');verification.className='details-checks';
 const verifySummary=create('summary','Optional production verification — species and licence');
@@ -793,15 +838,15 @@ detailBox.append(create('label','Specific feature to verify (only where necessar
 const detailNotes=create('textarea');detailNotes.rows=2;detailNotes.value=d.anatomy_followup_notes||'';detailNotes.placeholder='Example: male palpal embolus not visible; confirm with matched species/sex reference';
 detailBox.append(detailNotes);
 detailBox.append(create('small','No pixel-coordinate markers are invented. Source-specific positions must be anchored to inspected images or existing registered Human Gold. Unreviewed photo-text suggestions stay unverified.'));
-advancedReview.append(detailBox);info.append(advancedReview);
-info.append(create('label','AI visual notes — edit if necessary'));const notes=create('textarea');
-notes.value=d.notes||(isUntouchedAI?sug.visible_note:'');notes.placeholder='For example: female, lighting exaggerates orange; pedipalps obscured…';info.append(notes);
+advancedReview.append(detailBox);reviewBody.append(advancedReview);
+reviewBody.append(create('label','AI visual notes — edit if necessary'));const notes=create('textarea');
+notes.value=d.notes||(isUntouchedAI?sug.visible_note:'');notes.placeholder='For example: female, lighting exaggerates orange; pedipalps obscured…';reviewBody.append(notes);
 const rejectDetails=create('details');rejectDetails.className='reject-detail';
 rejectDetails.append(create('summary','Reject / exclude photograph ▾'));
 rejectDetails.append(create('label','Rejection reason (required if rejected)'));
 const rejectReason=create('textarea');rejectReason.value=d.reject_reason||'';rejectReason.placeholder='Why should this photo not be used?';rejectDetails.append(rejectReason);
 const rejectButton=create('button','Reject this photo');rejectButton.className='reject-action';rejectButton.type='button';rejectDetails.append(rejectButton);
-rejectDetails.open=select.value==='REJECT';info.append(rejectDetails);
+rejectDetails.open=select.value==='REJECT';reviewBody.append(rejectDetails);
 const touched=new Set(Array.isArray(d.reviewed_fields)?d.reviewed_fields:[]);
 const visual=p.preanalysis||{};
 const visualHashMatched=!!p.sha256&&visual.source_image_sha256===p.sha256&&
@@ -813,12 +858,12 @@ const aiReviewedFields=new Set(['sex','pose_id','life_stage','suitability','beha
 const updateColours=()=>{
  const tint=(el,key,valid,required=true)=>reviewFieldTint(el,
    (touched.has(key)||(aiFieldReviewed&&aiReviewedFields.has(key)))&&valid,required);
- tint(sexSelect,'sex',sexSelect.value!=='UNKNOWN');
+ const specimenTypeReviewed=touched.has('specimen_type')||(touched.has('sex')&&touched.has('life_stage'));
+ reviewFieldTint(specimenType,(specimenTypeReviewed||aiFieldReviewed)&&specimenType.value!=='UNKNOWN');
  tint(resembles,'resembles_original',resembles.value!=='NOT_ASSESSED');
  tint(resemblesNotes,'resembles_notes',resemblesNotes.value.trim().length>0,false);
  tint(select,'suitability',select.value!=='PENDING');
  tint(poseSelect,'pose_id',poseSelect.value!=='UNREVIEWED');
- tint(stageSelect,'life_stage',stageSelect.value!=='UNKNOWN');
  tint(behaviours,'behaviours',behaviours.value.trim().length>0,false);
  tint(anatomy,'visible_anatomy',anatomy.value.trim().length>0,false);
  tint(notes,'notes',notes.value.trim().length>0,false);
@@ -830,9 +875,15 @@ const updateColours=()=>{
  reviewFieldTint(suggestLabel,touched.has('retain_suggested_classifications'));
  reviewFieldTint(specieslabel,touched.has('species_verified')&&speciesbox.checked, false);
  reviewFieldTint(rightslabel,touched.has('rights_checked')&&rightsbox.checked,false);
+ const current=decisions[key]||d;
+ const green=current?.reviewed_by_human===true&&current?.photo_visual_fields_confirmed===true&&reviewSpecimenType(current,sug)!=='UNKNOWN'&&current.pose_id&&current.pose_id!=='UNREVIEWED'&&current.decision&&current.decision!=='PENDING';
+ reviewSummary.textContent=highConfidence?'High-confidence visual draft · expand to inspect':green?'Human-reviewed · green · expand to inspect':'Needs review · '+confidence.toLowerCase()+' confidence';
+ reviewFieldTint(reviewSummary,highConfidence||green);
+ if(highConfidence||green)reviewDetails.open=false;
  };
 const update=()=>{
   const choice=select.value;
+  const specimenDetails=specimenTypeFields(specimenType.value);
   const rejection=rejectReason.value.trim();
   if(choice==='REJECT'&&rejection.length<3){rejectDetails.open=true;
     reviewStatus.textContent='Rejection not saved yet: enter a reason (3+ characters).';
@@ -851,11 +902,11 @@ const update=()=>{
     recommendation_basis:sug.basis,recommendation_confidence:sug.confidence,
     recommended_suitability:sug.recommended_suitability,recommended_visual_notes:sug.visible_note,
     proposal_prepopulated_not_human_reviewed:false,
-    life_stage:stageSelect.value,resembles_original:resembles.value,resembles_notes:resemblesNotes.value,behaviours:splitTags(behaviours.value),visible_anatomy:splitTags(anatomy.value),
+    specimen_type:specimenType.value,life_stage:specimenDetails.life_stage,resembles_original:resembles.value,resembles_notes:resemblesNotes.value,behaviours:splitTags(behaviours.value),visible_anatomy:splitTags(anatomy.value),
     reviewed_fields:[...touched].sort(),reviewed_by_human:true,human_visual_confirmation:true,
     photo_visual_fields_confirmed:photoChecked.checked,
     decision:effective,requested_decision:choice,
-    sex:sexSelect.value,sex_verification:'USER_OBSERVATION_NOT_INDEPENDENTLY_VERIFIED',
+    sex:specimenDetails.sex,sex_verification:'USER_OBSERVATION_NOT_INDEPENDENTLY_VERIFIED',
     species_verified:speciesbox.checked,rights_checked:rightsbox.checked,
     pose_id:poseSelect.value,pose_type:POSE_V11[poseSelect.value]||'UNKNOWN',
     pose_review_status:poseSelect.value==='UNREVIEWED'?'UNREVIEWED':'HUMAN_LABEL_NOT_INDEPENDENTLY_PROMOTED',
@@ -876,12 +927,12 @@ const update=()=>{
   });
 };
 const reviewControls=[
- [select,'suitability'],[sexSelect,'sex'],[poseSelect,'pose_id'],[stageSelect,'life_stage'],
+ [select,'suitability'],[specimenType,'specimen_type'],[poseSelect,'pose_id'],
  [retainBox,'keep_research_candidate'],[suggestBox,'retain_suggested_classifications'],
  [speciesbox,'species_verified'],[rightsbox,'rights_checked'],
  [detailStatus,'anatomy_followup_status'],[resembles,'resembles_original']];
 photoChecked.addEventListener('change',()=>{
- for(const key of ['sex','pose_id','life_stage','suitability']){
+ for(const key of ['specimen_type','sex','pose_id','life_stage','suitability']){
   if(photoChecked.checked)touched.add(key);
   else touched.delete(key);
  }
@@ -889,6 +940,7 @@ photoChecked.addEventListener('change',()=>{
 });
 reviewControls.forEach(([el,key])=>el.addEventListener('change',()=>{
  touched.add(key);
+ if(el===specimenType){touched.add('sex');touched.add('life_stage')}
  if(el===select&&select.value!=='REJECT')rejectReason.value='';
  if(el===select&&select.value==='REJECT')rejectDetails.open=true;
  update()
@@ -1001,23 +1053,6 @@ function render(){
  const searchCard=sourceSearchCard(spec);if(searchCard)card.append(searchCard);
  root.append(card);
 }
-function navigateWithinImage(event){
- // Deliberately avoid swipes begun on form controls; preserve vertical scrolling and editing.
- if(event.target.closest('input,textarea,select,button,a,label,summary'))return false;
- return true;
-}
-let swipeStart=null;
-$('#results').addEventListener('touchstart',event=>{
- const t=event.changedTouches[0];if(!t||!navigateWithinImage(event)){swipeStart=null;return}
- swipeStart={x:t.clientX,y:t.clientY};
-},{passive:true});
-$('#results').addEventListener('touchend',event=>{
- const t=event.changedTouches[0];if(!swipeStart||!t)return;
- const dx=t.clientX-swipeStart.x,dy=t.clientY-swipeStart.y;
- swipeStart=null;
- if(Math.abs(dx)>65&&Math.abs(dx)>Math.abs(dy)*1.5)changeSpecies(dx<0?1:-1);
-},{passive:true});
-
 function bindVisualDrafts(){
  let matched=0,changed=0;const seen=new Set(),changedKeys=[];
  for(const spec of Object.values(dataset.species||{}))for(const p of photosFrom(spec)){
