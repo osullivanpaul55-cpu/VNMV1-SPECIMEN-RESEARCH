@@ -1,11 +1,11 @@
 {
   "schema": "VNMV1_PUBLIC_BEHAVIOUR_LITERATURE_CANDIDATES_V1",
-  "last_cycle": 0,
+  "last_cycle": 1,
   "named_species_in_seed": 195,
-  "species_searched": 24,
-  "species_with_literature_leads": 14,
+  "species_searched": 48,
+  "species_with_literature_leads": 23,
   "research_completed_first_sweep": false,
-  "last_research_at_utc": "2026-10-22T16:24:09.797966+00:00",
+  "last_research_at_utc": "2026-10-25T13:59:46.039035+00:00",
   "species": {
     "f3787c4b515c0a91": {
       "research_taxon": "Abdomegaphobema mesomelas",
@@ -557,6 +557,432 @@
       "publication_leads": [],
       "no_automatic_behavior_confirmation": true,
       "no_media_or_rights_permissions_implied": true
+    },
+    "cd04521a83bc01e1": {
+      "research_taxon": "Barylestis occidentalis",
+      "taxon_key": "cd04521a83bc01e1",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "6a555801b7c86fe0": {
+      "research_taxon": "Birupes simoroxigorum",
+      "taxon_key": "6a555801b7c86fe0",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "ccbca17299c46076": {
+      "research_taxon": "Bonnetina minax",
+      "taxon_key": "ccbca17299c46076",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "8656abaa937ea2b3": {
+      "research_taxon": "Bonnetina papalutlensis",
+      "taxon_key": "8656abaa937ea2b3",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1016/j.vascn.2019.01.003",
+          "url": "https://doi.org/10.1016/j.vascn.2019.01.003",
+          "title": "Drosophila bioassays are very sensitive methods to assess tarantula species venoms.",
+          "published_year": 2019,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1016/j.toxicon.2017.07.001",
+          "url": "https://doi.org/10.1016/j.toxicon.2017.07.001",
+          "title": "Hyaluronidase-like enzymes are a frequent component of venoms from theraphosid spiders.",
+          "published_year": 2017,
+          "behavior_text_hints_unverified": [
+            "HUNT_ACTIVE"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "10199468c9f13026": {
+      "research_taxon": "Bonnetina tanzeri",
+      "taxon_key": "10199468c9f13026",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "97c04285e5bdae9e": {
+      "research_taxon": "Brachypelma albiceps",
+      "taxon_key": "97c04285e5bdae9e",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.3390/biology15010016",
+          "url": "https://doi.org/10.3390/biology15010016",
+          "title": "Complete Mitochondrial Genome Sequencing of &lt;i&gt;Brachypelma albiceps&lt;/i&gt; and Comparative Codon Usage Bias Analysis Across Seven Mygalomorphae Species.",
+          "published_year": 2025,
+          "behavior_text_hints_unverified": [
+            "RESTING_NATURAL"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "e2a9b9a4762e2054": {
+      "research_taxon": "Brachypelma auratum",
+      "taxon_key": "e2a9b9a4762e2054",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1242/jeb.055657",
+          "url": "https://doi.org/10.1242/jeb.055657",
+          "title": "Tarantulas cling to smooth vertical surfaces by secreting silk from their feet.",
+          "published_year": 2011,
+          "behavior_text_hints_unverified": [
+            "CLIMBING_VERTICAL",
+            "SCORPION_PECTINAL_SUBSTRATE_SCAN",
+            "COLEOPTERA_DEFENSIVE_ABDOMEN"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "418372f83cc636e5": {
+      "research_taxon": "Brachypelma baumgarteni",
+      "taxon_key": "418372f83cc636e5",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "c2a2f2846c7c0b71": {
+      "research_taxon": "Brachypelma boehmei",
+      "taxon_key": "c2a2f2846c7c0b71",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1016/j.toxicon.2017.07.001",
+          "url": "https://doi.org/10.1016/j.toxicon.2017.07.001",
+          "title": "Hyaluronidase-like enzymes are a frequent component of venoms from theraphosid spiders.",
+          "published_year": 2017,
+          "behavior_text_hints_unverified": [
+            "HUNT_ACTIVE"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1002/zoo.20173",
+          "url": "https://doi.org/10.1002/zoo.20173",
+          "title": "Diagnostic imaging in terrestrial invertebrates: Madagascar hissing cockroach (Gromphadorhina portentosa), desert millipede (Orthoporus sp.), emperor scorpion (Pandinus imperator), Chilean rosehair tarantula (Grammostola spatulata), Mexican fireleg tarantula (Brachypelma boehmei), and Mexican redknee tarantula (Brachypelma smithi).",
+          "published_year": 2008,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "e9b1de96d05c9b5d": {
+      "research_taxon": "Brachypelma emilia",
+      "taxon_key": "e9b1de96d05c9b5d",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "71c1b329da06e6f5": {
+      "research_taxon": "Brachypelma hamorii",
+      "taxon_key": "71c1b329da06e6f5",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1016/j.toxicon.2009.01.025",
+          "url": "https://doi.org/10.1016/j.toxicon.2009.01.025",
+          "title": "Comparison of the peptidome and insecticidal activity of venom from a taxonomically diverse group of theraphosid spiders.",
+          "published_year": 2009,
+          "behavior_text_hints_unverified": [
+            "FUNNEL_WEB_BUILDING"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "0f346796519e83ac": {
+      "research_taxon": "Brachypelma klaasi",
+      "taxon_key": "0f346796519e83ac",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1023/a:1008976003011",
+          "url": "https://doi.org/10.1023/a:1008976003011",
+          "title": "Spatial distribution and habitat preference of the endangered tarantula, Brachypelma klaasi (Araneae: Theraphosidae) in Mexico.",
+          "published_year": 2000,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "7225e5930e6e6909": {
+      "research_taxon": "Brachypelma smithi",
+      "taxon_key": "7225e5930e6e6909",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1007/s00726-026-03521-5",
+          "url": "https://doi.org/10.1007/s00726-026-03521-5",
+          "title": "Spider peptides from Brachypelma smithi with slightly different amino acids at their C-terminal loops exert different insecticidal activities.",
+          "published_year": 2026,
+          "behavior_text_hints_unverified": [
+            "PREY_CAPTURE",
+            "AMBLYPYGI_RAPTORY_PEDIPALP_STRIKE",
+            "CHILOPODA_FORCIPULE_STRIKE"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1093/aesa/saac001",
+          "url": "https://doi.org/10.1093/aesa/saac001",
+          "title": "Morphological Differentiation of Ventral Tarsal Setae and Surface Sculpturing of Theraphosids (Araneae: Theraphosidae) With Different Types of Lifestyles",
+          "published_year": 2022,
+          "behavior_text_hints_unverified": [
+            "BURROW_EMERGENCE",
+            "BURROW_EXCAVATION",
+            "BURROW_SEAL",
+            "BURROW_SILK_LINING",
+            "TURRET_CONSTRUCTION",
+            "EGG_SAC_CONSTRUCTION",
+            "SCORPION_PECTINAL_SUBSTRATE_SCAN"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1016/j.toxicon.2017.07.001",
+          "url": "https://doi.org/10.1016/j.toxicon.2017.07.001",
+          "title": "Hyaluronidase-like enzymes are a frequent component of venoms from theraphosid spiders.",
+          "published_year": 2017,
+          "behavior_text_hints_unverified": [
+            "HUNT_ACTIVE"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "8ccd6b0d01f08c84": {
+      "research_taxon": "Caribena versicolor",
+      "taxon_key": "8ccd6b0d01f08c84",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1016/j.carbpol.2019.115301",
+          "url": "https://doi.org/10.1016/j.carbpol.2019.115301",
+          "title": "Spider Chitin. The biomimetic potential and applications of Caribena versicolor tubular chitin.",
+          "published_year": 2019,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.3390/molecules24203736",
+          "url": "https://doi.org/10.3390/molecules24203736",
+          "title": "Spider Chitin: An Ultrafast Microwave-Assisted Method for Chitin Isolation from Caribena versicolor Spider Molt Cuticle.",
+          "published_year": 2019,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "c40f155520521e74": {
+      "research_taxon": "Ceratogyrus darlingi",
+      "taxon_key": "c40f155520521e74",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1016/j.toxicon.2017.07.001",
+          "url": "https://doi.org/10.1016/j.toxicon.2017.07.001",
+          "title": "Hyaluronidase-like enzymes are a frequent component of venoms from theraphosid spiders.",
+          "published_year": 2017,
+          "behavior_text_hints_unverified": [
+            "HUNT_ACTIVE"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1186/s40409-015-0017-8",
+          "url": "https://doi.org/10.1186/s40409-015-0017-8",
+          "title": "Pharmacological characterization of venoms from three theraphosid spiders: Poecilotheria regalis, Ceratogyrus darlingi and Brachypelma epicureanum.",
+          "published_year": 2015,
+          "behavior_text_hints_unverified": [
+            "HUNT_ACTIVE",
+            "COURTSHIP_DISPLAY"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1371/journal.pone.0182848",
+          "url": "https://doi.org/10.1371/journal.pone.0182848",
+          "title": "Discovery and mode of action of a novel analgesic β-toxin from the African spider Ceratogyrus darlingi.",
+          "published_year": 2017,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "6766dc0df982316e": {
+      "research_taxon": "Ceratogyrus marshalli",
+      "taxon_key": "6766dc0df982316e",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "47a9be434c45becb": {
+      "research_taxon": "Ceratogyrus meridionalis",
+      "taxon_key": "47a9be434c45becb",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "c2b06a31cf657463": {
+      "research_taxon": "Ceratogyrus sanderi",
+      "taxon_key": "c2b06a31cf657463",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "326f583f28a1d7e4": {
+      "research_taxon": "Chaetopelma olivaceum",
+      "taxon_key": "326f583f28a1d7e4",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "c5f740202ba70737": {
+      "research_taxon": "Chilobrachys dyscolus",
+      "taxon_key": "c5f740202ba70737",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "b36555e5723e8407": {
+      "research_taxon": "Chilobrachys fimbriatus",
+      "taxon_key": "b36555e5723e8407",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "10ab0e09a6a0d2f9": {
+      "research_taxon": "Chilobrachys huahini",
+      "taxon_key": "10ab0e09a6a0d2f9",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "bcac939d4c465419": {
+      "research_taxon": "Chilobrachys natanicharum",
+      "taxon_key": "bcac939d4c465419",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "a784049c4e3ece4a": {
+      "research_taxon": "Chilocosmia dichromata",
+      "taxon_key": "a784049c4e3ece4a",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
     }
-  }
+  },
+  "species_processed_this_run": 24,
+  "species_with_literature_leads_this_run": 9
 }
