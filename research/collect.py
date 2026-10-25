@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Five-shard public-safe species photo research. NO animal or licence approval.
-No private card IDs/specimens, no credentials, no image generation; bounded iNaturalist requests.
+No private card IDs/specimens, no credentials, no image generation; bounded iNaturalist and Commons requests.
 """
 from __future__ import annotations
 import argparse, hashlib, io, json, re, time
+from html import unescape
 from pathlib import Path
 from urllib.parse import urlencode, urlparse, urlunparse
 from urllib.request import Request, urlopen
@@ -13,6 +14,7 @@ from pose_reference import unverified_text_pose_hints, unverified_text_behaviour
 SHARDS=5; MAX_IMAGE_BYTES=5_000_000; ALLOWED={'cc0','cc-by'}; MAX_LINK_LEADS_PER_SPECIES_PER_CYCLE=30
 HOSTS={'static.inaturalist.org','inaturalist-open-data.s3.amazonaws.com','inaturalist-open-data.s3.us-west-2.amazonaws.com'}
 API='https://api.inaturalist.org/v1/observations'
+COMMONS_API='https://commons.wikimedia.org/w/api.php'
 UA='VNMV1-SPECIMEN-RESEARCH/1.0 (open CC metadata research; public provenance and attribution)'
 
 def sha(data:bytes)->str:return hashlib.sha256(data).hexdigest()
@@ -178,6 +180,87 @@ def discover(taxon:str,seen:set[str],api_fetch=fetch,pages:int=8,per_page:int=25
         time.sleep(.12)
     return results
 
+def _commons_text(meta:dict,key:str)->str:
+    value=meta.get(key,{})
+    if isinstance(value,dict):value=value.get('value','')
+    return unescape(re.sub(r'<[^>]*>',' ',str(value or ''))).replace('\\n',' ').strip()[:700]
+
+def discover_commons(taxon:str,seen:set[str],api_fetch=fetch,limit:int=12)->list[dict]:
+    """Find Wikimedia Commons file pages by text search, as link-only review leads.
+
+    A Commons search match does not verify the photographed taxon, the photo,
+    the attribution, or the licence. Keep the page link and metadata claim for
+    the human reviewer; never download its pixels through this route.
+    """
+    if limit<=0:return []
+    results=[];checked=set()
+    taxon_tag=hashlib.sha256(taxon.casefold().encode('utf-8')).hexdigest()[:12]
+    queries=[f'"{taxon}"',taxon]
+    for term in queries:
+        params={'action':'query','format':'json','formatversion':'2','generator':'search',
+            'gsrsearch':term,'gsrnamespace':'6','gsrlimit':str(min(50,max(10,limit*2))),
+            'prop':'imageinfo','iiprop':'url|extmetadata',
+            'iiextmetadatafilter':'Artist|Credit|LicenseShortName|LicenseUrl'}
+        payload=json.loads(api_fetch(COMMONS_API+'?'+urlencode(params),3_000_000))
+        pages=(payload.get('query') or {}).get('pages',[])
+        if isinstance(pages,dict):pages=list(pages.values())
+        if not isinstance(pages,list):raise ValueError('INVALID_COMMONS_SEARCH_RESPONSE')
+        for page in pages:
+            if not isinstance(page,dict) or page.get('ns')!=6:continue
+            page_id=page.get('pageid')
+            if not isinstance(page_id,int):continue
+            infos=page.get('imageinfo') or []
+            if not isinstance(infos,list) or not infos:continue
+            info=infos[0] if isinstance(infos[0],dict) else {}
+            source_url=info.get('descriptionurl')
+            parsed=urlparse(source_url or '')
+            if (parsed.scheme!='https' or parsed.hostname!='commons.wikimedia.org'
+                or not parsed.path.startswith('/wiki/File:') or parsed.username or parsed.password
+                or parsed.query or parsed.fragment):continue
+            photo_key=f'commons:{taxon_tag}:{page_id}'
+            if photo_key in seen or photo_key in checked:continue
+            checked.add(photo_key)
+            meta=info.get('extmetadata') or {}
+            artist=_commons_text(meta,'Artist')
+            credit=_commons_text(meta,'Credit')
+            license_claim=_commons_text(meta,'LicenseShortName')
+            license_url=_commons_text(meta,'LicenseUrl')
+            results.append({'photo_key':photo_key,'photo_id':page_id,'taxon':taxon,
+                'source_title':str(page.get('title') or '')[:500],
+                'source_url':source_url,'source_type':'WIKIMEDIA_COMMONS_FILE_PAGE',
+                'source_search_term':taxon,'taxon_match_status':'TEXT_SEARCH_MATCH_NOT_TAXONOMICALLY_VERIFIED',
+                'taxon_authority':'WIKIMEDIA_TEXT_SEARCH_NOT_USER_APPROVED',
+                'observation_quality_grade':None,'link_only':True,
+                'redistribution_allowed_by_collector':False,
+                'license_code':'UNKNOWN_PENDING_VERIFICATION',
+                'license_url':license_url or None,
+                'source_license_claim':license_claim or 'No licence claim returned by Commons API',
+                'license_research_status':'COMMONS_METADATA_CLAIM_NOT_INDEPENDENTLY_VERIFIED',
+                'research_use_status':'RESEARCH_LINK_AVAILABLE_NOW',
+                'license_version':'UNVERIFIED_SOURCE_CHECK_REQUIRED',
+                'attribution':artist or credit or 'Photographer or credit unconfirmed',
+                'candidate_warning':['TEXT_SEARCH_MATCH_ONLY','PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED',
+                    'LICENCE_AND_ATTRIBUTION_CLAIMS_REQUIRE_SOURCE_CHECK'],
+                'rights_verdict':'CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED',
+                'review_state':'PENDING','pose_id':'UNREVIEWED',
+                'pose_review_status':'VISUAL_REVIEW_REQUIRED','thumbnail_url':None,
+                'media_copied_to_public_repo':False,'approved_for_imagegen':False,
+                'reviewed_by_human':False})
+            if len(results)>=limit:return results
+    return results
+
+def discover_all_sources(taxon:str,seen:set[str])->list[dict]:
+    results=[];errors=[]
+    try:results.extend(discover(taxon,seen))
+    except Exception as exc:errors.append('INAT:'+type(exc).__name__)
+    available=max(0,15-len(seen)-len({str(x.get('photo_key')) for x in results if x.get('photo_key')}))
+    if available:
+        used=seen|{str(x.get('photo_key')) for x in results if x.get('photo_key')}
+        try:results.extend(discover_commons(taxon,used,limit=min(12,available)))
+        except Exception as exc:errors.append('COMMONS:'+type(exc).__name__)
+    if errors and not results:raise ValueError('SOURCE_DISCOVERY_FAILED:'+','.join(errors))
+    return results
+
 def prioritize_reference_diversity(candidates:list[dict], prior:list[dict])->list[dict]:
     """Prefer distinct observations before extra frames from one observer event.
 
@@ -200,16 +283,18 @@ def prioritize_reference_diversity(candidates:list[dict], prior:list[dict])->lis
     return primary+extras
 
 
-def research_species(spec:dict,previous:dict,out:Path,max_per_species:int=12,discovery=discover,download=fetch)->dict:
+def research_species(spec:dict,previous:dict,out:Path,max_per_species:int=12,discovery=discover_all_sources,download=fetch)->dict:
     taxon=spec['name'];key=spec['key'];old=(previous.get('species') or {}).get(key,{})
     prior=old.get('candidates',[]);old_leads=old.get('link_only_leads',[])
     seen={v.get('photo_key') for v in prior}|{v.get('photo_key') for v in old_leads}
     accepted=[];links=[];rejections=[];phashes=[];obs_counts={}
+    max_additional=max(0,15-len(seen))
     # Every return is candidate-only; never auto-promote species, sex or licence.
     try: found=discovery(taxon,seen)
     except Exception as exc:
         return {'key':key,'taxon':taxon,'status':'RETRY_DISCOVERY','new_candidates':[],'new_link_leads':[], 'rejections':[str(exc)[:140]]}
     for c in prioritize_reference_diversity(found,prior+old_leads):
+        if len(accepted)+len(links)>=max_additional:break
         if c.get('link_only') or c.get('license_code') not in ALLOWED:
             if len(links)<MAX_LINK_LEADS_PER_SPECIES_PER_CYCLE:
                 # Link metadata is immediately useful for research and human
