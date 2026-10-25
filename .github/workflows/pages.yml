@@ -34,7 +34,7 @@ jobs:
       - name: Build per-species coverage report and public static website
         run: |
           mkdir -p _site/review _site/data
-          python research/coverage_report.py --index data/index.json --csv data/species_coverage.csv --summary data/species_coverage_summary.json
+          python research/coverage_report.py --index data/index.json --seed research/species_seed.json --extension research/species_reference_extension.json --csv data/species_coverage.csv --summary data/species_coverage_summary.json
           git config user.name 'VNMV1 public research bot'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data/species_coverage.csv data/species_coverage_summary.json
