@@ -1,0 +1,11 @@
+{
+  "schema": "VNMV1_PUBLIC_PHOTO_RESEARCH_REQUEST_V1",
+  "request_id": "20261025_coverage_gap_round_01",
+  "purpose": "Increase photo references for under-covered taxa for owner visual review.",
+  "minimum_distinct_photo_or_source_records": 9,
+  "preferred_distinct_photo_or_source_records": 12,
+  "preferred_maximum": 15,
+  "source_scope": "Exact species-level iNaturalist observations across Research Grade, Needs ID, and Casual community grades; preserve grade and source link.",
+  "copy_policy": "Archive only photo-level CC0 or CC BY candidate files; keep all other or unknown rights as source links.",
+  "approval_status": "NOT_APPROVED_PENDING_HUMAN_REVIEW"
+}
