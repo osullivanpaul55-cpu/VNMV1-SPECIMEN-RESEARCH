@@ -383,7 +383,12 @@ function photosFrom(x){return Array.isArray(x.candidates)?x.candidates:[]}
 function leadsFrom(x){return [...(Array.isArray(x.link_only_leads)?x.link_only_leads:[]),...(Array.isArray(x.curated_reference_leads)?x.curated_reference_leads:[])]}
 function searchesFrom(x){return Array.isArray(x.source_searches)?x.source_searches:[]}
 function reviewUnitLabel(x){
- if(x?.review_unit_type==='CARD')return x.research_taxon?x.review_unit_id+' · '+x.scientific_name:x.review_unit_id+' · Identity unresolved';
+ if(x?.review_unit_type==='CARD'){
+  const identity=String(x.card_identity_label||x.research_taxon||'').trim();
+  const common=String(x.card_common_label||'').trim();
+  if(!identity)return x.review_unit_id+' · Card identity label missing';
+  return x.review_unit_id+' · '+identity+(common?' · '+common:'');
+ }
  if(x?.review_unit_type==='NEW_TAXON_CANDIDATE')return 'New taxon candidate · '+x.scientific_name;
  if(x?.review_unit_type==='UNRESOLVED_RESEARCH_UNIT')return 'Unresolved research unit · '+x.scientific_name;
  return x?.scientific_name||'Unknown species';
@@ -667,15 +672,25 @@ function buildReviewRows(registry,extension){
  const cardRows=Object.entries(registry.cards).sort((a,b)=>a[0].localeCompare(b[0],undefined,{numeric:true}));
  for(const [cardId,card] of cardRows){
   const taxon=String(card.research_taxon||'').trim(),taxonKey=taxon.toLowerCase();
-  const spec=cloneResearchEntry(taxon?byName.get(taxonKey):null,taxon);
+  const cardIdentityLabel=String(card.card_identity_label||'').trim();
+  const cardCommonLabel=String(card.card_common_label||'').trim();
+  const displayName=taxon||cardIdentityLabel;
+  const spec=cloneResearchEntry(taxon?byName.get(taxonKey):null,displayName);
   spec.review_unit_type='CARD';spec.review_unit_id=cardId;spec.research_taxon=taxon;
-  spec.card_identity_status=card.identity_status||'UNRESOLVED';
+  spec.card_identity_label=cardIdentityLabel;
+  spec.card_common_label=cardCommonLabel;
+  spec.card_identity_level=String(card.card_identity_level||'');
+  spec.card_identity_status=card.identity_status||(displayName?'CARD_LABEL_RECONCILED':'UNRESOLVED');
   if(taxon){
    cardTaxa.add(taxonKey);addedNames.add(taxonKey);
    if(!spec.source_searches.length)spec.source_searches=generatedSearches(taxon);
   }else{
    spec.candidates=[];spec.link_only_leads=[];spec.curated_reference_leads=[];spec.source_searches=[];
-   spec.user_review_note='No research taxon is assigned to this card in the public registry. No species-specific photo references can be matched until its identity is reviewed.';
+   if(cardIdentityLabel){
+    spec.user_review_note=String(card.card_identity_note||('Prior project reconciliation records this card label at the source identity level. The original image has not been independently verified.'));
+   }else{
+    spec.user_review_note='No card identity label is recorded in the public registry.';
+   }
   }
   rows['card:'+cardId]=spec;
  }
@@ -767,8 +782,8 @@ function sourceSearchCard(spec){
 }
 function stats(){
  const names=Object.values(dataset.species||{});
- const unresolvedIdentityCount=names.filter(spec=>spec?.review_unit_type==='CARD'&&!spec?.research_taxon).length;
- const identityFilter=$('#statusFilter option[value="identity"]');if(identityFilter)identityFilter.textContent='Identity unresolved ('+unresolvedIdentityCount+')';
+ const unresolvedIdentityCount=names.filter(spec=>spec?.review_unit_type==='CARD'&&!String(spec?.card_identity_label||spec?.research_taxon||'').trim()).length;
+ const identityFilter=$('#statusFilter option[value="identity"]');if(identityFilter)identityFilter.textContent='Missing card identity label ('+unresolvedIdentityCount+')';
  const photoMap=new Map();
  for(const spec of names)for(const p of photosFrom(spec))if(p?.photo_key&&!photoMap.has(p.photo_key))photoMap.set(p.photo_key,p);
  const photos=[...photoMap.values()];
@@ -1147,7 +1162,7 @@ function render(){
  visibleSpecies=Object.values(dataset.species||{}).filter(spec=>{
    const photos=photosFrom(spec),label=reviewUnitLabel(spec).toLowerCase();
    if(query&&!((label+' '+String(spec.research_taxon||'').toLowerCase()).includes(query)))return false;
-   if(filter==='identity'&&!(spec?.review_unit_type==='CARD'&&!spec?.research_taxon))return false;
+   if(filter==='identity'&&!(spec?.review_unit_type==='CARD'&&!String(spec?.card_identity_label||spec?.research_taxon||'').trim()))return false;
    if(filter==='photos'&&photos.length===0&&leadsFrom(spec).length===0&&searchesFrom(spec).length===0)return false;
    if(filter==='under'&&photoReferenceCount(spec)>=PHOTO_REFERENCE_MIN)return false;
    if(filter==='decided'&&!photos.concat(leadsFrom(spec)).some(p=>reviewIsEntered(decisions[p.photo_key])))return false;
