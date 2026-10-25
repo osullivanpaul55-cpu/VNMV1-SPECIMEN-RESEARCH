@@ -67,7 +67,8 @@ class PublicTests(unittest.TestCase):
         self.assertEqual(report['summary']['index_candidate_photo_records'],index['discovered_candidate_count'])
         self.assertEqual(report['summary']['index_link_only_source_records'],index['unlicensed_link_research_lead_count'])
         missing={x['scientific_name'] for x in report['species'] if x['in_current_catalog'] and not x['present_in_index']}
-        self.assertEqual(missing,{'Phormingochilus hatihati','Phormingochilus pennellhewlettorum','Phrixotrichus scrofa','Phrixotrichus vulpinus','Platymeris biguttatus'})
+        self.assertEqual(missing,set())
+        self.assertEqual(report['summary']['catalog_taxa_missing_from_index'],len(missing))
         self.assertEqual(report['summary']['approved_for_imagegen_records'],0)
     def test_photo_host_fails_closed(self):
         self.assertIsNone(collect.image_url('http://static.inaturalist.org/photos/1/square.jpg'))
