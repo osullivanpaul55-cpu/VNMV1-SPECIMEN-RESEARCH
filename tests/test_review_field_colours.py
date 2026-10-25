@@ -38,3 +38,18 @@ class ReviewColourTests(unittest.TestCase):
   self.assertIn("approved_for_imagegen:false",html)
 
 if __name__=="__main__": unittest.main()
+
+class PhotoReferenceCoverageTests(unittest.TestCase):
+ def test_nine_photo_reference_floor_counts_individual_sources_not_searches(self):
+  html=PAGE.read_text()
+  self.assertIn("const PHOTO_REFERENCE_MIN=9;",html)
+  self.assertIn("const PHOTO_REFERENCE_TARGET=12;",html)
+  self.assertIn("const PHOTO_REFERENCE_PREFERRED_MAX=15;",html)
+  self.assertIn("function photoReferenceCount(spec)",html)
+  self.assertIn("...leadsFrom(spec)",html)
+  self.assertIn("filter==='under'&&photoReferenceCount(spec)>=PHOTO_REFERENCE_MIN",html)
+  self.assertNotIn("filter==='under'&&photos.length>=9",html)
+  self.assertIn("Species with 9+ photo references",html)
+  self.assertIn("photoReferenceCount(x)>=PHOTO_REFERENCE_MIN",html)
+  self.assertIn("at least 9 distinct individual photo/source records",html)
+
