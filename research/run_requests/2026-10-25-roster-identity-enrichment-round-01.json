@@ -1,0 +1,11 @@
+{
+  "schema": "VNMV1_PUBLIC_PHOTO_RESEARCH_REQUEST_V1",
+  "request_id": "20261025_roster_identity_enrichment_round_01",
+  "purpose": "Start the next five-runner photo research cycle after the current public roster taxon-name mapping completed.",
+  "minimum_distinct_photo_or_source_records": 9,
+  "preferred_distinct_photo_or_source_records": 12,
+  "preferred_maximum": 15,
+  "source_scope": "Exact species-level iNaturalist observations across Research Grade, Needs ID, and Casual community grades; preserve grade and source link. Also check GBIF occurrence media and Wikimedia Commons file pages when the species has room below the review cap.",
+  "copy_policy": "Archive only photo-level CC0 or CC BY candidate files; keep all other or unknown rights as source links visible for direct review.",
+  "approval_status": "NOT_APPROVED_PENDING_HUMAN_REVIEW"
+}
