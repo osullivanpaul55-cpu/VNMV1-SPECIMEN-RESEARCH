@@ -1,0 +1,2647 @@
+{
+  "schema": "VNMV1_PUBLIC_RESEARCH_REFERENCE_EXTENSION_V1",
+  "disclaimer": "Public taxa and source links are research leads only. Taxon identity, image identity, sex, life stage, pose, source rights, and suitability remain unreviewed. Search pages and literature pages are not individual photos. No private card IDs, private originals, or user-specific mappings are included.",
+  "insert_extension_species_at": 140,
+  "source_photo_review_defaults": {
+    "reviewed_by_human": false,
+    "rights_checked": false,
+    "approved_for_imagegen": false,
+    "media_copied_to_public_repo": false,
+    "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+  },
+  "species": [
+    {
+      "name": "Brachionopus pretoriae",
+      "key": "0446fc9fb82f89a3a0dfe261f8b70c2c",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Brachionopus research candidate",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Brachionopus%20pretoriae",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Brachionopus%20pretoriae&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:e12fae207f8d8c72d65411058ddb2507",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Brachionopus_pretoriae_349620720.jpg",
+          "attribution": "Wessel Pretorius; https://www.inaturalist.org/photos/349620720; CC BY-SA 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 4.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Hymenopus coronatus",
+      "key": "1ef82008a1d1da2936ef9826ee5e814c",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Mantis",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Hymenopus%20coronatus",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Hymenopus%20coronatus&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:effe8b8249d5372d2f7f86d086cf38ca",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Hymenopus_coronatus_Mante_orchid%C3%A9e_GLAM_MHNL_01.jpg",
+          "attribution": "Lamiot; Own work; CC BY-SA 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 4.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Phyllocrania paradoxa",
+      "key": "10c2ddc3fe331fc3a9d1dfc3885f27de",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Mantis",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Phyllocrania%20paradoxa",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Phyllocrania%20paradoxa&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:e64c504b7f4c05427bc900c87983a1b3",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Phyllocrania_Paradoxa_M_Fl%C3%BCgelans%C3%A4tze.JPG",
+          "attribution": "Mydriatic; Own work; CC BY-SA 3.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 3.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Pseudocreobotra wahlbergi",
+      "key": "67a50ce6b3900afbaaff1988d33f1842",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Mantis",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Pseudocreobotra%20wahlbergi",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Pseudocreobotra%20wahlbergi&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:db9628ffc0a6abc02e035b90b6d6a625",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Pseudocreobotra_wahlbergii,_nimf,_b,_Krantzkloof_NR.jpg",
+          "attribution": "JMK; Own work; CC BY-SA 3.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 3.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Mantis religiosa",
+      "key": "0705c6109de4080ed17ad2252bfc76ed",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Mantis",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Mantis%20religiosa",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Mantis%20religiosa&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:92a42e8302f97c5ef2ef982f66a03f51",
+          "source_url": "https://commons.wikimedia.org/wiki/File:European_praying_mantis_(Mantis_religiosa)_green_female_Dobruja.jpg",
+          "attribution": "Charles J. Sharp; Own work, from Sharp Photography, sharpphotography.co.uk; CC BY-SA 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 4.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Tenodera sinensis",
+      "key": "6815ac4cc035ba17d5266885fe9152ea",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Mantis",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Tenodera%20sinensis",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Tenodera%20sinensis&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:429b046a5632caafd235720c438e722c",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Chinese_praying_mantis_(Tenodera_sinensis).jpg",
+          "attribution": "Xiqian Ye; Figure in a CC-BY paper https://doi.org/10.1093/gigascience/giad090; CC BY 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY 4.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Gongylus gongylodes",
+      "key": "2710ed256575ee9c7113c710f9f9dee5",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Mantis",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Gongylus%20gongylodes",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Gongylus%20gongylodes&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:3cc78f5159e682e37584f3db4d936d3c",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Gongylus_gongylodes_adult_male.jpg",
+          "attribution": "Mantisonis; Own work; CC BY-SA 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 4.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Deroplatys desiccata",
+      "key": "f98ab59774dd55f38ac128ddbb045728",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Mantis",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Deroplatys%20desiccata",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Deroplatys%20desiccata&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:cabc558ac7d65f55afdf3625ea0bf114",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Bristol.zoo.dead.leaf.mantis.arp.jpg",
+          "attribution": "Adrian Pingstone; Own work; Public domain",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "Public domain",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Idolomantis diabolica",
+      "key": "2ba9d7b144c9b1be25f1d3b896f6fce7",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Mantis",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Idolomantis%20diabolica",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Idolomantis%20diabolica&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:caedb5900ad9b0d4b07c8f32ed3f7f35",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Idolomantis_diabolica-subadult_female.JPG",
+          "attribution": "Drägüs; Own work; CC BY-SA 3.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 3.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Empusa pennata",
+      "key": "6cdee32454693e79fc6287e62b607456",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Mantis",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Empusa%20pennata",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Empusa%20pennata&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:e0e70cb03475ad4c6b20aa39fb90a465",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Conehead_mantis_(Empusa_pennata)_waiting_for_prey_on_a_lizard_orchid_(Himantoglossum_jankae),_Pangaion_Hills,_Greece.jpg",
+          "attribution": "Zsolyomi; Own work; CC BY-SA 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 4.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Hierodula membranacea",
+      "key": "e3ea9755ed07b5b2bb92f505c182b0c7",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Mantis",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Hierodula%20membranacea",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Hierodula%20membranacea&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:a03ab711d82b673f9bffac52c0546386",
+          "source_url": "https://commons.wikimedia.org/wiki/File:H._membranacea_larvae.jpg",
+          "attribution": "Charles Lam; https://www.flickr.com/photos/kclama/2773424448/in/photolist-SEe8Pm-ozm69n-2eHKkM7-5e5wsU-5e5g6A-5e1cYB; CC BY-SA 2.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 2.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Extatosoma tiaratum",
+      "key": "b32ca614890117150bbeae7927ccf5bc",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Stick insect",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Extatosoma%20tiaratum",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Extatosoma%20tiaratum&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:e95486215a94433e56b1f8df083f4a13",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Extatosoma_tiaratum_-_Female_with_two_males.jpg",
+          "attribution": "Pdreijnders; Own work; CC BY-SA 3.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 3.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Phyllium philippinicum",
+      "key": "77f5b2e9e4435898dfc42365ff0219c3",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Stick insect",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Phyllium%20philippinicum",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Phyllium%20philippinicum&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:cb27624163e6d12213877d8271eb7789",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Phyllium_siccifolium,_weibliches_Abdomen_mit_erscheinendem_Ei.jpg",
+          "attribution": "Drägüs; Own work; CC BY-SA 3.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 3.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [
+            "Filename identifies Phyllium siccifolium, not the requested taxon; verify before assigning."
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ],
+      "review_warnings": [
+        "Filename identifies Phyllium siccifolium, not the requested taxon; verify before assigning."
+      ]
+    },
+    {
+      "name": "Pulchriphyllium giganteum",
+      "key": "ff23145e41a9c71770475b01474c3142",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Stick insect",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Pulchriphyllium%20giganteum",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Pulchriphyllium%20giganteum&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:49991e7d7e66c4c479c7940e80342e4f",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Pulchriphyllium_giganteum,_adult_femal_from_dorsal.jpg",
+          "attribution": "Drägüs; Own work; CC BY-SA 3.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 3.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Heteropteryx dilatata",
+      "key": "2c6c03881d15edc01f3d54a6f7a99b09",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Stick insect",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Heteropteryx%20dilatata",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Heteropteryx%20dilatata&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:e59fcb63442e0bae0b12feed3fb39699",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Heteropteryx_dilatata_-_male.jpg",
+          "attribution": "Greg Hume; Own work; CC BY-SA 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 4.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Peruphasma schultei",
+      "key": "047aab35175c782017e0bb8511c1baa1",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Stick insect",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Peruphasma%20schultei",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Peruphasma%20schultei&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:e3c05dc8ea149599405d116c4d3b7592",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Peruphasma_schultei_Conle_%26_Hennemann,_2002_female.jpg",
+          "attribution": "Frank Hennemann; Own work; CC BY-SA 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 4.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Achrioptera manga",
+      "key": "cb5467617c1922df6f607d67e8fc74ae",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Stick insect",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Achrioptera%20manga",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Achrioptera%20manga&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:96d2124f40cc54e06a0e1157aaf1458b",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Achrioptera_manga_-_male.jpg",
+          "attribution": "Drägüs; Own work; CC BY-SA 3.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 3.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Eurycantha calcarata",
+      "key": "2f6e02d96a151021ab1fa4d3e3f54c5e",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Stick insect",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Eurycantha%20calcarata",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Eurycantha%20calcarata&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:ad8717ac5a77eef0449ab1b66cf90537",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Eurycantha_calcarata_(female,_fifth_instar).jpg",
+          "attribution": "R.S.; Own work; Public domain",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "Public domain",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Carausius morosus",
+      "key": "7ad67009cfd4c45f6ae7b8fc78c4076e",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Stick insect",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Carausius%20morosus",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Carausius%20morosus&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:47527d8c9b9bad28293ea9f5b227209b",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Carausius_morosus-adult1.JPG",
+          "attribution": "Dinosaur918; Own work; CC BY-SA 3.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 3.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Sungaya inexpectata",
+      "key": "02ef4e9807ad377956d5e044c69f98b8",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Stick insect",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Sungaya%20inexpectata",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Sungaya%20inexpectata&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:c0e5c07edd5764821c15974ef0e5ba61",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Farbformen_von_Sungaya_aeta_und_Weibchen_von_Sungaya_inexpectata.jpg",
+          "attribution": "Drägüs; Own work; CC BY-SA 3.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 3.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Oreophoetes peruana",
+      "key": "9c713c1be1f39d148cbfaee6b0775399",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Stick insect",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Oreophoetes%20peruana",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Oreophoetes%20peruana&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:7ce94a87ccc3edc9bf0f3e4fc1d9380e",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Oreophoetes_peruana_-_Male_2.jpg",
+          "attribution": "Drägüs; Own work; CC BY-SA 3.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 3.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Dynastes hercules",
+      "key": "2e4c2377956e18217c8c516cd4258bb8",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Beetle",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Dynastes%20hercules",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Dynastes%20hercules&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:22e73e50eb452e07d7c649b250977ad4",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Dynastes_hercules_(10.3897-zookeys.813.29236)_Figure_8.jpg",
+          "attribution": "Ichiishi W, Shimada S, Motobayashi T, Abe H (2019) Completely engaged three-dimensional mandibular gear-like structures in the adult horned beetles: reconsideration of bark-carving behaviors (Coleoptera, Scarabaeidae, Dynastinae). ZooKeys 813: 89-110. https://doi.org/10.3897/zookeys.813.29236; https://zookeys.pensoft.net/article/29236/list/2/ (license); CC BY 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY 4.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Goliathus goliatus",
+      "key": "05b48091f9531809a5f08bd2efe87256",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Beetle",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Goliathus%20goliatus",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Goliathus%20goliatus&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:3c106f7d927ad96531a3bee8d0b8a0fe",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Scarabaeidae_-_Goliathus_goliatus-2.JPG",
+          "attribution": "Hectonichus; Own work; CC BY-SA 3.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 3.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Lucanus cervus",
+      "key": "fba51c34285400a47e229851be7ca4ff",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Beetle",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Lucanus%20cervus",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Lucanus%20cervus&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:e6889322044540ae344be6cde4d8a5f1",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Lucanus_cervus_male_Saarland_22.jpg",
+          "attribution": "Orchi; Self-photographed; CC BY-SA 3.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 3.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Chrysina gloriosa",
+      "key": "f1d79324b14f4edc5a031ce1b051ad81",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Beetle",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Chrysina%20gloriosa",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Chrysina%20gloriosa&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:21c902e43208a0525aa2eefbe02a7c77",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Escarabajo_glorioso.jpg",
+          "attribution": "Chiliguanca; Own work; CC BY-SA 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 4.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Scarabaeus sacer",
+      "key": "f09e9df2f17b572f1acc2d3561280108",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Beetle",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Scarabaeus%20sacer",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Scarabaeus%20sacer&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:f667d1036a931bf469330855abde8737",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Scarabaeidae_-_Scarabaeus_sacer.JPG",
+          "attribution": "Hectonichus; Own work; CC BY-SA 3.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 3.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Phalacrognathus muelleri",
+      "key": "8849d1f580b4043ed55adbb537374551",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Beetle",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Phalacrognathus%20muelleri",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Phalacrognathus%20muelleri&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:45376a41c094365398c26d2c5d3306aa",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Lamprimaaurata.JPG",
+          "attribution": "Notafly; Own work; CC BY-SA 3.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 3.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [
+            "Filename identifies Lamprima aurata, not the requested taxon; verify before assigning."
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ],
+      "review_warnings": [
+        "Filename identifies Lamprima aurata, not the requested taxon; verify before assigning."
+      ]
+    },
+    {
+      "name": "Mecynorhina torquata",
+      "key": "7c70432a287de639257a81d7c77ef40e",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Beetle",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Mecynorhina%20torquata",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Mecynorhina%20torquata&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:0fe63ed07982f4f92b6b47b1772705fe",
+          "source_url": "https://commons.wikimedia.org/wiki/File:03_20100903_Praha-573.JPG",
+          "attribution": "Hectonichus; Own work; CC BY-SA 3.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 3.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Pachyrhynchus congestus",
+      "key": "25cd3638de7e4d896c8f08950e33ce14",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Beetle",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Pachyrhynchus%20congestus",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Pachyrhynchus%20congestus&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:73774819b21878c542dae9736e3e82ba",
+          "source_url": "https://www.inaturalist.org/observations/328286044",
+          "attribution": "(c) Mark Bulahao, some rights reserved (CC BY); CC BY 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY 4.0",
+          "source_type": "INATURALIST_OBSERVATION",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Eupholus schoenherri",
+      "key": "57d844953644751a36c9b989504f891d",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Beetle",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Eupholus%20schoenherri",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Eupholus%20schoenherri&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:eaca4afd289c6fd412769d7edbe1b891",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Blue_Weevil_from_W-Papua_-_copula_(5066793227).jpg",
+          "attribution": "gbohne from Berlin, Germany; Blue Weevil from W-Papua - copula; CC BY-SA 2.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 2.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Buprestis aurulenta",
+      "key": "346ae2e2f832c75faa4ee930bd3f1b9a",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Beetle",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Buprestis%20aurulenta",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Buprestis%20aurulenta&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:e62ffe28482a863847f7bd5d9d579535",
+          "source_url": "https://commons.wikimedia.org/wiki/File:1939._6%27x6%27x8%27_screen-covered_cage_for_oviposition_study_of_Burprestis_aurulenta._Pack_Forest,_La_Grande,_Washington._(34953181176).jpg",
+          "attribution": "R6, State & Private Forestry, Forest Health Protection; 1939. 6'x6'x8' screen-covered cage for oviposition study of Burprestis aurulenta. Pack Forest, La Grande, Washington.; Public domain",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "Public domain",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [
+            "Source title describes a study cage; it may not show an individual beetle."
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ],
+      "review_warnings": [
+        "Source title describes a study cage; it may not show an individual beetle."
+      ]
+    },
+    {
+      "name": "Morpho menelaus",
+      "key": "03ab73a54831b53610e451ebb018538f",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Butterfly",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Morpho%20menelaus",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Morpho%20menelaus&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:370dca42faf4f0bb2856640bec4e84f4",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Morpho_menelaus_(Linnaeus,_1758)_in_Museu_de_Zoologia_da_USP.jpg",
+          "attribution": "Mário NET; Own work; CC BY-SA 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 4.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Papilio ulysses",
+      "key": "6c5a9b5cb1eed7658670f0a3798c4b18",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Butterfly",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Papilio%20ulysses",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Papilio%20ulysses&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:38b3819b7d3eefdc5373d257b28eb82b",
+          "source_url": "https://commons.wikimedia.org/wiki/File:MP_-_papilio_ulysses.jpg",
+          "attribution": "Mark Pellegrini (Raul654); Own work; CC BY-SA 2.5",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 2.5",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Papilio machaon",
+      "key": "786776a621e413625b740ca68b861933",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Butterfly",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Papilio%20machaon",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Papilio%20machaon&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:2186856e44b4c6a8e8a988054504f9cf",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Old_World_swallowtail_(Papilio_machaon_gorganus)_underside_Hungary.jpg",
+          "attribution": "Charles J. Sharp; Own work, from Sharp Photography, sharpphotography.co.uk; CC BY-SA 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 4.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Danaus plexippus",
+      "key": "138d8d6eb713b59bd245d9a7b4a76658",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Butterfly",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Danaus%20plexippus",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Danaus%20plexippus&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:f9eaeaa9b6a556c9380ad0557804b26a",
+          "source_url": "https://commons.wikimedia.org/wiki/File:ComputerHotline_-_Danaus_plexippus_(by)_(3).jpg",
+          "attribution": "Thomas Bresson; Danaus plexippus Uploaded by ComputerHotline; CC BY 2.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY 2.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Greta oto",
+      "key": "239e0d1d895560c067da1aa0a62c22c5",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Butterfly",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Greta%20oto",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Greta%20oto&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:d851cf53cb16f315f618d6157eba9d8a",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Greta_Oto_Glass-winged_Butterfly_at_Jur%C3%A9ia-Itatins_Ecological_Station_State_of_S%C3%A3o_Paulo_Brazil_2011_photo_by_Ithaka_Darin_Pappas_01.jpg",
+          "attribution": "IthakaDarinPappas; Own work; CC BY-SA 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 4.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Caligo memnon",
+      "key": "32cd1c0bd8ecd620f3878d6d112c9579",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Butterfly",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Caligo%20memnon",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Caligo%20memnon&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:9065a73f6a4b80384beea1b8d39d0b6b",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Bananenfalter_Caligo_memnon_2014.jpg",
+          "attribution": "Tuxyso; Own work; Tuxyso / Wikimedia Commons; CC BY-SA 3.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 3.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Heliconius melpomene",
+      "key": "1afbcb6379b2b8d6b03fff96870d81a1",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Butterfly",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Heliconius%20melpomene",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Heliconius%20melpomene&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:5307c9e28887c3c46098a5ed8fcc4647",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Gro%C3%9Fer_Kurier_Heliconius_cf_melpomene_0515.jpg",
+          "attribution": "NobbiP; Own work; NobbiP; CC BY-SA 3.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 3.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [
+            "Source uses 'cf. melpomene'; exact species identification is unresolved."
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ],
+      "review_warnings": [
+        "Source uses 'cf. melpomene'; exact species identification is unresolved."
+      ]
+    },
+    {
+      "name": "Agrias claudia claudina",
+      "key": "e688d85467045f64e1b4020ce27da0a1",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SUBSPECIES",
+      "intake_group": "Butterfly",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Agrias%20claudia%20claudina",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Agrias%20claudia%20claudina&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:7f0b08cdf0d22683440017c4e7c9f6d6",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Agrias_claudina.png",
+          "attribution": "Geoff Gallice; Flickr: Agrias claudina; CC BY 2.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY 2.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Vanessa atalanta",
+      "key": "05f4f00252f4bea6fd5e4c7b7b62e02d",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Butterfly",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Vanessa%20atalanta",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Vanessa%20atalanta&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:5916769a3d1598275698df73c95227dc",
+          "source_url": "https://commons.wikimedia.org/wiki/File:20220521_Vanessa_atalanta.jpg",
+          "attribution": "Flocci Nivis; Own work; CC BY 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY 4.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Troides aeacus",
+      "key": "ce6293a5c6b8d681bfc6c95213c3b0ae",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Butterfly",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Troides%20aeacus",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Troides%20aeacus&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:2fe821ae553ad4f1a250b065de6d9e1c",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Troides_aeacus_formosanus_female.jpg",
+          "attribution": "Peellden; Own work; CC BY-SA 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 4.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Attacus atlas",
+      "key": "aac94b357d0953df6caf25543e45532a",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Moth",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Attacus%20atlas",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Attacus%20atlas&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:f98748d70dc7b22b48c2fb06aabcee80",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Attacus_atlas_London_Zoo_01118-2.jpg",
+          "attribution": "London_Zoo_01118.jpg: Nevit Dilmen (talk) derivative work: Hic et nunc; This file was derived from: London Zoo 01118.jpg:; © Nevit Dilmen; CC BY-SA 3.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 3.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Actias luna",
+      "key": "fb324ef867759fdc3e1f6a9a40e797f1",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Moth",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Actias%20luna",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Actias%20luna&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:d7791ae4c8633cdc38b1a59d56ed0adb",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Actias_luna-male.jpg",
+          "attribution": "David notMD; Own work; CC BY-SA 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 4.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Acherontia atropos",
+      "key": "c57b737170dde9f182873d8302942cf2",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Moth",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Acherontia%20atropos",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Acherontia%20atropos&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:70d8ec3dc9d0a5da4c37d462ad48a065",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Acherontia_atropos,_emerged_DH_060_06_12_27-02_cr.jpg",
+          "attribution": "No machine-readable author provided. BetacommandBot assumed (based on copyright claims).; No machine-readable source provided. Own work assumed (based on copyright claims).; CC BY-SA 2.5",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 2.5",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Citheronia regalis",
+      "key": "29356d24b5b3b5b637c5e62aff9ddeb9",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Moth",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Citheronia%20regalis",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Citheronia%20regalis&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:fcbd507c9765ba43d7d90dec5797d758",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Citheronia_regalisPCCA20040718-3494AB.jpg",
+          "attribution": "Patrick Coin (Patrick Coin); Photograph taken by Patrick Coin; CC BY-SA 2.5",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 2.5",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Rothschildia lebeau",
+      "key": "db115955c6fbdc836464a9e47dcd13d2",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Moth",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Rothschildia%20lebeau",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Rothschildia%20lebeau&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:800f6af621dec8d55b30337fc52016a0",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Rothschildia_lebeau_f.jpg",
+          "attribution": "JohnSka; Own work; CC BY-SA 3.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 3.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Urania leilus",
+      "key": "b237603a9b05ca7bce703b6a01894246",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Moth",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Urania%20leilus",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Urania%20leilus&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:600549e22571f4b316a9ece29dadf144",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Mus%C3%A9um_d%27histoire_naturelle_de_Bordeaux_116.jpg",
+          "attribution": "Tylwyth Eldar; Own work; CC BY-SA 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 4.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Dryocampa rubicunda",
+      "key": "57cc0d58193ab788bc3fcedd633364f9",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Moth",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Dryocampa%20rubicunda",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Dryocampa%20rubicunda&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:f3fb64e5b52279568200dd986152be11",
+          "source_url": "https://commons.wikimedia.org/wiki/File:-_7715_%E2%80%93_Dryocampa_rubicunda_%E2%80%93_Rosy_Maple_Moth_(20309010658).jpg",
+          "attribution": "Andy Reago & Chrissy McClarren; # 7715 – Dryocampa rubicunda – Rosy Maple Moth; CC BY 2.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY 2.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Hemeroplanes triptolemus",
+      "key": "6336de354c923eac562e8d6f1fdafed7",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Moth",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Hemeroplanes%20triptolemus",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Hemeroplanes%20triptolemus&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:e35b54ca976348f53aecb7af16b25f3c",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Hemeroplanes_triptolemus_BMNHE273298_female_un.jpg",
+          "attribution": "The Trustees of the Natural History Museum, London; http://sphingidae.myspecies.info/file-colorboxed/4979; CC BY 3.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY 3.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Creatonotos gangis",
+      "key": "4d2eaff569586e1db65c0894b284faa6",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Moth",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Creatonotos%20gangis",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Creatonotos%20gangis&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:a0ca72d7c8478e1571fcef5d23b22d0a",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Baphomet_moth_(Creatonotos_gangis-interrupta_complex).jpg",
+          "attribution": "Charles J. Sharp; Own work, from Sharp Photography, sharpphotography.co.uk; CC BY-SA 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 4.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Aglia tau",
+      "key": "5a964a73680f925325e7f276db172d62",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Moth",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Aglia%20tau",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Aglia%20tau&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:951c194e97cccd6916c53cde6222cdc8",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Aglia_tau_MHNT_Male_Dos.jpg",
+          "attribution": "Didier Descouens; Own work; CC BY-SA 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 4.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Anax imperator",
+      "key": "9bcc9bccc62a96fef14b860c0741ef69",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Dragonfly",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Anax%20imperator",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Anax%20imperator&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:b727a3c6108988499aad0fe45b54e064",
+          "source_url": "https://commons.wikimedia.org/wiki/File:2017.06.05.-09-Anglerteiche-Rimbach--Grosse_Koenigslibelle-Weibchen_bei_Eiablage.jpg",
+          "attribution": "Andreas Eichler; Own work; Andreas Eichler; CC BY-SA 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 4.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Pantala flavescens",
+      "key": "a1b43333e02cdcc69fa86a1a5ed243d1",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Dragonfly",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Pantala%20flavescens",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Pantala%20flavescens&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:a94008a4095aa49784f46acfb1844d42",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Pantala_flavescens-Kadavoor-2017-05-04-002.jpg",
+          "attribution": "Jeevan Jose, Kerala, India; Own work; © 2017 Jee & Rani Nature Photography (License: CC BY-SA 4.0); CC BY-SA 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 4.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Libellula quadrimaculata",
+      "key": "87dcdb744bf47153d64c25e96bb60ba0",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Dragonfly",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Libellula%20quadrimaculata",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Libellula%20quadrimaculata&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:c3bd2ce4bb8b9bee7f0c14cecdfd252b",
+          "source_url": "https://commons.wikimedia.org/wiki/File:2013.05.18.-24-Kirschgartshaeuser_Schlaege_Mannheim-Vierfleck-Weibchen.jpg",
+          "attribution": "Andreas Eichler; Own work; Andreas Eichler; CC BY-SA 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 4.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Crocothemis erythraea",
+      "key": "116bd00e76e2f7f07fa2483aa7dcd741",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Dragonfly",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Crocothemis%20erythraea",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Crocothemis%20erythraea&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:58ca8763127b8f42dd317bcaa6a9ac9d",
+          "source_url": "https://commons.wikimedia.org/wiki/File:2015.08.07.-01-Anglersee_Huettenfeld-Lampertheim--Feuerlibelle-Maennchen.jpg",
+          "attribution": "Andreas Eichler; Own work; Andreas Eichler; CC BY-SA 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 4.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Trithemis annulata",
+      "key": "5f592845010db47aec220fdac4d708f1",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Dragonfly",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Trithemis%20annulata",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Trithemis%20annulata&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:0900a9e13a1974a8fbad03539620b401",
+          "source_url": "https://www.inaturalist.org/observations/222274356",
+          "attribution": "(c) Diego González Dopico, some rights reserved (CC BY); CC BY 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY 4.0",
+          "source_type": "INATURALIST_OBSERVATION",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Orthetrum cancellatum",
+      "key": "e774125d44e8935aa1e37543d5a6e84f",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Dragonfly",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Orthetrum%20cancellatum",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Orthetrum%20cancellatum&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:e9f3377878ad275b1011804e204031e2",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Black-tailed_skimmer_(Orthetrum_cancellatum)_female_Belgium.jpg",
+          "attribution": "Charles J. Sharp; Own work, from Sharp Photography, sharpphotography.co.uk; CC BY-SA 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 4.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Brachythemis contaminata",
+      "key": "b404ef86dbfa917fda0a8271b90cc970",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Dragonfly",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Brachythemis%20contaminata",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Brachythemis%20contaminata&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:7249b2f334abec1c7c19c3539b744c33",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Brachythemis_contaminata_(6)_,_Burdwan,_West_Bengal,_India_04_10_2012.JPG",
+          "attribution": "JDP90 (Joydeep); Own work; Joydeep; CC BY-SA 3.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 3.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Neurothemis fulvia",
+      "key": "b6c204bf50ec6707af8d6f16105ca12c",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Dragonfly",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Neurothemis%20fulvia",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Neurothemis%20fulvia&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:4319ea5f5fb99362201dba56bfc832b5",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Fulvous_Forest_Skimmer_(female).jpg",
+          "attribution": "Soumik Dey Roy; Own work; CC BY-SA 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 4.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Tramea lacerata",
+      "key": "8af99d9b7cd127a001861857356dc3d5",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Dragonfly",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Tramea%20lacerata",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Tramea%20lacerata&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:4ed7b64c733b74b9969dbc4ebe864e86",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Tramea_lacerata-female.jpg",
+          "attribution": "Peterwchen; Own work; CC BY-SA 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 4.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Sympetrum danae",
+      "key": "250d5768077b234aabcf7113828c726f",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Dragonfly",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Sympetrum%20danae",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Sympetrum%20danae&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:41c291383a6bff0a25d2b4ea3cfb976d",
+          "source_url": "https://commons.wikimedia.org/wiki/File:2014.07.17.-22-Zadlitzgraben_Pressel--Schwarze_Heidelibelle-Weibchen.jpg",
+          "attribution": "Andreas Eichler; Own work; Andreas Eichler; CC BY-SA 4.0",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 4.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Phidippus audax",
+      "key": "aef39363fad0b0ed",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Spider research candidate",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Phidippus%20audax",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Phidippus%20audax&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:2d30bda763981882d0a2aceb43545ecb",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Adult_Male_Phidippus_audax_Jumping_Spider.jpg",
+          "attribution": "Thomas Shahan (Opoterser); Thomas Shahan (Opoterser); Thomas Shahan (Opoterser); existing core photo refs: 120; asset/license binding not reviewed",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY 2.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Phidippus johnsoni",
+      "key": "81a12f33cf1827b8",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Spider research candidate",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Phidippus%20johnsoni",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Phidippus%20johnsoni&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": []
+    },
+    {
+      "name": "Phidippus mystaceus",
+      "key": "4bcdd7fe77f636af27856a68e7a6546e",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Spider research candidate",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Phidippus%20mystaceus",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Phidippus%20mystaceus&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:e32c85a42678d21f5ef1d49868cabd9e",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Face_of_a_Phidippus_mystaceus_jumping_spider.(adult_female).jpg",
+          "attribution": "Thomas Shahan (Opoterser); Thomas Shahan (Opoterser); Thomas Shahan (Opoterser)",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC BY-SA 3.0",
+          "source_type": "WIKIMEDIA_FILE_PAGE",
+          "candidate_warning": [],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Phidippus otiosus",
+      "key": "e0fa2260254354336a82fa472a152a5a",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Spider research candidate",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Phidippus%20otiosus",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Phidippus%20otiosus&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:7e5d18111a98155b7bc75f4e2c58310c",
+          "source_url": "https://www.inaturalist.org/observations/260640960",
+          "attribution": "Rowan Martin; photo reproduced/cropped in Nyffeler et al. 2025",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "CC_BY_NC_4_0_NONCOMMERCIAL_REFERENCE_ONLY",
+          "source_type": "INATURALIST_OBSERVATION",
+          "candidate_warning": [
+            "Intake rights claim is CC BY-NC 4.0; browse-only unless reuse is cleared."
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ],
+      "review_warnings": [
+        "Intake rights claim is CC BY-NC 4.0; browse-only unless reuse is cleared."
+      ]
+    },
+    {
+      "name": "Phidippus regius",
+      "key": "426f1aeb5c927661",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Spider research candidate",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Phidippus%20regius",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Phidippus%20regius&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": []
+    },
+    {
+      "name": "Hyllus brevitarsis",
+      "key": "d6da746da4c597e4077e018ae871202f",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Spider research candidate",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Hyllus%20brevitarsis",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Hyllus%20brevitarsis&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Additional intake research page",
+          "url": "https://doi.org/10.5281/zenodo.17103454",
+          "kind": "OTHER_REFERENCE"
+        }
+      ],
+      "curated_reference_leads": []
+    },
+    {
+      "name": "Hyllus semicupreus",
+      "key": "09c7cf17bdf3a2511e4b6132cc5435c2",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Spider research candidate",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Hyllus%20semicupreus",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Hyllus%20semicupreus&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Additional intake research page",
+          "url": "https://peckhamia.com/peckhamia/PECKHAMIA_125.1.pdf",
+          "kind": "OTHER_REFERENCE"
+        }
+      ],
+      "curated_reference_leads": []
+    },
+    {
+      "name": "Hyllus walckenaeri",
+      "key": "b17fafc09068940499d883556cab914f",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Spider research candidate",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Hyllus%20walckenaeri",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Hyllus%20walckenaeri&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Additional intake research page",
+          "url": "https://www.inaturalist.org/taxa/857714-Hyllus-walckenaeri",
+          "kind": "OTHER_REFERENCE"
+        }
+      ],
+      "curated_reference_leads": []
+    },
+    {
+      "name": "Ornithoctonus aureotibialis",
+      "key": "2dfe5150a46c4c4c",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Spider research candidate",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Ornithoctonus%20aureotibialis",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Ornithoctonus%20aureotibialis&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": []
+    },
+    {
+      "name": "Ornithoctonus costalis",
+      "key": "d0dcdcd4e4779a5c58ff12c8d6ab9bd3",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Spider research candidate",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Ornithoctonus%20costalis",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Ornithoctonus%20costalis&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:65bcebf4a336a7dfec30c2e8f1785984",
+          "source_url": "https://www.morphmarket.com/us/c/invertebrates/tarantulas/3547202",
+          "attribution": "Seller listing / photographer rights not established",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "NO_REUSE_REFERENCE_ONLY",
+          "source_type": "COMMERCIAL_LISTING",
+          "candidate_warning": [
+            "Commercial seller listing; browse-only lead, no copying or reuse permission recorded."
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ],
+      "review_warnings": [
+        "Commercial seller listing; browse-only lead, no copying or reuse permission recorded."
+      ]
+    },
+    {
+      "name": "Hyllus giganteus",
+      "key": "0fd8f753870f8eeb0b19e7cfcf06229c",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Spider research candidate",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Hyllus%20giganteus",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Hyllus%20giganteus&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": []
+    },
+    {
+      "name": "Hyllus diardi",
+      "key": "7d968a3319cdf2ca",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "rank": "SPECIES",
+      "intake_group": "Spider research candidate",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation photos",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Hyllus%20diardi",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Hyllus%20diardi&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "curated_reference_leads": []
+    }
+  ],
+  "unresolved_research_units": [
+    {
+      "name": "Brachionopus sp. \"Marakele\"",
+      "rank": "GENUS_ONLY",
+      "status": "UNRESOLVED_RESEARCH_UNIT",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation search",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Brachionopus%20sp.%20%22Marakele%22",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons image search",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Brachionopus%20sp.%20%22Marakele%22&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "user_note": "Identity unresolved at the submitted genus/locality level; do not inherit an exact species identification or behaviour."
+    },
+    {
+      "name": "Brachionopus sp. \"Limpopo\"",
+      "rank": "GENUS_ONLY",
+      "status": "UNRESOLVED_RESEARCH_UNIT",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation search",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Brachionopus%20sp.%20%22Limpopo%22",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons image search",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Brachionopus%20sp.%20%22Limpopo%22&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "user_note": "Identity unresolved at the submitted genus/locality level; do not inherit an exact species identification or behaviour."
+    },
+    {
+      "name": "Ornithoctonus sp. “Uthai Thani”",
+      "rank": "GENUS_ONLY",
+      "status": "UNRESOLVED_RESEARCH_UNIT",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation search",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Ornithoctonus%20sp.%20%E2%80%9CUthai%20Thani%E2%80%9D",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons image search",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Ornithoctonus%20sp.%20%E2%80%9CUthai%20Thani%E2%80%9D&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "additional_reference_sources": [
+        {
+          "label": "Unassigned intake source",
+          "url": "https://spidershoppe.com/products/ornithoctonus-costalis-thai-silver-grey-earth-tiger-4-female",
+          "kind": "UNVERIFIED_SOURCE"
+        }
+      ],
+      "user_note": "Seller listing mentions Ornithoctonus costalis; it is not evidence for the Uthai Thani locality label."
+    },
+    {
+      "name": "Ornithoctonus sp. “Surat Thani”",
+      "rank": "GENUS_ONLY",
+      "status": "UNRESOLVED_RESEARCH_UNIT",
+      "source_searches": [
+        {
+          "label": "iNaturalist observation search",
+          "url": "https://www.inaturalist.org/observations?taxon_name=Ornithoctonus%20sp.%20%E2%80%9CSurat%20Thani%E2%80%9D",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons image search",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Ornithoctonus%20sp.%20%E2%80%9CSurat%20Thani%E2%80%9D&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        }
+      ],
+      "additional_reference_sources": [
+        {
+          "label": "Unassigned intake source",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Ornithoctonus+sp.+Surat+Thani&title=Special:MediaSearch&type=image",
+          "kind": "UNVERIFIED_SOURCE"
+        }
+      ],
+      "user_note": "Identity unresolved at the submitted genus/locality level; do not inherit an exact species identification or behaviour."
+    }
+  ]
+}
