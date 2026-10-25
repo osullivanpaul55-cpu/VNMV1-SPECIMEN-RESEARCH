@@ -2,7 +2,7 @@
   "schema": "VNMV1_PUBLIC_PHOTO_RESEARCH_REQUEST_V1",
   "status": "REQUESTED",
   "purpose": "Continue public photo candidate collection for the expanded taxon catalog",
-  "requested_at": "2026-10-25T10:12:00Z",
-  "request_generation": 7,
-  "rerun_reason": "Continue catalogue photo coverage after cycle 10 was archived"
+  "requested_at": "2026-10-25T10:18:00Z",
+  "request_generation": 8,
+  "rerun_reason": "Continue catalogue photo coverage after cycle 11 was archived"
 }
