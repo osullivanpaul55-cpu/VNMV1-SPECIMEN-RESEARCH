@@ -44,6 +44,9 @@ def compile_archive(shard_root:Path,previous:dict,out:Path,tag:str,repo:str)->di
                     elif re.fullmatch(r'commons:[0-9a-f]{12}:[0-9]{1,15}',lkey):
                         if not re.fullmatch(r'https://commons\.wikimedia\.org/wiki/File:[^?#]{1,1000}',lurl):
                             raise ValueError('BAD_LINK_COMMONS_FILE_PAGE')
+                    elif re.fullmatch(r'gbif:[0-9a-f]{12}:[0-9]{1,20}:[0-9a-f]{12}',lkey):
+                        if not re.fullmatch(r'https://www\.gbif\.org/occurrence/[0-9]{1,20}',lurl):
+                            raise ValueError('BAD_LINK_GBIF_OCCURRENCE')
                     else:
                         raise ValueError('BAD_LINK_PHOTO_KEY')
                     if lkey in prior_keys or lkey in key_seen:continue
