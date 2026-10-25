@@ -30,7 +30,7 @@
 .quick-save{position:fixed;z-index:850;left:50%;bottom:calc(12px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);width:min(560px,calc(100vw - 20px));display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 10px;font-size:.73rem;color:#aabed4;background:rgba(20,32,48,.97);border:1px solid #45617d;border-radius:14px;box-shadow:0 8px 25px rgba(0,0,0,.48);backdrop-filter:blur(8px)}
 .quick-save>span{flex:1;min-width:0;line-height:1.25}
 .quick-save small{display:block;font-size:.68rem;white-space:normal}
-.quick-save button{font-size:.82rem;padding:9px 12px;min-height:44px;white-space:nowrap}
+.quick-save button{font-size:.82rem;padding:9px 12px;min-height:44px;white-space:nowrap}\n.quick-save #driveSaveState[data-state=success]{color:#b5eac1}\n.quick-save #driveSaveState[data-state=error]{color:#ffb4ba}\n.quick-save #driveSaveState a{color:#b5d9ff;text-decoration:underline;margin-left:4px}\n.card-jump #nextUncertain{min-width:0;padding:7px 9px;font-size:.8rem}
 .photo-review-details{margin:7px 0;border:1px solid #394d65;border-radius:9px;background:#142235;padding:0 9px}
 .photo-review-details>summary{cursor:pointer;padding:9px 7px;border-radius:7px;font-weight:650}
 .photo-review-body{padding:2px 0 8px}
@@ -54,16 +54,16 @@
 <details id="reviewSettings" class="review-settings"><summary>VNMV1 Reference Review <span>Tools & progress ▾</span></summary>
 <header><div><h1>VNMV1 · Specimen reference review</h1><p class="muted">Independent photo research • one species pool • human-reviewed decisions · <a href="../data/species_coverage.csv">Download per-species coverage</a></p></div><div class="muted">Candidate references only · No image generation</div></header>
 <div class="note"><strong>Quick review:</strong> choose specimen type, pose, notes or Reject for each photograph. Edits save on this phone automatically; use Save JSON to Drive for a backup. Use Previous/Next or Card # to change species; scroll downward through photos for that species. References and available text-based suggestions are preselected for retention. Correct our proposals where necessary. <strong>Photo coverage:</strong> aim for at least 9 distinct individual photo/source records per named taxon where available; target 12, preferably 12–15. The under-9 filter counts individual photo records and individual source-photo leads, but not search pages or duplicates. A documented source shortage stays visible for research. User review can establish card identity only at the taxonomic rank supported by the photo; sex/stage and photo-use rights remain separate.</div>
-<section class="stats" aria-label="Research counts"><div class="stat"><b id="speciesCount">0</b><span>Review entries</span></div><div class="stat"><b id="candidateCount">0</b><span>Photo candidates</span></div><div class="stat"><b id="sourceLeadCount">0</b><span>Research-only photo links</span></div><div class="stat"><b id="decisionCount">0</b><span>Decisions entered</span></div><div class="stat"><b id="aiDraftCount">0</b><span>AI draft reviews</span></div><div class="stat"><b id="floorCount">0</b><span>Species with 9+ photo references</span></div></section>
-<div class="controls"><input id="filter" type="search" placeholder="Find a card number or taxon…" aria-label="Filter cards and taxa"><select id="statusFilter" aria-label="Filter research state"><option value="all" selected>All cards and taxon candidates</option><option value="photos">With photographs or research links</option><option value="under">Fewer than 9 photo references</option><option value="decided">My reviewed photographs</option></select><button class="secondary" id="reload">Refresh public index</button></div>
+<section class="stats" aria-label="Research counts"><div class="stat"><b id="speciesCount">0</b><span>Review entries</span></div><div class="stat"><b id="candidateCount">0</b><span>Photo candidates</span></div><div class="stat"><b id="sourceLeadCount">0</b><span>Research-only photo links</span></div><div class="stat"><b id="decisionCount">0</b><span>Decisions entered</span></div><div class="stat"><b id="needsReviewCount">0</b><span>Photos needing review</span></div><div class="stat"><b id="aiDraftCount">0</b><span>AI draft reviews</span></div><div class="stat"><b id="floorCount">0</b><span>Species with 9+ photo references</span></div></section>
+<div class="controls"><input id="filter" type="search" placeholder="Find a card number or taxon…" aria-label="Filter cards and taxa"><select id="statusFilter" aria-label="Filter research state"><option value="all" selected>All cards and taxon candidates</option><option value="photos">With photographs or research links</option><option value="under">Fewer than 9 photo references</option><option value="decided">My reviewed photographs</option><option value="needs">Needs review (red / unsure)</option></select><button class="secondary" id="reload">Refresh public index</button></div>
 <div class="controls"><label class="upload" for="reviewUpload">Import saved review JSON</label><input id="reviewUpload" type="file" accept="application/json,.json"><button class="secondary" id="openHelp" type="button">Where do I save?</button></div>
 <details id="advancedIndex"><summary>Advanced: load offline research index</summary><input style="max-width:180px" id="indexUpload" type="file" accept="application/json,.json"></details>
 <div class="controls"><button id="export" type="button">Download backup review JSON</button><small>This button only downloads a copy. Use Save JSON to Drive for a direct upload.</small></div>
 <details id="driveSetup" class="photo-source"><summary>One-time Google Drive setup</summary><p>Direct upload needs a Google OAuth Web application Client ID. In <a href="https://console.cloud.google.com/apis/credentials" target="_blank" rel="noopener">Google Cloud credentials</a>, enable the Google Drive API, configure the OAuth consent screen, create a Web application OAuth Client ID, and add this exact Authorized JavaScript origin: <code>https://osullivanpaul55-cpu.github.io</code>. If the app is in testing, add your Google account as a test user. Paste the Client ID below. Do not paste a client secret. The Client ID is public and is stored only in this browser.</p><label for="driveClientId">Google OAuth Client ID</label><input id="driveClientId" type="text" autocomplete="off" inputmode="url" placeholder="…apps.googleusercontent.com" style="width:100%;padding:10px;border-radius:8px"><div class="controls"><button id="saveDriveSetup" type="button">Save Drive setup on this phone</button><button id="clearDriveSetup" type="button" class="secondary">Clear saved Drive setup</button></div><p id="driveSetupState" class="muted"></p></details>
 <div id="notification" role="status" aria-live="polite"></div>
 </details>
-<nav id="speciesNav" class="navstrip" aria-label="Specimen navigation"><button id="prevSpecies" type="button">◀ Previous</button><strong id="speciesPosition">Specimen 0/0</strong><button id="nextSpecies" type="button">Next ▶</button><div class="card-jump"><label for="cardJump">Card #</label><input id="cardJump" type="number" min="1" step="1" inputmode="numeric" placeholder="12" aria-label="Card number, for example 12"><button id="jumpToCard" type="button">Go</button></div></nav>
-<div class="quick-save"><span>Autosave on this phone<br><small id="saveState" role="status" aria-live="polite">Loading saved reviews…</small></span><button id="saveQuick" type="button">Save JSON to Drive</button></div>
+<nav id="speciesNav" class="navstrip" aria-label="Specimen navigation"><button id="prevSpecies" type="button">◀ Previous</button><strong id="speciesPosition">Specimen 0/0</strong><button id="nextSpecies" type="button">Next ▶</button><div class="card-jump"><label for="cardJump">Card #</label><input id="cardJump" type="number" min="1" step="1" inputmode="numeric" placeholder="12" aria-label="Card number, for example 12"><button id="jumpToCard" type="button">Go</button><button id="nextUncertain" class="secondary" type="button">Next uncertain</button></div></nav>
+<div class="quick-save"><span><b>Phone save</b><small id="saveState" role="status" aria-live="polite">Loading saved reviews…</small><small id="driveSaveState" role="status" aria-live="polite">Drive: last upload time will show after the next save</small></span><button id="saveQuick" type="button">Save JSON to Drive</button></div>
 <div class="mobile-tips">Use Previous / Next or Card # to change species · Scroll down for the next photograph</div>
 <div class="review-legend"><span class="review-green">Green: checked and resolved</span><span class="review-red">Red: suggested, unknown or still needs review</span></div>
 <p id="scopeNote" class="muted"></p>
@@ -84,7 +84,7 @@ document.head.appendChild(googleDriveClientLibrary);
 let dataset={schema:'VNMV1_PUBLIC_PHOTO_CANDIDATES_V1',species:{}},speciesCursor=0,visibleSpecies=[];
 let visualDrafts={},lastIndexLoad=0;
 const $=s=>document.querySelector(s), KEY='vnmv1-photo-review-v1';
-const DRIVE_CLIENT_KEY='vnmv1-google-oauth-client-id-v1',DRIVE_FOLDER_KEY='vnmv1-drive-backup-folder-id-v1';
+const DRIVE_CLIENT_KEY='vnmv1-google-oauth-client-id-v1',DRIVE_FOLDER_KEY='vnmv1-drive-backup-folder-id-v1',DRIVE_LAST_UPLOAD_KEY='vnmv1-drive-last-upload-v1';
 const POSES=[
 ['UNREVIEWED','Camera pose not reviewed'],
 ['FRONTAL','1 · Frontal / eye-level'],
@@ -185,6 +185,33 @@ let reviewDB=null,reviewStorageMode='loading',reviewStorageError=null;
 let reviewSaveTimer=null,reviewPendingRecords=new Map(),reviewPendingFullSnapshot=false;
 let reviewPendingWaiters=[],reviewWriteQueue=Promise.resolve();
 function setSaveState(message){const state=$('#saveState');if(state)state.textContent=message}
+function setDriveSaveState(message,state='info',url=''){
+ const status=$('#driveSaveState');if(!status)return;
+ status.dataset.state=state;status.replaceChildren(document.createTextNode(message));
+ if(url&&/^https:\/\/drive\.google\.com\//.test(url)){
+  const link=document.createElement('a');link.href=url;link.target='_blank';link.rel='noopener';link.textContent='Open';status.append(link);
+ }
+}
+function describeDriveSave(record){
+ const when=Date.parse(record.uploaded_at||'');
+ const date=Number.isFinite(when)?new Date(when).toLocaleString(undefined,{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'}):'recently';
+ const records=Number(record.record_count||0).toLocaleString();
+ const edited=Number(record.human_reviewed_count||0).toLocaleString();
+ return 'Drive: backed up '+date+' · '+records+' records · '+edited+' reviewed';
+}
+function restoreDriveSaveState(){
+ try{
+  const record=JSON.parse(localStorage.getItem(DRIVE_LAST_UPLOAD_KEY)||'null');
+  if(record?.uploaded_at){setDriveSaveState(describeDriveSave(record),'success',record.webViewLink||'');return}
+ }catch(_){}
+ setDriveSaveState('Drive: last upload time will show after the next save','info');
+}
+function rememberDriveSave(saved,data,edited){
+ const record={uploaded_at:new Date().toISOString(),filename:saved.name||data.filename,webViewLink:saved.webViewLink||'',record_count:data.rows.length,human_reviewed_count:edited};
+ try{localStorage.setItem(DRIVE_LAST_UPLOAD_KEY,JSON.stringify(record))}catch(_){}
+ setDriveSaveState(describeDriveSave(record),'success',record.webViewLink);
+}
+restoreDriveSaveState();
 function openReviewDatabase(){
  return new Promise((resolve,reject)=>{
   if(!('indexedDB' in window)){reject(Error('IndexedDB is unavailable in this browser.'));return}
@@ -423,7 +450,7 @@ function leadCard(p){
  const spec=Object.values(dataset.species||{}).find(s=>leadsFrom(s).includes(p));
  const d=decisions[p.photo_key]||seedProposal(spec||{scientific_name:'UNRESOLVED'},p,true);
  const sug=suggestions(p);
- const article=create('article',undefined,'photo');
+ const article=create('article',undefined,'photo');article.dataset.photoKey=String(p.photo_key||'');article.dataset.needsReview=String(photoNeedsAttention(spec||{scientific_name:'UNRESOLVED'},p,true));
  const preview=leadPreviewUrl(p);
  if(preview){
   const image=create('img');image.loading='lazy';image.decoding='async';image.referrerPolicy='no-referrer';
@@ -504,6 +531,7 @@ function leadCard(p){
   reviewFieldTint(suggestLabel,actual&&touched.has('retain_suggested_classifications'));
   const current=decisions[p.photo_key]||d;
   const green=current?.reviewed_by_human===true&&current?.human_visual_confirmation===true&&Array.isArray(current.reviewed_fields)&&current.reviewed_fields.length>0&&current.pose_id&&current.pose_id!=='UNREVIEWED'&&reviewSpecimenType(current,sug)!=='UNKNOWN';
+  article.dataset.needsReview=String(!(highConfidence||green));
   reviewSummary.textContent=highConfidence?'High-confidence visual draft · expand to inspect':green?'Human-reviewed · green · expand to inspect':'Needs review · '+confidence.toLowerCase()+' confidence';
   reviewFieldTint(reviewSummary,highConfidence||green);
   if(highConfidence||green)reviewDetails.open=false;
@@ -702,6 +730,16 @@ function stats(){
  const photoMap=new Map();
  for(const spec of names)for(const p of photosFrom(spec))if(p?.photo_key&&!photoMap.has(p.photo_key))photoMap.set(p.photo_key,p);
  const photos=[...photoMap.values()];
+ const reviewItems=new Map();
+ for(const spec of names)for(const p of photosFrom(spec)){
+  if(typeof p?.photo_key==='string'&&/^inat:\d+$/.test(p.photo_key)&&!reviewItems.has(p.photo_key))reviewItems.set(p.photo_key,{spec,p,linkOnly:false});
+ }
+ for(const spec of names)for(const p of leadsFrom(spec)){
+  if(typeof p?.photo_key==='string'&&/^(?:inat:\d+|ref:[a-f0-9]{32})$/.test(p.photo_key)&&!reviewItems.has(p.photo_key))reviewItems.set(p.photo_key,{spec,p,linkOnly:true});
+ }
+ const needsReviewCount=[...reviewItems.values()].filter(item=>photoNeedsAttention(item.spec,item.p,item.linkOnly)).length;
+ $('#needsReviewCount').textContent=needsReviewCount;
+ const nextUncertainButton=$('#nextUncertain');if(nextUncertainButton)nextUncertainButton.disabled=needsReviewCount===0;
  const sourceKeys=new Set();
  for(const spec of names)for(const p of [...leadsFrom(spec),...searchesFrom(spec)]){
   const key=p?.photo_key||p?.source_url||p?.url;
@@ -736,9 +774,25 @@ function displayFieldStatus(record,field,valid,visualConfirmed=true){
  return fieldIsMarked(record,field)&&valid&&visualConfirmed;
 }
 function reviewIsEntered(d){return !!d&&(!d.proposal_prepopulated_not_human_reviewed||d.reviewed_by_human===true)&&(d.resembles_original&&d.resembles_original!=='NOT_ASSESSED'||d.reviewed_by_human===true||!!d.sex&&d.sex!=='UNKNOWN'||!!d.decision&&d.decision!=='PENDING'||!!d.pose_id&&d.pose_id!=='UNREVIEWED'||!!d.notes?.trim()||!!d.reject_reason?.trim())}
+function photoNeedsAttention(spec,p,linkOnly=false){
+ if(!p||typeof p.photo_key!=='string')return false;
+ const d=decisions[p.photo_key]||seedProposal(spec,p,linkOnly),sug=suggestions(p);
+ const confidence=String(sug.confidence||'UNKNOWN').toUpperCase();
+ const hasBoundVisual=!!p.sha256&&p.preanalysis?.reviewed_actual_image===true&&p.preanalysis?.source_image_sha256===p.sha256;
+ const highConfidence=['HIGH','VERY_HIGH'].includes(confidence)&&hasBoundVisual;
+ const specimen=reviewSpecimenType(d,sug);
+ const greenReview=linkOnly
+  ?d?.reviewed_by_human===true&&d?.human_visual_confirmation===true&&Array.isArray(d.reviewed_fields)&&d.reviewed_fields.length>0&&d.pose_id&&d.pose_id!=='UNREVIEWED'&&specimen!=='UNKNOWN'
+  :d?.reviewed_by_human===true&&d?.photo_visual_fields_confirmed===true&&specimen!=='UNKNOWN'&&d.pose_id&&d.pose_id!=='UNREVIEWED'&&d.decision&&d.decision!=='PENDING';
+ return !(highConfidence||greenReview);
+}
+function speciesNeedsAttention(spec){
+ return photosFrom(spec).some(p=>photoNeedsAttention(spec,p,false))
+  ||leadsFrom(spec).some(p=>photoNeedsAttention(spec,p,true));
+}
 function reviewDecisionChoice(d){return d.requested_decision || (d.decision==='ACCEPT_FEMALE'||d.decision==='ACCEPT_MALE'?'ACCEPT_REFERENCE':d.decision)||'PENDING'}
 function reviewSex(d){return d.sex || (d.decision==='ACCEPT_FEMALE'?'FEMALE':d.decision==='ACCEPT_MALE'?'MATURE_MALE':'UNKNOWN')}
-function imageCard(spec,p){const key=p.photo_key;if(typeof key!=='string'||!/^inat:\d+$/.test(key))return create('div','Invalid photo entry','photo');const d=decisions[key]||seedProposal(spec,p,false);const sug=suggestions(p);const box=create('article',undefined,'photo');const src=imgUrl(p.thumbnail_url);if(src){const im=create('img');im.loading='lazy';im.src=src;im.alt='Reference photo for '+spec.scientific_name;im.className='tap-zoom';im.title='Tap to pinch-zoom';im.addEventListener('click',()=>openPhotoZoom(src,key+' · '+spec.scientific_name));box.append(im)}
+function imageCard(spec,p){const key=p.photo_key;if(typeof key!=='string'||!/^inat:\d+$/.test(key))return create('div','Invalid photo entry','photo');const d=decisions[key]||seedProposal(spec,p,false);const sug=suggestions(p);const box=create('article',undefined,'photo');box.dataset.photoKey=key;box.dataset.needsReview=String(photoNeedsAttention(spec,p,false));const src=imgUrl(p.thumbnail_url);if(src){const im=create('img');im.loading='lazy';im.src=src;im.alt='Reference photo for '+spec.scientific_name;im.className='tap-zoom';im.title='Tap to pinch-zoom';im.addEventListener('click',()=>openPhotoZoom(src,key+' · '+spec.scientific_name));box.append(im)}
 const info=create('div',undefined,'info');
 const confidence=String(sug.confidence||'UNKNOWN').toUpperCase();
 const hasBoundVisual=!!p.sha256&&p.preanalysis?.reviewed_actual_image===true&&p.preanalysis?.source_image_sha256===p.sha256;
@@ -878,6 +932,7 @@ const updateColours=()=>{
  reviewFieldTint(rightslabel,touched.has('rights_checked')&&rightsbox.checked,false);
  const current=decisions[key]||d;
  const green=current?.reviewed_by_human===true&&current?.photo_visual_fields_confirmed===true&&reviewSpecimenType(current,sug)!=='UNKNOWN'&&current.pose_id&&current.pose_id!=='UNREVIEWED'&&current.decision&&current.decision!=='PENDING';
+ box.dataset.needsReview=String(!(highConfidence||green));
  reviewSummary.textContent=highConfidence?'High-confidence visual draft · expand to inspect':green?'Human-reviewed · green · expand to inspect':'Needs review · '+confidence.toLowerCase()+' confidence';
  reviewFieldTint(reviewSummary,highConfidence||green);
  if(highConfidence||green)reviewDetails.open=false;
@@ -959,7 +1014,7 @@ rejectButton.addEventListener('click',()=>{
   touched.add('suitability');select.value='REJECT';update();notify('Rejected and excluded from approved ImageGen references.');
 });
 box.append(info);return box}
-let navSequence=0;
+let navSequence=0,lastUncertainPhotoKey='';
 function anchorToFirstPhoto(sequence){
  if(sequence!==navSequence)return;
  const first=$('#results .photo img')||$('#results .photo')||$('#results .species');
@@ -971,6 +1026,7 @@ function anchorToFirstPhoto(sequence){
  window.scrollTo({top:Math.max(0,Math.min(max,y)),behavior:'instant'});
 }
 function changeSpecies(delta){
+ lastUncertainPhotoKey='';
  if(!visibleSpecies.length)return;
  const next=Math.max(0,Math.min(visibleSpecies.length-1,speciesCursor+delta));
  if(next===speciesCursor)return;
@@ -996,10 +1052,52 @@ function jumpToCard(){
   index=visibleSpecies.findIndex(spec=>cardNumberFor(spec)===number);
  }
  if(index<0){notify('Card '+String(number).padStart(4,'0')+' is not in the current review index.');return}
- const id=++navSequence;speciesCursor=index;render();
+ lastUncertainPhotoKey='';const id=++navSequence;speciesCursor=index;render();
  requestAnimationFrame(()=>{anchorToFirstPhoto(id);requestAnimationFrame(()=>anchorToFirstPhoto(id))});
  setTimeout(()=>anchorToFirstPhoto(id),130);setTimeout(()=>anchorToFirstPhoto(id),350);
  notify('Opened Card_'+String(number).padStart(4,'0'));
+}
+function scrollToUncertainPhoto(article){
+ const details=article.querySelector('details.photo-review-details');if(details)details.open=true;
+ const nav=$('#speciesNav'),offset=(nav?nav.getBoundingClientRect().height:0)+10;
+ const top=article.getBoundingClientRect().top+window.scrollY-offset;
+ window.scrollTo({top:Math.max(0,top),behavior:'smooth'});
+}
+function jumpToNextUncertain(){
+ if(!visibleSpecies.length){notify('No review entries match the current filters.');return}
+ const cards=[...$('#results').querySelectorAll('.photo[data-needs-review="true"]')];
+ const needs=cards.filter(card=>card.dataset.needsReview==='true');
+ const nav=$('#speciesNav'),navBottom=nav?nav.getBoundingClientRect().bottom:0;
+ const lastIndex=needs.findIndex(card=>card.dataset.photoKey===lastUncertainPhotoKey);
+ let target=lastIndex>=0?needs.slice(lastIndex+1)[0]:null;
+ if(lastIndex<0){
+  target=needs.find(card=>card.getBoundingClientRect().top>navBottom+12)
+    ||needs.find(card=>card.getBoundingClientRect().bottom>navBottom+12)
+    ||needs[0]||null;
+ }
+ if(target){
+  lastUncertainPhotoKey=target.dataset.photoKey||'';
+  scrollToUncertainPhoto(target);
+  notify('Opened a photo needing review.');
+  return;
+ }
+ for(let step=1;step<visibleSpecies.length;step++){
+  const index=(speciesCursor+step)%visibleSpecies.length;
+  if(speciesNeedsAttention(visibleSpecies[index])){
+   speciesCursor=index;lastUncertainPhotoKey='';
+   const sequence=++navSequence;render();
+   const jump=()=>{if(sequence!==navSequence)return;const first=$('#results .photo[data-needs-review="true"]');if(!first)return;lastUncertainPhotoKey=first.dataset.photoKey||'';scrollToUncertainPhoto(first);};
+   requestAnimationFrame(()=>{jump();requestAnimationFrame(jump)});setTimeout(jump,160);
+   notify('Opened the next entry with a photo needing review.');
+   return;
+  }
+ }
+ if(needs.length){
+  const first=needs[0];lastUncertainPhotoKey=first.dataset.photoKey||'';scrollToUncertainPhoto(first);
+  notify('No later uncertain photo in this list; returned to the first one.');
+  return;
+ }
+ notify('No uncertain photos remain in the current filter.');
 }
 function render(){
  stats();
@@ -1010,6 +1108,7 @@ function render(){
    if(filter==='photos'&&photos.length===0&&leadsFrom(spec).length===0&&searchesFrom(spec).length===0)return false;
    if(filter==='under'&&photoReferenceCount(spec)>=PHOTO_REFERENCE_MIN)return false;
    if(filter==='decided'&&!photos.concat(leadsFrom(spec)).some(p=>reviewIsEntered(decisions[p.photo_key])))return false;
+   if(filter==='needs'&&!speciesNeedsAttention(spec))return false;
    return true;
  }).sort((a,b)=>reviewUnitLabel(a).localeCompare(reviewUnitLabel(b),undefined,{numeric:true}));
  const root=$('#results');root.replaceChildren();
@@ -1117,14 +1216,15 @@ async function load(){
   render();notify('Public research index unavailable ('+lastError+'). Open index JSON offline.');
 }
 $('#indexUpload').addEventListener('change',async event=>{const f=event.target.files?.[0];if(!f)return;try{const o=JSON.parse(await f.text());if(o.schema!=='VNMV1_PUBLIC_PHOTO_CANDIDATES_V1'||typeof o.species!=='object')throw Error('Invalid index');dataset=o;await loadReferenceCatalog();speciesCursor=0;seedPendingReviews();render();notify('Loaded local index: '+f.name)}catch(e){notify('Could not load index: '+e.message)}});
-$('#filter').addEventListener('input',()=>{speciesCursor=0;render()});
-$('#statusFilter').addEventListener('change',()=>{speciesCursor=0;render()});
+$('#filter').addEventListener('input',()=>{lastUncertainPhotoKey='';speciesCursor=0;render()});
+$('#statusFilter').addEventListener('change',()=>{lastUncertainPhotoKey='';speciesCursor=0;render()});
 $('#reload').addEventListener('click',load);
 setInterval(()=>{if(document.visibilityState==='visible'&&Date.now()-lastIndexLoad>15*60*1000)load()},60000);
 window.addEventListener('focus',()=>{if(Date.now()-lastIndexLoad>15*60*1000)load()});
 $('#prevSpecies').addEventListener('click',()=>changeSpecies(-1));
 $('#nextSpecies').addEventListener('click',()=>changeSpecies(1));
 $('#jumpToCard').addEventListener('click',jumpToCard);
+$('#nextUncertain').addEventListener('click',jumpToNextUncertain);
 $('#cardJump').addEventListener('keydown',event=>{if(event.key==='Enter'){event.preventDefault();jumpToCard()}});
 $('#openHelp').addEventListener('click',()=>notify("Save JSON to Drive uploads a dated JSON directly into a VNMV1 Reference Review Backups folder. The first use asks Google for permission. Direct upload requires the one-time Google OAuth Client ID under Tools & progress > One-time Google Drive setup. Download backup remains a separate manual option."));
 $('#reviewUpload').addEventListener('change',async event=>{
@@ -1272,7 +1372,8 @@ async function saveQuickReview(){
  }
  let clientId='';
  try{clientId=localStorage.getItem(DRIVE_CLIENT_KEY)||''}catch(_){}
- if(!validDriveClientId(clientId)){showDriveSetup();return}
+ if(!validDriveClientId(clientId)){setDriveSaveState('Drive: setup required','error');showDriveSetup();return}
+ setDriveSaveState('Drive: preparing backup…','pending');
  const authResult=requestDriveAccessToken(clientId).then(token=>({token}),error=>({error}));
  let storageWarning='';
  try{
@@ -1287,12 +1388,17 @@ async function saveQuickReview(){
   const data=buildReviewExport();
   const edited=data.rows.filter(row=>row.reviewed_by_human===true).length;
   notify('Connecting to Google Drive…');
+  setDriveSaveState('Drive: waiting for Google permission…','pending');
   const auth=await authResult;if(auth.error)throw auth.error;
   notify('Uploading '+data.filename+' ('+data.rows.length+' records; '+edited+' with human edits)…');
+  setDriveSaveState('Drive: uploading '+data.rows.length.toLocaleString()+' records…','pending');
   const saved=await uploadReviewToDrive(auth.token,data);
+  rememberDriveSave(saved,data,edited);
   notifyDriveUpload('Uploaded '+(saved.name||data.filename)+' · '+data.rows.length+' records, '+edited+' with human edits.'+storageWarning,saved.webViewLink);
  }catch(error){
-  notify('Google Drive save failed: '+(error?.message||String(error))+'. Check the backup folder before retrying.');
+  const message=error?.message||String(error);
+  setDriveSaveState('Drive upload failed · '+message.slice(0,110),'error');
+  notify('Google Drive save failed: '+message+'. Check the backup folder before retrying.');
  }
 }
 $('#saveQuick').addEventListener('click',saveQuickReview);
