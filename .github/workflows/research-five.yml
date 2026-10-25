@@ -10,10 +10,10 @@ on:
         description: 'Unique species per worker (1-6)'
         type: choice
         options: ['2','4','6']
-        default: '4'
+        default: '6'
         required: true
   schedule:
-    # Twenty taxa per cycle; the expanded 263-taxon catalog takes 14 cycles for a full sweep.
+    # Thirty taxa per cycle at six per worker; the 263-taxon catalog takes nine cycles for a full sweep.
     - cron: '23 6 * * *'
   push:
     branches: [main]
@@ -79,7 +79,7 @@ jobs:
           PY
             )
           fi
-          PER_WORKER="${PER_WORKER_INPUT:-4}"
+          PER_WORKER="${PER_WORKER_INPUT:-6}"
           [[ "$PER_WORKER" == 2 || "$PER_WORKER" == 4 || "$PER_WORKER" == 6 ]] || exit 2
           echo "cycle=$CYCLE" >> "$GITHUB_OUTPUT"
           echo "per_worker=$PER_WORKER" >> "$GITHUB_OUTPUT"
