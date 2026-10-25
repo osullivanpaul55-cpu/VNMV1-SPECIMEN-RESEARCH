@@ -136,14 +136,14 @@ function leadPreviewUrls(p){
   if(preview&&!previews.includes(preview))previews.push(preview);
  };
  for(const value of [p.review_preview_url,p.preview_image_url,p.thumbnail_url])add(value);
- const inat=String(p.photo_key||'').match(/^inat:(\\d+)$/);
+ const inat=String(p.photo_key||'').match(/^inat:(\d+)$/);
  if(inat)add('https://static.inaturalist.org/photos/'+inat[1]+'/medium.jpg');
  const source=safeReferenceUrl(p.source_url);
  if(source){
   try{
    const u=new URL(source);
-   if(/\\.(?:jpe?g|png|webp)$/i.test(u.pathname))add(u.href);
-   const file=u.hostname==='commons.wikimedia.org'?u.pathname.match(/^\\/wiki\\/File(?::|%3A)(.+)$/i):null;
+   if(/\.(?:jpe?g|png|webp)$/i.test(u.pathname))add(u.href);
+   const file=u.hostname==='commons.wikimedia.org'?u.pathname.match(/^\/wiki\/File(?::|%3A)(.+)$/i):null;
    if(file){
     const title=decodeURIComponent(file[1]).replaceAll('_',' ');
     add('https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(title)+'?width=640');
