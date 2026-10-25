@@ -18,6 +18,8 @@
   "distinct_photo_source_records": 6238,
   "unresolved_extension_research_units": 4,
   "unresolved_extension_search_pages": 8,
+  "unresolved_extension_photo_page_leads": 0,
+  "unresolved_extension_taxa_with_photo_page_leads": 0,
   "taxa_below_minimum_target": 61,
   "taxa_at_or_above_preferred_target": 193,
   "minimum_target": 9,
