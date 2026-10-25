@@ -58,7 +58,7 @@
 <div id="notification" role="status" aria-live="polite"></div>
 </details>
 <nav id="speciesNav" class="navstrip" aria-label="Specimen navigation"><button id="prevSpecies" type="button">◀ Previous</button><strong id="speciesPosition">Specimen 0/0</strong><button id="nextSpecies" type="button">Next ▶</button><div class="card-jump"><label for="cardJump">Card #</label><input id="cardJump" type="number" min="1" step="1" inputmode="numeric" placeholder="12" aria-label="Card number, for example 12"><button id="jumpToCard" type="button">Go</button></div></nav>
-<div class="quick-save"><span>Local autosave · tap to upload a dated JSON backup</span><button id="saveQuick" type="button">Save JSON to Drive</button></div>
+<div class="quick-save"><span>Autosave to this phone · tap to upload a dated JSON backup<br><small id="saveState" role="status" aria-live="polite">Loading saved reviews…</small></span><button id="saveQuick" type="button">Save JSON to Drive</button></div>
 <div class="mobile-tips">Swipe ← → to change species · Opens at Photo 1 · Scroll ↓ for the next photograph</div>
 <div class="review-legend"><span class="review-green">Green: checked and resolved</span><span class="review-red">Red: suggested, unknown or still needs review</span></div>
 <p id="scopeNote" class="muted"></p>
@@ -142,7 +142,143 @@ zoomStage.addEventListener('touchmove',e=>{
 zoomStage.addEventListener('touchend',e=>{gesture=null;e.preventDefault()},{passive:false});
 zoomStage.addEventListener('dblclick',resetZoom);
 zoomStage.addEventListener('wheel',e=>{zoomScale=Math.max(1,Math.min(8,zoomScale+(e.deltaY<0?.3:-.3)));renderZoom();e.preventDefault()},{passive:false});
-function save(){try{localStorage.setItem(KEY,JSON.stringify(decisions))}catch(_){notify('Browser storage unavailable; export your review regularly.')}stats()}
+const REVIEW_DB_NAME='vnmv1-photo-review-v2',REVIEW_STORE='decisions';
+const legacyReviewDecisions=decisions;
+let reviewDB=null,reviewStorageMode='loading',reviewStorageError=null;
+let reviewSaveTimer=null,reviewPendingRecords=new Map(),reviewPendingFullSnapshot=false;
+let reviewPendingWaiters=[],reviewWriteQueue=Promise.resolve();
+function setSaveState(message){const state=$('#saveState');if(state)state.textContent=message}
+function openReviewDatabase(){
+ return new Promise((resolve,reject)=>{
+  if(!('indexedDB' in window)){reject(Error('IndexedDB is unavailable in this browser.'));return}
+  const request=indexedDB.open(REVIEW_DB_NAME,1);
+  request.onupgradeneeded=()=>{
+   const db=request.result;
+   if(!db.objectStoreNames.contains(REVIEW_STORE))db.createObjectStore(REVIEW_STORE,{keyPath:'photo_key'});
+  };
+  request.onsuccess=()=>{reviewDB=request.result;reviewDB.onversionchange=()=>reviewDB.close();resolve(reviewDB)};
+  request.onerror=()=>reject(request.error||Error('Could not open phone review storage.'));
+  request.onblocked=()=>reject(Error('Phone review storage is busy in another tab. Close the other review tab and retry.'));
+ });
+}
+function readAllReviewRecords(db){
+ return new Promise((resolve,reject)=>{
+  const request=db.transaction(REVIEW_STORE,'readonly').objectStore(REVIEW_STORE).getAll();
+  request.onsuccess=()=>resolve(Array.isArray(request.result)?request.result:[]);
+  request.onerror=()=>reject(request.error||Error('Could not read saved phone reviews.'));
+ });
+}
+function writeReviewRecords(db,records){
+ return new Promise((resolve,reject)=>{
+  let transaction;
+  try{
+   transaction=db.transaction(REVIEW_STORE,'readwrite');
+   transaction.oncomplete=()=>resolve();
+   transaction.onerror=()=>reject(transaction.error||Error('Could not save phone reviews.'));
+   transaction.onabort=()=>reject(transaction.error||Error('Phone review save was interrupted.'));
+   const store=transaction.objectStore(REVIEW_STORE);
+   for(const record of records)if(record&&typeof record.photo_key==='string')store.put(record);
+  }catch(error){reject(error)}
+ });
+}
+function mergeReviewRecords(base,records){
+ const merged={...(base||{})};
+ for(const record of records||[]){
+  if(!record||typeof record.photo_key!=='string')continue;
+  const old=merged[record.photo_key];
+  const oldTime=Date.parse(old?.last_edited_at||'')||0;
+  const newTime=Date.parse(record.last_edited_at||'')||0;
+  if(!old||newTime>oldTime||(record.reviewed_by_human===true&&old.reviewed_by_human!==true)){
+   merged[record.photo_key]=record;
+  }
+ }
+ return merged;
+}
+async function initializeReviewStorage(){
+ try{
+  const db=await openReviewDatabase();
+  const saved=await readAllReviewRecords(db);
+  decisions=mergeReviewRecords(legacyReviewDecisions,saved);
+  const legacyRows=Object.values(legacyReviewDecisions).filter(record=>record&&typeof record.photo_key==='string');
+  if(legacyRows.length)await writeReviewRecords(db,Object.values(decisions));
+  try{localStorage.removeItem(KEY)}catch(_){}
+  reviewStorageMode='indexeddb';
+  setSaveState('Ready · edits save on this phone');
+  return true;
+ }catch(error){
+  reviewStorageMode='localstorage';reviewStorageError=error;
+  setSaveState('Phone storage fallback · Drive backups recommended');
+  return false;
+ }
+}
+let reviewStorageReady=initializeReviewStorage();
+function queueReviewSave(photoKeys=null){
+ if(Array.isArray(photoKeys)){
+  for(const key of photoKeys)if(decisions[key])reviewPendingRecords.set(key,decisions[key]);
+ }else reviewPendingFullSnapshot=true;
+ setSaveState('Saving edits…');
+ stats();
+ const promise=new Promise((resolve,reject)=>reviewPendingWaiters.push({resolve,reject}));
+ if(reviewSaveTimer)clearTimeout(reviewSaveTimer);
+ reviewSaveTimer=setTimeout(()=>{persistPendingReviews().catch(()=>{})},250);
+ return promise;
+}
+function save(photoKey){return queueReviewSave(photoKey?[photoKey]:null)}
+function saveMany(photoKeys){return queueReviewSave(photoKeys)}
+async function persistPendingReviews(){
+ if(reviewSaveTimer){clearTimeout(reviewSaveTimer);reviewSaveTimer=null}
+ if(!reviewPendingFullSnapshot&&!reviewPendingRecords.size)return reviewWriteQueue;
+ const all=reviewPendingFullSnapshot;
+ const records=all?Object.values(decisions):[...reviewPendingRecords.values()];
+ reviewPendingFullSnapshot=false;reviewPendingRecords.clear();
+ const waiters=reviewPendingWaiters.splice(0);
+ const task=reviewWriteQueue.catch(()=>{}).then(async()=>{
+  await reviewStorageReady;
+  try{
+   if(reviewStorageMode==='indexeddb'&&reviewDB)await writeReviewRecords(reviewDB,records);
+   else throw reviewStorageError||Error('IndexedDB is unavailable.');
+  }catch(indexedError){
+   try{
+    localStorage.setItem(KEY,JSON.stringify(decisions));
+    reviewStorageMode='localstorage';reviewStorageError=indexedError;
+   }catch(fallbackError){
+    throw Error('Could not save on this phone. '+(fallbackError?.message||indexedError?.message||'Phone storage is full or unavailable.'));
+   }
+  }
+ });
+ reviewWriteQueue=task;
+ task.then(()=>{
+  setSaveState(reviewPendingRecords.size||reviewPendingFullSnapshot?'Saving edits…':
+   reviewStorageMode==='indexeddb'?'Saved on this phone':'Saved in browser storage · limited space');
+  for(const waiter of waiters)waiter.resolve(true);
+ },error=>{
+  setSaveState('Save failed · keep this page open and make a Drive backup');
+  for(const waiter of waiters)waiter.reject(error);
+ });
+ return task;
+}
+async function flushPendingReviewWrites(){
+ while(true){
+  if(reviewSaveTimer){clearTimeout(reviewSaveTimer);reviewSaveTimer=null}
+  if(reviewPendingFullSnapshot||reviewPendingRecords.size){await persistPendingReviews();continue}
+  const queue=reviewWriteQueue;
+  await queue;
+  if(!reviewPendingFullSnapshot&&!reviewPendingRecords.size&&!reviewSaveTimer&&queue===reviewWriteQueue)return true;
+ }
+}
+async function refreshPersistedReviewDecisions(){
+ await flushPendingReviewWrites();
+ if(reviewStorageMode==='indexeddb'&&reviewDB){
+  const saved=await readAllReviewRecords(reviewDB);
+  decisions=mergeReviewRecords(decisions,saved);
+ }else{
+  try{
+   const legacy=JSON.parse(localStorage.getItem(KEY)||'{}');
+   decisions=mergeReviewRecords(decisions,Object.values(legacy));
+  }catch(_){}
+ }
+ stats();
+}
 function notify(message){$('#notification').textContent=message}
 const PHOTO_REFERENCE_MIN=9;
 const PHOTO_REFERENCE_TARGET=12;
@@ -220,7 +356,7 @@ function seedPendingReviews(){
    }
   }
  }
- if(n)save();
+ if(n)stats();
  return n;
 }
 function isExportable(d){return !!d&&(d.keep_research_candidate===true||reviewIsEntered(d)||d.reviewed_by_human===true)}
@@ -309,7 +445,15 @@ function leadCard(p){
    notes:notes.value,decision:'PENDING',requested_decision:'PENDING',
    species_verified:false,rights_checked:false,approved_for_imagegen:false,
    review_gate:'RESEARCH_LINK_ONLY_NOT_PRODUCTION_APPROVED'};
-  save();updateColours();
+  decisions[p.photo_key].last_edited_at=new Date().toISOString();
+  updateColours();
+  reviewStatus.textContent='Saving on this phone…';
+  save(p.photo_key).then(()=>{
+   if(box.isConnected)reviewStatus.textContent='Saved on this phone.';
+  }).catch(error=>{
+   if(box.isConnected)reviewStatus.textContent='Not saved: '+(error?.message||'phone storage unavailable')+'. Keep this page open and back up to Drive.';
+   notify('Review edit was not saved on this phone. '+(error?.message||'Storage unavailable.'));
+  });
  };
  const controls=[[check,'keep_research_candidate'],[suggestCheck,'retain_suggested_classifications'],
   [pose,'pose_id'],[stage,'life_stage'],[sex,'sex'],[looked,'human_visual_confirmation'],
@@ -677,9 +821,16 @@ const update=()=>{
     anatomical_coordinate_review:'NOT_REQUIRED_BY_DEFAULT',atlas_pose_role:'STRUCTURAL_STAGING_AND_QA_ONLY',
     approved_for_imagegen:false,review_gate:choice==='REJECT'?'REJECTED':
       eligibleIntent?(readyForReview?'USER_REQUESTED_PENDING_PRIVATE_VALIDATION':'IDENTITY_OR_RIGHTS_CHECK_REQUIRED'):'UNAPPROVED_CANDIDATE'};
-  decisions[key]=rec;save();updateColours();
-  reviewStatus.textContent=eligibleIntent&&!readyForReview?'Sex/pose saved. Suitability request held until both species and licence checks.':
-    'Saved on this device. Use APK bottom Save to Drive to export.';
+  rec.last_edited_at=new Date().toISOString();
+  decisions[key]=rec;updateColours();
+  const successMessage=eligibleIntent&&!readyForReview?'Saved on this phone. Suitability request held until both species and licence checks.':'Saved on this phone.';
+  reviewStatus.textContent='Saving on this phone…';
+  save(key).then(()=>{
+   if(article.isConnected)reviewStatus.textContent=successMessage;
+  }).catch(error=>{
+   if(article.isConnected)reviewStatus.textContent='Not saved: '+(error?.message||'phone storage unavailable')+'. Keep this page open and back up to Drive.';
+   notify('Review edit was not saved on this phone. '+(error?.message||'Storage unavailable.'));
+  });
 };
 const reviewControls=[
  [select,'suitability'],[sexSelect,'sex'],[poseSelect,'pose_id'],[stageSelect,'life_stage'],
@@ -825,7 +976,7 @@ $('#results').addEventListener('touchend',event=>{
 },{passive:true});
 
 function bindVisualDrafts(){
- let matched=0,changed=0;const seen=new Set();
+ let matched=0,changed=0;const seen=new Set(),changedKeys=[];
  for(const spec of Object.values(dataset.species||{}))for(const p of photosFrom(spec)){
   if(seen.has(p.photo_key))continue;seen.add(p.photo_key);
   const x=visualDrafts[p.photo_key];
@@ -842,10 +993,10 @@ function bindVisualDrafts(){
     recommendation_confidence:sug.confidence,recommended_suitability:sug.recommended_suitability,
     recommended_visual_notes:sug.visible_note,sex:sug.sex,pose_id:sug.pose,
     life_stage:sug.life_stage,visible_anatomy:sug.anatomy,behaviours:sug.behaviour});
-   changed++;
+   changed++;changedKeys.push(d.photo_key);
   }
  }
- if(changed)save();
+ if(changed)saveMany(changedKeys).catch(error=>notify('Could not save generated suggestions on this phone: '+(error?.message||String(error))));
  return matched;
 }
 async function loadVisualDrafts(){
@@ -865,6 +1016,7 @@ async function loadVisualDrafts(){
  }
 }
 async function load(){
+  await reviewStorageReady;
   // Workflow-authenticated commits do not automatically trigger Pages.
   // Read the current public main-branch index first, with static-site fallback.
   const sources=[
@@ -913,8 +1065,11 @@ $('#reviewUpload').addEventListener('change',async event=>{
    const n=Object.keys(imported).length;if(n===0)throw Error('No supported photo decisions');
    const overlap=Object.keys(imported).filter(k=>reviewIsEntered(decisions[k])).length;
    if(overlap&&!confirm('Replace '+overlap+' existing decisions from the imported JSON?'))return;
-   Object.assign(decisions,imported);save();render();
-   notify('Imported '+n+' photo reviews into this device. Not automatically uploaded to Google Drive.');
+   Object.assign(decisions,imported);render();
+   try{
+    await save();
+    notify('Imported '+n+' photo reviews and saved them on this phone. Not automatically uploaded to Google Drive.');
+   }catch(error){notify('Imported '+n+' reviews into this page, but phone storage failed: '+(error?.message||String(error)))}
  }catch(error){notify('Cannot import review JSON: '+error.message)}
  finally{event.target.value=''}
 });
@@ -1039,19 +1194,37 @@ async function saveQuickReview(){
  let clientId='';
  try{clientId=localStorage.getItem(DRIVE_CLIENT_KEY)||''}catch(_){}
  if(!validDriveClientId(clientId)){showDriveSetup();return}
- const data=buildReviewExport();
+ const authResult=requestDriveAccessToken(clientId).then(token=>({token}),error=>({error}));
+ let storageWarning='';
  try{
+  notify('Saving edits on this phone…');
+  try{
+   await flushPendingReviewWrites();
+   await refreshPersistedReviewDecisions();
+   await flushPendingReviewWrites();
+  }catch(storageError){
+   storageWarning=' Phone autosave failed; uploading the current page data. '+(storageError?.message||String(storageError));
+  }
+  const data=buildReviewExport();
+  const edited=data.rows.filter(row=>row.reviewed_by_human===true).length;
   notify('Connecting to Google Drive…');
-  const token=await requestDriveAccessToken(clientId);
-  notify('Uploading '+data.filename+' to Google Drive…');
-  const saved=await uploadReviewToDrive(token,data);
-  notifyDriveUpload('Uploaded '+(saved.name||data.filename)+' to VNMV1 Reference Review Backups.',saved.webViewLink);
+  const auth=await authResult;if(auth.error)throw auth.error;
+  notify('Uploading '+data.filename+' ('+data.rows.length+' records; '+edited+' with human edits)…');
+  const saved=await uploadReviewToDrive(auth.token,data);
+  notifyDriveUpload('Uploaded '+(saved.name||data.filename)+' · '+data.rows.length+' records, '+edited+' with human edits.'+storageWarning,saved.webViewLink);
  }catch(error){
-  notify('Drive upload failed: '+(error?.message||String(error))+' No file was downloaded.');
+  notify('Google Drive save failed: '+(error?.message||String(error))+'. Check the backup folder before retrying.');
  }
 }
 $('#saveQuick').addEventListener('click',saveQuickReview);
-$('#export').addEventListener('click',()=>{const data=buildReviewExport();downloadReviewExport(data);notify('Downloaded '+data.rows.length+' photo review decisions as '+data.filename+'.')});
+$('#export').addEventListener('click',async()=>{
+ let storageWarning='';
+ try{await flushPendingReviewWrites();await refreshPersistedReviewDecisions();await flushPendingReviewWrites()}
+ catch(error){storageWarning=' Phone autosave failed; keep this downloaded backup safe. '+(error?.message||String(error))}
+ const data=buildReviewExport(),edited=data.rows.filter(row=>row.reviewed_by_human===true).length;
+ downloadReviewExport(data);
+ notify('Downloaded '+data.rows.length+' photo review decisions, including '+edited+' with human edits, as '+data.filename+'.'+storageWarning);
+});
 const pageParams=new URLSearchParams(window.location.search);
 const initialTaxon=(pageParams.get('taxon')||pageParams.get('q')||'').trim();
 if(initialTaxon)$('#filter').value=initialTaxon;
