@@ -1,6 +1,6 @@
 # VNMV1 Specimen Research — Public-Safe Research Repository
 
-This is the **public component only** of the VNMV1 natural-history reference research programme. It contains 195 *candidate research species names* from an existing 526-card research roster, five no-paid-model photo research workers, provenance/copyright filters, durable GitHub Release archive assets, a mobile-friendly human review webpage, and unit tests. It contains **no original card specimen photographs, Human Gold annotations, per-card species/sex mapping, personal Google Drive data, paid API credentials or image-generation executor**.
+This is the **public component only** of the VNMV1 natural-history reference research programme. It contains an unchanged 195-name base seed plus a separate 73-name species/subspecies extension and four unresolved genus/locality research units for an existing 526-card research roster, five no-paid-model photo research workers, provenance/copyright filters, durable GitHub Release archive assets, a mobile-friendly human review webpage, and unit tests. It contains **no original card specimen photographs, Human Gold annotations, per-card species/sex mapping, personal Google Drive data, paid API credentials or image-generation executor**.
 
 **WARNING: All photos are unapproved research candidates**, regardless of community research-grade status. Do not assert specimen sex, exact species identity, licence fitness for a particular commercial AI workflow, or approval to generate from any public index field. The public queue never makes those decisions.
 
@@ -58,3 +58,9 @@ python -m unittest discover -s tests -p 'test_public_research.py' -v
 ```
 
 Research output is not a model input until private-side biological and rights checks pass; the eventual ImageGen executor remains a separate engineering project.
+
+## 25 October — expanded photo review catalog
+
+The unchanged 195-name seed is combined at runtime with `research/species_reference_extension.json`: 73 named species/subspecies research taxa from the new intake plus four locality-level research units whose identities remain unresolved. The extension adds source-search links for every taxon and 65 individual photo/source pages as link-only leads. Search pages are browse links, not individual photo reviews. All supplied images, rights claims, sex, stage, pose and taxon assignments remain unverified until a human reviews the source.
+
+Research cycles can collect up to 18 candidate photographs per taxon per pass. Collection uses the existing CC0/CC BY pixel archive rules; sources with other or unknown rights remain source links. The extension is inserted at the next research position so the first cycles prioritize the new intake without changing the original seed file or its established ordering.
