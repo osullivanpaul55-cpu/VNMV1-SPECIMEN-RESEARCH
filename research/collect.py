@@ -58,13 +58,36 @@ def choose_species(seed:dict, shard:int,cycle:int,per_worker:int,previous:dict)-
     species=seed['species']
     if seed.get('schema')!='VNMV1_PUBLIC_RESEARCH_SPECIES_SEED_V1' or len(species)!=len({v['key'] for v in species}):raise ValueError('INVALID_SPECIES_SEED')
     if not 0<=shard<SHARDS or cycle<0 or not 1<=per_worker<=6: raise ValueError('BAD_CYCLE_OR_SHARD')
-    # deterministic disjoint workers for the initial full sweep, then
-    # revisit low-count taxa without inserting fictitious filler photographs.
-    n=len(species);start=(cycle*SHARDS*per_worker+shard*per_worker)%n
-    out=[species[(start+i)%n] for i in range(per_worker)]
-    # No duplicate assignment between workers within a normal sweep; at the
-    # wrap boundary the second pass reuses the first handful intentionally.
-    return out
+    n=len(species);per_cycle=SHARDS*per_worker
+    # Preserve a deterministic, disjoint first sweep across the full catalog.
+    # Do not wrap the final partial batch: wrapping skips the last taxa and
+    # duplicates the first ones when n is not divisible by per_cycle.
+    full_sweep_cycles=(n+per_cycle-1)//per_cycle
+    if cycle<full_sweep_cycles:
+        start=cycle*per_cycle+shard*per_worker
+        return species[start:min(start+per_worker,n)]
+    indexed=(previous.get('species') or {}) if isinstance(previous,dict) else {}
+    ranked=[]
+    for position,spec in enumerate(species):
+        prior=indexed.get(spec['key'],{})
+        if not isinstance(prior,dict):prior={}
+        seen={str(x.get('photo_key')) for x in
+              list(prior.get('candidates') or [])+list(prior.get('link_only_leads') or [])
+              if isinstance(x,dict) and x.get('photo_key')}
+        count=len(seen)
+        if count<9:band,gap=0,9-count
+        elif count<12:band,gap=1,12-count
+        elif count<15:band,gap=2,15-count
+        else:band,gap=3,0
+        raw_last=prior.get('last_cycle',-1)
+        try:last_cycle=int(raw_last)
+        except (TypeError,ValueError):last_cycle=-1
+        # Within each coverage band, fill the largest shortfall first, then
+        # retry the taxa least recently visited. Stable catalog order breaks ties.
+        ranked.append((band,-gap,last_cycle,position,spec))
+    ranked.sort(key=lambda row:row[:4])
+    start=shard*per_worker
+    return [row[4] for row in ranked[start:start+per_worker]]
 
 def fetch(url:str,cap:int,timeout:int=12)->bytes:
     req=Request(url,headers={'User-Agent':UA,'Accept':'application/json,image/*'})
@@ -104,17 +127,30 @@ def inspect_image(b:bytes)->tuple[str,int,int,int]:
         raise ValueError('PHOTO_DECODE_OR_DIMENSIONS_FAILED') from exc
 
 def discover(taxon:str,seen:set[str],api_fetch=fetch,pages:int=8,per_page:int=25)->list[dict]:
+    """Collect exact species-level community observations at every quality grade.
+
+    Research Grade is useful context, not expert verification. Needs ID and
+    Casual records remain photo-review leads when the displayed community taxon
+    matches exactly; each grade is preserved for the human reviewer.
+    """
     results=[];checked=set()
     for page in range(1,pages+1):
-        qs=urlencode({'taxon_name':taxon,'quality_grade':'research','photos':'true','per_page':per_page,'page':page})
+        qs=urlencode({'taxon_name':taxon,'photos':'true','per_page':per_page,'page':page})
         payload=json.loads(api_fetch(API+'?'+qs,3_000_000))
         obs=payload.get('results',[])
         if not isinstance(obs,list):raise ValueError('INVALID_OBSERVATION_RESPONSE')
         for ob in obs:
             t=ob.get('taxon') or {}
-            if t.get('name')!=taxon or t.get('rank')!='species' or ob.get('quality_grade')!='research':continue
+            if t.get('name')!=taxon or t.get('rank')!='species':continue
             oid=ob.get('id')
             if not isinstance(oid,int):continue
+            grade=str(ob.get('quality_grade') or 'UNKNOWN').lower()
+            if grade=='research':
+                authority='COMMUNITY_RESEARCH_GRADE_NOT_USER_APPROVED'
+            elif grade in {'needs_id','casual'}:
+                authority=f'COMMUNITY_{grade.upper()}_NOT_USER_APPROVED'
+            else:
+                authority='COMMUNITY_STATUS_UNVERIFIED_NOT_USER_APPROVED'
             for p in ob.get('photos',[]):
                 lic=(p.get('license_code') or '').lower();pid=p.get('id'); url=image_url(p.get('url'))
                 if not isinstance(pid,int):continue
@@ -123,7 +159,8 @@ def discover(taxon:str,seen:set[str],api_fetch=fetch,pages:int=8,per_page:int=25
                 if key in seen or key in checked:continue
                 checked.add(key)
                 results.append({'photo_key':key,'observation_id':oid,'photo_id':pid,'taxon':taxon,
-                  'link_only':not allowed,'redistribution_allowed_by_collector':allowed,
+                  'observation_quality_grade':grade,'link_only':not allowed,
+                  'redistribution_allowed_by_collector':allowed,
                   'license_code':lic or 'UNKNOWN','license_url':p.get('license_url'),
                   'license_research_status':'UNKNOWN_NO_LICENSE_METADATA' if not lic else ('CC0_OR_CC_BY_CANDIDATE' if allowed else 'NON_ARCHIVABLE_RIGHTS_NOT_CLEARED'),
                   'research_use_status':'USE_SOURCE_LINK_IMMEDIATELY_FOR_RESEARCH',
@@ -131,7 +168,7 @@ def discover(taxon:str,seen:set[str],api_fetch=fetch,pages:int=8,per_page:int=25
                   'attribution':p.get('attribution') or (ob.get('user') or {}).get('login') or 'UNKNOWN',
                   'source_url':f'https://www.inaturalist.org/observations/{oid}',
                   'thumbnail_url':url if allowed else None,'sex':'UNKNOWN_UNVERIFIED',
-                  'taxon_authority':'COMMUNITY_RESEARCH_GRADE_NOT_USER_APPROVED',
+                  'taxon_authority':authority,
                   'rights_verdict':'CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED',
                   'review_state':'PENDING',
                   'pose_id':'UNREVIEWED','pose_review_status':'VISUAL_REVIEW_REQUIRED',
