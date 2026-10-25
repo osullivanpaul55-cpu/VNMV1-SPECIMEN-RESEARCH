@@ -13,16 +13,18 @@ on:
         default: '4'
         required: true
   schedule:
-    # Frequent enough to finish the 195-name first sweep in ~10 successful cycles.
+    # Twenty taxa per cycle; the expanded 263-taxon catalog takes 14 cycles for a full sweep.
     - cron: '23 6 * * *'
   push:
     branches: [main]
     paths:
       - 'research/species_seed.json'
+      - 'research/species_reference_extension.json'
       - 'research/run_requests/*.json'
   pull_request:
     paths:
       - 'research/collect.py'
+      - 'research/species_reference_extension.json'
       - 'research/pose_reference.py'
       - 'review/index.html'
       - 'tests/test_public_research.py'
@@ -43,6 +45,8 @@ jobs:
       per_worker: ${{ steps.pick.outputs.per_worker }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || 'main' }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -99,7 +103,7 @@ jobs:
       - name: Discover and download candidate photos (no approval)
         run: |
           python research/collect.py \
-            --seed research/species_seed.json --index data/index.json \
+            --seed research/species_seed.json --extension research/species_reference_extension.json --index data/index.json \
             --shard ${{ matrix.shard }} \
             --cycle ${{ needs.certify.outputs.cycle }} \
             --species-per-worker ${{ needs.certify.outputs.per_worker }} \
