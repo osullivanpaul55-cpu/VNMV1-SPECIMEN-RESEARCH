@@ -1,6 +1,6 @@
 {
   "schema": "VNMV1_PUBLIC_RESEARCH_REFERENCE_EXTENSION_V1",
-  "disclaimer": "Public taxa and source links are research leads only. Taxon identity, image identity, sex, life stage, pose, source rights, and suitability remain unreviewed. Search pages and literature pages are not individual photos. No private card IDs, private originals, or user-specific mappings are included.",
+  "disclaimer": "Public taxa and source links are research leads only. Curated links may include community galleries, commercial listings, alternate-name matches, and locality comparisons; taxon identity, photo identity, attribution, licence, and reuse rights remain unverified. Original images are not copied. No private card IDs, private originals, or user-specific mappings are included.",
   "insert_extension_species_at": 140,
   "source_photo_review_defaults": {
     "reviewed_by_human": false,
@@ -2554,6 +2554,699 @@
         }
       ],
       "curated_reference_leads": []
+    },
+    {
+      "name": "Augacephalus ezendami",
+      "key": "71df21aa4aa68053",
+      "rank": "SPECIES",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "intake_group": "Additional low-coverage photo source leads pending review",
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:82c8aadb370b77da29f543a7302f9e7c",
+          "source_url": "https://arachnoboards.com/gallery/augacephalus-ezendami-female.77325/",
+          "source_title": "Female Augacephalus ezendami — Arachnoboards gallery",
+          "attribution": "Arachnoboards gallery; photographer and rights holder not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMUNITY_GALLERY",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "COMMUNITY_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        },
+        {
+          "photo_key": "ref:b20fe61cf6d0fbd3af330e4851d92351",
+          "source_url": "https://www.tarantupedia.com/harpactirinae/augacephalus/augacephalus-ezendami",
+          "source_title": "Augacephalus ezendami — Tarantupedia species page",
+          "attribution": "Tarantupedia species page; photographer and rights holder not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "TAXONOMY_PHOTO_PAGE",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "SOURCE_TAXON_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Cyriocosmus giganteus",
+      "key": "807da919e162c17f",
+      "rank": "SPECIES",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "intake_group": "Additional low-coverage photo source leads pending review",
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:65a51c7f62a23bc6ebcacdf7aa9069e8",
+          "source_url": "https://arachnoboards.com/gallery/cyriocosmus-giganteus-sub-adult-female-3.61421/",
+          "source_title": "Cyriocosmus giganteus sub-adult female — Arachnoboards gallery",
+          "attribution": "Arachnoboards gallery; photographer and rights holder not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMUNITY_GALLERY",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "COMMUNITY_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        },
+        {
+          "photo_key": "ref:bc46860e87ae8b8930bc281a1e26773f",
+          "source_url": "https://franksbuggin661.com/products/cyriocosmus-sp-giganteus",
+          "source_title": "Cyriocosmus sp. giganteus — Frank's Buggin listing",
+          "attribution": "Commercial listing; photographer and rights holder not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMERCIAL_PRODUCT_LISTING",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "SELLER_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED",
+            "SOURCE_USES_SP_NAME_VARIANT"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Euathlus manicatus",
+      "key": "b28875820c54b42e",
+      "rank": "SPECIES",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "intake_group": "Additional low-coverage photo source leads pending review",
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:e80cf9e7284439cbbb4af27962de5597",
+          "source_url": "https://spidershoppe.com/products/euathlus-manicata-green",
+          "source_title": "Euathlus manicata Green — Spider Shoppe listing",
+          "attribution": "Commercial listing; photographer and rights holder not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMERCIAL_PRODUCT_LISTING",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "SELLER_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED",
+            "SOURCE_NAME_GRAMMAR_VARIANT"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        },
+        {
+          "photo_key": "ref:6c56b4c994fb9563b48c93db9714d08b",
+          "source_url": "https://tydyeexotic.com/products/euathlus-manicatus-gold-chilean-golden-flame-tarantula-rare-dwarf-new-world-species-live-arrival-guarantee",
+          "source_title": "Euathlus manicatus Gold — Tydye Exotic listing",
+          "attribution": "Commercial listing; photographer and rights holder not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMERCIAL_PRODUCT_LISTING",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "SELLER_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Ewok kimraykawasaki",
+      "key": "31a244aed0fb3415",
+      "rank": "SPECIES",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "intake_group": "Additional low-coverage photo source leads pending review",
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:d66d4e2051cfdbc65e1a2a6e7af050d2",
+          "source_url": "https://spaspiders.co.uk/product/ewok-kimraykawsaki-3cm/",
+          "source_title": "Ewok kimraykawsaki — Spas Spiders listing",
+          "attribution": "Commercial listing under the accepted spelling; photographer and rights holder not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMERCIAL_PRODUCT_LISTING",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "SELLER_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED",
+            "CATALOG_NAME_SPELLING_DIFFERS_FROM_WORLD_SPIDER_CATALOG"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        },
+        {
+          "photo_key": "ref:577c3b374fb5bd96efb4165bf5cfa160",
+          "source_url": "https://www.inaturalist.org/taxa/1659172-Ewok-kimraykawsaki",
+          "source_title": "Ewok kimraykawsaki — iNaturalist taxon page",
+          "attribution": "iNaturalist taxon page under the accepted spelling; individual photographer and photo rights not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "INATURALIST_TAXON_PAGE_VARIANT",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "SOURCE_TAXON_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED",
+            "CATALOG_NAME_SPELLING_DIFFERS_FROM_WORLD_SPIDER_CATALOG"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ],
+      "user_review_note": "World Spider Catalog lists the accepted spelling as Ewok kimraykawsaki; the current catalog label differs. The linked images are source leads only until the taxon name and photo are checked.",
+      "source_searches": [
+        {
+          "label": "iNaturalist photos (accepted spelling variant)",
+          "url": "https://www.inaturalist.org/taxa/1659172-Ewok-kimraykawsaki",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "Wikimedia Commons images",
+          "url": "https://commons.wikimedia.org/w/index.php?search=Ewok%20kimraykawasaki&title=Special:MediaSearch&type=image",
+          "kind": "PHOTO_SEARCH"
+        },
+        {
+          "label": "World Spider Catalog accepted-name page",
+          "url": "https://wsc.nmbe.ch/spec-data/71470/species",
+          "kind": "TAXONOMY_REFERENCE"
+        }
+      ]
+    },
+    {
+      "name": "Hapalopus planetearth",
+      "key": "6a29c7c840e1500b",
+      "rank": "SPECIES",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "intake_group": "Additional low-coverage photo source leads pending review",
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:465348d49a3c66d897b4201e7760616c",
+          "source_url": "https://spiderfarm.co.uk/shop/p/hapalopus-planetearth-ex-theraphosinae-sp-yasuni-juvenile-female-6cm",
+          "source_title": "Hapalopus planetearth (ex. Theraphosinae sp. Yasuni) — Spider Farm listing",
+          "attribution": "Commercial listing; photographer and rights holder not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMERCIAL_PRODUCT_LISTING",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "SELLER_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED",
+            "SOURCE_INCLUDES_PREVIOUS_OR_LOCALITY_NAME"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        },
+        {
+          "photo_key": "ref:26768e456a3c44414ede2e6baa0c3a79",
+          "source_url": "https://westsidetarantulas.com/products/theraphosidae-sp-yasumi-ecuadorian-crowned-beauty-0-75-inch-sling-3-75-inch-female",
+          "source_title": "Hapalopus Planet Earth — Westside Tarantulas listing",
+          "attribution": "Commercial listing; photographer and rights holder not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMERCIAL_PRODUCT_LISTING",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "SELLER_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Hapalopus vangoghi",
+      "key": "82d12550dc127b3b",
+      "rank": "SPECIES",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "intake_group": "Additional low-coverage photo source leads pending review",
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:721d0b4bf63165ea79ea611b5b765d78",
+          "source_url": "https://westsidetarantulas.com/products/hapalopus-vangoghi-gothic-pumpkin-patch-sub-adult-female",
+          "source_title": "Hapalopus vangoghi — Westside Tarantulas listing",
+          "attribution": "Commercial listing; photographer and rights holder not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMERCIAL_PRODUCT_LISTING",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "SELLER_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Heterothele villosella",
+      "key": "29aec6b91db2869e",
+      "rank": "SPECIES",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "intake_group": "Additional low-coverage photo source leads pending review",
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:9eaaf54d99bc8f6bc4b5c8d32244223f",
+          "source_url": "https://arachnoboards.com/gallery/heterothele-villosella.65017/",
+          "source_title": "Heterothele villosella — Arachnoboards gallery",
+          "attribution": "Arachnoboards gallery; photographer and rights holder not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMUNITY_GALLERY",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "COMMUNITY_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        },
+        {
+          "photo_key": "ref:1c9d513c9f74eef0086924ca2cd86148",
+          "source_url": "https://tarantulaforum.com/media/heterothele-villosella-zengi.5782/",
+          "source_title": "Heterothele villosella Zengi — Tarantula Forum media",
+          "attribution": "Tarantula Forum media page; photographer and rights holder not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMUNITY_GALLERY",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "COMMUNITY_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        },
+        {
+          "photo_key": "ref:1d8e66dbc3cdbfd2122347a7a232fb04",
+          "source_url": "https://themotherofspiders.com/products/heterothele-villosella-tanzanian-chestnut-baboon",
+          "source_title": "Heterothele villosella — Mother of Spiders listing",
+          "attribution": "Commercial listing; photographer and rights holder not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMERCIAL_PRODUCT_LISTING",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "SELLER_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Melopoeus hainanus",
+      "key": "f61b15b2f6981fd9",
+      "rank": "SPECIES",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "intake_group": "Additional low-coverage photo source leads pending review",
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:5a96b0778789f5f4210ecca745bc99fe",
+          "source_url": "https://www.inaturalist.org/observations/203450876",
+          "source_title": "Melopoeus hainanus observation 203450876 — iNaturalist",
+          "attribution": "iNaturalist observation page; observer attribution and photo-level licence not checked.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "INATURALIST_OBSERVATION",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "COMMUNITY_TAXONOMIC_STATUS_NOT_USER_APPROVED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Pamphobeteus solaris",
+      "key": "abeda9bf0d16a1b1",
+      "rank": "SPECIES",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "intake_group": "Additional low-coverage photo source leads pending review",
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:328b758b50a8245ed0f1b05347b54e3c",
+          "source_url": "https://fearnottarantulas.com/products/pamphobeteus-solaris-tarantula-for-sale",
+          "source_title": "Pamphobeteus sp. solaris — Fear Not Tarantulas listing",
+          "attribution": "Commercial listing; photographer and rights holder not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMERCIAL_PRODUCT_LISTING",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "SELLER_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED",
+            "SOURCE_USES_SP_NAME_VARIANT"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        },
+        {
+          "photo_key": "ref:94b05f3a855bba24bb766a806c667c38",
+          "source_url": "https://westsidetarantulas.com/collections/female-tarantulas?page=6",
+          "source_title": "Pamphobeteus solaris female — Westside Tarantulas collection",
+          "attribution": "Commercial collection page; image identity and photographer not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMERCIAL_PRODUCT_LISTING",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "SELLER_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Phormictopus cochleasvorax",
+      "key": "cb430cf310916747",
+      "rank": "SPECIES",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "intake_group": "Additional low-coverage photo source leads pending review",
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:997a371dbd89142b145894937a7651d3",
+          "source_url": "https://arachnoboards.com/gallery/phormictopus-cochleasvorax.96815/",
+          "source_title": "Phormictopus cochleasvorax — Arachnoboards gallery (May 2025)",
+          "attribution": "Arachnoboards gallery; photographer and rights holder not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMUNITY_GALLERY",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "COMMUNITY_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        },
+        {
+          "photo_key": "ref:a0af7935b7a756afffd578c3f493494b",
+          "source_url": "https://arachnoboards.com/gallery/phormictopus-cochleasvorax.97997/",
+          "source_title": "Phormictopus cochleasvorax — Arachnoboards gallery (Aug 2025)",
+          "attribution": "Arachnoboards gallery; photographer and rights holder not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMUNITY_GALLERY",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "COMMUNITY_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        },
+        {
+          "photo_key": "ref:6e8f1a9f0f474a7dfd40d8c9daab2bd9",
+          "source_url": "https://www.theraphosia.de/spinnengalerie/phormictopus/",
+          "source_title": "Phormictopus photo gallery — Theraphosia",
+          "attribution": "Theraphosia gallery; individual image attribution and rights not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMUNITY_GALLERY",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "COMMUNITY_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Phormingochilus hatihati",
+      "key": "3713df3b8c234291",
+      "rank": "SPECIES",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "intake_group": "Additional low-coverage photo source leads pending review",
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:3bfcf5907481556018f305265aa0db10",
+          "source_url": "https://spiderfarm.co.uk/shop/p/phormingochilus-hatihati-bulk-of-5-sling-12cm",
+          "source_title": "Phormingochilus hatihati — Spider Farm listing",
+          "attribution": "Commercial listing; photographer and rights holder not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMERCIAL_PRODUCT_LISTING",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "SELLER_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        },
+        {
+          "photo_key": "ref:4bd454297ecb5f1a1789b281e4d1a008",
+          "source_url": "https://www.8pawstarantulas.com/product-page/cyriopagopus-sp-hati-hati-5",
+          "source_title": "Phormingochilus hatihati — 8paws Tarantulas listing",
+          "attribution": "Commercial listing under former genus/spelling; photographer and rights holder not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMERCIAL_PRODUCT_LISTING",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "SELLER_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED",
+            "SOURCE_USES_FORMER_GENUS_OR_NAME_VARIANT"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Phormingochilus pennellhewlettorum",
+      "key": "f1384717899f71f5",
+      "rank": "SPECIES",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "intake_group": "Additional low-coverage photo source leads pending review",
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:426905cf548121eaa19244077ab30ee8",
+          "source_url": "https://spiderfarm.co.uk/shop/p/phormingochilus-pennellhewlettorum-bario-bat-eater-juvenile-female-810cm",
+          "source_title": "Phormingochilus pennellhewlettorum — Spider Farm listing",
+          "attribution": "Commercial listing; photographer and rights holder not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMERCIAL_PRODUCT_LISTING",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "SELLER_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        },
+        {
+          "photo_key": "ref:c656f64813435667b8f468588b3bd601",
+          "source_url": "https://spidershoppe.com/products/phormingochilus-pennelhewlettorum-bario-bat-eater-0-75",
+          "source_title": "Phormingochilus pennellhewlettorum — Spider Shoppe listing",
+          "attribution": "Commercial listing; photographer and rights holder not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMERCIAL_PRODUCT_LISTING",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "SELLER_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED",
+            "SOURCE_URL_SLUG_HAS_NAME_VARIANT"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Psednocnemis brachyramosa",
+      "key": "5baa881eea446773",
+      "rank": "SPECIES",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "intake_group": "Additional low-coverage photo source leads pending review",
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:b14b2a5a27cd37c6f54cb094e9f5d532",
+          "source_url": "https://westsidetarantulas.com/products/psednocnemis-brachyramosa-malaysian-shiny-blue-pregnant-adult-female",
+          "source_title": "Psednocnemis brachyramosa — Westside Tarantulas listing",
+          "attribution": "Commercial listing; photographer and rights holder not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMERCIAL_PRODUCT_LISTING",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "SELLER_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        },
+        {
+          "photo_key": "ref:ecaefb4021a42aded39c516299cfc34a",
+          "source_url": "https://spiderfarm.co.uk/shop/p/psednocnemis-brachyramosa-malaysian-blue-femur-subadult-female",
+          "source_title": "Psednocnemis brachyramosa — Spider Farm listing",
+          "attribution": "Commercial listing; photographer and rights holder not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMERCIAL_PRODUCT_LISTING",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "SELLER_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
+    },
+    {
+      "name": "Selenocosmia aruana",
+      "key": "b789b7a8d6865b11",
+      "rank": "SPECIES",
+      "taxon_status": "RESEARCH_CANDIDATE_UNVERIFIED",
+      "intake_group": "Additional low-coverage photo source leads pending review",
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:b13fdfeb164e53f1a7244f653d639035",
+          "source_url": "https://legacy.tarantulacanada.ca/info_en.php?page=gallery",
+          "source_title": "Selenocosmia aruana (juvenile) — Tarantula Canada gallery",
+          "attribution": "Tarantula Canada gallery entry; exact image association, photographer, and rights not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMUNITY_GALLERY",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "COMMUNITY_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED",
+            "GALLERY_ENTRY_NOT_INDIVIDUAL_PHOTO_PAGE"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
     }
   ],
   "unresolved_research_units": [
@@ -2573,7 +3266,29 @@
           "kind": "PHOTO_SEARCH"
         }
       ],
-      "user_note": "Identity unresolved at the submitted genus/locality level; do not inherit an exact species identification or behaviour."
+      "user_note": "Commercial listing photo lead; seller identification and reuse rights are unverified. Compare the visible photo with your specimen.",
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:e958dcc865ccac9122ecc0c86592a1ef",
+          "source_url": "https://thespidershop.co.uk/product/brachionopus-sp-marakele/",
+          "source_title": "Brachionopus sp. Marakele — The Spider Shop listing",
+          "attribution": "Commercial listing; photographer and rights holder not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMERCIAL_PRODUCT_LISTING",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "SELLER_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
     },
     {
       "name": "Brachionopus sp. \"Limpopo\"",
@@ -2591,7 +3306,29 @@
           "kind": "PHOTO_SEARCH"
         }
       ],
-      "user_note": "Identity unresolved at the submitted genus/locality level; do not inherit an exact species identification or behaviour."
+      "user_note": "Commercial listing photo lead; seller identification and reuse rights are unverified. Compare the visible photo with your specimen.",
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:df2be7a48958a7b0e41e442e361f5430",
+          "source_url": "https://www.onelovetarantulas.com/store/Brachionopus-sp-Limpopo-1-4-Limpopo-dwarf-baboon-p720629356",
+          "source_title": "Brachionopus sp. Limpopo — One Love Tarantulas listing",
+          "attribution": "Commercial listing; photographer and rights holder not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMERCIAL_PRODUCT_LISTING",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "SELLER_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
     },
     {
       "name": "Ornithoctonus sp. “Uthai Thani”",
@@ -2616,7 +3353,50 @@
           "kind": "UNVERIFIED_SOURCE"
         }
       ],
-      "user_note": "Seller listing mentions Ornithoctonus costalis; it is not evidence for the Uthai Thani locality label."
+      "user_note": "Seller pages use inconsistent taxon names; one Spider Shoppe URL slug says costalis while its image-search result labels Uthai Thani. Verify identity on the page and image.",
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:5d40598fc2b663fff11546350781806b",
+          "source_url": "https://tarantulas.base.shop/items/137516026",
+          "source_title": "Ornithoctonus sp. Uthai Thani — BASE shop listing",
+          "attribution": "Commercial listing; photographer and rights holder not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMERCIAL_PRODUCT_LISTING",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "SELLER_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        },
+        {
+          "photo_key": "ref:ec0bfe61ce87eeb7328dd1a78dfc639b",
+          "source_url": "https://spidershoppe.com/products/ornithoctonus-costalis-thai-silver-grey-earth-tiger-4-female",
+          "source_title": "Ornithoctonus Uthai Thani — Spider Shoppe listing",
+          "attribution": "Commercial listing; photographer and rights holder not verified.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMMERCIAL_PRODUCT_LISTING",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "SELLER_TAXON_CLAIM_NOT_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED",
+            "SOURCE_URL_SLUG_SAYS_COSTALIS"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
     },
     {
       "name": "Ornithoctonus sp. “Surat Thani”",
@@ -2641,7 +3421,31 @@
           "kind": "UNVERIFIED_SOURCE"
         }
       ],
-      "user_note": "Identity unresolved at the submitted genus/locality level; do not inherit an exact species identification or behaviour."
+      "user_note": "The linked photograph is labeled Ornithoctonus aureotibialis from Surat Thani, not confirmed as the undescribed Ornithoctonus sp. “Surat Thani”. Treat it as a locality comparison only.",
+      "curated_reference_leads": [
+        {
+          "photo_key": "ref:8ed8afb956fea32e143050e9c3239fc4",
+          "source_url": "https://www.joelsartore.com/inv003-00219/",
+          "source_title": "Ornithoctonus aureotibialis from Surat Thani — Photo Ark",
+          "attribution": "Joel Sartore / Photo Ark page identifies O. aureotibialis from Surat Thani; not the undescribed sp. taxon.",
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "source_license_claim": "No photo-level licence claim recorded; check the source page.",
+          "source_type": "COMPARATIVE_LOCALITY_REFERENCE",
+          "candidate_warning": [
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "SOURCE_TAXON_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+            "PHOTO_REUSE_RIGHTS_NOT_CLEARED",
+            "COMPARATIVE_REFERENCE_ONLY",
+            "SOURCE_IDENTIFIES_DIFFERENT_NAMED_SPECIES"
+          ],
+          "link_only": true,
+          "media_copied_to_public_repo": false,
+          "rights_checked": false,
+          "reviewed_by_human": false,
+          "approved_for_imagegen": false,
+          "research_use_status": "SOURCE_LINK_PENDING_USER_REVIEW"
+        }
+      ]
     }
   ]
 }
