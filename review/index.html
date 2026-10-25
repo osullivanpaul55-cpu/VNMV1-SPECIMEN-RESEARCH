@@ -454,7 +454,7 @@ function leadCard(p){
  info.append(create('label','Corrections and source notes'));
  const notes=create('textarea');notes.value=d.notes||'';info.append(notes);
  const lookedLabel=create('label',undefined,'check');const looked=create('input');looked.type='checkbox';looked.checked=d.human_visual_confirmation===true;
- lookedLabel.append(looked,create('span','I inspected the actual source photograph'));info.append(lookedLabel);
+ lookedLabel.append(looked,create('span','I inspected the actual photograph on its original website or in the inline source preview'));info.append(lookedLabel);
  const toTags=v=>[...new Set(v.split(',').map(x=>x.trim().toUpperCase().replace(/[^A-Z0-9_]/g,'_')).filter(x=>/^[A-Z0-9_]{3,80}$/.test(x)))].slice(0,56);
  const touched=new Set(Array.isArray(d.reviewed_fields)?d.reviewed_fields:[]);
  const updateColours=()=>{
