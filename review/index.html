@@ -216,8 +216,11 @@ function leadCard(p){
  info.append(create('small','Original photograph NOT copied into GitHub or APK · Licence: '+(p.license_code||'UNKNOWN')));
  info.append(create('small','Source: '+(p.attribution||'Photographer unconfirmed')));
  const link=safeReferenceUrl(p.source_url);
- if(link){const a=create('a','OPEN ORIGINAL PHOTOGRAPH — inspect the source page');
+ if(link){const a=create('a','OPEN SOURCE RECORD — inspect the photo');
    a.href=link;a.target='_blank';a.rel='noopener noreferrer';info.append(a)}
+ const related=safeReferenceUrl(p.secondary_source_url);
+ if(related&&related!==link){const b=create('a','OPEN UNDERLYING PHOTO SOURCE');
+   b.href=related;b.target='_blank';b.rel='noopener noreferrer';info.append(b)}
  if(p.source_title)info.append(create('small','File page: '+p.source_title));
  if(p.source_license_claim)info.append(create('small','Intake licence claim: '+p.source_license_claim+' · not independently verified.'));
  if(Array.isArray(p.candidate_warning))for(const warning of p.candidate_warning)info.append(create('small','Review flag: '+warning));
