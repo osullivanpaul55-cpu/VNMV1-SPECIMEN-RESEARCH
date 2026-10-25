@@ -510,6 +510,7 @@ function leadCard(p){
  };
  const update=()=>{
   const specimenDetails=specimenTypeFields(specimenType.value);
+   const stage={value:specimenDetails.life_stage};
   decisions[p.photo_key]={...d,photo_key:p.photo_key,
    scientific_name:spec?.scientific_name||'UNRESOLVED',
    source_url:p.source_url,photographer_attribution:p.attribution,licence_code:p.license_code||'UNKNOWN',
@@ -520,7 +521,7 @@ function leadCard(p){
    recommended_behaviours:sug.behaviour,recommended_visible_anatomy:sug.anatomy,
    recommendation_basis:sug.basis,recommendation_confidence:sug.confidence,
    pose_id:pose.value,pose_review_status:looked.checked?'HUMAN_LABEL_NOT_INDEPENDENTLY_PROMOTED':'UNVERIFIED_NOT_VISUALLY_REVIEWED',
-   specimen_type:specimenType.value,sex:specimenDetails.sex,life_stage:specimenDetails.life_stage,resembles_original:resembles.value,resembles_notes:resemblesNotes.value,behaviours:toTags(behavior.value),visible_anatomy:toTags(anatomy.value),
+   specimen_type:specimenType.value,sex:specimenDetails.sex,life_stage:stage.value,resembles_original:resembles.value,resembles_notes:resemblesNotes.value,behaviours:toTags(behavior.value),visible_anatomy:toTags(anatomy.value),
    notes:notes.value,decision:'PENDING',requested_decision:'PENDING',
    species_verified:false,rights_checked:false,approved_for_imagegen:false,
    review_gate:'RESEARCH_LINK_ONLY_NOT_PRODUCTION_APPROVED'};
@@ -884,6 +885,7 @@ const updateColours=()=>{
 const update=()=>{
   const choice=select.value;
   const specimenDetails=specimenTypeFields(specimenType.value);
+   const stage={value:specimenDetails.life_stage};
   const rejection=rejectReason.value.trim();
   if(choice==='REJECT'&&rejection.length<3){rejectDetails.open=true;
     reviewStatus.textContent='Rejection not saved yet: enter a reason (3+ characters).';
@@ -902,7 +904,7 @@ const update=()=>{
     recommendation_basis:sug.basis,recommendation_confidence:sug.confidence,
     recommended_suitability:sug.recommended_suitability,recommended_visual_notes:sug.visible_note,
     proposal_prepopulated_not_human_reviewed:false,
-    specimen_type:specimenType.value,life_stage:specimenDetails.life_stage,resembles_original:resembles.value,resembles_notes:resemblesNotes.value,behaviours:splitTags(behaviours.value),visible_anatomy:splitTags(anatomy.value),
+    specimen_type:specimenType.value,life_stage:stage.value,resembles_original:resembles.value,resembles_notes:resemblesNotes.value,behaviours:splitTags(behaviours.value),visible_anatomy:splitTags(anatomy.value),
     reviewed_fields:[...touched].sort(),reviewed_by_human:true,human_visual_confirmation:true,
     photo_visual_fields_confirmed:photoChecked.checked,
     decision:effective,requested_decision:choice,
