@@ -885,7 +885,6 @@ const updateColours=()=>{
 const update=()=>{
   const choice=select.value;
   const specimenDetails=specimenTypeFields(specimenType.value);
-   const stage={value:specimenDetails.life_stage};
   const rejection=rejectReason.value.trim();
   if(choice==='REJECT'&&rejection.length<3){rejectDetails.open=true;
     reviewStatus.textContent='Rejection not saved yet: enter a reason (3+ characters).';
@@ -904,7 +903,7 @@ const update=()=>{
     recommendation_basis:sug.basis,recommendation_confidence:sug.confidence,
     recommended_suitability:sug.recommended_suitability,recommended_visual_notes:sug.visible_note,
     proposal_prepopulated_not_human_reviewed:false,
-    specimen_type:specimenType.value,life_stage:stage.value,resembles_original:resembles.value,resembles_notes:resemblesNotes.value,behaviours:splitTags(behaviours.value),visible_anatomy:splitTags(anatomy.value),
+    specimen_type:specimenType.value,life_stage:specimenDetails.life_stage,resembles_original:resembles.value,resembles_notes:resemblesNotes.value,behaviours:splitTags(behaviours.value),visible_anatomy:splitTags(anatomy.value),
     reviewed_fields:[...touched].sort(),reviewed_by_human:true,human_visual_confirmation:true,
     photo_visual_fields_confirmed:photoChecked.checked,
     decision:effective,requested_decision:choice,
