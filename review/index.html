@@ -107,6 +107,38 @@ function safeUrl(url,hostname){try{const u=new URL(url);return u.protocol==='htt
 const SAFE_REFERENCE_HOSTS=new Set(['www.inaturalist.org','inaturalist.org','commons.wikimedia.org','doi.org','peckhamia.com','www.morphmarket.com','spidershoppe.com','www.gbif.org','wsc.nmbe.ch','arachnoboards.com','www.tarantupedia.com','www.onelovetarantulas.com','thespidershop.co.uk','franksbuggin661.com','tydyeexotic.com','spiderfarm.co.uk','westsidetarantulas.com','tarantulaforum.com','themotherofspiders.com','www.joelsartore.com','tarantulas.base.shop','fearnottarantulas.com','www.theraphosia.de','www.8pawstarantulas.com','legacy.tarantulacanada.ca','spaspiders.co.uk']);
 function safeReferenceUrl(url){try{const u=new URL(url);return u.protocol==='https:'&&SAFE_REFERENCE_HOSTS.has(u.hostname)?u.href:null}catch(_){return null}}
 function imgUrl(url){for(const h of ['static.inaturalist.org','inaturalist-open-data.s3.amazonaws.com','inaturalist-open-data.s3.us-west-2.amazonaws.com']){const u=safeUrl(url,h);if(u)return u}return null}
+const SAFE_PREVIEW_INAT_HOSTS=new Set(['static.inaturalist.org','inaturalist-open-data.s3.amazonaws.com','inaturalist-open-data.s3.us-west-2.amazonaws.com']);
+function safeRemotePreviewUrl(url,sourceType=''){
+ try{
+  const u=new URL(String(url||''));
+  if(u.protocol!=='https:'||u.username||u.password)return null;
+  const host=u.hostname.toLowerCase(),path=u.pathname;
+  const inat=SAFE_PREVIEW_INAT_HOSTS.has(host)&&/^\/photos\/\d+\//i.test(path)&&/\.(?:jpe?g|png|webp)$/i.test(path);
+  const commonsThumb=host==='upload.wikimedia.org'&&path.startsWith('/wikipedia/commons/');
+  const commonsFilePath=host==='commons.wikimedia.org'&&path.startsWith('/wiki/Special:FilePath/');
+  if(inat||commonsThumb||commonsFilePath||sourceType==='GBIF_OCCURRENCE_MEDIA_PAGE')return u.href;
+  return null;
+ }catch(_){return null}
+}
+function leadPreviewUrl(p){
+ for(const value of [p.review_preview_url,p.preview_image_url,p.thumbnail_url]){
+  const preview=safeRemotePreviewUrl(value,p.source_type);if(preview)return preview;
+ }
+ const inat=String(p.photo_key||'').match(/^inat:(\d+)$/);
+ if(inat)return safeRemotePreviewUrl('https://static.inaturalist.org/photos/'+inat[1]+'/medium.jpg','INATURALIST');
+ const source=safeReferenceUrl(p.source_url);
+ if(source){
+  try{
+   const u=new URL(source),file=u.hostname==='commons.wikimedia.org'?u.pathname.match(/^\/wiki\/File(?::|%3A)(.+)$/i):null;
+   if(file){
+    const title=decodeURIComponent(file[1]).replaceAll('_',' ');
+    const preview=safeRemotePreviewUrl('https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(title)+'?width=640','WIKIMEDIA_COMMONS_FILE_PAGE');
+    if(preview)return preview;
+   }
+  }catch(_){}
+ }
+ return safeRemotePreviewUrl(p.secondary_source_url,p.source_type);
+}
 // Photo lightbox: zoom only the photograph, not the review controls.
 let zoomScale=1,zoomX=0,zoomY=0;
 let gesture=null;
@@ -367,9 +399,20 @@ function leadCard(p){
  const d=decisions[p.photo_key]||seedProposal(spec||{scientific_name:'UNRESOLVED'},p,true);
  const sug=suggestions(p);
  const article=create('article',undefined,'photo');
+ const preview=leadPreviewUrl(p);
+ if(preview){
+  const image=create('img');image.loading='lazy';image.decoding='async';image.referrerPolicy='no-referrer';
+  image.src=preview;image.alt='Source-hosted photo preview for '+(spec?.scientific_name||'unresolved research source');
+  image.className='tap-zoom';image.title='Tap to pinch-zoom';
+  image.addEventListener('click',()=>openPhotoZoom(preview,String(p.photo_key||'Source photo')+' · '+(spec?.scientific_name||'')));
+  const fallback=create('small','Inline preview unavailable from the source; open the original photograph below.');fallback.hidden=true;
+  image.addEventListener('error',()=>{image.hidden=true;fallback.hidden=false});
+  article.append(image,fallback);
+ }
  const info=create('div',undefined,'info');
  info.append(create('strong','Research-only source '+String(p.photo_key||'')));
- info.append(create('small','Original photograph NOT copied into GitHub or APK · Licence: '+(p.license_code||'UNKNOWN')));
+ info.append(create('small','Original image is not copied into GitHub or APK · Licence: '+(p.license_code||'UNKNOWN')));
+ info.append(create('small',preview?'Source-hosted preview shown for inspection; this does not approve reuse or ImageGen.':'No direct image URL is available here; inspect the linked source page.'));
  info.append(create('small','Source: '+(p.attribution||'Photographer unconfirmed')));
  const link=safeReferenceUrl(p.source_url);
  if(link){const a=create('a','OPEN ORIGINAL PHOTOGRAPH — inspect the source page');
@@ -387,7 +430,7 @@ function leadCard(p){
  checkLabel.append(check,create('span','Keep this source link · preselected'));info.append(checkLabel);
  const suggestLabel=create('label',undefined,'check');const suggestCheck=create('input');suggestCheck.type='checkbox';suggestCheck.checked=d.retain_suggested_classifications!==false;
  suggestLabel.append(suggestCheck,create('span','Retain research suggestions · preselected'));info.append(suggestLabel);
- info.append(create('small','Evidence: '+sug.basis+' · No visual preanalysis of link-only image. Edit only after opening the source.'));
+ info.append(create('small','Evidence: '+sug.basis+' · No visual preanalysis is supplied for this source-linked photo. Inspect the inline preview or open the source before editing.'));
  info.append(create('label','Pose suggestion (correct after viewing source)'));
  const pose=create('select');for(const [v,label] of POSES){const opt=create('option',label);opt.value=v;pose.append(opt)}
  pose.value=d.pose_id&&d.pose_id!=='UNREVIEWED'?d.pose_id:sug.pose;info.append(pose);
@@ -411,7 +454,7 @@ function leadCard(p){
  info.append(create('label','Corrections and source notes'));
  const notes=create('textarea');notes.value=d.notes||'';info.append(notes);
  const lookedLabel=create('label',undefined,'check');const looked=create('input');looked.type='checkbox';looked.checked=d.human_visual_confirmation===true;
- lookedLabel.append(looked,create('span','I inspected the actual photograph on its original website'));info.append(lookedLabel);
+ lookedLabel.append(looked,create('span','I inspected the actual source photograph'));info.append(lookedLabel);
  const toTags=v=>[...new Set(v.split(',').map(x=>x.trim().toUpperCase().replace(/[^A-Z0-9_]/g,'_')).filter(x=>/^[A-Z0-9_]{3,80}$/.test(x)))].slice(0,56);
  const touched=new Set(Array.isArray(d.reviewed_fields)?d.reviewed_fields:[]);
  const updateColours=()=>{
@@ -932,7 +975,7 @@ function render(){
 
  const refCount=photoReferenceCount(spec),shortfall=Math.max(0,PHOTO_REFERENCE_MIN-refCount);
  const coverageNote=shortfall>0?shortfall+' more source-photo record(s) sought': 'photo-reference floor reached; human review still required';
- card.append(create('div',photos.length+' archived photographs · '+leads.length+' individual photo/source leads · '+searches.length+' browse/search links · '+refCount+'/'+PHOTO_REFERENCE_MIN+' minimum (aim '+PHOTO_REFERENCE_TARGET+', prefer '+PHOTO_REFERENCE_TARGET+'–'+PHOTO_REFERENCE_PREFERRED_MAX+') · '+coverageNote,'specdetails'));
+ card.append(create('div',photos.length+' archived photo files · '+leads.length+' source-photo leads · '+searches.length+' browse/search links · '+refCount+'/'+PHOTO_REFERENCE_MIN+' minimum (aim '+PHOTO_REFERENCE_TARGET+', prefer '+PHOTO_REFERENCE_TARGET+'–'+PHOTO_REFERENCE_PREFERRED_MAX+') · '+coverageNote,'specdetails'));
  if(photos.length){
    const gallery=create('div',undefined,'photos');
    for(let i=0;i<photos.length;i++){
@@ -949,8 +992,8 @@ function render(){
    card.append(create('p',msg));
  }
  if(leads.length){
-   const details=create('details');details.className='details-archive';
-   const summary=create('summary','Research source links ('+leads.length+') · includes missing and unverified licences');details.append(summary);
+   const details=create('details');details.className='details-archive';details.open=true;
+   const summary=create('summary','Source-hosted photo previews and research links ('+leads.length+')');details.append(summary);
    const gallery=create('div',undefined,'photos');
    for(const p of leads)gallery.append(leadCard(p));
    details.append(gallery);card.append(details);
