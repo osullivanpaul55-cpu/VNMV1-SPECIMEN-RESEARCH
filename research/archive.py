@@ -52,7 +52,7 @@ def compile_archive(shard_root:Path,previous:dict,out:Path,tag:str,repo:str)->di
                     link_leads.append(public);prior_keys.add(lkey);links_added+=1
                 for c in row['new_candidates']:
                     path=c['archive_member']
-                    if not re.fullmatch(r'media/[0-9a-f]{16}/[0-9]{1,15}\.(jpg|png|webp)',path):raise ValueError('BAD_ARCHIVE_MEMBER')
+                    if not re.fullmatch(r'media/(?:[0-9a-f]{16}|[0-9a-f]{32})/[0-9]{1,15}\.(jpg|png|webp)',path):raise ValueError('BAD_ARCHIVE_MEMBER')
                     file=(src.parent/path).resolve()
                     if not file.is_relative_to(src.parent.resolve()) or not file.is_file():raise ValueError('REFERENCE_BYTES_MISSING')
                     b=file.read_bytes()
