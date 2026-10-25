@@ -31,6 +31,8 @@ jobs:
       - uses: actions/configure-pages@v5
         with:
           enablement: true
+      - name: Install report image dependency
+        run: python -m pip install Pillow
       - name: Build per-species coverage report and public static website
         run: |
           mkdir -p _site/review _site/data
