@@ -218,9 +218,11 @@ function leadCard(p){
  const link=safeReferenceUrl(p.source_url);
  if(link){const a=create('a','OPEN ORIGINAL PHOTOGRAPH — inspect the source page');
    a.href=link;a.target='_blank';a.rel='noopener noreferrer';info.append(a)}
+ if(p.source_title)info.append(create('small','File page: '+p.source_title));
  if(p.source_license_claim)info.append(create('small','Intake licence claim: '+p.source_license_claim+' · not independently verified.'));
  if(Array.isArray(p.candidate_warning))for(const warning of p.candidate_warning)info.append(create('small','Review flag: '+warning));
- info.append(create('small','Species: '+(spec?.scientific_name||'UNRESOLVED')+' · Source type: '+(p.source_type||'LINK_ONLY')+' · Observation grade: '+(p.observation_quality_grade||'not reported')+' · Community status is a discovery clue, not taxonomic approval; rights and photo identity remain pending your review.'));
+ const gradeNote=p.observation_quality_grade?' · Observation grade: '+p.observation_quality_grade+'; community status is a discovery clue, not taxonomic approval':'';
+ info.append(create('small','Species: '+(spec?.scientific_name||'UNRESOLVED')+' · Source type: '+(p.source_type||'LINK_ONLY')+gradeNote+' · Rights and photo identity remain pending your review.'));
  info.append(create('small','Text-only pose clues: '+(p.unverified_observer_text_pose_hints||[]).join(', ')+'; behaviour clues: '+(p.unverified_observer_behaviour_hints||[]).join(', ')));
  const checkLabel=create('label',undefined,'check');const check=create('input');check.type='checkbox';check.checked=d.keep_research_candidate!==false;
  checkLabel.append(check,create('span','Keep this source link · preselected'));info.append(checkLabel);
