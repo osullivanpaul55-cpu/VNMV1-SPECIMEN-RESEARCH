@@ -4,7 +4,7 @@ from pathlib import Path
 from PIL import Image
 BASE=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(BASE/'research'))
-import collect,archive
+import collect,archive,coverage_report
 from pose_reference import CORE_POSES,OPTIONAL_POSES,unverified_text_pose_hints,unverified_text_behaviour_hints,research_needs
 
 def jpeg(color):
@@ -24,15 +24,46 @@ class PublicTests(unittest.TestCase):
         self.assertNotIn('HUMAN_GOLD',raw)
         self.assertNotIn('source_specimen_sex',raw)
         self.assertNotIn('sha256',raw)
-        d=json.loads(raw);self.assertEqual(len(d['species']),195)
-        self.assertIn('Abdomegaphobema mesomelas',{x['name'] for x in d['species']})
+        d=json.loads(raw);names=[x['name'] for x in d['species']];keys=[x['key'] for x in d['species']]
+        self.assertEqual(len(names),len(set(names)));self.assertEqual(len(keys),len(set(keys)))
+        self.assertIn('Abdomegaphobema mesomelas',set(names))
     def test_five_shards_cover_exact_species_once_first_sweep(self):
         seed=json.loads((BASE/'research/species_seed.json').read_text())
+        expected={x['key'] for x in seed['species']}
+        cycles=(len(expected)+19)//20
         got=[]
-        for cycle in range(10):
-            for shard in range(5):got+= [x['key'] for x in collect.choose_species(seed,shard,cycle,4,{})]
-        self.assertEqual(len(set(got)),195)
-        self.assertEqual(len(got),200)
+        for cycle in range(cycles):
+            for shard in range(5):got += [x['key'] for x in collect.choose_species(seed,shard,cycle,4,{})]
+        self.assertEqual(set(got),expected)
+        self.assertEqual(len(got),len(expected))
+    def test_species_coverage_counts_distinct_records_and_never_approves(self):
+        index={'schema':coverage_report.SCHEMA,'last_cycle':3,'species':{
+          'a':{'scientific_name':'Species alpha','candidates':[
+            {'photo_key':'inat:1','approved_for_imagegen':False,'license_verification':'PENDING_HUMAN_SOURCE_CHECK',
+             'unverified_observer_text_pose_hints':['DORSAL'],'unverified_observer_behaviour_hints':['FEEDING']}],
+            'link_only_leads':[{'photo_key':'inat:2','license_code':'UNKNOWN'},
+                               {'photo_key':'inat:1','license_code':'cc-by'}]},
+          'b':{'scientific_name':'Species beta','candidates':[],'link_only_leads':[]}}}
+        report=coverage_report.compile_coverage(index)
+        alpha=report['species'][0]
+        self.assertEqual(alpha['distinct_photo_source_records'],2)
+        self.assertEqual(alpha['candidate_photo_records'],1)
+        self.assertEqual(alpha['link_only_source_records'],1)
+        self.assertEqual(alpha['minimum_target'],9)
+        self.assertEqual(alpha['preferred_target'],12)
+        self.assertEqual(alpha['gap_to_minimum'],7)
+        self.assertEqual(alpha['review_state'],'PENDING_HUMAN_REVIEW')
+        self.assertEqual(report['summary']['candidate_photo_records'],1)
+        self.assertEqual(report['summary']['link_only_source_records'],2)
+        self.assertEqual(report['summary']['approved_for_imagegen_records'],0)
+        self.assertTrue(report['summary']['all_candidate_photos_unapproved'])
+    def test_live_coverage_export_matches_index_totals(self):
+        index=json.loads((BASE/'data/index.json').read_text())
+        report=coverage_report.compile_coverage(index)
+        self.assertEqual(report['summary']['taxa_total'],len(index['species']))
+        self.assertEqual(report['summary']['candidate_photo_records'],index['discovered_candidate_count'])
+        self.assertEqual(report['summary']['link_only_source_records'],index['unlicensed_link_research_lead_count'])
+        self.assertEqual(report['summary']['approved_for_imagegen_records'],0)
     def test_photo_host_fails_closed(self):
         self.assertIsNone(collect.image_url('http://static.inaturalist.org/photos/1/square.jpg'))
         self.assertIsNone(collect.image_url('https://evil.com/photos/1/square.jpg'))

@@ -8,10 +8,13 @@ on:
     branches: [main]
     paths:
       - 'data/index.json'
+      - 'research/coverage_report.py'
+      - 'research/species_seed.json'
+      - 'research/species_reference_extension.json'
       - 'review/index.html'
       - '.github/workflows/pages.yml'
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 concurrency:
@@ -28,11 +31,21 @@ jobs:
       - uses: actions/configure-pages@v5
         with:
           enablement: true
-      - name: Prepare public static website
+      - name: Build per-species coverage report and public static website
         run: |
           mkdir -p _site/review _site/data
+          python research/coverage_report.py --index data/index.json --csv data/species_coverage.csv --summary data/species_coverage_summary.json
+          git config user.name 'VNMV1 public research bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/species_coverage.csv data/species_coverage_summary.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'research: refresh species photo coverage report [skip ci]'
+            git push origin HEAD:main
+          fi
           cp review/index.html _site/review/index.html
           cp data/index.json _site/data/index.json
+          cp data/species_coverage.csv _site/data/species_coverage.csv
+          cp data/species_coverage_summary.json _site/data/species_coverage_summary.json
           printf '%s\n' '<!doctype html><html lang="en"><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=./review/"><title>VNMV1 Reference Review</title><a href="./review/">Open specimen review</a></html>' > _site/index.html
           printf 'GitHub Pages review interface; all images are unapproved research candidates.\n' > _site/README.txt
       - uses: actions/upload-pages-artifact@v3

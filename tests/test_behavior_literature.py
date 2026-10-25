@@ -25,12 +25,16 @@ class Literature(unittest.TestCase):
   target=self.seed["species"][0]["name"]
   item={"DOI":"10.1234/example","title":["Natural history of "+target],"issued":{"date-parts":[[2022]]}}
   result=run(self.seed,self.index,self.terms,0,2,fetch=lambda _:{"message":{"items":[item]}})
-  self.assertEqual(result["species_searched"],2)
+  self.assertEqual(result["species_processed_this_run"],2)
+  self.assertEqual(result["species_searched"],len(result["species"]))
   self.assertFalse(result["research_completed_first_sweep"])
-  self.assertEqual(result["species_with_literature_leads"],1)
+  self.assertEqual(result["species_with_literature_leads_this_run"],1)
   self.assertTrue(all(not p["photo_source_verified"] for a in result["species"].values() for p in a["publication_leads"]))
  def test_public_scope(self):
-  self.assertEqual(len(self.seed["species"]),195)
+  names=[x["name"] for x in self.seed["species"]]
+  keys=[x["key"] for x in self.seed["species"]]
+  self.assertEqual(len(names),len(set(names)))
+  self.assertEqual(len(keys),len(set(keys)))
   self.assertEqual(len(self.terms),68)
   self.assertNotIn("Card_0001",(ROOT/"research/species_seed.json").read_text())
 if __name__=="__main__":unittest.main()

@@ -106,6 +106,8 @@ def run(seed,index,terms,cycle,per_run=MAX_TAXA_PER_RUN,fetch=None):
     record["named_species_in_seed"]=len(names)
     record["species_with_literature_leads"]=sum(bool(x.get("publication_leads")) for x in results.values())
     record["species_searched"]=len(results)
+    record["species_processed_this_run"]=len(chosen)
+    record["species_with_literature_leads_this_run"]=sum(bool(results[entry["key"]].get("publication_leads")) for entry in chosen)
     record["research_completed_first_sweep"]=len(results)==len(names)
     return record
 def main():
@@ -119,5 +121,5 @@ def main():
     seed=json.loads(a.seed.read_text());index=json.loads(a.index.read_text());terms=json.loads(a.terms.read_text())["behaviors"]
     out=run(seed,index,terms,a.cycle,a.per_run)
     a.index.write_text(json.dumps(out,indent=2,ensure_ascii=False)+"\n")
-    print(json.dumps({key:out[key] for key in ("last_cycle","species_searched","species_with_literature_leads","research_completed_first_sweep")}))
+    print(json.dumps({key:out[key] for key in ("last_cycle","species_processed_this_run","species_with_literature_leads_this_run","species_searched","species_with_literature_leads","research_completed_first_sweep")}))
 if __name__=="__main__":main()
