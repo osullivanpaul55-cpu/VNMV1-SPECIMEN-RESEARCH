@@ -1,7 +1,7 @@
 {
   "schema": "VNMV1_PUBLIC_SPECIES_PHOTO_COVERAGE_V1",
   "source_schema": "VNMV1_PUBLIC_PHOTO_CANDIDATES_V1",
-  "last_cycle": 19,
+  "last_cycle": 20,
   "catalog_taxa_total": 263,
   "index_taxa_total": 263,
   "taxa_total": 263,
