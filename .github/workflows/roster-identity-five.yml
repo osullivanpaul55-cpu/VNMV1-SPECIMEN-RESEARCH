@@ -1,0 +1,105 @@
+name: Five public roster taxon identity mappers
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/roster-identity-five.yml'
+      - 'research/roster_taxon_name_leads.json'
+      - 'research/roster_identity_five_lanes.py'
+      - 'research/merge_roster_taxon_identity_five.py'
+      - 'research/species_seed.json'
+      - 'research/species_reference_extension.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: public-vnmv1-roster-identity-five
+  cancel-in-progress: false
+
+jobs:
+  map-public-name-shards:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        shard: [0, 1, 2, 3, 4]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Map one disjoint public name shard through GBIF
+        env:
+          SHARD: ${{ matrix.shard }}
+        run: |
+          python research/roster_identity_five_lanes.py \
+            --seed research/roster_taxon_name_leads.json \
+            --shard "$SHARD" --shard-count 5 \
+            --out "out/shard-$SHARD.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: roster-identity-${{ matrix.shard }}
+          path: out/shard-${{ matrix.shard }}.json
+          retention-days: 14
+          if-no-files-found: error
+
+  merge-and-persist:
+    needs: map-public-name-shards
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 2
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: roster-identity-*
+          path: five-output
+          merge-multiple: false
+      - name: Require complete five-shard coverage and build the taxon-only photo queue
+        run: |
+          python research/merge_roster_taxon_identity_five.py \
+            --seed research/roster_taxon_name_leads.json \
+            --shards five-output \
+            --species research/species_seed.json \
+            --extension research/species_reference_extension.json \
+            --evidence-out data/roster_taxon_identity_evidence.json \
+            --generated-extension-out research/generated_roster_species_extension.json
+      - name: Persist public taxon evidence and candidate queue
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'VNMV1 public taxon evidence bot'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/roster_taxon_identity_evidence.json research/generated_roster_species_extension.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'research: map roster taxon names with five public runners [skip ci]'
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then exit 0; fi
+            sleep 2
+          done
+          echo 'Could not persist five-shard roster taxon evidence.' >&2
+          exit 1
+      - name: Report lookup and queue counts
+        run: |
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          d=json.load(open('data/roster_taxon_identity_evidence.json'))
+          print('## Public roster taxon mapping')
+          print('Distinct public name labels mapped:', d['public_name_leads_looked_up'])
+          print('GBIF responses:', d['gbif_name_responses'])
+          print('Retryable source failures:', d['source_unavailable_retry_required'])
+          print('New exact accepted species queued for photo research:', d['new_photo_research_taxa_added'])
+          print('Specimen identities approved:', 0)
+          print('Card mappings exposed:', 'no')
+          PY

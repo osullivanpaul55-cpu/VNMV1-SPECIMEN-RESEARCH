@@ -60,7 +60,7 @@ def merge_seed_with_extension(seed:dict, extension:dict)->dict:
 def choose_species(seed:dict, shard:int,cycle:int,per_worker:int,previous:dict)->list[dict]:
     species=seed['species']
     if seed.get('schema')!='VNMV1_PUBLIC_RESEARCH_SPECIES_SEED_V1' or len(species)!=len({v['key'] for v in species}):raise ValueError('INVALID_SPECIES_SEED')
-    if not 0<=shard<SHARDS or cycle<0 or not 1<=per_worker<=6: raise ValueError('BAD_CYCLE_OR_SHARD')
+    if not 0<=shard<SHARDS or cycle<0 or not 1<=per_worker<=12: raise ValueError('BAD_CYCLE_OR_SHARD')
     n=len(species);per_cycle=SHARDS*per_worker
     # Preserve a deterministic, disjoint first sweep across the full catalog.
     # Do not wrap the final partial batch: wrapping skips the last taxa and
