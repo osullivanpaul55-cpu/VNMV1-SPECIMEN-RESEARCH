@@ -36,7 +36,7 @@ The fresh-history PUBLIC repository is now created and deployed. The first five-
 
 The five workers now **include missing or restrictive photo-licence references as link-only research leads** in each species entry (`link_only_leads`). These can be searched, grouped by species, and opened from the mobile review website immediately—no permission check is needed just to retain the citation and ask a researcher to inspect the original public source. Observer descriptions are unverified hints, not verified pose/sex evidence.
 
-Unknown/right-restricted source photos are **not downloaded, displayed as hosted images, redistributed in Release ZIP files, or promoted to image-generation inputs**. Their records carry source URL, photographer attribution where supplied, licence state `UNKNOWN` or original terms, and `RESEARCH_LINK_AVAILABLE_NOW`. Non-licence photos remain accessible via source links for research without waiting; approval for copying/publishing remains separate. Photo-level CC0/CC BY candidates continue through the downloadable archive lane.
+Unknown/right-restricted source photos are **not downloaded, copied into public Release ZIP files, or promoted to image-generation inputs**. When a source exposes a direct image URL, the review page loads that source-hosted image inline for inspection and shows its source, attribution and licence details. This remote preview is not a copy or approval for redistribution or ImageGen; sources that block inline display retain an open-original link. Photo-level CC0/CC BY candidates continue through the downloadable archive lane.
 
 The mobile website separates **Archived photo candidates** from **Research-only photo links**; users can open the latter and assess pose or anatomy at the source. The installed Gold Android APK remains a separate integration.
 
@@ -48,7 +48,7 @@ No open-source licence is automatically applied to photographs by this repositor
 
 ## Review
 
-Open the site `/review/` (GitHub Pages) on a phone; filter by scientific name; inspect original observation links; mark `Accept female`, `Accept male`, `Structural only`, `Needs more evidence` or `Reject`; correct anatomy and source information in notes. Accept selections require species and licence confirmations. The browser stores unfinished decisions locally; **Export decisions** downloads a review JSON. Upload it back to the private review/import process. No user decisions are sent automatically to GitHub, no original or private card files are published, and no model images are generated.
+Open the site `/review/` (GitHub Pages) on a phone; filter by scientific name; inspect inline source-hosted previews or open the original observation pages; mark `Accept female`, `Accept male`, `Structural only`, `Needs more evidence` or `Reject`; correct anatomy and source information in notes. Accept selections require species and licence confirmations. The browser stores unfinished decisions locally; **Export decisions** downloads a review JSON. Upload it back to the private review/import process. No user decisions are sent automatically to GitHub, no original or private card files are published, and no model images are generated.
 
 ## Safety testing
 
