@@ -18,6 +18,14 @@ Six is the standard camera plan; optional views depend on animal type, habitat, 
 4. The private authority/importer combines review labels, same-species/sex authorization, SHA-256 verified image bytes, legally suitable image rights, and focal-card references. It must calculate **per-variant pose coverage** and prioritize missing views. Public research never turns a pose label into a generated photograph or a production approval.
 5. Each actual model call still contains **one specimen, one morph, one pose, one photograph**. The resulting synthetic master goes through independent anatomical and alpha QA. Do not supply contact sheets, pose-reference research documents, or multi-output dashboards as production model inputs.
 
+## Species photo-reference coverage floor
+
+For each distinct named species or evidence-supported candidate taxon, seek **at least 9 distinct individual photo/source records** from reputable web sources where they can be found. Aim for 12 and preferably 12–15; the review app can hold up to 18 candidate records per taxon. This is a reference-coverage target, not a species-identity or ImageGen-rights approval.
+
+Count an archived candidate photograph or a direct, individual source-photo/observation lead once, after deduplication. Do not count search-result pages, general browse links, text-only pages, illustrations, synthetic images or duplicate photographs. The reviewer must open and assess each source record; unknown or restricted rights may remain a link-only research lead.
+
+If fewer than nine suitable references can be found, preserve the search trail, record the count and why the source pool is limited, and leave the taxon visibly below target. Do not invent, duplicate or silently substitute images. A genuine user-reviewed photo can still establish card identity at the taxonomic rank it supports; a documented coverage shortfall does not by itself invalidate that identity decision. Sex, life stage, behaviour and image-use rights remain separate.
+
 ## Fair coverage metric
 
 Measure eligible pose coverage as **distinct reviewer-confirmed pose IDs** from eligible source images, not by counts of photos or iNaturalist records. Require a stronger visual reference for ventral/sex-diagnostic anatomy and mature-male emboli/palp/spur depiction; otherwise hold that exact view or detail as unknown. Exact high-resolution source originals and verified same-species/sex photographs rank above related-species comparisons.

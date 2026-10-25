@@ -46,9 +46,9 @@
 <body><main>
 <details id="reviewSettings" class="review-settings"><summary>VNMV1 Reference Review <span>Tools & progress ▾</span></summary>
 <header><div><h1>VNMV1 · Specimen reference review</h1><p class="muted">Independent photo research • one species pool • human-reviewed decisions</p></div><div class="muted">Candidate references only · No image generation</div></header>
-<div class="note"><strong>Quick review:</strong> select sex, pose, notes or Reject for each photograph. Your notes and Resembles assessment save on the phone automatically. Swipe horizontally to change species; scroll downward through photos for that species. References and available text-based suggestions are preselected for retention. Correct our proposals where necessary; biological and photo rights approval remain separate. Licence/identity checks are only needed later for production eligibility.</div>
-<section class="stats" aria-label="Research counts"><div class="stat"><b id="speciesCount">0</b><span>Species in index</span></div><div class="stat"><b id="candidateCount">0</b><span>Photo candidates</span></div><div class="stat"><b id="sourceLeadCount">0</b><span>Research-only photo links</span></div><div class="stat"><b id="decisionCount">0</b><span>Decisions entered</span></div><div class="stat"><b id="aiDraftCount">0</b><span>AI draft reviews</span></div><div class="stat"><b id="floorCount">0</b><span>Species with 9+ candidates</span></div></section>
-<div class="controls"><input id="filter" type="search" placeholder="Find species…" aria-label="Filter species"><select id="statusFilter" aria-label="Filter research state"><option value="all">All species</option><option value="photos" selected>With photographs or research links</option><option value="under">Fewer than nine candidates</option><option value="decided">My reviewed photographs</option></select><button class="secondary" id="reload">Refresh public index</button></div>
+<div class="note"><strong>Quick review:</strong> select sex, pose, notes or Reject for each photograph. Your notes and Resembles assessment save on the phone automatically. Swipe horizontally to change species; scroll downward through photos for that species. References and available text-based suggestions are preselected for retention. Correct our proposals where necessary. <strong>Photo coverage:</strong> aim for at least 9 distinct individual photo/source records per named taxon where available; target 12, preferably 12–15. The under-9 filter counts individual photo records and individual source-photo leads, but not search pages or duplicates. A documented source shortage stays visible for research. User review can establish card identity only at the taxonomic rank supported by the photo; sex/stage and photo-use rights remain separate.</div>
+<section class="stats" aria-label="Research counts"><div class="stat"><b id="speciesCount">0</b><span>Species in index</span></div><div class="stat"><b id="candidateCount">0</b><span>Photo candidates</span></div><div class="stat"><b id="sourceLeadCount">0</b><span>Research-only photo links</span></div><div class="stat"><b id="decisionCount">0</b><span>Decisions entered</span></div><div class="stat"><b id="aiDraftCount">0</b><span>AI draft reviews</span></div><div class="stat"><b id="floorCount">0</b><span>Species with 9+ photo references</span></div></section>
+<div class="controls"><input id="filter" type="search" placeholder="Find species…" aria-label="Filter species"><select id="statusFilter" aria-label="Filter research state"><option value="all">All species</option><option value="photos" selected>With photographs or research links</option><option value="under">Fewer than 9 photo references</option><option value="decided">My reviewed photographs</option></select><button class="secondary" id="reload">Refresh public index</button></div>
 <div class="controls"><label class="upload" for="reviewUpload">Import saved review JSON</label><input id="reviewUpload" type="file" accept="application/json,.json"><button class="secondary" id="openHelp" type="button">Where do I save?</button></div>
 <details id="advancedIndex"><summary>Advanced: load offline research index</summary><input style="max-width:180px" id="indexUpload" type="file" accept="application/json,.json"></details>
 <div class="controls"><button id="export" type="button">Download backup review JSON</button><small>This is a manual browser backup, NOT the Android Drive upload. In the APK, use the fixed bottom SAVE JSON → DRIVE button.</small></div>
@@ -130,9 +130,28 @@ zoomStage.addEventListener('dblclick',resetZoom);
 zoomStage.addEventListener('wheel',e=>{zoomScale=Math.max(1,Math.min(8,zoomScale+(e.deltaY<0?.3:-.3)));renderZoom();e.preventDefault()},{passive:false});
 function save(){try{localStorage.setItem(KEY,JSON.stringify(decisions))}catch(_){notify('Browser storage unavailable; export your review regularly.')}stats()}
 function notify(message){$('#notification').textContent=message}
+const PHOTO_REFERENCE_MIN=9;
+const PHOTO_REFERENCE_TARGET=12;
+const PHOTO_REFERENCE_PREFERRED_MAX=15;
 function photosFrom(x){return Array.isArray(x.candidates)?x.candidates:[]}
 function leadsFrom(x){return [...(Array.isArray(x.link_only_leads)?x.link_only_leads:[]),...(Array.isArray(x.curated_reference_leads)?x.curated_reference_leads:[])]}
 function searchesFrom(x){return Array.isArray(x.source_searches)?x.source_searches:[]}
+function photoReferenceCount(spec){
+ const rows=[...photosFrom(spec),...leadsFrom(spec)],keys=new Set();
+ for(const p of rows){
+  if(!p||typeof p!=='object')continue;
+  const details=[p.source_url,p.url,p.attribution].filter(Boolean).join(' ');
+  const inat=details.match(/inaturalist\.org\/photos\/(\d+)/i);
+  let raw=inat?'inat-photo:'+inat[1]:(p.photo_id||p.photo_key||p.source_url||p.url);
+  if(!raw)continue;
+  let key=String(raw).trim();
+  if(/^https?:\/\//i.test(key)){
+   try{const u=new URL(key);u.hash='';key=u.href.replace(/\/$/,'')}catch(_){}
+  }
+  keys.add(key.toLowerCase());
+ }
+ return keys.size;
+}
 const REVIEW_DOCTRINE='VNMV1_UNIFIED_REFERENCE_REVIEW_DOCTRINE_V1';
 const LIFE_STAGES=['UNKNOWN','MATURE_MALE','ADULT_FEMALE_MATURE','ADULT_FEMALE_YOUNGER','JUVENILE_SPIDERLING'];
 const SUITABILITY=new Set(['PENDING','ACCEPT_REFERENCE','STRUCTURAL_ONLY','HABITAT_ONLY','NEEDS_RESEARCH','REJECT']);
@@ -372,7 +391,7 @@ function stats(){
  $('#speciesCount').textContent=names.length;
  $('#candidateCount').textContent=photos.length;
  $('#sourceLeadCount').textContent=names.reduce((a,x)=>a+leadsFrom(x).length+searchesFrom(x).length,0);
- $('#floorCount').textContent=names.filter(x=>photosFrom(x).length>=9).length;
+ $('#floorCount').textContent=names.filter(x=>photoReferenceCount(x)>=PHOTO_REFERENCE_MIN).length;
  $('#decisionCount').textContent=Object.values(decisions).filter(reviewIsEntered).length;
  const checked=photos.filter(p=>{
   const x=visualDrafts[p.photo_key];
@@ -623,7 +642,7 @@ function render(){
    const photos=photosFrom(spec);
    if(!String(spec.scientific_name||'').toLowerCase().includes(query))return false;
    if(filter==='photos'&&photos.length===0&&leadsFrom(spec).length===0&&searchesFrom(spec).length===0)return false;
-   if(filter==='under'&&photos.length>=9)return false;
+   if(filter==='under'&&photoReferenceCount(spec)>=PHOTO_REFERENCE_MIN)return false;
    if(filter==='decided'&&!photos.concat(leadsFrom(spec)).some(p=>reviewIsEntered(decisions[p.photo_key])))return false;
    return true;
  }).sort((a,b)=>String(a.scientific_name).localeCompare(String(b.scientific_name)));
@@ -641,7 +660,9 @@ function render(){
  $('#speciesPosition').textContent=(spec.scientific_name||'Unknown species')+' · '+(speciesCursor+1)+'/'+count;
  const card=create('section',undefined,'species');
 
- card.append(create('div',photos.length+' archived photographs · '+leads.length+' individual photo/source leads · '+searches.length+' browse links','specdetails'));
+ const refCount=photoReferenceCount(spec),shortfall=Math.max(0,PHOTO_REFERENCE_MIN-refCount);
+ const coverageNote=shortfall>0?shortfall+' more source-photo record(s) sought': 'photo-reference floor reached; human review still required';
+ card.append(create('div',photos.length+' archived photographs · '+leads.length+' individual photo/source leads · '+searches.length+' browse/search links · '+refCount+'/'+PHOTO_REFERENCE_MIN+' minimum (aim '+PHOTO_REFERENCE_TARGET+', prefer '+PHOTO_REFERENCE_TARGET+'–'+PHOTO_REFERENCE_PREFERRED_MAX+') · '+coverageNote,'specdetails'));
  if(photos.length){
    const gallery=create('div',undefined,'photos');
    for(let i=0;i<photos.length;i++){
