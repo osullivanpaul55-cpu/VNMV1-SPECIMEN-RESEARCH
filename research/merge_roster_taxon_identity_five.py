@@ -112,7 +112,7 @@ def merge(seed_path: Path, shard_dir: Path, species_path: Path,
             continue
         eligible_matches += 1
         canonical, usage_key = match
-        key = "roster-gbif:" + usage_key
+        key = "roster-gbif-" + usage_key
         canonical_key = norm(canonical)
         if canonical_key in existing_names or canonical_key in accepted_names or key in existing_keys:
             continue
