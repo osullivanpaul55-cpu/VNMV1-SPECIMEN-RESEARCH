@@ -115,8 +115,8 @@ def make_reference_mesh(rec):
                 node=f"{side_tag}_{limb}_{article.upper()}"
                 scene.add_geometry(mesh,geom_name=node,node_name=node,
                                    parent_node_name=parent,transform=transform)
-                measured_side=((side_tag=="L" and rec["measurement_side"]=="LEFT")
-                               or (side_tag=="L" and rec["measurement_side"]=="PUBLICATION_NOT_EXPLICITLY_RECORDED"))
+                measured_side=(rec["legs"][limb] is not None and side_tag=="L" and
+                               rec["measurement_side"] in ("LEFT","PUBLICATION_NOT_EXPLICITLY_RECORDED"))
                 status=("SOURCE_PUBLISHED_DISTAL_LENGTH_SIDE_UNCONFIRMED" if
                          measured_side and rec["measurement_side"]=="PUBLICATION_NOT_EXPLICITLY_RECORDED" and article in ARTICLES
                          else "PUBLISHED_LEFT_DISTAL_LENGTH" if measured_side and article in ARTICLES

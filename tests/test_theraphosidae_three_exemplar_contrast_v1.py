@@ -62,6 +62,12 @@ class MultiExemplarTests(unittest.TestCase):
                 self.assertIn("R_IV_TARSUS",set(s.graph.nodes))
                 self.assertIn("L_II_TROCHANTER",set(s.graph.nodes))
                 self.assertEqual(item["named_segments"],56)
+                if item["specimen_id"] in ("APH_1031","APH_0887"):
+                    self.assertEqual(item["source_measured_left_segments"],15)
+                    self.assertEqual(item["published_side_not_specified_segments"],0)
+                else:
+                    self.assertEqual(item["source_measured_left_segments"],0)
+                    self.assertEqual(item["published_side_not_specified_segments"],20)
                 self.assertFalse(item["biology_approved"])
                 self.assertEqual(item["real_camera_views_rendered"],0)
             self.assertEqual(len(r["male_and_juvenile_unknowns"]),3)
