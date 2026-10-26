@@ -1,0 +1,151 @@
+{
+  "schema": "VNMV1_THERAPHOSIDAE_SCIENTIFIC_MORPHOMETRY_EVIDENCE_V1",
+  "status": "PUBLISHED_REFERENCE_EXEMPLAR_ONLY_NOT_SPECIES_MASTER",
+  "sources": [
+    {
+      "id": "AMNH-SPIDER-ANATOMY",
+      "type": "institutional_anatomy",
+      "url": "https://www.amnh.org/learn-teach/curriculum-collections/biodiversity-counts/arthropod-identification/arthropod-morphology/parts-of-a-spider-dorsal-view-of-a-male-spider",
+      "supports": [
+        "eight walking legs",
+        "seven named leg articles",
+        "two separate pedipalps",
+        "prosoma and opisthosoma",
+        "chelicerae",
+        "pedicel"
+      ]
+    },
+    {
+      "id": "HAMILTON-2016-APH1031",
+      "type": "peer_reviewed_taxonomic_revision",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4768370/",
+      "alt_url": "https://www.sciencedirect.com/org/science/article/pii/S1313298916005164",
+      "paper": "Hamilton, Hendrixson & Bond (2016), ZooKeys 560, Aphonopelma revision",
+      "supports": [
+        "published female reference voucher APH_1031",
+        "left appendage measurements in mm",
+        "carapace measurements"
+      ],
+      "scope": "ONE_PRESERVED_APHONOPELMA_EUTYLENUM_FEMALE_NOT_FAMILY_NOR_MOOREAE_MEASUREMENTS"
+    },
+    {
+      "id": "PLOS-2019-URTICATING",
+      "type": "peer_reviewed_setae_review",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0224384",
+      "supports": [
+        "urticating setae vary by subgroup and type"
+      ],
+      "scope": "DO_NOT_MARK_ALL_THERAPHOSIDAE_WITH_SAME_URTICATING_SETAL_TYPE"
+    },
+    {
+      "id": "PLOS-2014-EUMENOPHORINAE",
+      "type": "peer_reviewed_taxonomic_study",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0087928",
+      "supports": [
+        "additional distinct tarantula exemplar measurements and leg morphology"
+      ],
+      "scope": "COMPARATIVE_DIFFERENCE_ONLY_NOT_TRANSFERABLE_NUMBERS"
+    }
+  ],
+  "topology": {
+    "scope": "GENERAL_ARANEAE_WITH_THERAPHOSIDAE_RESEARCH_CONTEXT",
+    "walking_legs": 8,
+    "leg_ids": [
+      "LI",
+      "LII",
+      "LIII",
+      "LIV",
+      "RI",
+      "RII",
+      "RIII",
+      "RIV"
+    ],
+    "segments": [
+      "coxa",
+      "trochanter",
+      "femur",
+      "patella",
+      "tibia",
+      "metatarsus",
+      "tarsus"
+    ],
+    "source_id": "AMNH-SPIDER-ANATOMY",
+    "pedipalp_count": 2,
+    "appendage_roots": "PROSOMA",
+    "sex_safeguards": {
+      "male_palp_bulb": "REQUIRES_SPECIES_SPECIFIC_MATURE_MALE_EVIDENCE",
+      "tibial_apophysis": "NEVER_AUTO_PRESENT",
+      "female_male_traits": "SEPARATE_TEMPLATES_NO_INFERENCE"
+    },
+    "variable_features": {
+      "ocular_coordinates": "UNKNOWN_UNTIL_DIAGNOSTIC_REFERENCE",
+      "tarsal_scopula": "SPECIES_SEX_STAGE_SOURCE_REQUIRED",
+      "spinneret_shape": "SPECIES_SOURCE_REQUIRED",
+      "urticating_setae": "NOT_UNIVERSAL_ACROSS_FAMILY",
+      "setae_color": "REFERENCE_PHOTO_ONLY"
+    }
+  },
+  "published_exemplars": [
+    {
+      "id": "APH_1031",
+      "taxon": "Aphonopelma eutylenum",
+      "family": "Theraphosidae",
+      "sex": "adult female",
+      "scientific_source_id": "HAMILTON-2016-APH1031",
+      "measurement_unit": "mm",
+      "side_measured": "LEFT",
+      "voucher_condition": "ETHANOL_PRESERVED",
+      "carapace": {
+        "length": 16.55,
+        "width": 15.05
+      },
+      "leg_distal_five_articles": {
+        "I": {
+          "femur": 13.77,
+          "patella": 5.95,
+          "tibia": 10.15,
+          "metatarsus": 8.89,
+          "tarsus": 7.44
+        },
+        "III": {
+          "femur": 10.84,
+          "patella": 5.29,
+          "tibia": 8.95,
+          "metatarsus": 9.07,
+          "tarsus": 7.29
+        },
+        "IV": {
+          "femur": 13.7,
+          "patella": 5.51,
+          "tibia": 11.43,
+          "metatarsus": 12.7,
+          "tarsus": 8.14
+        }
+      },
+      "not_measured": [
+        "leg II segments in publication excerpt",
+        "coxa lengths",
+        "trochanter lengths",
+        "all 3D joint coordinates",
+        "original live pose",
+        "right-side equivalents",
+        "abdomen radii",
+        "sex-specific palpal organ detail",
+        "eye coordinates",
+        "foot contacts"
+      ],
+      "usage": "ONLY_FOR_APH_1031_SCIENTIFIC_REFERENCE_STUDY",
+      "not_approved_for": [
+        "Aphonopelma mooreae",
+        "generic Theraphosidae family sizes",
+        "all card models"
+      ]
+    }
+  ],
+  "promotion_policy": {
+    "data_qa": "SOURCE_LINKED_MEASUREMENT_INTERNAL_CHECKS_ONLY",
+    "anatomical_master_approved": false,
+    "production_use_authorized": false,
+    "Card_0016": "PRESERVE_EXISTING_FEMALE_APPEARANCE_AND_V3_PROVISIONAL_SKELETON"
+  }
+}

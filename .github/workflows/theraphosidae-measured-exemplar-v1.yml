@@ -1,0 +1,45 @@
+name: Theraphosidae published-exemplar 3D calibration
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'research/theraphosidae_measured_exemplar_v1.py'
+      - 'research/data/theraphosidae_morphometry_evidence_v1.json'
+      - 'tests/test_theraphosidae_measured_exemplar_v1.py'
+      - '.github/workflows/theraphosidae-measured-exemplar-v1.yml'
+  pull_request:
+    paths:
+      - 'research/theraphosidae_measured_exemplar_v1.py'
+      - 'research/data/theraphosidae_morphometry_evidence_v1.json'
+      - 'tests/test_theraphosidae_measured_exemplar_v1.py'
+      - '.github/workflows/theraphosidae-measured-exemplar-v1.yml'
+permissions:
+  contents: read
+jobs:
+  calibrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'trimesh>=4,<5' 'numpy>=1.24,<3'
+      - name: Check published metrics, voucher binding, nonpromotion and GLB nodes
+        run: python -m unittest discover -s tests -p 'test_theraphosidae_measured_exemplar_v1.py' -v
+      - name: Generate voucher-linked geometry study (not production master)
+        run: python research/theraphosidae_measured_exemplar_v1.py --out output/aph1031
+      - uses: actions/upload-artifact@v4
+        with:
+          name: theraphosidae-aph1031-measured-reference-NOT-MASTER
+          path: output/aph1031/
+          retention-days: 7
+          if-no-files-found: error
+      - name: Disclose known anatomical unknowns
+        run: |
+          echo '### Museum morphometry exemplar calibration — research only' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Voucher APH_1031, female Aphonopelma eutylenum: 15 published LEFT distal article lengths applied.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Leg II, both proximal leg segments, all 3D joint angles and right-side true lengths unmeasured.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'NEVER transfer these measurements to Card 0016 / A. mooreae or any other species.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'No scientifically approved species meshes; no photo finishing or animation.' >> "$GITHUB_STEP_SUMMARY"
