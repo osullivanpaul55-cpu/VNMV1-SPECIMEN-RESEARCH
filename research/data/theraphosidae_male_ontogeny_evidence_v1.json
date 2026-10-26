@@ -1,0 +1,219 @@
+{
+  "schema": "VNMV1_THERAPHOSIDAE_MALE_ONTOGENY_EVIDENCE_V1",
+  "version": "1.0.0",
+  "created": "2026-10-26",
+  "scope": "SOURCE_MEASURED_MALES_AND_QUALITATIVE_DEVELOPMENT_ONLY",
+  "units": "mm",
+  "sources": [
+    {
+      "id": "HAMILTON2016",
+      "url": "https://doi.org/10.3897/zookeys.560.6264",
+      "open_version": "https://escholarship.org/content/qt4dx5n982/qt4dx5n982_noSplash_52d02003f10f74c587793475c5b543e7.pdf",
+      "title": "Taxonomic revision of the tarantula genus Aphonopelma within the United States",
+      "type": "PRIMARY_MORPHOMETRY",
+      "note": "Exemplar APH_0954 and its left-leg segment values, palpal anatomy, and male-mating clasper shown in Figure 31."
+    },
+    {
+      "id": "PENAHERRERA2023",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10492195/",
+      "doi": "10.3897/zookeys.1178.105703",
+      "title": "Increasing knowledge of Cymbiapophysa: three new species from Ecuador",
+      "type": "PRIMARY_MORPHOMETRY",
+      "note": "Table 2 male holotype ZFSQ-i11578 four legs and palp; illustrated species-diagnostic palpal bulb and absence of tibial apophysis."
+    },
+    {
+      "id": "SCHWERDT2021",
+      "url": "https://doi.org/10.1016/j.jcz.2021.05.005",
+      "title": "Development, growth and allometry in a cohort of the tarantula Grammostola vachoni",
+      "type": "ONTOGENY_ABSTRACT",
+      "note": "Instar timing, somatic growth and development. No validated species leg segment trajectories transcribed or approved here."
+    },
+    {
+      "id": "COMMISSION2018",
+      "url": "https://www.cec.org/cites/wp-content/themes/foodwaste-theme/documents/tarantula-growth-and-development-for-educators-en.pdf",
+      "title": "Tarantula Growth and Development (CEC educational reference)",
+      "type": "VISUAL_STAGE_GUIDANCE",
+      "note": "Illustrated Brachypelma baumgarteni 4th/6th/9th instar and adult female; pictures are research references, not normalized geometry or approved model pixels."
+    },
+    {
+      "id": "BARRANTES2026",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42117401/",
+      "title": "Ontogenetic Growth Patterns of Leg Segments in Three Theridiid Spiders",
+      "type": "OTHER_FAMILY_CAUTION",
+      "note": "Theridiidae rather than Theraphosidae, so findings demonstrate developmental variation is possible but provide no transferable tarantula growth constants."
+    }
+  ],
+  "adult_male_vouchers": [
+    {
+      "id": "APH_0954",
+      "taxon": "Aphonopelma chalcodes",
+      "sex": "MATURE_MALE",
+      "family": "Theraphosidae",
+      "source_id": "HAMILTON2016",
+      "comparison_female_voucher": "APH_0887",
+      "measured_side": "LEFT",
+      "carapace": {
+        "length": 16.33,
+        "width": 15.71
+      },
+      "left_leg_distal_articles": {
+        "I": {
+          "femur": 16.51,
+          "patella": 7.12,
+          "tibia": 14.12,
+          "metatarsus": 13.37,
+          "tarsus": 8.19
+        },
+        "III": {
+          "femur": 13.73,
+          "patella": 5.67,
+          "tibia": 10.59,
+          "metatarsus": 13.16,
+          "tarsus": 7.95
+        },
+        "IV": {
+          "femur": 16.44,
+          "patella": 6.16,
+          "tibia": 13.74,
+          "metatarsus": 16.84,
+          "tarsus": 8.55
+        }
+      },
+      "palp": {
+        "retrolateral_tibia_length": 9.54,
+        "tibia_width": 3.15,
+        "article_length_series": null
+      },
+      "diagnostics": {
+        "embolus": "TAPERS_AND_CURVES_TO_RETROLATERAL_APEX_CONFIRMED_IN_SOURCE",
+        "palpal_keels": "NO_KEELS_PUBLISHED",
+        "leg_I_tibial_mating_clasper": "SOURCE_ILLUSTRATED_NOT_NUMERICALLY_RECONSTRUCTED"
+      },
+      "unknowns": [
+        "LEFT_LEG_II_MEASUREMENTS",
+        "COXA_TROCHANTER_LENGTHS",
+        "RIGHT_LEG_LENGTHS",
+        "PALPAL_BULB_3D_SURFACE",
+        "LIVING_POSE_AND_JOINT_ANGLES",
+        "FOOT_CONTACTS"
+      ]
+    },
+    {
+      "id": "ZFSQ-i11578",
+      "taxon": "Cymbiapophysa carmencita",
+      "sex": "MATURE_MALE",
+      "family": "Theraphosidae",
+      "source_id": "PENAHERRERA2023",
+      "comparison_female_voucher": null,
+      "measured_side": "SOURCE_SIDE_NOT_SPECIFIED",
+      "carapace": {
+        "length": 10.38,
+        "width": 8.59
+      },
+      "left_leg_distal_articles": {
+        "I": {
+          "femur": 12.04,
+          "patella": 6.21,
+          "tibia": 11.42,
+          "metatarsus": 10.66,
+          "tarsus": 7.11
+        },
+        "II": {
+          "femur": 12.16,
+          "patella": 5.93,
+          "tibia": 10.59,
+          "metatarsus": 11.14,
+          "tarsus": 6.6
+        },
+        "III": {
+          "femur": 11.27,
+          "patella": 4.98,
+          "tibia": 9.32,
+          "metatarsus": 12.5,
+          "tarsus": 6.16
+        },
+        "IV": {
+          "femur": 13.37,
+          "patella": 5.21,
+          "tibia": 12.38,
+          "metatarsus": 16.89,
+          "tarsus": 7.48
+        }
+      },
+      "palp": {
+        "femur": 6.82,
+        "patella": 3.17,
+        "tibia": 6.96,
+        "tarsus": 2.4,
+        "metatarsus": "ABSENT_IN_SPIDER_PEDIPALP"
+      },
+      "diagnostics": {
+        "leg_I_tibial_apophysis": "ABSENT_PUBLISHED",
+        "palpal_bulb": "SPECIES_DIAGNOSTIC_KEELS_SHOWN_NOT_3D_RECONSTRUCTED",
+        "eye_row": "DESCRIBED_NOT_3D_COORDINATES"
+      },
+      "unknowns": [
+        "COXA_TROCHANTER_LENGTHS",
+        "SOURCE_SIDE_OF_LEG_SERIES",
+        "RIGHT_AND_LEFT_INDIVIDUAL_3D_GEOMETRY",
+        "PALPAL_BULB_3D_SURFACE",
+        "LIVING_POSE_AND_JOINT_ANGLES",
+        "FOOT_CONTACTS",
+        "CORRESPONDING_FEMALE_SERIES"
+      ]
+    }
+  ],
+  "ontogeny": {
+    "controlled_biological_stages": [
+      "SPIDERLING",
+      "JUVENILE",
+      "SUBADULT",
+      "MATURE_MALE",
+      "ADULT_FEMALE_FRESH",
+      "ADULT_FEMALE_OLD"
+    ],
+    "references": [
+      {
+        "species": "Grammostola vachoni",
+        "source_id": "SCHWERDT2021",
+        "conclusions": [
+          "juvenile growth proceeds through molts",
+          "adult male timing and female reproductive structures change through maturation"
+        ],
+        "may_infer_leg_segment_scale": false,
+        "may_infer_universal_instars": false
+      },
+      {
+        "species": "Brachypelma baumgarteni",
+        "source_id": "COMMISSION2018",
+        "conclusions": [
+          "illustrated specimens differ between fourth sixth ninth instar and adult female",
+          "visual colouring can change with molt stage"
+        ],
+        "may_infer_segment_proportions": false,
+        "may_copy_photos_to_public_asset": false
+      },
+      {
+        "species": "Latrodectus geometricus, Latrodectus mactans, Steatoda grossa",
+        "source_id": "BARRANTES2026",
+        "taxon_family": "Theridiidae",
+        "conclusions": [
+          "cross-species juvenile-to-adult leg length scaling differs"
+        ],
+        "may_infer_theraphosidae_parameters": false
+      }
+    ],
+    "age_is_not_a_valid_species_scale_parameter": true,
+    "post_maturity_female_molt_does_not_mean_female_skeleton_same_as_juvenile": true,
+    "species_specific_instars_with_diagnostic_photos_required": true
+  },
+  "hard_gates": {
+    "never_reuse_distal_lengths_as_other_species_measurements": true,
+    "never_model_male_palp_bulb_without_individual_species_evidence": true,
+    "never_assume_mature_male_tibial_spurs_present": true,
+    "no_juvenile_or_spiderling_mesh_from_uniform_adult_scale": true,
+    "no_Card_0016_mooreae_edits": true,
+    "no_approval_from_generic_GLTF_geometry": true,
+    "preserve_original_and_user_approved_appearance": true
+  }
+}
