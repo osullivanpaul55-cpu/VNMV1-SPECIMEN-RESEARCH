@@ -1,11 +1,11 @@
 {
   "schema": "VNMV1_PUBLIC_BEHAVIOUR_LITERATURE_CANDIDATES_V1",
-  "last_cycle": 2,
+  "last_cycle": 3,
   "named_species_in_seed": 195,
-  "species_searched": 72,
-  "species_with_literature_leads": 30,
+  "species_searched": 96,
+  "species_with_literature_leads": 40,
   "research_completed_first_sweep": false,
-  "last_research_at_utc": "2026-10-25T22:01:49.592468+00:00",
+  "last_research_at_utc": "2026-10-26T14:32:54.679733+00:00",
   "species": {
     "f3787c4b515c0a91": {
       "research_taxon": "Abdomegaphobema mesomelas",
@@ -1293,8 +1293,480 @@
       "publication_leads": [],
       "no_automatic_behavior_confirmation": true,
       "no_media_or_rights_permissions_implied": true
+    },
+    "2641f3c83502d917": {
+      "research_taxon": "Harpactira tigrina",
+      "taxon_key": "2641f3c83502d917",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "e2864ca0cadbfe6c": {
+      "research_taxon": "Heterometrus longimanus",
+      "taxon_key": "e2864ca0cadbfe6c",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1080/23802359.2020.1848475",
+          "url": "https://doi.org/10.1080/23802359.2020.1848475",
+          "title": "The complete mitochondrial genome of Scorpiops tibetanus (Scorpionida; Euscorpiidae Laurie).",
+          "published_year": 2021,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1638/2018-0173",
+          "url": "https://doi.org/10.1638/2018-0173",
+          "title": "EFFECTS OF OXYGEN AND ISOFLURANE ANESTHESIA ON HEMOLYMPH GAS ANALYSIS AND RIGHTING REFLEX OF ASIAN FOREST ( HETEROMETRUS LONGIMANUS ) AND DICTATOR SCORPIONS ( PANDINUS DICTATOR ).",
+          "published_year": 2019,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "0410384a40c4de8f": {
+      "research_taxon": "Heterometrus silenus",
+      "taxon_key": "0410384a40c4de8f",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "5f4e7937d9c467d1": {
+      "research_taxon": "Heteropoda davidbowie",
+      "taxon_key": "5f4e7937d9c467d1",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1371/journal.pone.0172966",
+          "url": "https://doi.org/10.1371/journal.pone.0172966",
+          "title": "Peptidomic and transcriptomic profiling of four distinct spider venoms.",
+          "published_year": 2017,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "29aec6b91db2869e": {
+      "research_taxon": "Heterothele villosella",
+      "taxon_key": "29aec6b91db2869e",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "05c69061264ea61e": {
+      "research_taxon": "Hogna carolinensis",
+      "taxon_key": "05c69061264ea61e",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.22541/au.176035693.39009746/v1",
+          "url": "https://doi.org/10.22541/au.176035693.39009746/v1",
+          "title": "Testing for differences in consumer-based nutrient cycling between male and female wolf spiders (Hogna carolinensis)",
+          "published_year": 2025,
+          "behavior_text_hints_unverified": [
+            "SCORPION_BROOD_ON_BACK"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1002/ece3.72640",
+          "url": "https://doi.org/10.1002/ece3.72640",
+          "title": "Testing for Differences in Consumer-Based Nutrient Cycling Between Male and Female Wolf Spiders (&lt;i&gt;Hogna carolinensis&lt;/i&gt;).",
+          "published_year": 2025,
+          "behavior_text_hints_unverified": [
+            "SCORPION_BROOD_ON_BACK"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1002/ece3.71045",
+          "url": "https://doi.org/10.1002/ece3.71045",
+          "title": "Comparing Nutrient Intake by Wolf Spiders (&lt;i&gt;Hogna carolinensis&lt;/i&gt;) Consuming Frogs (&lt;i&gt;Acris blanchardi&lt;/i&gt;) and Crickets (&lt;i&gt;Gryllodes sigillatus&lt;/i&gt;).",
+          "published_year": 2025,
+          "behavior_text_hints_unverified": [
+            "FEEDING"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.3897/bdj.13.e166495",
+          "url": "https://doi.org/10.3897/bdj.13.e166495",
+          "title": "The revision and phylogenetic position of &lt;i&gt;Hippasa bifasciata&lt;/i&gt; Buchar, 1997 (Araneae, Lycosidae).",
+          "published_year": 2025,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.7717/peerj.4233",
+          "url": "https://doi.org/10.7717/peerj.4233",
+          "title": "-Comparative spigot ontogeny across the spider tree of life.",
+          "published_year": 2018,
+          "behavior_text_hints_unverified": [
+            "SILK_SPINNING"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "05e6c847f9fad1e0": {
+      "research_taxon": "Hogna maderiana",
+      "taxon_key": "05e6c847f9fad1e0",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "6c1d0d77f0fd0889": {
+      "research_taxon": "Hogna radiata",
+      "taxon_key": "6c1d0d77f0fd0889",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.3389/fmolb.2023.1243976",
+          "url": "https://doi.org/10.3389/fmolb.2023.1243976",
+          "title": "The synergic effects of presynaptic calcium channel antagonists purified from spiders on memory elimination of glutamate-induced excitotoxicity in the rat hippocampus trisynaptic circuit.",
+          "published_year": 2023,
+          "behavior_text_hints_unverified": [
+            "URTICATING_SETAE_RELEASE"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.3389/fmolb.2021.705141",
+          "url": "https://doi.org/10.3389/fmolb.2021.705141",
+          "title": "Linear Peptides-A Combinatorial Innovation in the Venom of Some Modern Spiders.",
+          "published_year": 2021,
+          "behavior_text_hints_unverified": [
+            "HUNT_ACTIVE"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1636/hi12-72.1",
+          "url": "https://doi.org/10.1636/hi12-72.1",
+          "title": "Hogna radiata males do not deplete their sperm in a single mating",
+          "published_year": 2013,
+          "behavior_text_hints_unverified": [
+            "MATING_PAIR",
+            "CANNIBALISM"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "20c33dcdd20ac741": {
+      "research_taxon": "Holconia murrayensis",
+      "taxon_key": "20c33dcdd20ac741",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "7d968a3319cdf2ca": {
+      "research_taxon": "Hyllus diardi",
+      "taxon_key": "7d968a3319cdf2ca",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.11646/zootaxa.5230.3.8",
+          "url": "https://doi.org/10.11646/zootaxa.5230.3.8",
+          "title": "Deciphering mysteries: On the identity of five enigmatic jumping spiders from Northeast India, China and Philippines (Araneae, Salticidae).",
+          "published_year": 2023,
+          "behavior_text_hints_unverified": [
+            "SALTICID_POUNCE"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "793d0d138916520e": {
+      "research_taxon": "Hysterocrates hercules",
+      "taxon_key": "793d0d138916520e",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "a48197f9178a111a": {
+      "research_taxon": "Hysterocrates scepticus",
+      "taxon_key": "a48197f9178a111a",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "64a6d14833b7c781": {
+      "research_taxon": "Idiothele mira",
+      "taxon_key": "64a6d14833b7c781",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "9e817c35f041e27c": {
+      "research_taxon": "Idiothele nigrofulva",
+      "taxon_key": "9e817c35f041e27c",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "c959e8ee926eadcf": {
+      "research_taxon": "Iridopelma hirsutum",
+      "taxon_key": "c959e8ee926eadcf",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1371/journal.pone.0224384",
+          "url": "https://doi.org/10.1371/journal.pone.0224384",
+          "title": "Urticating setae of tarantulas (Araneae: Theraphosidae): Morphology, revision of typology and terminology and implications for taxonomy.",
+          "published_year": 2019,
+          "behavior_text_hints_unverified": [
+            "DEFENSIVE_REARING",
+            "URTICATING_SETAE_RELEASE",
+            "SCORPION_METASOMA_DEFENSIVE_ARCH",
+            "COLEOPTERA_DEFENSIVE_ABDOMEN"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.3897/zookeys.230.3500",
+          "url": "https://doi.org/10.3897/zookeys.230.3500",
+          "title": "Revision, cladistic analysis and biogeography of Typhochlaena C. L. Koch, 1850, Pachistopelma Pocock, 1901 and Iridopelma Pocock, 1901 (Araneae, Theraphosidae, Aviculariinae).",
+          "published_year": 2012,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "7a02d3763d286d5d": {
+      "research_taxon": "Iridopelma zorodes",
+      "taxon_key": "7a02d3763d286d5d",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "2afb86cbb01a190f": {
+      "research_taxon": "Kochiana brunnipes",
+      "taxon_key": "2afb86cbb01a190f",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "c5cf6464f38089a1": {
+      "research_taxon": "Lampropelma nigerrimum",
+      "taxon_key": "c5cf6464f38089a1",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1093/qjmed/hcp128",
+          "url": "https://doi.org/10.1093/qjmed/hcp128",
+          "title": "Symptom in search of a toxin: muscle spasms following bites by Old World tarantula spiders (Lampropelma nigerrimum, Pterinochilus murinus, Poecilotheria regalis) with review.",
+          "published_year": 2009,
+          "behavior_text_hints_unverified": [
+            "ALERT_ELEVATED"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "da7f4efccdb71df3": {
+      "research_taxon": "Lasiocyano sazimai",
+      "taxon_key": "da7f4efccdb71df3",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1002/jmor.70123",
+          "url": "https://doi.org/10.1002/jmor.70123",
+          "title": "Testing the Limits of Morphology: A Comprehensive Morphometric Study of the Sister Lineages Lasiocyano Galleti-Lima, Hamilton, Borges and Guadanucci, 2023 and Lasiodora C. L. Koch, 1850 (Theraphosidae, Mygalomorphae).",
+          "published_year": 2026,
+          "behavior_text_hints_unverified": [
+            "COURTSHIP_DISPLAY"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "a14aa3f5ce390128": {
+      "research_taxon": "Lasiodora benedeni",
+      "taxon_key": "a14aa3f5ce390128",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "b29f595f88d6a4b0": {
+      "research_taxon": "Lasiodora klugi",
+      "taxon_key": "b29f595f88d6a4b0",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.11646/zootaxa.5390.1.1",
+          "url": "https://doi.org/10.11646/zootaxa.5390.1.1",
+          "title": "Taxonomic revision and cladistic analysis of Lasiodora C. L. Koch, 1850 (Araneae, Theraphosidae) with notes on related genera.",
+          "published_year": 2023,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.3390/toxins15070418",
+          "url": "https://doi.org/10.3390/toxins15070418",
+          "title": "Two Novel Mosquitocidal Peptides Isolated from the Venom of the Bahia Scarlet Tarantula ( Lasiodora klugi ).",
+          "published_year": 2023,
+          "behavior_text_hints_unverified": [
+            "BURROW_EMERGENCE"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1016/j.toxicon.2017.07.001",
+          "url": "https://doi.org/10.1016/j.toxicon.2017.07.001",
+          "title": "Hyaluronidase-like enzymes are a frequent component of venoms from theraphosid spiders.",
+          "published_year": 2017,
+          "behavior_text_hints_unverified": [
+            "HUNT_ACTIVE"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "a60664604b5ba094": {
+      "research_taxon": "Lasiodora parahybana",
+      "taxon_key": "a60664604b5ba094",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1016/j.toxicon.2006.01.017",
+          "url": "https://doi.org/10.1016/j.toxicon.2006.01.017",
+          "title": "Peptide profiling by matrix-assisted laser desorption/ionisation time-of-flight mass spectrometry of the Lasiodora parahybana tarantula venom gland.",
+          "published_year": 2006,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "e47aa2f3356d8a1d": {
+      "research_taxon": "Lasiodora sertaneja",
+      "taxon_key": "e47aa2f3356d8a1d",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "a5c8be6c4fd20f1b": {
+      "research_taxon": "Lasiodorides polycuspulatus",
+      "taxon_key": "a5c8be6c4fd20f1b",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
     }
   },
   "species_processed_this_run": 24,
-  "species_with_literature_leads_this_run": 7
+  "species_with_literature_leads_this_run": 10
 }
