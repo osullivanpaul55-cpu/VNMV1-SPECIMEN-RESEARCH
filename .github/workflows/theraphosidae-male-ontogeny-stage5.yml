@@ -1,0 +1,43 @@
+name: Stage 5 published male tarantula anatomy and ontogeny research
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'research/data/theraphosidae_male_ontogeny_evidence_v1.json'
+      - 'research/theraphosidae_male_ontogeny_stage5_v1.py'
+      - 'tests/test_theraphosidae_male_ontogeny_stage5_v1.py'
+      - '.github/workflows/theraphosidae-male-ontogeny-stage5.yml'
+  pull_request:
+    paths:
+      - 'research/data/theraphosidae_male_ontogeny_evidence_v1.json'
+      - 'research/theraphosidae_male_ontogeny_stage5_v1.py'
+      - 'tests/test_theraphosidae_male_ontogeny_stage5_v1.py'
+      - '.github/workflows/theraphosidae-male-ontogeny-stage5.yml'
+permissions:
+  contents: read
+jobs:
+  male-data-and-rig:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'trimesh>=4,<5' 'numpy>=1.24,<3'
+      - name: Check source-voucher boundaries and sex-stage safeguards
+        run: python -m unittest discover -s tests -p 'test_theraphosidae_male_ontogeny_stage5_v1.py' -v
+      - name: Export male measurement studies and paired adult sex audit
+        run: python research/theraphosidae_male_ontogeny_stage5_v1.py --out output/stage5
+      - uses: actions/upload-artifact@v4
+        with:
+          name: VNMV1-stage5-two-male-vouchers-and-ontogeny-holds-NOT-MASTERS
+          path: output/stage5/
+          retention-days: 7
+          if-no-files-found: error
+      - name: Scientific provenance disclosure
+        run: |
+          echo '35 male femur-to-tarsus published values across 2 species; one 15-article distinct male/female voucher comparison.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Juvenile/spiderling stage geometry on hold. NO species-matched true 3D palp bulb, joint motion, photo QA or master approval.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'No Card 0016 model, appearance, originals or original specimen images were altered.' >> "$GITHUB_STEP_SUMMARY"
