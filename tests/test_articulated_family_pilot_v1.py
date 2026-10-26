@@ -1,4 +1,5 @@
 import json
+import io
 import tempfile
 import unittest
 from pathlib import Path
@@ -17,7 +18,7 @@ class FamilyRigResearchTests(unittest.TestCase):
         self.assertEqual(parents['L_I_FEMUR'],'L_I_TROCHANTER')
         self.assertEqual(parents['R_IV_TARSUS'],'R_IV_METATARSUS')
         binary=rig.export(file_type='glb')
-        restored=trimesh.load(file_obj=binary,file_type='glb',force='scene')
+        restored=trimesh.load(file_obj=io.BytesIO(binary),file_type='glb',force='scene')
         self.assertIn('L_I_PATELLA',set(restored.graph.nodes))
         self.assertGreater(len(binary),1000)
 
