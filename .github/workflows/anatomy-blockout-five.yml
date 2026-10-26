@@ -1,0 +1,62 @@
+name: Five public anatomy blockout and research runners
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'research/anatomy_blockout_five.py'
+      - 'tests/test_anatomy_blockout_five.py'
+      - '.github/workflows/anatomy-blockout-five.yml'
+  pull_request:
+    paths:
+      - 'research/anatomy_blockout_five.py'
+      - 'tests/test_anatomy_blockout_five.py'
+      - '.github/workflows/anatomy-blockout-five.yml'
+permissions:
+  contents: read
+concurrency:
+  group: vnmv1-public-anatomy-five
+  cancel-in-progress: false
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'trimesh>=4,<5' 'numpy>=1.24,<3'
+      - run: python -m unittest discover -s tests -p 'test_anatomy_blockout_five.py' -v
+  research-and-blockout:
+    needs: test
+    if: github.event_name != 'pull_request'
+    strategy:
+      fail-fast: false
+      max-parallel: 5
+      matrix:
+        shard: [0,1,2,3,4]
+    runs-on: ubuntu-latest
+    timeout-minutes: 22
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'trimesh>=4,<5' 'numpy>=1.24,<3'
+      - name: Build neutral taxonomic blockouts only
+        run: >-
+          python research/anatomy_blockout_five.py
+          --source data/roster_taxon_identity_evidence.json
+          --shard ${{ matrix.shard }} --out output/shard-${{ matrix.shard }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: vnmv1-unapproved-neutral-blockouts-${{ matrix.shard }}
+          path: output/shard-${{ matrix.shard }}/
+          if-no-files-found: error
+          retention-days: 7
+      - name: Explicit non-approval disclosure
+        run: |
+          echo '## Preliminary geometry only' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Order-level generic blockouts, NOT validated species rigs, NOT production ready.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Original private card photographs, textures, biologically measured joints and owner approvals were not used.' >> "$GITHUB_STEP_SUMMARY"
