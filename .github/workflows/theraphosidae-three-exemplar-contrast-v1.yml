@@ -1,0 +1,43 @@
+name: Stage 4 published Theraphosidae multi-exemplar calibration
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'research/data/theraphosidae_three_females_comparison_v1.json'
+      - 'research/theraphosidae_three_exemplar_contrast_v1.py'
+      - 'tests/test_theraphosidae_three_exemplar_contrast_v1.py'
+      - '.github/workflows/theraphosidae-three-exemplar-contrast-v1.yml'
+  pull_request:
+    paths:
+      - 'research/data/theraphosidae_three_females_comparison_v1.json'
+      - 'research/theraphosidae_three_exemplar_contrast_v1.py'
+      - 'tests/test_theraphosidae_three_exemplar_contrast_v1.py'
+      - '.github/workflows/theraphosidae-three-exemplar-contrast-v1.yml'
+permissions:
+  contents: read
+jobs:
+  evidence-contrast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install 'trimesh>=4,<5' 'numpy>=1.24,<3'
+      - name: Scientifically bounded source and model integrity tests
+        run: python -m unittest discover -s tests -p 'test_theraphosidae_three_exemplar_contrast_v1.py' -v
+      - name: Export comparative morphometrics plus 3 research-only GLBs
+        run: python research/theraphosidae_three_exemplar_contrast_v1.py --out output/theraphosidae-stage4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: VNMV1-stage4-three-source-measured-females-NOT-SPECIES-MASTERS
+          path: output/theraphosidae-stage4/
+          retention-days: 7
+          if-no-files-found: error
+      - name: Summary
+        run: |
+          echo 'Three published female vouchers across two genera compared; 3 research-only GLBs exported.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Carapace and distal leg measurements sourced; all foot contacts, proximal segments and pose geometry unmeasured.' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Male, juvenile and spiderling remain on hold. No Card 0016 changes or species-master approvals.' >> "$GITHUB_STEP_SUMMARY"
