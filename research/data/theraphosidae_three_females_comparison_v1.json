@@ -1,0 +1,213 @@
+{
+  "schema": "VNMV1_THERAPHOSIDAE_MULTI_EXEMPLAR_MORPHOMETRY_V1",
+  "date": "2026-10-26",
+  "status": "PUBLISHED_INDIVIDUAL_MEASUREMENTS_ONLY__NO_SPECIES_GENERALIZATION",
+  "scientific_evidence": [
+    {
+      "id": "HAMILTON2016",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4768370/",
+      "doi": "10.3897/zookeys.560.6264",
+      "scope": "US Aphonopelma taxonomic revision; specimen measurements, mostly left legs"
+    },
+    {
+      "id": "ZAMANIWEST2023",
+      "url": "https://doi.org/10.3897/zookeys.1174.109135",
+      "doi": "10.3897/zookeys.1174.109135",
+      "scope": "Female holotype Chaetopelma persianum, dorsal measured femur-tarsus"
+    }
+  ],
+  "leg_article_order": [
+    "femur",
+    "patella",
+    "tibia",
+    "metatarsus",
+    "tarsus"
+  ],
+  "units": "mm",
+  "exemplars": [
+    {
+      "id": "APH_1031",
+      "name": "Aphonopelma eutylenum",
+      "family": "Theraphosidae",
+      "sex": "FEMALE_ADULT",
+      "voucher": "APH_1031",
+      "source": "HAMILTON2016",
+      "measurement_side": "LEFT",
+      "carapace": {
+        "length": 16.55,
+        "width": 15.05
+      },
+      "legs": {
+        "I": {
+          "femur": 13.77,
+          "patella": 5.95,
+          "tibia": 10.15,
+          "metatarsus": 8.89,
+          "tarsus": 7.44
+        },
+        "II": null,
+        "III": {
+          "femur": 10.84,
+          "patella": 5.29,
+          "tibia": 8.95,
+          "metatarsus": 9.07,
+          "tarsus": 7.29
+        },
+        "IV": {
+          "femur": 13.7,
+          "patella": 5.51,
+          "tibia": 11.43,
+          "metatarsus": 12.7,
+          "tarsus": 8.14
+        }
+      },
+      "sex_traits": {
+        "palp_bulb": "NOT_MATURE_MALE",
+        "tibial_spur": "NOT_ASSUMED"
+      },
+      "notes": "Matched first-stage publication-bound exemplar; leg II unmeasured"
+    },
+    {
+      "id": "APH_0887",
+      "name": "Aphonopelma chalcodes",
+      "family": "Theraphosidae",
+      "sex": "FEMALE_ADULT",
+      "voucher": "APH_0887",
+      "source": "HAMILTON2016",
+      "measurement_side": "LEFT",
+      "carapace": {
+        "length": 20.37,
+        "width": 18.1
+      },
+      "legs": {
+        "I": {
+          "femur": 14.74,
+          "patella": 6.4,
+          "tibia": 10.41,
+          "metatarsus": 8.93,
+          "tarsus": 7.36
+        },
+        "II": null,
+        "III": {
+          "femur": 12.95,
+          "patella": 5.67,
+          "tibia": 9.23,
+          "metatarsus": 9.96,
+          "tarsus": 7.32
+        },
+        "IV": {
+          "femur": 15.91,
+          "patella": 6.66,
+          "tibia": 12.45,
+          "metatarsus": 13.79,
+          "tarsus": 7.72
+        }
+      },
+      "sex_traits": {
+        "palp_bulb": "NOT_MATURE_MALE",
+        "tibial_spur": "NOT_ASSUMED"
+      },
+      "notes": "Independent female voucher; published measured distal leg articles; not a generic chalcodes profile"
+    },
+    {
+      "id": "ZMUT_CHAETOP_PERSIANUM_HOLOTYPE",
+      "name": "Chaetopelma persianum",
+      "family": "Theraphosidae",
+      "sex": "FEMALE_ADULT",
+      "voucher": "ZMUT female holotype West Azerbaijan Iran 26 Aug 2022",
+      "source": "ZAMANIWEST2023",
+      "measurement_side": "PUBLICATION_NOT_EXPLICITLY_RECORDED",
+      "carapace": {
+        "length": 13.75,
+        "width": 13.15
+      },
+      "legs": {
+        "I": {
+          "femur": 10.9,
+          "patella": 7,
+          "tibia": 7.8,
+          "metatarsus": 6.4,
+          "tarsus": 4.25
+        },
+        "II": {
+          "femur": 9.95,
+          "patella": 6.05,
+          "tibia": 6.7,
+          "metatarsus": 5.95,
+          "tarsus": 4.85
+        },
+        "III": {
+          "femur": 8.7,
+          "patella": 5.8,
+          "tibia": 5.2,
+          "metatarsus": 6.85,
+          "tarsus": 4.45
+        },
+        "IV": {
+          "femur": 10.75,
+          "patella": 6.4,
+          "tibia": 7.95,
+          "metatarsus": 8.5,
+          "tarsus": 5.5
+        }
+      },
+      "posterior_lateral_spinneret": {
+        "basal": 2.95,
+        "median": 2.12,
+        "apical": 2.82
+      },
+      "posterior_median_spinneret": {
+        "length": 1.8
+      },
+      "sex_traits": {
+        "palp_bulb": "MALE_UNKNOWN_IN_SOURCE",
+        "tibial_spur": "MALE_UNKNOWN_IN_SOURCE"
+      },
+      "notes": "Independent genus; source specifies dorsal leg measurements but not their specimen side"
+    }
+  ],
+  "additional_evidence_holds": [
+    {
+      "id": "APH_0954",
+      "name": "Aphonopelma chalcodes",
+      "sex": "MALE_ADULT",
+      "source": "HAMILTON2016",
+      "carapace": {
+        "length": 16.33,
+        "width": 15.71
+      },
+      "status": "HOLD_DONT_FABRICATE_MALE_LIMB_SEGMENTS",
+      "notes": "Published male exemplar known, but segment series not transcribed/verified in this pass; do not derive male rig from female"
+    },
+    {
+      "id": "JUVENILE_THERAPHOSIDAE",
+      "sex": "JUVENILE",
+      "status": "HOLD_NO_MEASURED_STAGE_SERIES"
+    },
+    {
+      "id": "SPIDERLING_THERAPHOSIDAE",
+      "sex": "SPIDERLING",
+      "status": "HOLD_NO_MEASURED_STAGE_SERIES"
+    }
+  ],
+  "geometry_discipline": {
+    "common_topology": [
+      "coxa",
+      "trochanter",
+      "femur",
+      "patella",
+      "tibia",
+      "metatarsus",
+      "tarsus"
+    ],
+    "shared_anatomical_topology": true,
+    "fixed_family_segment_ratios": false,
+    "right_left_mirroring_not_measurement": true,
+    "photo_rest_pose_not_reconstructed": true,
+    "no_real_joint_angles_or_joint_limit_measurements": true,
+    "no_transfer_to_card0016": true,
+    "no_species_mesh_approved": true,
+    "no_full_family_mesh_approved": true,
+    "no_source_photo_pixels_ingested": true
+  }
+}
