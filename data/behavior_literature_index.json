@@ -1,11 +1,11 @@
 {
   "schema": "VNMV1_PUBLIC_BEHAVIOUR_LITERATURE_CANDIDATES_V1",
-  "last_cycle": 3,
+  "last_cycle": 4,
   "named_species_in_seed": 195,
-  "species_searched": 96,
-  "species_with_literature_leads": 40,
+  "species_searched": 120,
+  "species_with_literature_leads": 45,
   "research_completed_first_sweep": false,
-  "last_research_at_utc": "2026-10-26T14:32:54.679733+00:00",
+  "last_research_at_utc": "2026-10-26T23:19:07.450766+00:00",
   "species": {
     "f3787c4b515c0a91": {
       "research_taxon": "Abdomegaphobema mesomelas",
@@ -1765,8 +1765,354 @@
       "publication_leads": [],
       "no_automatic_behavior_confirmation": true,
       "no_media_or_rights_permissions_implied": true
+    },
+    "aae945123a1e15dd": {
+      "research_taxon": "Lasiodorides striatus",
+      "taxon_key": "aae945123a1e15dd",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "acc0cc521250709f": {
+      "research_taxon": "Linothele fallax",
+      "taxon_key": "acc0cc521250709f",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1021/acs.biomac.1c00787",
+          "url": "https://doi.org/10.1021/acs.biomac.1c00787",
+          "title": "Modulating Surface Properties of the Linothele fallax Spider Web by Solvent Treatment.",
+          "published_year": 2021,
+          "behavior_text_hints_unverified": [
+            "RESTING_NATURAL",
+            "SCORPION_PECTINAL_SUBSTRATE_SCAN"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "d00a9bc9682aa050": {
+      "research_taxon": "Linothele sericata",
+      "taxon_key": "d00a9bc9682aa050",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "e11d6f9f479236c7": {
+      "research_taxon": "Lyrognathus giannisposatoi",
+      "taxon_key": "e11d6f9f479236c7",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "c402b969e6abe49a": {
+      "research_taxon": "Macrothele calpeiana",
+      "taxon_key": "c402b969e6abe49a",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.6620/zs.2025.64-52",
+          "url": "https://doi.org/10.6620/zs.2025.64-52",
+          "title": "Rapid Distribution Updates for Arachnids of Conservation Concern through Citizen Collaboration: the Case of the Spider &lt;i&gt;Macrothele calpeiana&lt;/i&gt; (Walckenaer, 1805) (Mygalomorphae: Macrothelidae).",
+          "published_year": 2025,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.7417/ct.2021.2338",
+          "url": "https://doi.org/10.7417/ct.2021.2338",
+          "title": "Key to medically relevant Italian spider bites: a practical quick recognition tool for clinicians.",
+          "published_year": 2021,
+          "behavior_text_hints_unverified": [
+            "CHILOPODA_BROOD_COIL"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.7717/peerj.1064",
+          "url": "https://doi.org/10.7717/peerj.1064",
+          "title": "Comparative analysis of tissue-specific transcriptomes in the funnel-web spider Macrothele calpeiana (Araneae, Hexathelidae).",
+          "published_year": 2015,
+          "behavior_text_hints_unverified": [
+            "FUNNEL_WEB_BUILDING"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1111/j.1365-2699.2010.02465.x",
+          "url": "https://doi.org/10.1111/j.1365-2699.2010.02465.x",
+          "title": "Environmental suitability of new reported localities of the funnelweb spider Macrothele calpeiana: an assessment using potential distribution modelling with presence-only techniques",
+          "published_year": 2011,
+          "behavior_text_hints_unverified": [
+            "SPIDERLING_DISPERSAL"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1007/s10592-006-9270-2",
+          "url": "https://doi.org/10.1007/s10592-006-9270-2",
+          "title": "Mitochondrial markers reveal deep population subdivision in the European protected spider Macrothele calpeiana (Walckenaer, 1805) (Araneae, Hexathelidae)",
+          "published_year": 2007,
+          "behavior_text_hints_unverified": [
+            "FUNNEL_WEB_BUILDING"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "cd101458cc851dfb": {
+      "research_taxon": "Magnacrus taynguyenensis",
+      "taxon_key": "cd101458cc851dfb",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "f7bb2a3b5cd688c2": {
+      "research_taxon": "Magnacrus tongmianensis",
+      "taxon_key": "f7bb2a3b5cd688c2",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.11646/zootaxa.5701.3.5",
+          "url": "https://doi.org/10.11646/zootaxa.5701.3.5",
+          "title": "The new genus Magnacrus (Araneae: Theraphosidae: Ornithoctoninae) from Vietnam, with notes on Citharognathus hosei Pocock, 1895.",
+          "published_year": 2025,
+          "behavior_text_hints_unverified": [
+            "RESTING_NATURAL"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "11fed5354acd44df": {
+      "research_taxon": "Megaphobema robustum",
+      "taxon_key": "11fed5354acd44df",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "f1814a9785cfa745": {
+      "research_taxon": "Melopoeus albostriatus",
+      "taxon_key": "f1814a9785cfa745",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "f61b15b2f6981fd9": {
+      "research_taxon": "Melopoeus hainanus",
+      "taxon_key": "f61b15b2f6981fd9",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "e551e88e364f57ef": {
+      "research_taxon": "Melopoeus lividus",
+      "taxon_key": "e551e88e364f57ef",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "1a1e7c84d61fccf4": {
+      "research_taxon": "Melopoeus minax",
+      "taxon_key": "1a1e7c84d61fccf4",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "1fc3fc52d1dee8ce": {
+      "research_taxon": "Melopoeus schmidti",
+      "taxon_key": "1fc3fc52d1dee8ce",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "3664a0521b669892": {
+      "research_taxon": "Melopoeus vonwirthi",
+      "taxon_key": "3664a0521b669892",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "2bca2d9be2708fec": {
+      "research_taxon": "Monocentropus balfouri",
+      "taxon_key": "2bca2d9be2708fec",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1016/j.jemermed.2023.12.006",
+          "url": "https://doi.org/10.1016/j.jemermed.2023.12.006",
+          "title": "Perioral Paresthesia, Generalize Muscle Cramps, and Rhabdomyolysis After a Socotra Island Blue Baboon Tarantula (Monocentropus Balfouri) Bite.",
+          "published_year": 2024,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.3390/toxins9050155",
+          "url": "https://doi.org/10.3390/toxins9050155",
+          "title": "Insect-Active Toxins with Promiscuous Pharmacology from the African Theraphosid Spider Monocentropus balfouri.",
+          "published_year": 2017,
+          "behavior_text_hints_unverified": [
+            "HUNT_ACTIVE"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "4753229bb69228b9": {
+      "research_taxon": "Monocentropus lambertoni",
+      "taxon_key": "4753229bb69228b9",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "877232d7d8482f3d": {
+      "research_taxon": "Neoholothele fasciaaurinigra",
+      "taxon_key": "877232d7d8482f3d",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "cef129d9a19d5abd": {
+      "research_taxon": "Neoholothele incei",
+      "taxon_key": "cef129d9a19d5abd",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "14f29e7b93c90959": {
+      "research_taxon": "Nhandu carapoensis",
+      "taxon_key": "14f29e7b93c90959",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "52316f3cbde18b38": {
+      "research_taxon": "Nhandu cerradensis",
+      "taxon_key": "52316f3cbde18b38",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "ea4cfd0ae468b6ed": {
+      "research_taxon": "Nhandu chromatus",
+      "taxon_key": "ea4cfd0ae468b6ed",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.11646/zootaxa.5390.1.1",
+          "url": "https://doi.org/10.11646/zootaxa.5390.1.1",
+          "title": "Taxonomic revision and cladistic analysis of Lasiodora C. L. Koch, 1850 (Araneae, Theraphosidae) with notes on related genera.",
+          "published_year": 2023,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1016/j.toxicon.2017.07.001",
+          "url": "https://doi.org/10.1016/j.toxicon.2017.07.001",
+          "title": "Hyaluronidase-like enzymes are a frequent component of venoms from theraphosid spiders.",
+          "published_year": 2017,
+          "behavior_text_hints_unverified": [
+            "HUNT_ACTIVE"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "30ec8abd152bd951": {
+      "research_taxon": "Nhandu coloratovillosus",
+      "taxon_key": "30ec8abd152bd951",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "5291bd3d0905852b": {
+      "research_taxon": "Nhandu tripepii",
+      "taxon_key": "5291bd3d0905852b",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "909c280d676dc682": {
+      "research_taxon": "Omothymus schioedtei",
+      "taxon_key": "909c280d676dc682",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
     }
   },
   "species_processed_this_run": 24,
-  "species_with_literature_leads_this_run": 10
+  "species_with_literature_leads_this_run": 5
 }
