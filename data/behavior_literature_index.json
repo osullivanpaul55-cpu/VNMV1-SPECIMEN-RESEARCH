@@ -1,11 +1,11 @@
 {
   "schema": "VNMV1_PUBLIC_BEHAVIOUR_LITERATURE_CANDIDATES_V1",
-  "last_cycle": 5,
+  "last_cycle": 6,
   "named_species_in_seed": 195,
-  "species_searched": 144,
-  "species_with_literature_leads": 55,
+  "species_searched": 168,
+  "species_with_literature_leads": 71,
   "research_completed_first_sweep": false,
-  "last_research_at_utc": "2026-10-27T13:32:55.472969+00:00",
+  "last_research_at_utc": "2026-10-27T23:08:02.803194+00:00",
   "species": {
     "f3787c4b515c0a91": {
       "research_taxon": "Abdomegaphobema mesomelas",
@@ -2584,8 +2584,629 @@
       "publication_leads": [],
       "no_automatic_behavior_confirmation": true,
       "no_media_or_rights_permissions_implied": true
+    },
+    "7d89c8648c07ba92": {
+      "research_taxon": "Platymeris biguttatus",
+      "taxon_key": "7d89c8648c07ba92",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.3390/biology11030464",
+          "url": "https://doi.org/10.3390/biology11030464",
+          "title": "Proteotranscriptomic Analysis and Toxicity Assay Suggest the Functional Distinction between Venom Gland Chambers in Twin-Spotted Assassin Bug, Platymeris biguttatus .",
+          "published_year": 2022,
+          "behavior_text_hints_unverified": [
+            "PREDATOR_DEFENSE",
+            "CHILOPODA_FORCIPULE_STRIKE"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.3390/ijms20112728",
+          "url": "https://doi.org/10.3390/ijms20112728",
+          "title": "Three Melanin Pathway Genes, TH , yellow , and aaNAT , Regulate Pigmentation in the Twin-Spotted Assassin Bug, Platymeris biguttatus (Linnaeus).",
+          "published_year": 2019,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "108709b3b8f603e7": {
+      "research_taxon": "Poecilotheria fasciata",
+      "taxon_key": "108709b3b8f603e7",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.7759/cureus.43074",
+          "url": "https://doi.org/10.7759/cureus.43074",
+          "title": "A Case Report on Generalised Muscle Spasms After Ornamental Tarantula Bites That Responded Well to Intravenous Calcium Gluconate Treatment.",
+          "published_year": 2023,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1016/j.toxicon.2017.08.013",
+          "url": "https://doi.org/10.1016/j.toxicon.2017.08.013",
+          "title": "Pharmacological analysis of Poecilotheria spider venoms in mice provides clues for human treatment.",
+          "published_year": 2017,
+          "behavior_text_hints_unverified": [
+            "RESTING_NATURAL"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "a4b5eab8eb53518b": {
+      "research_taxon": "Poecilotheria formosa",
+      "taxon_key": "a4b5eab8eb53518b",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1371/journal.pone.0172966",
+          "url": "https://doi.org/10.1371/journal.pone.0172966",
+          "title": "Peptidomic and transcriptomic profiling of four distinct spider venoms.",
+          "published_year": 2017,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "78fe7fd7472d94a1": {
+      "research_taxon": "Poecilotheria hanumavilasumica",
+      "taxon_key": "78fe7fd7472d94a1",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "631b0d7f22046e2c": {
+      "research_taxon": "Poecilotheria metallica",
+      "taxon_key": "631b0d7f22046e2c",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.3390/biomedicines8020037",
+          "url": "https://doi.org/10.3390/biomedicines8020037",
+          "title": "Addition of K22 Converts Spider Venom Peptide Pme2a from an Activator to an Inhibitor of Na V 1.7.",
+          "published_year": 2020,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "d5a20421027fae10": {
+      "research_taxon": "Poecilotheria miranda",
+      "taxon_key": "d5a20421027fae10",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "204f712a0372282d": {
+      "research_taxon": "Poecilotheria ornata",
+      "taxon_key": "204f712a0372282d",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1016/j.toxcx.2023.100159",
+          "url": "https://doi.org/10.1016/j.toxcx.2023.100159",
+          "title": "Vasodilator activity of Poecilotheria ornata venom involves activation of the NO/cGMP pathway and inhibition of calcium influx to vascular smooth muscle cells.",
+          "published_year": 2023,
+          "behavior_text_hints_unverified": [
+            "RESTING_NATURAL"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1016/j.toxicon.2017.07.001",
+          "url": "https://doi.org/10.1016/j.toxicon.2017.07.001",
+          "title": "Hyaluronidase-like enzymes are a frequent component of venoms from theraphosid spiders.",
+          "published_year": 2017,
+          "behavior_text_hints_unverified": [
+            "HUNT_ACTIVE"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "51f1a0b6427a0055": {
+      "research_taxon": "Poecilotheria regalis",
+      "taxon_key": "51f1a0b6427a0055",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1016/j.toxicon.2025.108543",
+          "url": "https://doi.org/10.1016/j.toxicon.2025.108543",
+          "title": "Hyaluronidase activity of Indian ornamental tarantula (Poecilotheria regalis) venom is significantly reduced by commercial Latrodectus mactans and American scorpion antivenoms.",
+          "published_year": 2025,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.3390/cells14030191",
+          "url": "https://doi.org/10.3390/cells14030191",
+          "title": "Correction: Richards et al. Indian Ornamental Tarantula ( Poecilotheria regalis ) Venom Affects Myoblast Function and Causes Skeletal Muscle Damage. Cells 2023, 12 , 2074.",
+          "published_year": 2025,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1016/j.toxicon.2024.107842",
+          "url": "https://doi.org/10.1016/j.toxicon.2024.107842",
+          "title": "Envenomation by the Indian ornamental tarantula (Poecilotheria regalis): A case report on treatment with Latrodectus mactans antivenom.",
+          "published_year": 2024,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.3390/toxins17090432",
+          "url": "https://doi.org/10.3390/toxins17090432",
+          "title": "Modification of Closed-State Inactivation in Voltage-Gated Sodium Channel Na&lt;sub&gt;v&lt;/sub&gt;1.7 by Two Novel Arachnid Toxins.",
+          "published_year": 2025,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.3390/cells12162074",
+          "url": "https://doi.org/10.3390/cells12162074",
+          "title": "Indian Ornamental Tarantula ( Poecilotheria regalis ) Venom Affects Myoblast Function and Causes Skeletal Muscle Damage.",
+          "published_year": 2023,
+          "behavior_text_hints_unverified": [
+            "CHILOPODA_BROOD_COIL"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "624de4385921f126": {
+      "research_taxon": "Poecilotheria rufilata",
+      "taxon_key": "624de4385921f126",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1016/j.toxicon.2017.07.001",
+          "url": "https://doi.org/10.1016/j.toxicon.2017.07.001",
+          "title": "Hyaluronidase-like enzymes are a frequent component of venoms from theraphosid spiders.",
+          "published_year": 2017,
+          "behavior_text_hints_unverified": [
+            "HUNT_ACTIVE"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1002/rcm.595",
+          "url": "https://doi.org/10.1002/rcm.595",
+          "title": "Matrix-assisted laser desorption/ionization time-of-flight mass spectrometry and high-performance liquid chromatography study of quantitative and qualitative variation in tarantula spider venoms.",
+          "published_year": 2002,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "b3500f6c11a47fa4": {
+      "research_taxon": "Poecilotheria smithi",
+      "taxon_key": "b3500f6c11a47fa4",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "8e56097930c86622": {
+      "research_taxon": "Poecilotheria subfusca",
+      "taxon_key": "8e56097930c86622",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "394bf7b250a32d40": {
+      "research_taxon": "Poecilotheria tigrinawesseli",
+      "taxon_key": "394bf7b250a32d40",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1016/j.toxicon.2022.107013",
+          "url": "https://doi.org/10.1016/j.toxicon.2022.107013",
+          "title": "Wessel's tiger ornamental tarantula bite envenomation: A case report and venom analysis.",
+          "published_year": 2023,
+          "behavior_text_hints_unverified": [
+            "AMBLYPYGI_MALE_ANTENNIFORM_FENCING",
+            "COLEOPTERA_DEFENSIVE_ABDOMEN"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "410dffc1d7024163": {
+      "research_taxon": "Poecilotheria vittata",
+      "taxon_key": "410dffc1d7024163",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1016/j.toxicon.2017.07.001",
+          "url": "https://doi.org/10.1016/j.toxicon.2017.07.001",
+          "title": "Hyaluronidase-like enzymes are a frequent component of venoms from theraphosid spiders.",
+          "published_year": 2017,
+          "behavior_text_hints_unverified": [
+            "HUNT_ACTIVE"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "1e609862639634fb": {
+      "research_taxon": "Psalmopoeus cambridgei",
+      "taxon_key": "1e609862639634fb",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "1c841cb5fd4082dd": {
+      "research_taxon": "Psalmopoeus ecclesiasticus",
+      "taxon_key": "1c841cb5fd4082dd",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.11646/zootaxa.5437.4.3",
+          "url": "https://doi.org/10.11646/zootaxa.5437.4.3",
+          "title": "Description of a new Psalmopoeus Pocock, 1895 species (Araneae, Theraphosidae, Psalmopoeinae) from the Chocó region of Ecuador.",
+          "published_year": 2024,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.11646/zootaxa.5101.1.1",
+          "url": "https://doi.org/10.11646/zootaxa.5101.1.1",
+          "title": "Taxonomic revision and cladistic analysis of the tarantula genera Tapinauchenius Ausserer, 1871, Psalmopoeus Pocock, 1985, and Amazonius n. gen. (Theraphosidae, Psalmopoeinae).",
+          "published_year": 2022,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "fa65658713b31f89": {
+      "research_taxon": "Psalmopoeus irminia",
+      "taxon_key": "fa65658713b31f89",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1016/j.jemermed.2023.05.022",
+          "url": "https://doi.org/10.1016/j.jemermed.2023.05.022",
+          "title": "A Case Report of Venezuelan Suntiger Tarantula (Psalmopoeus Irminia) Envenomation and Review of Tarantula Exposures.",
+          "published_year": 2023,
+          "behavior_text_hints_unverified": [
+            "ALERT_ELEVATED",
+            "AMBLYPYGI_MALE_ANTENNIFORM_FENCING",
+            "COLEOPTERA_DEFENSIVE_ABDOMEN"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.11646/zootaxa.5101.1.1",
+          "url": "https://doi.org/10.11646/zootaxa.5101.1.1",
+          "title": "Taxonomic revision and cladistic analysis of the tarantula genera Tapinauchenius Ausserer, 1871, Psalmopoeus Pocock, 1985, and Amazonius n. gen. (Theraphosidae, Psalmopoeinae).",
+          "published_year": 2022,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "6ad42e6ab6ce6350": {
+      "research_taxon": "Psalmopoeus pulcher",
+      "taxon_key": "6ad42e6ab6ce6350",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1016/j.jbc.2026.113347",
+          "url": "https://doi.org/10.1016/j.jbc.2026.113347",
+          "title": "Molecular and structural dissection of Psalmopoeus pulcher venom reveals cysteine-rich peptides that target acid-sensing ion channel 1a.",
+          "published_year": 2026,
+          "behavior_text_hints_unverified": [
+            "TURRET_CONSTRUCTION",
+            "WEB_SENSING",
+            "EGG_SAC_CONSTRUCTION"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.11646/zootaxa.5101.1.1",
+          "url": "https://doi.org/10.11646/zootaxa.5101.1.1",
+          "title": "Taxonomic revision and cladistic analysis of the tarantula genera Tapinauchenius Ausserer, 1871, Psalmopoeus Pocock, 1985, and Amazonius n. gen. (Theraphosidae, Psalmopoeinae).",
+          "published_year": 2022,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "12b7831d5c67d7f0": {
+      "research_taxon": "Psalmopoeus reduncus",
+      "taxon_key": "12b7831d5c67d7f0",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.11646/zootaxa.5101.1.1",
+          "url": "https://doi.org/10.11646/zootaxa.5101.1.1",
+          "title": "Taxonomic revision and cladistic analysis of the tarantula genera Tapinauchenius Ausserer, 1871, Psalmopoeus Pocock, 1985, and Amazonius n. gen. (Theraphosidae, Psalmopoeinae).",
+          "published_year": 2022,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "241d040655888932": {
+      "research_taxon": "Psalmopoeus victori",
+      "taxon_key": "241d040655888932",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.11646/zootaxa.5101.1.1",
+          "url": "https://doi.org/10.11646/zootaxa.5101.1.1",
+          "title": "Taxonomic revision and cladistic analysis of the tarantula genera Tapinauchenius Ausserer, 1871, Psalmopoeus Pocock, 1985, and Amazonius n. gen. (Theraphosidae, Psalmopoeinae).",
+          "published_year": 2022,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "5baa881eea446773": {
+      "research_taxon": "Psednocnemis brachyramosa",
+      "taxon_key": "5baa881eea446773",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "d8ab27a812524e45": {
+      "research_taxon": "Pterinochilus chordatus",
+      "taxon_key": "d8ab27a812524e45",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1371/journal.pone.0039019",
+          "url": "https://doi.org/10.1371/journal.pone.0039019",
+          "title": "Mites parasitic on Australasian and African spiders found in the pet trade; a redescription of Ljunghia pulleinei Womersley.",
+          "published_year": 2012,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "1a77ccd2b9e285b8": {
+      "research_taxon": "Pterinochilus lugardi",
+      "taxon_key": "1a77ccd2b9e285b8",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "dcb4221a4144e8b1": {
+      "research_taxon": "Pterinochilus murinus",
+      "taxon_key": "dcb4221a4144e8b1",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1038/s41597-025-06507-2",
+          "url": "https://doi.org/10.1038/s41597-025-06507-2",
+          "title": "Chromosome-scale genome and lncRNA annotation of the Orange Baboon Tarantula (Pterinochilus murinus).",
+          "published_year": 2026,
+          "behavior_text_hints_unverified": [
+            "SCORPION_BROOD_ON_BACK"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1016/j.gene.2024.148954",
+          "url": "https://doi.org/10.1016/j.gene.2024.148954",
+          "title": "Characterization of the complete mitochondrial genomes of four tarantulas (Arachnida: Theraphosidae) with phylogenetic analysis.",
+          "published_year": 2025,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1007/s00018-025-05778-7",
+          "url": "https://doi.org/10.1007/s00018-025-05778-7",
+          "title": "Spider venom peptides with unique fold selectively block Shaker-type potassium channels.",
+          "published_year": 2025,
+          "behavior_text_hints_unverified": [
+            "RESTING_NATURAL",
+            "WEB_SENSING"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1111/febs.16773",
+          "url": "https://doi.org/10.1111/febs.16773",
+          "title": "Pmu1a, a novel spider toxin with dual inhibitory activity at pain targets hNa V 1.7 and hCa V 3 voltage-gated channels.",
+          "published_year": 2023,
+          "behavior_text_hints_unverified": [
+            "CHILOPODA_BROOD_COIL"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1093/aesa/saac001",
+          "url": "https://doi.org/10.1093/aesa/saac001",
+          "title": "Morphological Differentiation of Ventral Tarsal Setae and Surface Sculpturing of Theraphosids (Araneae: Theraphosidae) With Different Types of Lifestyles",
+          "published_year": 2022,
+          "behavior_text_hints_unverified": [
+            "BURROW_EMERGENCE",
+            "BURROW_EXCAVATION",
+            "BURROW_SEAL",
+            "BURROW_SILK_LINING",
+            "TURRET_CONSTRUCTION",
+            "EGG_SAC_CONSTRUCTION",
+            "SCORPION_PECTINAL_SUBSTRATE_SCAN"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "f5b15eb3d23cb55a": {
+      "research_taxon": "Sandinista lanceolatum",
+      "taxon_key": "f5b15eb3d23cb55a",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
     }
   },
   "species_processed_this_run": 24,
-  "species_with_literature_leads_this_run": 10
+  "species_with_literature_leads_this_run": 16
 }
