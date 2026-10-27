@@ -1,0 +1,13 @@
+{
+  "schema": "VNMV1_PUBLIC_PHOTO_RESEARCH_REQUEST_V1",
+  "request_id": "20261027_species_bound_anatomy_evidence_round_01",
+  "purpose": "Collect more genuine candidate specimen photo sources for distinct public research taxa with gaps; preserve identity evidence, photo source pages and SHA-256 bytes where rights permit, and add Stage 6 species anatomy evidence intake sidecars for each five-shard research output.",
+  "minimum_distinct_photo_or_source_records": 9,
+  "preferred_distinct_photo_or_source_records": 12,
+  "preferred_maximum": 15,
+  "source_scope": "Existing exact-name iNaturalist candidate observations, GBIF still-image occurrence leads and Wikimedia Commons file-page sources. Treat all candidate identifications and poses as unreviewed until human comparison with genuine specimen photographs.",
+  "copy_policy": "Archive only photo-level CC0/CC BY iNaturalist source candidates under existing collection rules; retain restricted or unknown-licence records as source links only. No reuse for image generation without separate review.",
+  "anatomy_provenance": "VNMV1_SPECIES_BOUND_ANATOMY_DOCTRINE_V1; all measurements UNKNOWN/null until published same-species voucher and independent photographic joint review.",
+  "do_not_include": "Private card numbers, private original specimen images, owner human-gold annotations or measurements borrowed from other species.",
+  "approval_status": "NOT_APPROVED_PENDING_HUMAN_REVIEW"
+}
