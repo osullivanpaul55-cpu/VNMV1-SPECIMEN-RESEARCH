@@ -81,6 +81,17 @@ def compile_archive(shard_root:Path,previous:dict,out:Path,tag:str,repo:str)->di
                     dest['link_only_leads']=[x for x in link_leads if x.get('photo_key')!=c['photo_key']]
                     key_seen.add(c['photo_key']);sha_seen.add(c['sha256']);added.append({'taxon':taxon,'photo_key':c['photo_key'],'sha256':c['sha256'],'filename':path,'attribution':c['attribution'],'license_code':c['license_code'],'source_url':c['source_url']})
                     newly_added+=1
+            # Preserve provenance-bound candidate-anatomy intake alongside photo bytes,
+            # without claiming human verification, joint labels or measured dimensions.
+            evidence_path=src.parent/'ANATOMY_EVIDENCE_INTAKE_V1.json'
+            if evidence_path.is_file():
+                evidence=json.loads(evidence_path.read_text(encoding='utf-8'))
+                if (evidence.get('schema')!='VNMV1_PUBLIC_SPECIES_ANATOMY_EVIDENCE_INTAKE_V1'
+                    or evidence.get('shard')!=shard
+                    or evidence.get('approved_3d_species_rigs')!=0
+                    or evidence.get('human_approved_anatomical_profiles')!=0):
+                    raise ValueError('ANATOMY_EVIDENCE_CANNOT_BE_PROMOTED')
+                z.writestr('ANATOMY_EVIDENCE_INTAKE_V1.json',evidence_path.read_bytes())
             z.writestr('CREDITS.json',json.dumps({'status':'RESEARCH_CANDIDATES_NOT_APPROVED','records':added},indent=2)+'\n')
         # Asset SHA available separately for audit; per-photo hashes remain immutable.
         assets.append({'filename':asset_name,'sha256':digest(asset.read_bytes()),'photos':len(added)})
