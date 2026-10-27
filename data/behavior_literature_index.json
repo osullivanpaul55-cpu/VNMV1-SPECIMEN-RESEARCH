@@ -1,11 +1,11 @@
 {
   "schema": "VNMV1_PUBLIC_BEHAVIOUR_LITERATURE_CANDIDATES_V1",
-  "last_cycle": 4,
+  "last_cycle": 5,
   "named_species_in_seed": 195,
-  "species_searched": 120,
-  "species_with_literature_leads": 45,
+  "species_searched": 144,
+  "species_with_literature_leads": 55,
   "research_completed_first_sweep": false,
-  "last_research_at_utc": "2026-10-26T23:19:07.450766+00:00",
+  "last_research_at_utc": "2026-10-27T13:32:55.472969+00:00",
   "species": {
     "f3787c4b515c0a91": {
       "research_taxon": "Abdomegaphobema mesomelas",
@@ -2111,8 +2111,481 @@
       "publication_leads": [],
       "no_automatic_behavior_confirmation": true,
       "no_media_or_rights_permissions_implied": true
+    },
+    "58df955bbfccb525": {
+      "research_taxon": "Omothymus violaceopes",
+      "taxon_key": "58df955bbfccb525",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "2dfe5150a46c4c4c": {
+      "research_taxon": "Ornithoctonus aureotibialis",
+      "taxon_key": "2dfe5150a46c4c4c",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.3390/toxins17110561",
+          "url": "https://doi.org/10.3390/toxins17110561",
+          "title": "Venom Peptides Across Asian and American Tarantulas Utilize Dual Pharmacology to Target Activation and Fast Inactivation of Voltage-Gated Sodium Channels.",
+          "published_year": 2025,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "c58552aa94c9b7a2": {
+      "research_taxon": "Pachistopelma bromelicola",
+      "taxon_key": "c58552aa94c9b7a2",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "45bc1434ad2ff605": {
+      "research_taxon": "Pamphobeteus antinous",
+      "taxon_key": "45bc1434ad2ff605",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1364/oe.21.006979",
+          "url": "https://doi.org/10.1364/oe.21.006979",
+          "title": "Cylindrical Bragg mirrors on leg segments of the male Bolivian blueleg tarantula Pamphobeteus antinous (Theraphosidae).",
+          "published_year": 2013,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "9f29b28be974a6fe": {
+      "research_taxon": "Pamphobeteus fortis",
+      "taxon_key": "9f29b28be974a6fe",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "6a539dfbb24aa2a6": {
+      "research_taxon": "Pamphobeteus insignis",
+      "taxon_key": "6a539dfbb24aa2a6",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "abeda9bf0d16a1b1": {
+      "research_taxon": "Pamphobeteus solaris",
+      "taxon_key": "abeda9bf0d16a1b1",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "1e4b7f98d5bf7ca6": {
+      "research_taxon": "Pamphobeteus ultramarinus",
+      "taxon_key": "1e4b7f98d5bf7ca6",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "6b79840337ecd944": {
+      "research_taxon": "Pamphobeteus vespertinus",
+      "taxon_key": "6b79840337ecd944",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1101/2022.03.03.482746",
+          "url": "https://doi.org/10.1101/2022.03.03.482746",
+          "title": "Comments on snails of the genus Zoniferella from Ecuador (Mollusca: Achatinidae), with restriction of the type locality “Los Puentes” for several species of Gastropoda and Arachnida",
+          "published_year": 2022,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "e1e7af0250120239": {
+      "research_taxon": "Pelinobius muticus",
+      "taxon_key": "e1e7af0250120239",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1080/10888705.2021.1872027",
+          "url": "https://doi.org/10.1080/10888705.2021.1872027",
+          "title": "Full Spectrum Lighting Induces Behavioral Changes and Increases Cortisol Immunoreactivity in Captive Arachnids.",
+          "published_year": 2021,
+          "behavior_text_hints_unverified": [
+            "ALERT_ELEVATED"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1073/pnas.2110932119",
+          "url": "https://doi.org/10.1073/pnas.2110932119",
+          "title": "Multitarget nociceptor sensitization by a promiscuous peptide from the venom of the King Baboon spider.",
+          "published_year": 2022,
+          "behavior_text_hints_unverified": [
+            "DEFENSIVE_REARING",
+            "SCORPION_METASOMA_DEFENSIVE_ARCH"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1016/j.bcp.2014.02.008",
+          "url": "https://doi.org/10.1016/j.bcp.2014.02.008",
+          "title": "Isolation, synthesis and characterization of ω-TRTX-Cc1a, a novel tarantula venom peptide that selectively targets L-type Cav channels.",
+          "published_year": 2014,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "aef39363fad0b0ed": {
+      "research_taxon": "Phidippus audax",
+      "taxon_key": "aef39363fad0b0ed",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.21203/rs.3.rs-7076766/v1",
+          "url": "https://doi.org/10.21203/rs.3.rs-7076766/v1",
+          "title": "Isolation, synthesis, and pharmacological characterization of a short-structured peptide from the venom of Phidippus audax that affects potassium currents",
+          "published_year": 2025,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1186/s13071-025-06987-6",
+          "url": "https://doi.org/10.1186/s13071-025-06987-6",
+          "title": "Growth and development of two predator species fed a diet of genetically engineered mosquitoes.",
+          "published_year": 2025,
+          "behavior_text_hints_unverified": [
+            "RESTING_NATURAL",
+            "URTICATING_SETAE_RELEASE",
+            "PREDATOR_ENCOUNTER",
+            "PREDATOR_DEFENSE",
+            "PREDATOR_ATTACK"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1016/j.visres.2023.108185",
+          "url": "https://doi.org/10.1016/j.visres.2023.108185",
+          "title": "Nutrition-induced macular-degeneration-like photoreceptor damage in jumping spider eyes.",
+          "published_year": 2023,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1101/2022.04.12.487891",
+          "url": "https://doi.org/10.1101/2022.04.12.487891",
+          "title": "Carbohydrates complement high protein diets to maximize the growth of an actively hunting predator",
+          "published_year": 2022,
+          "behavior_text_hints_unverified": [
+            "FEEDING",
+            "PREDATOR_ENCOUNTER",
+            "PREDATOR_DEFENSE",
+            "PREDATOR_ATTACK"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1002/ece3.9150",
+          "url": "https://doi.org/10.1002/ece3.9150",
+          "title": "Carbohydrates complement high-protein diets to maximize the growth of an actively hunting predator.",
+          "published_year": 2022,
+          "behavior_text_hints_unverified": [
+            "PREDATOR_ENCOUNTER",
+            "PREDATOR_DEFENSE",
+            "PREDATOR_ATTACK"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "81a12f33cf1827b8": {
+      "research_taxon": "Phidippus johnsoni",
+      "taxon_key": "81a12f33cf1827b8",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1016/j.asd.2010.07.006",
+          "url": "https://doi.org/10.1016/j.asd.2010.07.006",
+          "title": "Structural origin of the green iridescence on the chelicerae of the red-backed jumping spider, Phidippus johnsoni (Salticidae: Araneae).",
+          "published_year": 2011,
+          "behavior_text_hints_unverified": [
+            "COURTSHIP_DISPLAY"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "426f1aeb5c927661": {
+      "research_taxon": "Phidippus regius",
+      "taxon_key": "426f1aeb5c927661",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.7554/elife.97146",
+          "url": "https://doi.org/10.7554/elife.97146",
+          "title": "Individual recognition in a jumping spider (&lt;i&gt;Phidippus regius&lt;/i&gt;).",
+          "published_year": 2025,
+          "behavior_text_hints_unverified": [
+            "PREDATOR_ENCOUNTER"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1002/adhm.202302968",
+          "url": "https://doi.org/10.1002/adhm.202302968",
+          "title": "Comparative Analysis of Various Spider Silks in Regard to Nerve Regeneration: Material Properties and Schwann Cell Response.",
+          "published_year": 2024,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1101/2023.04.25.538063",
+          "url": "https://doi.org/10.1101/2023.04.25.538063",
+          "title": "Study replication: Shape discrimination in a conditioning procedure on the jumping spider Phidippus regius",
+          "published_year": 2023,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1101/2023.11.17.567545",
+          "url": "https://doi.org/10.1101/2023.11.17.567545",
+          "title": "Individual recognition in a jumping spider ( Phidippus regius )",
+          "published_year": 2023,
+          "behavior_text_hints_unverified": [
+            "PREDATOR_ENCOUNTER"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1098/rsos.230907",
+          "url": "https://doi.org/10.1098/rsos.230907",
+          "title": "Conspicuous stripes on prey capture attention and reduce attacks by foraging jumping spiders.",
+          "published_year": 2023,
+          "behavior_text_hints_unverified": [
+            "RESTING_NATURAL",
+            "PREY_CAPTURE",
+            "AMBLYPYGI_RAPTORY_PEDIPALP_STRIKE",
+            "CHILOPODA_FORCIPULE_STRIKE"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "0944bc33335df84b": {
+      "research_taxon": "Phlogiellus baeri",
+      "taxon_key": "0944bc33335df84b",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "01868bdbd30bf65d": {
+      "research_taxon": "Phormictopus atrichomatus",
+      "taxon_key": "01868bdbd30bf65d",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1016/j.gene.2024.148954",
+          "url": "https://doi.org/10.1016/j.gene.2024.148954",
+          "title": "Characterization of the complete mitochondrial genomes of four tarantulas (Arachnida: Theraphosidae) with phylogenetic analysis.",
+          "published_year": 2025,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "54202e87b463e274": {
+      "research_taxon": "Phormictopus auratus",
+      "taxon_key": "54202e87b463e274",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "6cf1b8b652b39703": {
+      "research_taxon": "Phormictopus cancerides",
+      "taxon_key": "6cf1b8b652b39703",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.3390/cimb47060448",
+          "url": "https://doi.org/10.3390/cimb47060448",
+          "title": "Comparative Analysis of Mitochondrial Genome from &lt;i&gt;Phormictopus cancerides&lt;/i&gt; (Arachnida: Theraphosidae) with Phylogenetic Implications.",
+          "published_year": 2025,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "b2020e042cb774b8": {
+      "research_taxon": "Phormictopus cautus",
+      "taxon_key": "b2020e042cb774b8",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "cb430cf310916747": {
+      "research_taxon": "Phormictopus cochleasvorax",
+      "taxon_key": "cb430cf310916747",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "0932ac045a29deff": {
+      "research_taxon": "Phormingochilus everetti",
+      "taxon_key": "0932ac045a29deff",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1016/j.bcp.2020.114080",
+          "url": "https://doi.org/10.1016/j.bcp.2020.114080",
+          "title": "Mutational analysis of ProTx-I and the novel venom peptide Pe1b provide insight into residues responsible for selective inhibition of the analgesic drug target Na V 1.7.",
+          "published_year": 2020,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "3713df3b8c234291": {
+      "research_taxon": "Phormingochilus hatihati",
+      "taxon_key": "3713df3b8c234291",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "f1384717899f71f5": {
+      "research_taxon": "Phormingochilus pennellhewlettorum",
+      "taxon_key": "f1384717899f71f5",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "18fdf200ef8a8d67": {
+      "research_taxon": "Phrixotrichus scrofa",
+      "taxon_key": "18fdf200ef8a8d67",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "a45dc6af37f24855": {
+      "research_taxon": "Phrixotrichus vulpinus",
+      "taxon_key": "a45dc6af37f24855",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
     }
   },
   "species_processed_this_run": 24,
-  "species_with_literature_leads_this_run": 5
+  "species_with_literature_leads_this_run": 10
 }
