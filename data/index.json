@@ -6,7 +6,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "commons:f3787c4b515c:34451468",
@@ -8677,8 +8677,8 @@
       "scientific_name": "Aspinochilus rufus",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "inat:634687512",
@@ -9361,7 +9361,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": []
     },
     "87b1db096a7ff2af": {
@@ -10831,7 +10831,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "commons:cd5e7cdf8a28:29677896",
@@ -11120,7 +11120,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "inat:16382384",
@@ -14200,16 +14200,173 @@
           "species_sex_anatomy_review": "PENDING"
         }
       ],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 14,
-      "link_only_leads": []
+      "last_state": "LINK_RESEARCH_READY",
+      "last_cycle": 31,
+      "link_only_leads": [
+        {
+          "photo_key": "gbif:c10790afc9a1:6130315551:e2e7ce5110e5",
+          "photo_id": "e2e7ce5110e5",
+          "observation_id": "6130315551",
+          "taxon": "Avicularia variegata",
+          "source_title": "Avicularia variegata F.O.Pickard-Cambridge, 1896",
+          "source_url": "https://www.gbif.org/occurrence/6130315551",
+          "secondary_source_url": "https://www.inaturalist.org/photos/606386877",
+          "review_preview_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/606386877/original.jpg",
+          "source_type": "GBIF_OCCURRENCE_MEDIA_PAGE",
+          "source_search_term": "Avicularia variegata",
+          "source_search_mode": "GBIF_SCIENTIFIC_NAME_WITH_STILL_IMAGE_FILTER",
+          "source_taxon_name": "Avicularia variegata F.O.Pickard-Cambridge, 1896",
+          "source_accepted_taxon_name": "Avicularia variegata F.O.Pickard-Cambridge, 1896",
+          "taxon_match_status": "SPECIES_NAME_MATCH_NOT_USER_APPROVED",
+          "taxon_authority": "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+          "observation_quality_grade": null,
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "license_url": "http://creativecommons.org/licenses/by-nc/4.0/",
+          "source_license_claim": "http://creativecommons.org/licenses/by-nc/4.0/",
+          "license_research_status": "GBIF_MEDIA_METADATA_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "conwaykw",
+          "candidate_warning": [
+            "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "LICENCE_AND_ATTRIBUTION_CLAIMS_REQUIRE_SOURCE_CHECK"
+          ],
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false,
+          "reviewed_by_human": false
+        },
+        {
+          "photo_key": "gbif:c10790afc9a1:6147378465:4c2f75275a3f",
+          "photo_id": "4c2f75275a3f",
+          "observation_id": "6147378465",
+          "taxon": "Avicularia variegata",
+          "source_title": "Avicularia variegata F.O.Pickard-Cambridge, 1896",
+          "source_url": "https://www.gbif.org/occurrence/6147378465",
+          "secondary_source_url": "https://www.inaturalist.org/photos/613283486",
+          "review_preview_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/613283486/original.jpg",
+          "source_type": "GBIF_OCCURRENCE_MEDIA_PAGE",
+          "source_search_term": "Avicularia variegata",
+          "source_search_mode": "GBIF_SCIENTIFIC_NAME_WITH_STILL_IMAGE_FILTER",
+          "source_taxon_name": "Avicularia variegata F.O.Pickard-Cambridge, 1896",
+          "source_accepted_taxon_name": "Avicularia variegata F.O.Pickard-Cambridge, 1896",
+          "taxon_match_status": "SPECIES_NAME_MATCH_NOT_USER_APPROVED",
+          "taxon_authority": "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+          "observation_quality_grade": null,
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "license_url": "http://creativecommons.org/licenses/by/4.0/",
+          "source_license_claim": "http://creativecommons.org/licenses/by/4.0/",
+          "license_research_status": "GBIF_MEDIA_METADATA_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "Charlotte Kirchner",
+          "candidate_warning": [
+            "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "LICENCE_AND_ATTRIBUTION_CLAIMS_REQUIRE_SOURCE_CHECK"
+          ],
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false,
+          "reviewed_by_human": false
+        },
+        {
+          "photo_key": "gbif:c10790afc9a1:6147378465:0b3b2d1f7e25",
+          "photo_id": "0b3b2d1f7e25",
+          "observation_id": "6147378465",
+          "taxon": "Avicularia variegata",
+          "source_title": "Avicularia variegata F.O.Pickard-Cambridge, 1896",
+          "source_url": "https://www.gbif.org/occurrence/6147378465",
+          "secondary_source_url": "https://www.inaturalist.org/photos/613283508",
+          "review_preview_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/613283508/original.jpg",
+          "source_type": "GBIF_OCCURRENCE_MEDIA_PAGE",
+          "source_search_term": "Avicularia variegata",
+          "source_search_mode": "GBIF_SCIENTIFIC_NAME_WITH_STILL_IMAGE_FILTER",
+          "source_taxon_name": "Avicularia variegata F.O.Pickard-Cambridge, 1896",
+          "source_accepted_taxon_name": "Avicularia variegata F.O.Pickard-Cambridge, 1896",
+          "taxon_match_status": "SPECIES_NAME_MATCH_NOT_USER_APPROVED",
+          "taxon_authority": "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+          "observation_quality_grade": null,
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "license_url": "http://creativecommons.org/licenses/by/4.0/",
+          "source_license_claim": "http://creativecommons.org/licenses/by/4.0/",
+          "license_research_status": "GBIF_MEDIA_METADATA_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "Charlotte Kirchner",
+          "candidate_warning": [
+            "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "LICENCE_AND_ATTRIBUTION_CLAIMS_REQUIRE_SOURCE_CHECK"
+          ],
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false,
+          "reviewed_by_human": false
+        },
+        {
+          "photo_key": "gbif:c10790afc9a1:6147378465:6478639bd52d",
+          "photo_id": "6478639bd52d",
+          "observation_id": "6147378465",
+          "taxon": "Avicularia variegata",
+          "source_title": "Avicularia variegata F.O.Pickard-Cambridge, 1896",
+          "source_url": "https://www.gbif.org/occurrence/6147378465",
+          "secondary_source_url": "https://www.inaturalist.org/photos/613283510",
+          "review_preview_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/613283510/original.jpg",
+          "source_type": "GBIF_OCCURRENCE_MEDIA_PAGE",
+          "source_search_term": "Avicularia variegata",
+          "source_search_mode": "GBIF_SCIENTIFIC_NAME_WITH_STILL_IMAGE_FILTER",
+          "source_taxon_name": "Avicularia variegata F.O.Pickard-Cambridge, 1896",
+          "source_accepted_taxon_name": "Avicularia variegata F.O.Pickard-Cambridge, 1896",
+          "taxon_match_status": "SPECIES_NAME_MATCH_NOT_USER_APPROVED",
+          "taxon_authority": "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+          "observation_quality_grade": null,
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "license_url": "http://creativecommons.org/licenses/by/4.0/",
+          "source_license_claim": "http://creativecommons.org/licenses/by/4.0/",
+          "license_research_status": "GBIF_MEDIA_METADATA_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "Charlotte Kirchner",
+          "candidate_warning": [
+            "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "LICENCE_AND_ATTRIBUTION_CLAIMS_REQUIRE_SOURCE_CHECK"
+          ],
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false,
+          "reviewed_by_human": false
+        }
+      ]
     },
     "9f5855dee85b54b1": {
       "scientific_name": "Bacillochilus xenostridulans",
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "commons:9f5855dee85b:76578785",
@@ -14285,8 +14442,8 @@
           "species_sex_anatomy_review": "PENDING"
         }
       ],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "inat:754223003",
@@ -15086,8 +15243,8 @@
       "scientific_name": "Bonnetina minax",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "inat:472639645",
@@ -18268,7 +18425,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "LINK_RESEARCH_READY",
-      "last_cycle": 14,
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "inat:600683251",
@@ -18544,6 +18701,150 @@
           "unverified_observer_behaviour_hints": [],
           "media_copied_to_public_repo": false,
           "approved_for_imagegen": false
+        },
+        {
+          "photo_key": "commons:c2a2f2846c7c:82147",
+          "photo_id": 82147,
+          "taxon": "Brachypelma boehmei",
+          "source_title": "File:Euathlus boehmei 1.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Euathlus_boehmei_1.jpg",
+          "review_preview_url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Euathlus_boehmei_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+          "source_type": "WIKIMEDIA_COMMONS_FILE_PAGE",
+          "source_search_term": "Brachypelma boehmei",
+          "source_search_query": "\"Brachypelma boehmei\"",
+          "source_search_mode": "EXACT_PHRASE",
+          "taxon_match_status": "TEXT_SEARCH_MATCH_NOT_TAXONOMICALLY_VERIFIED",
+          "taxon_authority": "WIKIMEDIA_TEXT_SEARCH_NOT_USER_APPROVED",
+          "observation_quality_grade": null,
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+          "source_license_claim": "CC BY-SA 3.0",
+          "license_research_status": "COMMONS_METADATA_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "Photographer or credit unconfirmed",
+          "candidate_warning": [
+            "TEXT_SEARCH_MATCH_ONLY",
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "LICENCE_AND_ATTRIBUTION_CLAIMS_REQUIRE_SOURCE_CHECK"
+          ],
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false,
+          "reviewed_by_human": false
+        },
+        {
+          "photo_key": "commons:c2a2f2846c7c:82155",
+          "photo_id": 82155,
+          "taxon": "Brachypelma boehmei",
+          "source_title": "File:Euathlus boehmei 2.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Euathlus_boehmei_2.jpg",
+          "review_preview_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Euathlus_boehmei_2.jpg/960px-Euathlus_boehmei_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "source_type": "WIKIMEDIA_COMMONS_FILE_PAGE",
+          "source_search_term": "Brachypelma boehmei",
+          "source_search_query": "\"Brachypelma boehmei\"",
+          "source_search_mode": "EXACT_PHRASE",
+          "taxon_match_status": "TEXT_SEARCH_MATCH_NOT_TAXONOMICALLY_VERIFIED",
+          "taxon_authority": "WIKIMEDIA_TEXT_SEARCH_NOT_USER_APPROVED",
+          "observation_quality_grade": null,
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+          "source_license_claim": "CC BY-SA 3.0",
+          "license_research_status": "COMMONS_METADATA_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "Photographer or credit unconfirmed",
+          "candidate_warning": [
+            "TEXT_SEARCH_MATCH_ONLY",
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "LICENCE_AND_ATTRIBUTION_CLAIMS_REQUIRE_SOURCE_CHECK"
+          ],
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false,
+          "reviewed_by_human": false
+        },
+        {
+          "photo_key": "commons:c2a2f2846c7c:121514",
+          "photo_id": 121514,
+          "taxon": "Brachypelma boehmei",
+          "source_title": "File:Brachypelma boehmei1.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Brachypelma_boehmei1.jpg",
+          "review_preview_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Brachypelma_boehmei1.jpg/960px-Brachypelma_boehmei1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "source_type": "WIKIMEDIA_COMMONS_FILE_PAGE",
+          "source_search_term": "Brachypelma boehmei",
+          "source_search_query": "\"Brachypelma boehmei\"",
+          "source_search_mode": "EXACT_PHRASE",
+          "taxon_match_status": "TEXT_SEARCH_MATCH_NOT_TAXONOMICALLY_VERIFIED",
+          "taxon_authority": "WIKIMEDIA_TEXT_SEARCH_NOT_USER_APPROVED",
+          "observation_quality_grade": null,
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+          "source_license_claim": "CC BY-SA 3.0",
+          "license_research_status": "COMMONS_METADATA_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "Viki",
+          "candidate_warning": [
+            "TEXT_SEARCH_MATCH_ONLY",
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "LICENCE_AND_ATTRIBUTION_CLAIMS_REQUIRE_SOURCE_CHECK"
+          ],
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false,
+          "reviewed_by_human": false
+        },
+        {
+          "photo_key": "commons:c2a2f2846c7c:1731984",
+          "photo_id": 1731984,
+          "taxon": "Brachypelma boehmei",
+          "source_title": "File:Tarantula Image 002.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Tarantula_Image_002.jpg",
+          "review_preview_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Tarantula_Image_002.jpg/960px-Tarantula_Image_002.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "source_type": "WIKIMEDIA_COMMONS_FILE_PAGE",
+          "source_search_term": "Brachypelma boehmei",
+          "source_search_query": "\"Brachypelma boehmei\"",
+          "source_search_mode": "EXACT_PHRASE",
+          "taxon_match_status": "TEXT_SEARCH_MATCH_NOT_TAXONOMICALLY_VERIFIED",
+          "taxon_authority": "WIKIMEDIA_TEXT_SEARCH_NOT_USER_APPROVED",
+          "observation_quality_grade": null,
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "license_url": null,
+          "source_license_claim": "Public domain",
+          "license_research_status": "COMMONS_METADATA_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "Ltshears - Trisha M Shears",
+          "candidate_warning": [
+            "TEXT_SEARCH_MATCH_ONLY",
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "LICENCE_AND_ATTRIBUTION_CLAIMS_REQUIRE_SOURCE_CHECK"
+          ],
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false,
+          "reviewed_by_human": false
         }
       ]
     },
@@ -31016,7 +31317,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "commons:bcac939d4c46:146855579",
@@ -32403,8 +32704,8 @@
           "species_sex_anatomy_review": "PENDING"
         }
       ],
-      "last_state": "LINK_RESEARCH_READY",
-      "last_cycle": 30,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "inat:360498521",
@@ -33523,7 +33824,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": []
     },
     "523bae6ba16814db": {
@@ -34635,8 +34936,8 @@
       "scientific_name": "Cyriocosmus sellatus",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "inat:612858659",
@@ -34922,8 +35223,8 @@
           "species_sex_anatomy_review": "PENDING"
         }
       ],
-      "last_state": "LINK_RESEARCH_READY",
-      "last_cycle": 30,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "inat:329016485",
@@ -38339,7 +38640,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": []
     },
     "ffe239d36d2ed81a": {
@@ -39256,7 +39557,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "inat:92464385",
@@ -39988,7 +40289,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": []
     },
     "b13f2f4cb58b71f7": {
@@ -40455,15 +40756,15 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": []
     },
     "82d12550dc127b3b": {
       "scientific_name": "Hapalopus vangoghi",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_state": "NO_CANDIDATES",
+      "last_cycle": 31,
       "link_only_leads": []
     },
     "e3cab69db7e4f893": {
@@ -47776,8 +48077,8 @@
       "scientific_name": "Heterothele villosella",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_state": "NO_CANDIDATES",
+      "last_cycle": 31,
       "link_only_leads": []
     },
     "05c69061264ea61e": {
@@ -54861,8 +55162,8 @@
           "species_sex_anatomy_review": "PENDING"
         }
       ],
-      "last_state": "LINK_RESEARCH_READY",
-      "last_cycle": 30,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "inat:738806481",
@@ -55485,7 +55786,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "inat:463728682",
@@ -58110,7 +58411,7 @@
         }
       ],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "inat:355337616",
@@ -61240,7 +61541,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "commons:e47aa2f3356d:198651156",
@@ -61494,7 +61795,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "inat:631108109",
@@ -63859,7 +64160,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "commons:e11d6f9f4792:76639023",
@@ -65459,7 +65760,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "commons:f7bb2a3b5cd6:123542463",
@@ -66073,7 +66374,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "commons:f1814a9785cf:13600596",
@@ -66152,7 +66453,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": []
     },
     "e551e88e364f57ef": {
@@ -66588,8 +66889,8 @@
       "scientific_name": "Melopoeus minax",
       "research_only": true,
       "candidates": [],
-      "last_state": "LINK_RESEARCH_READY",
-      "last_cycle": 23,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "commons:1a1e7c84d61f:92589893",
@@ -66990,7 +67291,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "commons:1fc3fc52d1de:66193575",
@@ -67035,7 +67336,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "inat:611359320",
@@ -68348,7 +68649,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "inat:13403822",
@@ -68434,7 +68735,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "inat:751759329",
@@ -70165,7 +70466,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "commons:ea4cfd0ae468:11612683",
@@ -76543,8 +76844,8 @@
       "scientific_name": "Pamphobeteus insignis",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "inat:568371136",
@@ -76744,8 +77045,8 @@
       "scientific_name": "Pamphobeteus solaris",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_state": "NO_CANDIDATES",
+      "last_cycle": 31,
       "link_only_leads": []
     },
     "1e4b7f98d5bf7ca6": {
@@ -77218,7 +77519,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "inat:719183943",
@@ -87701,7 +88002,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "inat:437957160",
@@ -87820,8 +88121,8 @@
       "scientific_name": "Phormictopus cochleasvorax",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_state": "NO_CANDIDATES",
+      "last_cycle": 31,
       "link_only_leads": []
     },
     "0932ac045a29deff": {
@@ -154512,7 +154813,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "inat:454004337",
@@ -157798,7 +158099,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "inat:288105468",
@@ -159200,8 +159501,8 @@
       "scientific_name": "Poecilotheria smithi",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "inat:599747625",
@@ -165840,7 +166141,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": []
     },
     "d8ab27a812524e45": {
@@ -169313,7 +169614,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": []
     },
     "80e4bcc4b8262a13": {
@@ -170336,8 +170637,8 @@
       "scientific_name": "Selenocosmia kovariki",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "commons:907caf4dcada:123541978",
@@ -171788,8 +172089,8 @@
       "scientific_name": "Stichoplastoris obelix",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "inat:477094704",
@@ -172787,7 +173088,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "inat:470026230",
@@ -181720,7 +182021,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "inat:356507295",
@@ -183560,7 +183861,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "inat:703768766",
@@ -185807,7 +186108,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": []
     },
     "f1384717899f71f5": {
@@ -185815,7 +186116,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": []
     },
     "18fdf200ef8a8d67": {
@@ -189484,8 +189785,8 @@
       "scientific_name": "Cyriopagopus minax",
       "research_only": true,
       "candidates": [],
-      "last_state": "LINK_RESEARCH_READY",
-      "last_cycle": 29,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "commons:ecf27de7621a:92589893",
@@ -190309,7 +190610,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": []
     },
     "84d12a63dd3f752f": {
@@ -190317,7 +190618,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": []
     },
     "30bbc340d5bbb4dd": {
@@ -190325,7 +190626,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "gbif:be8350c6faf7:5069733707:8c3945ad7108",
@@ -190634,7 +190935,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": []
     },
     "6383c4eb2afc3ba2": {
@@ -192993,8 +193294,8 @@
       "scientific_name": "Tapinauchenius sanctivincenti",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 31,
       "link_only_leads": [
         {
           "photo_key": "inat:457473060",
@@ -193030,13 +193331,13 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 30,
+      "last_cycle": 31,
       "link_only_leads": []
     }
   },
   "discovered_candidate_count": 1508,
   "image_generation_connected": false,
   "approved_photo_count": 0,
-  "last_cycle": 30,
-  "unlicensed_link_research_lead_count": 4959
+  "last_cycle": 31,
+  "unlicensed_link_research_lead_count": 4967
 }
