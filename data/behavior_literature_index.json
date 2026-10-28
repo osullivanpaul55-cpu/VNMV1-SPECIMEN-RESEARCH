@@ -1,11 +1,11 @@
 {
   "schema": "VNMV1_PUBLIC_BEHAVIOUR_LITERATURE_CANDIDATES_V1",
-  "last_cycle": 7,
+  "last_cycle": 8,
   "named_species_in_seed": 195,
-  "species_searched": 192,
-  "species_with_literature_leads": 77,
-  "research_completed_first_sweep": false,
-  "last_research_at_utc": "2026-10-28T14:28:38.734546+00:00",
+  "species_searched": 195,
+  "species_with_literature_leads": 79,
+  "research_completed_first_sweep": true,
+  "last_research_at_utc": "2026-10-28T23:29:46.359263+00:00",
   "species": {
     "f3787c4b515c0a91": {
       "research_taxon": "Abdomegaphobema mesomelas",
@@ -3554,8 +3554,64 @@
       "publication_leads": [],
       "no_automatic_behavior_confirmation": true,
       "no_media_or_rights_permissions_implied": true
+    },
+    "9ad99889621d705f": {
+      "research_taxon": "Xenesthis intermedia",
+      "taxon_key": "9ad99889621d705f",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "7f229122fd76b16f": {
+      "research_taxon": "Ybyrapora diversipes",
+      "taxon_key": "7f229122fd76b16f",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.3897/zookeys.659.10717",
+          "url": "https://doi.org/10.3897/zookeys.659.10717",
+          "title": "Taxonomic revision and cladistic analysis of Avicularia Lamarck, 1818 (Araneae, Theraphosidae, Aviculariinae) with description of three new aviculariine genera.",
+          "published_year": 2017,
+          "behavior_text_hints_unverified": [
+            "ALERT_ELEVATED",
+            "SCORPION_BROOD_ON_BACK"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "f22344caac26a03d": {
+      "research_taxon": "Ybyrapora sooretama",
+      "taxon_key": "f22344caac26a03d",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.3897/zookeys.659.10717",
+          "url": "https://doi.org/10.3897/zookeys.659.10717",
+          "title": "Taxonomic revision and cladistic analysis of Avicularia Lamarck, 1818 (Araneae, Theraphosidae, Aviculariinae) with description of three new aviculariine genera.",
+          "published_year": 2017,
+          "behavior_text_hints_unverified": [
+            "ALERT_ELEVATED",
+            "SCORPION_BROOD_ON_BACK"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
     }
   },
-  "species_processed_this_run": 24,
-  "species_with_literature_leads_this_run": 6
+  "species_processed_this_run": 3,
+  "species_with_literature_leads_this_run": 2
 }
