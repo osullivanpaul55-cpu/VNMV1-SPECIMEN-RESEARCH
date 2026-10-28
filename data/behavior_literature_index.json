@@ -1,11 +1,11 @@
 {
   "schema": "VNMV1_PUBLIC_BEHAVIOUR_LITERATURE_CANDIDATES_V1",
-  "last_cycle": 6,
+  "last_cycle": 7,
   "named_species_in_seed": 195,
-  "species_searched": 168,
-  "species_with_literature_leads": 71,
+  "species_searched": 192,
+  "species_with_literature_leads": 77,
   "research_completed_first_sweep": false,
-  "last_research_at_utc": "2026-10-27T23:08:02.803194+00:00",
+  "last_research_at_utc": "2026-10-28T14:28:38.734546+00:00",
   "species": {
     "f3787c4b515c0a91": {
       "research_taxon": "Abdomegaphobema mesomelas",
@@ -3205,8 +3205,357 @@
       "publication_leads": [],
       "no_automatic_behavior_confirmation": true,
       "no_media_or_rights_permissions_implied": true
+    },
+    "5a850c2df35be3ad": {
+      "research_taxon": "Selenobrachys philippinus",
+      "taxon_key": "5a850c2df35be3ad",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "dda52054a6e81fea": {
+      "research_taxon": "Selenocosmia arndsti",
+      "taxon_key": "dda52054a6e81fea",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "b789b7a8d6865b11": {
+      "research_taxon": "Selenocosmia aruana",
+      "taxon_key": "b789b7a8d6865b11",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "80e4bcc4b8262a13": {
+      "research_taxon": "Selenocosmia crassipes",
+      "taxon_key": "80e4bcc4b8262a13",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "907caf4dcada789d": {
+      "research_taxon": "Selenocosmia kovariki",
+      "taxon_key": "907caf4dcada789d",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "d88bb99fa21011b5": {
+      "research_taxon": "Sicarius thomisoides",
+      "taxon_key": "d88bb99fa21011b5",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.3390/toxins17100486",
+          "url": "https://doi.org/10.3390/toxins17100486",
+          "title": "Proteome Analysis of the Six-Eyed Sand-Spider &lt;i&gt;Sicarius thomisoides&lt;/i&gt; Venom.",
+          "published_year": 2025,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.3390/toxins12110702",
+          "url": "https://doi.org/10.3390/toxins12110702",
+          "title": "Toxicological Characterization and Phospholipase D Activity of the Venom of the Spider Sicarius thomisoides .",
+          "published_year": 2020,
+          "behavior_text_hints_unverified": [
+            "AMBLYPYGI_MALE_ANTENNIFORM_FENCING",
+            "COLEOPTERA_DEFENSIVE_ABDOMEN"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1016/j.jtherbio.2019.102465",
+          "url": "https://doi.org/10.1016/j.jtherbio.2019.102465",
+          "title": "Daily thermal preference variation of the sand recluse spider Sicarius thomisoides (Araneae: Sicariidae).",
+          "published_year": 2020,
+          "behavior_text_hints_unverified": [
+            "RESTING_NATURAL",
+            "HUNT_ACTIVE"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1016/j.jtherbio.2018.10.018",
+          "url": "https://doi.org/10.1016/j.jtherbio.2018.10.018",
+          "title": "Thermal niche conservatism in an environmental gradient in the spider Sicarius thomisoides (Araneae: Sicariidae): Implications for microhabitat selection.",
+          "published_year": 2018,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "e3e5a84eb4c0607e": {
+      "research_taxon": "Stichoplastoris obelix",
+      "taxon_key": "e3e5a84eb4c0607e",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "19be4bffa466a977": {
+      "research_taxon": "Stromatopelma calceatum",
+      "taxon_key": "19be4bffa466a977",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "188667bef5d309d8": {
+      "research_taxon": "Taksinus bambus",
+      "taxon_key": "188667bef5d309d8",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "910791c60e6085b5": {
+      "research_taxon": "Tapinauchenius rasti",
+      "taxon_key": "910791c60e6085b5",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1111/cobi.14362",
+          "url": "https://doi.org/10.1111/cobi.14362",
+          "title": "Assessing the risk of overexploitation to a tarantula species in the pet trade.",
+          "published_year": 2024,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.11646/zootaxa.5101.1.1",
+          "url": "https://doi.org/10.11646/zootaxa.5101.1.1",
+          "title": "Taxonomic revision and cladistic analysis of the tarantula genera Tapinauchenius Ausserer, 1871, Psalmopoeus Pocock, 1985, and Amazonius n. gen. (Theraphosidae, Psalmopoeinae).",
+          "published_year": 2022,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "ef56f36e8f0166a9": {
+      "research_taxon": "Theraphosa apophysis",
+      "taxon_key": "ef56f36e8f0166a9",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.1097/j.pain.0000000000002041",
+          "url": "https://doi.org/10.1097/j.pain.0000000000002041",
+          "title": "A spider-venom peptide with multitarget activity on sodium and calcium channels alleviates chronic visceral pain in a model of irritable bowel syndrome.",
+          "published_year": 2021,
+          "behavior_text_hints_unverified": [
+            "COURTSHIP_DISPLAY"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "681fb0af0cb06494": {
+      "research_taxon": "Theraphosa blondi",
+      "taxon_key": "681fb0af0cb06494",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "fb839ed3658e6a88": {
+      "research_taxon": "Theraphosa stirmi",
+      "taxon_key": "fb839ed3658e6a88",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "2260edac37e4af30": {
+      "research_taxon": "Thrigmopoeus truculentus",
+      "taxon_key": "2260edac37e4af30",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.64898/2026.02.06.704511",
+          "url": "https://doi.org/10.64898/2026.02.06.704511",
+          "title": "Spatiotemporal variation in habitat suitability predicts genomic diversity and structure in a Western Ghats endemic Tarantula ( Thrigmopoeus truculentus )",
+          "published_year": 2026,
+          "behavior_text_hints_unverified": [
+            "RESTING_NATURAL",
+            "ALERT_ELEVATED",
+            "AMBLYPYGI_MALE_ANTENNIFORM_FENCING",
+            "COLEOPTERA_DEFENSIVE_ABDOMEN"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "4015bb7667233e02": {
+      "research_taxon": "Tliltocatl albopilosus",
+      "taxon_key": "4015bb7667233e02",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.2460/ajvr.24.02.0053",
+          "url": "https://doi.org/10.2460/ajvr.24.02.0053",
+          "title": "Expanding the invertebrate medicine toolbox: evaluation of opisthosoma tonometry as a novel diagnostic tool for arachnids.",
+          "published_year": 2024,
+          "behavior_text_hints_unverified": [
+            "SCORPION_PECTINAL_SUBSTRATE_SCAN"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        },
+        {
+          "doi": "10.1007/s00726-026-03521-5",
+          "url": "https://doi.org/10.1007/s00726-026-03521-5",
+          "title": "Spider peptides from Brachypelma smithi with slightly different amino acids at their C-terminal loops exert different insecticidal activities.",
+          "published_year": 2026,
+          "behavior_text_hints_unverified": [
+            "PREY_CAPTURE",
+            "AMBLYPYGI_RAPTORY_PEDIPALP_STRIKE",
+            "CHILOPODA_FORCIPULE_STRIKE"
+          ],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "4d0beb7bd1878881": {
+      "research_taxon": "Tliltocatl kahlenbergi",
+      "taxon_key": "4d0beb7bd1878881",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "243149cc5e179159": {
+      "research_taxon": "Tliltocatl vagans",
+      "taxon_key": "243149cc5e179159",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "5af907d569b2026e": {
+      "research_taxon": "Typhochlaena amma",
+      "taxon_key": "5af907d569b2026e",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "90d4c624d0d492dc": {
+      "research_taxon": "Typhochlaena costae",
+      "taxon_key": "90d4c624d0d492dc",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "012c84236571e1ff": {
+      "research_taxon": "Typhochlaena curumim",
+      "taxon_key": "012c84236571e1ff",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [
+        {
+          "doi": "10.3897/zookeys.938.51442",
+          "url": "https://doi.org/10.3897/zookeys.938.51442",
+          "title": "Description of the male of the Critically Endangered tarantula Typhochlaena curumim Bertani, 2012 (Araneae, Theraphosidae), with comments on tarantula trade and conservation.",
+          "published_year": 2020,
+          "behavior_text_hints_unverified": [],
+          "evidence_scope": "BIBLIOGRAPHIC_SPECIES_TEXT_MENTION_NOT_EXPERT_REVIEW",
+          "species_behavior_verified": false,
+          "visual_pose_verified": false,
+          "photo_source_verified": false,
+          "photo_license_verified": false
+        }
+      ],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "db05f3c011d9e058": {
+      "research_taxon": "Typhochlaena seladonia",
+      "taxon_key": "db05f3c011d9e058",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "fcf2b4929c571be7": {
+      "research_taxon": "Vitalius paranaensis",
+      "taxon_key": "fcf2b4929c571be7",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "e85940f6189c0799": {
+      "research_taxon": "Warmiru longicolli",
+      "taxon_key": "e85940f6189c0799",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
+    },
+    "0a7ea8ea713f895e": {
+      "research_taxon": "Xenesthis immanis",
+      "taxon_key": "0a7ea8ea713f895e",
+      "taxon_identity_status": "PUBLIC_RESEARCH_NAME_NOT_CARD_SPECIMEN_CERTIFIED",
+      "publication_leads": [],
+      "no_automatic_behavior_confirmation": true,
+      "no_media_or_rights_permissions_implied": true
     }
   },
   "species_processed_this_run": 24,
-  "species_with_literature_leads_this_run": 16
+  "species_with_literature_leads_this_run": 6
 }
