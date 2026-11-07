@@ -6,7 +6,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "commons:f3787c4b515c:34451468",
@@ -8678,7 +8678,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "inat:634687512",
@@ -9361,7 +9361,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": []
     },
     "87b1db096a7ff2af": {
@@ -10830,8 +10830,8 @@
       "scientific_name": "Avicularia geroldi",
       "research_only": true,
       "candidates": [],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 42,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "commons:cd5e7cdf8a28:29677896",
@@ -11120,7 +11120,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "inat:16382384",
@@ -14365,8 +14365,8 @@
       "scientific_name": "Bacillochilus xenostridulans",
       "research_only": true,
       "candidates": [],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 42,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "commons:9f5855dee85b:76578785",
@@ -14443,7 +14443,7 @@
         }
       ],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "inat:754223003",
@@ -15244,7 +15244,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "inat:472639645",
@@ -31317,7 +31317,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "commons:bcac939d4c46:146855579",
@@ -32704,8 +32704,8 @@
           "species_sex_anatomy_review": "PENDING"
         }
       ],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 42,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "inat:360498521",
@@ -33824,7 +33824,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": []
     },
     "523bae6ba16814db": {
@@ -34937,7 +34937,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "inat:612858659",
@@ -35223,8 +35223,8 @@
           "species_sex_anatomy_review": "PENDING"
         }
       ],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 42,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "inat:329016485",
@@ -38640,7 +38640,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": []
     },
     "ffe239d36d2ed81a": {
@@ -39556,8 +39556,8 @@
       "scientific_name": "Eucratoscelus pachypus",
       "research_only": true,
       "candidates": [],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 42,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "inat:92464385",
@@ -40289,7 +40289,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": []
     },
     "b13f2f4cb58b71f7": {
@@ -40756,15 +40756,15 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": []
     },
     "82d12550dc127b3b": {
       "scientific_name": "Hapalopus vangoghi",
       "research_only": true,
       "candidates": [],
-      "last_state": "NO_CANDIDATES",
-      "last_cycle": 42,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 43,
       "link_only_leads": []
     },
     "e3cab69db7e4f893": {
@@ -48077,8 +48077,8 @@
       "scientific_name": "Heterothele villosella",
       "research_only": true,
       "candidates": [],
-      "last_state": "NO_CANDIDATES",
-      "last_cycle": 42,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 43,
       "link_only_leads": []
     },
     "05c69061264ea61e": {
@@ -55163,7 +55163,7 @@
         }
       ],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "inat:738806481",
@@ -55786,7 +55786,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "inat:463728682",
@@ -58411,7 +58411,7 @@
         }
       ],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "inat:355337616",
@@ -61541,7 +61541,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "commons:e47aa2f3356d:198651156",
@@ -61795,7 +61795,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "inat:631108109",
@@ -64276,8 +64276,8 @@
       "scientific_name": "Lyrognathus giannisposatoi",
       "research_only": true,
       "candidates": [],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 42,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "commons:e11d6f9f4792:76639023",
@@ -65877,7 +65877,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "commons:f7bb2a3b5cd6:123542463",
@@ -66491,7 +66491,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "commons:f1814a9785cf:13600596",
@@ -66570,7 +66570,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": []
     },
     "e551e88e364f57ef": {
@@ -67007,7 +67007,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "commons:1a1e7c84d61f:92589893",
@@ -67408,7 +67408,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "commons:1fc3fc52d1de:66193575",
@@ -67452,8 +67452,8 @@
       "scientific_name": "Melopoeus vonwirthi",
       "research_only": true,
       "candidates": [],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 42,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "inat:611359320",
@@ -68766,7 +68766,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "inat:13403822",
@@ -68852,7 +68852,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "inat:751759329",
@@ -70700,7 +70700,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "commons:ea4cfd0ae468:11612683",
@@ -77078,8 +77078,8 @@
       "scientific_name": "Pamphobeteus insignis",
       "research_only": true,
       "candidates": [],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 42,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "inat:568371136",
@@ -77280,7 +77280,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": []
     },
     "1e4b7f98d5bf7ca6": {
@@ -77288,7 +77288,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "LINK_RESEARCH_READY",
-      "last_cycle": 24,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "gbif:1e4b7f98d5bf:5176678674:64499c9f6f81",
@@ -77745,6 +77745,123 @@
           "media_copied_to_public_repo": false,
           "approved_for_imagegen": false,
           "reviewed_by_human": false
+        },
+        {
+          "photo_key": "gbif:1e4b7f98d5bf:5133800270:5e8720d0e703",
+          "photo_id": "5e8720d0e703",
+          "observation_id": "5133800270",
+          "taxon": "Pamphobeteus ultramarinus",
+          "source_title": "Pamphobeteus ultramarinus Schmidt, 1995",
+          "source_url": "https://www.gbif.org/occurrence/5133800270",
+          "secondary_source_url": "https://www.inaturalist.org/photos/482272572",
+          "review_preview_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/482272572/original.jpeg",
+          "source_type": "GBIF_OCCURRENCE_MEDIA_PAGE",
+          "source_search_term": "Pamphobeteus ultramarinus",
+          "source_search_mode": "GBIF_SCIENTIFIC_NAME_WITH_STILL_IMAGE_FILTER",
+          "source_taxon_name": "Pamphobeteus ultramarinus Schmidt, 1995",
+          "source_accepted_taxon_name": "Pamphobeteus ultramarinus Schmidt, 1995",
+          "taxon_match_status": "SPECIES_NAME_MATCH_NOT_USER_APPROVED",
+          "taxon_authority": "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+          "observation_quality_grade": null,
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "license_url": "http://creativecommons.org/licenses/by-nc/4.0/",
+          "source_license_claim": "http://creativecommons.org/licenses/by-nc/4.0/",
+          "license_research_status": "GBIF_MEDIA_METADATA_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "Luis Salagaje",
+          "candidate_warning": [
+            "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "LICENCE_AND_ATTRIBUTION_CLAIMS_REQUIRE_SOURCE_CHECK"
+          ],
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false,
+          "reviewed_by_human": false
+        },
+        {
+          "photo_key": "gbif:1e4b7f98d5bf:5133800270:2f5552901579",
+          "photo_id": "2f5552901579",
+          "observation_id": "5133800270",
+          "taxon": "Pamphobeteus ultramarinus",
+          "source_title": "Pamphobeteus ultramarinus Schmidt, 1995",
+          "source_url": "https://www.gbif.org/occurrence/5133800270",
+          "secondary_source_url": "https://www.inaturalist.org/photos/482272594",
+          "review_preview_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/482272594/original.jpeg",
+          "source_type": "GBIF_OCCURRENCE_MEDIA_PAGE",
+          "source_search_term": "Pamphobeteus ultramarinus",
+          "source_search_mode": "GBIF_SCIENTIFIC_NAME_WITH_STILL_IMAGE_FILTER",
+          "source_taxon_name": "Pamphobeteus ultramarinus Schmidt, 1995",
+          "source_accepted_taxon_name": "Pamphobeteus ultramarinus Schmidt, 1995",
+          "taxon_match_status": "SPECIES_NAME_MATCH_NOT_USER_APPROVED",
+          "taxon_authority": "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+          "observation_quality_grade": null,
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "license_url": "http://creativecommons.org/licenses/by-nc/4.0/",
+          "source_license_claim": "http://creativecommons.org/licenses/by-nc/4.0/",
+          "license_research_status": "GBIF_MEDIA_METADATA_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "Luis Salagaje",
+          "candidate_warning": [
+            "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "LICENCE_AND_ATTRIBUTION_CLAIMS_REQUIRE_SOURCE_CHECK"
+          ],
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false,
+          "reviewed_by_human": false
+        },
+        {
+          "photo_key": "gbif:1e4b7f98d5bf:5133800270:31c3e50785c7",
+          "photo_id": "31c3e50785c7",
+          "observation_id": "5133800270",
+          "taxon": "Pamphobeteus ultramarinus",
+          "source_title": "Pamphobeteus ultramarinus Schmidt, 1995",
+          "source_url": "https://www.gbif.org/occurrence/5133800270",
+          "secondary_source_url": "https://www.inaturalist.org/photos/482272620",
+          "review_preview_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/482272620/original.jpeg",
+          "source_type": "GBIF_OCCURRENCE_MEDIA_PAGE",
+          "source_search_term": "Pamphobeteus ultramarinus",
+          "source_search_mode": "GBIF_SCIENTIFIC_NAME_WITH_STILL_IMAGE_FILTER",
+          "source_taxon_name": "Pamphobeteus ultramarinus Schmidt, 1995",
+          "source_accepted_taxon_name": "Pamphobeteus ultramarinus Schmidt, 1995",
+          "taxon_match_status": "SPECIES_NAME_MATCH_NOT_USER_APPROVED",
+          "taxon_authority": "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+          "observation_quality_grade": null,
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "license_url": "http://creativecommons.org/licenses/by-nc/4.0/",
+          "source_license_claim": "http://creativecommons.org/licenses/by-nc/4.0/",
+          "license_research_status": "GBIF_MEDIA_METADATA_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "Luis Salagaje",
+          "candidate_warning": [
+            "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "LICENCE_AND_ATTRIBUTION_CLAIMS_REQUIRE_SOURCE_CHECK"
+          ],
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false,
+          "reviewed_by_human": false
         }
       ]
     },
@@ -77752,8 +77869,8 @@
       "scientific_name": "Pamphobeteus vespertinus",
       "research_only": true,
       "candidates": [],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 42,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "inat:719183943",
@@ -86607,7 +86724,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "LINK_RESEARCH_READY",
-      "last_cycle": 24,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "gbif:01868bdbd30b:6185614052:124334bb163e",
@@ -87052,6 +87169,123 @@
           "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
           "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
           "attribution": "Thorsten Usée",
+          "candidate_warning": [
+            "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "LICENCE_AND_ATTRIBUTION_CLAIMS_REQUIRE_SOURCE_CHECK"
+          ],
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false,
+          "reviewed_by_human": false
+        },
+        {
+          "photo_key": "gbif:01868bdbd30b:6520235644:3c7d83d9f86b",
+          "photo_id": "3c7d83d9f86b",
+          "observation_id": "6520235644",
+          "taxon": "Phormictopus atrichomatus",
+          "source_title": "Phormictopus atrichomatus Schmidt, 1991",
+          "source_url": "https://www.gbif.org/occurrence/6520235644",
+          "secondary_source_url": "https://www.inaturalist.org/photos/344319970",
+          "review_preview_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/344319970/original.jpg",
+          "source_type": "GBIF_OCCURRENCE_MEDIA_PAGE",
+          "source_search_term": "Phormictopus atrichomatus",
+          "source_search_mode": "GBIF_SCIENTIFIC_NAME_WITH_STILL_IMAGE_FILTER",
+          "source_taxon_name": "Phormictopus atrichomatus Schmidt, 1991",
+          "source_accepted_taxon_name": "Phormictopus atrichomatus Schmidt, 1991",
+          "taxon_match_status": "SPECIES_NAME_MATCH_NOT_USER_APPROVED",
+          "taxon_authority": "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+          "observation_quality_grade": null,
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "license_url": "http://creativecommons.org/licenses/by-nc/4.0/",
+          "source_license_claim": "http://creativecommons.org/licenses/by-nc/4.0/",
+          "license_research_status": "GBIF_MEDIA_METADATA_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "thepossum",
+          "candidate_warning": [
+            "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "LICENCE_AND_ATTRIBUTION_CLAIMS_REQUIRE_SOURCE_CHECK"
+          ],
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false,
+          "reviewed_by_human": false
+        },
+        {
+          "photo_key": "gbif:01868bdbd30b:6131221395:b59f86b7fe6c",
+          "photo_id": "b59f86b7fe6c",
+          "observation_id": "6131221395",
+          "taxon": "Phormictopus atrichomatus",
+          "source_title": "Phormictopus atrichomatus Schmidt, 1991",
+          "source_url": "https://www.gbif.org/occurrence/6131221395",
+          "secondary_source_url": "https://www.inaturalist.org/photos/604889556",
+          "review_preview_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/604889556/original.jpg",
+          "source_type": "GBIF_OCCURRENCE_MEDIA_PAGE",
+          "source_search_term": "Phormictopus atrichomatus",
+          "source_search_mode": "GBIF_SCIENTIFIC_NAME_WITH_STILL_IMAGE_FILTER",
+          "source_taxon_name": "Phormictopus atrichomatus Schmidt, 1991",
+          "source_accepted_taxon_name": "Phormictopus atrichomatus Schmidt, 1991",
+          "taxon_match_status": "SPECIES_NAME_MATCH_NOT_USER_APPROVED",
+          "taxon_authority": "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+          "observation_quality_grade": null,
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "license_url": "http://creativecommons.org/licenses/by-nc/4.0/",
+          "source_license_claim": "http://creativecommons.org/licenses/by-nc/4.0/",
+          "license_research_status": "GBIF_MEDIA_METADATA_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "komorebi_hwang",
+          "candidate_warning": [
+            "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "LICENCE_AND_ATTRIBUTION_CLAIMS_REQUIRE_SOURCE_CHECK"
+          ],
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false,
+          "reviewed_by_human": false
+        },
+        {
+          "photo_key": "gbif:01868bdbd30b:6131221395:1f5c03195802",
+          "photo_id": "1f5c03195802",
+          "observation_id": "6131221395",
+          "taxon": "Phormictopus atrichomatus",
+          "source_title": "Phormictopus atrichomatus Schmidt, 1991",
+          "source_url": "https://www.gbif.org/occurrence/6131221395",
+          "secondary_source_url": "https://www.inaturalist.org/photos/604889589",
+          "review_preview_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/604889589/original.jpg",
+          "source_type": "GBIF_OCCURRENCE_MEDIA_PAGE",
+          "source_search_term": "Phormictopus atrichomatus",
+          "source_search_mode": "GBIF_SCIENTIFIC_NAME_WITH_STILL_IMAGE_FILTER",
+          "source_taxon_name": "Phormictopus atrichomatus Schmidt, 1991",
+          "source_accepted_taxon_name": "Phormictopus atrichomatus Schmidt, 1991",
+          "taxon_match_status": "SPECIES_NAME_MATCH_NOT_USER_APPROVED",
+          "taxon_authority": "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+          "observation_quality_grade": null,
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "license_url": "http://creativecommons.org/licenses/by-nc/4.0/",
+          "source_license_claim": "http://creativecommons.org/licenses/by-nc/4.0/",
+          "license_research_status": "GBIF_MEDIA_METADATA_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "komorebi_hwang",
           "candidate_warning": [
             "GBIF_OCCURRENCE_NOT_USER_APPROVED",
             "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
@@ -88353,7 +88587,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "inat:437957160",
@@ -88472,8 +88706,8 @@
       "scientific_name": "Phormictopus cochleasvorax",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 42,
+      "last_state": "NO_CANDIDATES",
+      "last_cycle": 43,
       "link_only_leads": []
     },
     "0932ac045a29deff": {
@@ -156571,7 +156805,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "inat:454004337",
@@ -159856,8 +160090,8 @@
       "scientific_name": "Poecilotheria miranda",
       "research_only": true,
       "candidates": [],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 42,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "inat:288105468",
@@ -161494,7 +161728,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "inat:599747625",
@@ -168250,7 +168484,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": []
     },
     "d8ab27a812524e45": {
@@ -171723,7 +171957,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": []
     },
     "80e4bcc4b8262a13": {
@@ -172747,7 +172981,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "commons:907caf4dcada:123541978",
@@ -174199,7 +174433,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "inat:477094704",
@@ -175196,8 +175430,8 @@
       "scientific_name": "Taksinus bambus",
       "research_only": true,
       "candidates": [],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 42,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "inat:470026230",
@@ -184238,7 +184472,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "inat:356507295",
@@ -186078,7 +186312,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "inat:703768766",
@@ -188324,16 +188558,16 @@
       "scientific_name": "Phormingochilus hatihati",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 42,
+      "last_state": "NO_CANDIDATES",
+      "last_cycle": 43,
       "link_only_leads": []
     },
     "f1384717899f71f5": {
       "scientific_name": "Phormingochilus pennellhewlettorum",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 42,
+      "last_state": "NO_CANDIDATES",
+      "last_cycle": 43,
       "link_only_leads": []
     },
     "18fdf200ef8a8d67": {
@@ -192003,7 +192237,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "commons:ecf27de7621a:92589893",
@@ -192827,7 +193061,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": []
     },
     "84d12a63dd3f752f": {
@@ -192835,7 +193069,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": []
     },
     "30bbc340d5bbb4dd": {
@@ -192843,7 +193077,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "gbif:be8350c6faf7:5069733707:8c3945ad7108",
@@ -193152,7 +193386,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": []
     },
     "6383c4eb2afc3ba2": {
@@ -195512,7 +195746,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 42,
+      "last_cycle": 43,
       "link_only_leads": [
         {
           "photo_key": "inat:457473060",
@@ -195547,14 +195781,14 @@
       "scientific_name": "Thrixopelma pruriens",
       "research_only": true,
       "candidates": [],
-      "last_state": "NO_CANDIDATES",
-      "last_cycle": 42,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 43,
       "link_only_leads": []
     }
   },
   "discovered_candidate_count": 1508,
   "image_generation_connected": false,
   "approved_photo_count": 0,
-  "last_cycle": 42,
-  "unlicensed_link_research_lead_count": 5025
+  "last_cycle": 43,
+  "unlicensed_link_research_lead_count": 5031
 }
