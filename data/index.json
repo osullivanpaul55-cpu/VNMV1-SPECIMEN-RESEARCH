@@ -6,7 +6,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "commons:f3787c4b515c:34451468",
@@ -8678,7 +8678,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:634687512",
@@ -9361,7 +9361,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": []
     },
     "87b1db096a7ff2af": {
@@ -10830,8 +10830,8 @@
       "scientific_name": "Avicularia geroldi",
       "research_only": true,
       "candidates": [],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 46,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "commons:cd5e7cdf8a28:29677896",
@@ -11119,8 +11119,8 @@
       "scientific_name": "Avicularia huriana",
       "research_only": true,
       "candidates": [],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 46,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:16382384",
@@ -14366,7 +14366,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "commons:9f5855dee85b:76578785",
@@ -14443,7 +14443,7 @@
         }
       ],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:754223003",
@@ -15243,8 +15243,8 @@
       "scientific_name": "Bonnetina minax",
       "research_only": true,
       "candidates": [],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 46,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:472639645",
@@ -31317,7 +31317,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "commons:bcac939d4c46:146855579",
@@ -32705,7 +32705,7 @@
         }
       ],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:360498521",
@@ -33824,7 +33824,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": []
     },
     "523bae6ba16814db": {
@@ -34937,7 +34937,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:612858659",
@@ -35224,7 +35224,7 @@
         }
       ],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:329016485",
@@ -38640,7 +38640,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": []
     },
     "ffe239d36d2ed81a": {
@@ -39557,7 +39557,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:92464385",
@@ -40289,7 +40289,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": []
     },
     "b13f2f4cb58b71f7": {
@@ -40756,7 +40756,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": []
     },
     "82d12550dc127b3b": {
@@ -40764,7 +40764,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": []
     },
     "e3cab69db7e4f893": {
@@ -48077,8 +48077,8 @@
       "scientific_name": "Heterothele villosella",
       "research_only": true,
       "candidates": [],
-      "last_state": "NO_CANDIDATES",
-      "last_cycle": 46,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 47,
       "link_only_leads": []
     },
     "05c69061264ea61e": {
@@ -55163,7 +55163,7 @@
         }
       ],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:738806481",
@@ -55516,10 +55516,48 @@
           "archive_asset": "shard-0.zip",
           "license_verification": "PENDING_HUMAN_SOURCE_CHECK",
           "species_sex_anatomy_review": "PENDING"
+        },
+        {
+          "photo_key": "inat:161150550",
+          "observation_id": 96960881,
+          "photo_id": 161150550,
+          "taxon": "Hysterocrates scepticus",
+          "observation_quality_grade": "research",
+          "link_only": false,
+          "redistribution_allowed_by_collector": true,
+          "license_code": "cc0",
+          "license_url": null,
+          "license_research_status": "CC0_OR_CC_BY_CANDIDATE",
+          "research_use_status": "USE_SOURCE_LINK_IMMEDIATELY_FOR_RESEARCH",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "no rights reserved",
+          "source_url": "https://www.inaturalist.org/observations/96960881",
+          "review_preview_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/161150550/large.jpeg",
+          "thumbnail_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/161150550/large.jpeg",
+          "sex": "UNKNOWN_UNVERIFIED",
+          "taxon_authority": "COMMUNITY_RESEARCH_GRADE_NOT_USER_APPROVED",
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "unverified_observer_text_pose_hints": [],
+          "unverified_observer_behaviour_hints": [],
+          "sha256": "6f3d54e7d1352f8c8cb8a102cddb857295b41d872c4babb2a12af0160d0e8868",
+          "bytes": 216504,
+          "width": 1024,
+          "height": 768,
+          "archive_member": "media/a48197f9178a111a/161150550.jpg",
+          "same_observation_reference_group": 96960881,
+          "approved_for_imagegen": false,
+          "archive_url": "https://github.com/osullivanpaul55-cpu/VNMV1-SPECIMEN-RESEARCH/releases/download/photo-candidates-run-74/shard-4.zip",
+          "archive_sha256": null,
+          "archive_asset": "shard-4.zip",
+          "license_verification": "PENDING_HUMAN_SOURCE_CHECK",
+          "species_sex_anatomy_review": "PENDING"
         }
       ],
       "last_state": "REVIEW_REQUIRED",
-      "last_cycle": 4,
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:687376440",
@@ -55785,8 +55823,8 @@
       "scientific_name": "Idiothele mira",
       "research_only": true,
       "candidates": [],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 46,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:463728682",
@@ -58410,8 +58448,8 @@
           "species_sex_anatomy_review": "PENDING"
         }
       ],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 46,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:355337616",
@@ -61541,7 +61579,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "commons:e47aa2f3356d:198651156",
@@ -61795,7 +61833,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:631108109",
@@ -64277,7 +64315,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "commons:e11d6f9f4792:76639023",
@@ -65876,8 +65914,8 @@
       "scientific_name": "Magnacrus tongmianensis",
       "research_only": true,
       "candidates": [],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 46,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "commons:f7bb2a3b5cd6:123542463",
@@ -66491,7 +66529,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "commons:f1814a9785cf:13600596",
@@ -66570,7 +66608,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": []
     },
     "e551e88e364f57ef": {
@@ -67115,7 +67153,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "commons:1a1e7c84d61f:92589893",
@@ -67952,8 +67990,8 @@
       "scientific_name": "Melopoeus vonwirthi",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 46,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:611359320",
@@ -69266,7 +69304,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:13403822",
@@ -69352,7 +69390,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:751759329",
@@ -71200,7 +71238,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "commons:ea4cfd0ae468:11612683",
@@ -77578,8 +77616,8 @@
       "scientific_name": "Pamphobeteus insignis",
       "research_only": true,
       "candidates": [],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 46,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:568371136",
@@ -77779,8 +77817,8 @@
       "scientific_name": "Pamphobeteus solaris",
       "research_only": true,
       "candidates": [],
-      "last_state": "NO_CANDIDATES",
-      "last_cycle": 46,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 47,
       "link_only_leads": []
     },
     "1e4b7f98d5bf7ca6": {
@@ -78369,8 +78407,8 @@
       "scientific_name": "Pamphobeteus vespertinus",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 46,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:719183943",
@@ -89086,8 +89124,8 @@
       "scientific_name": "Phormictopus cautus",
       "research_only": true,
       "candidates": [],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 46,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:437957160",
@@ -89206,8 +89244,8 @@
       "scientific_name": "Phormictopus cochleasvorax",
       "research_only": true,
       "candidates": [],
-      "last_state": "NO_CANDIDATES",
-      "last_cycle": 46,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 47,
       "link_only_leads": []
     },
     "0932ac045a29deff": {
@@ -157422,7 +157460,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:454004337",
@@ -160308,7 +160346,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:491472135",
@@ -160708,7 +160746,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:288105468",
@@ -162344,8 +162382,8 @@
       "scientific_name": "Poecilotheria smithi",
       "research_only": true,
       "candidates": [],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 46,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:599747625",
@@ -169335,7 +169373,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": []
     },
     "d8ab27a812524e45": {
@@ -172808,7 +172846,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": []
     },
     "80e4bcc4b8262a13": {
@@ -173831,8 +173869,8 @@
       "scientific_name": "Selenocosmia kovariki",
       "research_only": true,
       "candidates": [],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 46,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "commons:907caf4dcada:123541978",
@@ -175283,8 +175321,8 @@
       "scientific_name": "Stichoplastoris obelix",
       "research_only": true,
       "candidates": [],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 46,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:477094704",
@@ -176281,8 +176319,8 @@
       "scientific_name": "Taksinus bambus",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 46,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:470026230",
@@ -176556,7 +176594,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "LINK_RESEARCH_READY",
-      "last_cycle": 12,
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:629780697",
@@ -176874,6 +176912,33 @@
           "source_url": "https://www.inaturalist.org/observations/124921859",
           "sex": "UNKNOWN_UNVERIFIED",
           "taxon_authority": "COMMUNITY_RESEARCH_GRADE_NOT_USER_APPROVED",
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "unverified_observer_text_pose_hints": [],
+          "unverified_observer_behaviour_hints": [],
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false
+        },
+        {
+          "photo_key": "inat:629432555",
+          "observation_id": 345387170,
+          "photo_id": 629432555,
+          "taxon": "Tapinauchenius rasti",
+          "observation_quality_grade": "needs_id",
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "cc-by-nc",
+          "license_url": null,
+          "license_research_status": "NON_ARCHIVABLE_RIGHTS_NOT_CLEARED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "(c) alejandrariosa, some rights reserved (CC BY-NC)",
+          "source_url": "https://www.inaturalist.org/observations/345387170",
+          "review_preview_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/629432555/large.jpg",
+          "sex": "UNKNOWN_UNVERIFIED",
+          "taxon_authority": "COMMUNITY_NEEDS_ID_NOT_USER_APPROVED",
           "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
           "review_state": "PENDING",
           "pose_id": "UNREVIEWED",
@@ -185323,7 +185388,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:356507295",
@@ -187162,8 +187227,8 @@
       "scientific_name": "Warmiru longicolli",
       "research_only": true,
       "candidates": [],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 46,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:703768766",
@@ -189409,8 +189474,8 @@
       "scientific_name": "Phormingochilus hatihati",
       "research_only": true,
       "candidates": [],
-      "last_state": "NO_CANDIDATES",
-      "last_cycle": 46,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 47,
       "link_only_leads": []
     },
     "f1384717899f71f5": {
@@ -189418,7 +189483,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": []
     },
     "18fdf200ef8a8d67": {
@@ -193088,7 +193153,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "commons:ecf27de7621a:92589893",
@@ -193912,7 +193977,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": []
     },
     "84d12a63dd3f752f": {
@@ -193920,15 +193985,15 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": []
     },
     "30bbc340d5bbb4dd": {
       "scientific_name": "Orphnaecus philippinus",
       "research_only": true,
       "candidates": [],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 46,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "gbif:be8350c6faf7:5069733707:8c3945ad7108",
@@ -194237,7 +194302,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": []
     },
     "6383c4eb2afc3ba2": {
@@ -196596,8 +196661,8 @@
       "scientific_name": "Tapinauchenius sanctivincenti",
       "research_only": true,
       "candidates": [],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 46,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 47,
       "link_only_leads": [
         {
           "photo_key": "inat:457473060",
@@ -196633,13 +196698,13 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 46,
+      "last_cycle": 47,
       "link_only_leads": []
     }
   },
-  "discovered_candidate_count": 1509,
+  "discovered_candidate_count": 1510,
   "image_generation_connected": false,
   "approved_photo_count": 0,
-  "last_cycle": 46,
-  "unlicensed_link_research_lead_count": 5056
+  "last_cycle": 47,
+  "unlicensed_link_research_lead_count": 5057
 }
