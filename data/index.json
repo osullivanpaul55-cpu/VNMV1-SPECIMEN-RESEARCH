@@ -6,7 +6,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "commons:f3787c4b515c:34451468",
@@ -8678,7 +8678,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "inat:634687512",
@@ -9361,7 +9361,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": []
     },
     "87b1db096a7ff2af": {
@@ -10830,8 +10830,8 @@
       "scientific_name": "Avicularia geroldi",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "commons:cd5e7cdf8a28:29677896",
@@ -11119,8 +11119,8 @@
       "scientific_name": "Avicularia huriana",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "inat:16382384",
@@ -14366,7 +14366,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "commons:9f5855dee85b:76578785",
@@ -14443,7 +14443,7 @@
         }
       ],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "inat:754223003",
@@ -15244,7 +15244,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "inat:472639645",
@@ -31396,7 +31396,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "commons:bcac939d4c46:146855579",
@@ -32784,7 +32784,7 @@
         }
       ],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "inat:360498521",
@@ -33903,7 +33903,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": []
     },
     "523bae6ba16814db": {
@@ -35016,7 +35016,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "inat:612858659",
@@ -35303,7 +35303,7 @@
         }
       ],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "inat:329016485",
@@ -38719,7 +38719,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": []
     },
     "ffe239d36d2ed81a": {
@@ -39713,8 +39713,8 @@
       "scientific_name": "Eucratoscelus pachypus",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "inat:92464385",
@@ -40446,7 +40446,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": []
     },
     "b13f2f4cb58b71f7": {
@@ -40913,7 +40913,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": []
     },
     "82d12550dc127b3b": {
@@ -40921,7 +40921,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": []
     },
     "e3cab69db7e4f893": {
@@ -48235,7 +48235,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": []
     },
     "05c69061264ea61e": {
@@ -55320,7 +55320,7 @@
         }
       ],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "inat:738806481",
@@ -55980,8 +55980,8 @@
       "scientific_name": "Idiothele mira",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "inat:463728682",
@@ -57353,7 +57353,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "LINK_RESEARCH_READY",
-      "last_cycle": 23,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "gbif:7a02d3763d28:6130413533:1b3273755bf8",
@@ -57833,6 +57833,84 @@
           "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
           "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
           "attribution": "Ícaro Bastos",
+          "candidate_warning": [
+            "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "LICENCE_AND_ATTRIBUTION_CLAIMS_REQUIRE_SOURCE_CHECK"
+          ],
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false,
+          "reviewed_by_human": false
+        },
+        {
+          "photo_key": "gbif:7a02d3763d28:6870261015:f704ee334ce0",
+          "photo_id": "f704ee334ce0",
+          "observation_id": "6870261015",
+          "taxon": "Iridopelma zorodes",
+          "source_title": "Iridopelma zorodes (Mello-Leitão, 1926)",
+          "source_url": "https://www.gbif.org/occurrence/6870261015",
+          "secondary_source_url": "https://www.inaturalist.org/photos/754122173",
+          "review_preview_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/754122173/original.jpg",
+          "source_type": "GBIF_OCCURRENCE_MEDIA_PAGE",
+          "source_search_term": "Iridopelma zorodes",
+          "source_search_mode": "GBIF_SCIENTIFIC_NAME_WITH_STILL_IMAGE_FILTER",
+          "source_taxon_name": "Iridopelma zorodes (Mello-Leitão, 1926)",
+          "source_accepted_taxon_name": "Iridopelma zorodes (Mello-Leitão, 1926)",
+          "taxon_match_status": "SPECIES_NAME_MATCH_NOT_USER_APPROVED",
+          "taxon_authority": "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+          "observation_quality_grade": null,
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+          "source_license_claim": "http://creativecommons.org/publicdomain/zero/1.0/",
+          "license_research_status": "GBIF_MEDIA_METADATA_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "Gabriel Cardoso Fialho",
+          "candidate_warning": [
+            "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "LICENCE_AND_ATTRIBUTION_CLAIMS_REQUIRE_SOURCE_CHECK"
+          ],
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false,
+          "reviewed_by_human": false
+        },
+        {
+          "photo_key": "gbif:7a02d3763d28:6870261015:d46e33fc180a",
+          "photo_id": "d46e33fc180a",
+          "observation_id": "6870261015",
+          "taxon": "Iridopelma zorodes",
+          "source_title": "Iridopelma zorodes (Mello-Leitão, 1926)",
+          "source_url": "https://www.gbif.org/occurrence/6870261015",
+          "secondary_source_url": "https://www.inaturalist.org/photos/754122182",
+          "review_preview_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/754122182/original.jpg",
+          "source_type": "GBIF_OCCURRENCE_MEDIA_PAGE",
+          "source_search_term": "Iridopelma zorodes",
+          "source_search_mode": "GBIF_SCIENTIFIC_NAME_WITH_STILL_IMAGE_FILTER",
+          "source_taxon_name": "Iridopelma zorodes (Mello-Leitão, 1926)",
+          "source_accepted_taxon_name": "Iridopelma zorodes (Mello-Leitão, 1926)",
+          "taxon_match_status": "SPECIES_NAME_MATCH_NOT_USER_APPROVED",
+          "taxon_authority": "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+          "observation_quality_grade": null,
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/",
+          "source_license_claim": "http://creativecommons.org/publicdomain/zero/1.0/",
+          "license_research_status": "GBIF_MEDIA_METADATA_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "Gabriel Cardoso Fialho",
           "candidate_warning": [
             "GBIF_OCCURRENCE_NOT_USER_APPROVED",
             "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
@@ -58606,7 +58684,7 @@
         }
       ],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "inat:355337616",
@@ -58640,7 +58718,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "LINK_RESEARCH_READY",
-      "last_cycle": 23,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "gbif:da7f4efccdb7:6133298606:4ee39e750b88",
@@ -59120,6 +59198,84 @@
           "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
           "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
           "attribution": "Thiago Gonçalves Coronado Antunes",
+          "candidate_warning": [
+            "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "LICENCE_AND_ATTRIBUTION_CLAIMS_REQUIRE_SOURCE_CHECK"
+          ],
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false,
+          "reviewed_by_human": false
+        },
+        {
+          "photo_key": "gbif:da7f4efccdb7:6551789870:0b59ceddf2ad",
+          "photo_id": "0b59ceddf2ad",
+          "observation_id": "6551789870",
+          "taxon": "Lasiocyano sazimai",
+          "source_title": "Lasiocyano sazimai (Bertani, Nagahama & Fukushima, 2011)",
+          "source_url": "https://www.gbif.org/occurrence/6551789870",
+          "secondary_source_url": "https://www.inaturalist.org/photos/732247631",
+          "review_preview_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/732247631/original.jpg",
+          "source_type": "GBIF_OCCURRENCE_MEDIA_PAGE",
+          "source_search_term": "Lasiocyano sazimai",
+          "source_search_mode": "GBIF_SCIENTIFIC_NAME_WITH_STILL_IMAGE_FILTER",
+          "source_taxon_name": "Lasiocyano sazimai (Bertani, Nagahama & Fukushima, 2011)",
+          "source_accepted_taxon_name": "Pterinopelma sazimai Bertani, Nagahama & Fukushima, 2011",
+          "taxon_match_status": "SPECIES_NAME_MATCH_NOT_USER_APPROVED",
+          "taxon_authority": "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+          "observation_quality_grade": null,
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "license_url": "http://creativecommons.org/licenses/by-nc/4.0/",
+          "source_license_claim": "http://creativecommons.org/licenses/by-nc/4.0/",
+          "license_research_status": "GBIF_MEDIA_METADATA_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "Mathieu Decreuse",
+          "candidate_warning": [
+            "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "LICENCE_AND_ATTRIBUTION_CLAIMS_REQUIRE_SOURCE_CHECK"
+          ],
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false,
+          "reviewed_by_human": false
+        },
+        {
+          "photo_key": "gbif:da7f4efccdb7:6871748308:137e69223b9e",
+          "photo_id": "137e69223b9e",
+          "observation_id": "6871748308",
+          "taxon": "Lasiocyano sazimai",
+          "source_title": "Lasiocyano sazimai (Bertani, Nagahama & Fukushima, 2011)",
+          "source_url": "https://www.gbif.org/occurrence/6871748308",
+          "secondary_source_url": "https://www.inaturalist.org/photos/748059108",
+          "review_preview_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/748059108/original.jpg",
+          "source_type": "GBIF_OCCURRENCE_MEDIA_PAGE",
+          "source_search_term": "Lasiocyano sazimai",
+          "source_search_mode": "GBIF_SCIENTIFIC_NAME_WITH_STILL_IMAGE_FILTER",
+          "source_taxon_name": "Lasiocyano sazimai (Bertani, Nagahama & Fukushima, 2011)",
+          "source_accepted_taxon_name": "Pterinopelma sazimai Bertani, Nagahama & Fukushima, 2011",
+          "taxon_match_status": "SPECIES_NAME_MATCH_NOT_USER_APPROVED",
+          "taxon_authority": "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+          "observation_quality_grade": null,
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "license_url": "http://creativecommons.org/licenses/by-nc/4.0/",
+          "source_license_claim": "http://creativecommons.org/licenses/by-nc/4.0/",
+          "license_research_status": "GBIF_MEDIA_METADATA_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "Isabele Aguiar",
           "candidate_warning": [
             "GBIF_OCCURRENCE_NOT_USER_APPROVED",
             "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
@@ -61736,7 +61892,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "commons:e47aa2f3356d:198651156",
@@ -61990,7 +62146,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "inat:631108109",
@@ -64472,7 +64628,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "commons:e11d6f9f4792:76639023",
@@ -66072,7 +66228,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "commons:f7bb2a3b5cd6:123542463",
@@ -66686,7 +66842,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "commons:f1814a9785cf:13600596",
@@ -66765,7 +66921,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": []
     },
     "e551e88e364f57ef": {
@@ -67310,7 +67466,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "commons:1a1e7c84d61f:92589893",
@@ -68148,7 +68304,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "inat:611359320",
@@ -69515,7 +69671,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "inat:13403822",
@@ -69601,7 +69757,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "inat:751759329",
@@ -71449,7 +71605,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "commons:ea4cfd0ae468:11612683",
@@ -77828,7 +77984,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "inat:568371136",
@@ -78028,8 +78184,8 @@
       "scientific_name": "Pamphobeteus solaris",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_state": "NO_CANDIDATES",
+      "last_cycle": 50,
       "link_only_leads": []
     },
     "1e4b7f98d5bf7ca6": {
@@ -78619,7 +78775,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "inat:719183943",
@@ -89335,8 +89491,8 @@
       "scientific_name": "Phormictopus cautus",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "inat:437957160",
@@ -89455,8 +89611,8 @@
       "scientific_name": "Phormictopus cochleasvorax",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_state": "NO_CANDIDATES",
+      "last_cycle": 50,
       "link_only_leads": []
     },
     "0932ac045a29deff": {
@@ -157671,7 +157827,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "inat:454004337",
@@ -160557,7 +160713,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "inat:491472135",
@@ -160956,8 +161112,8 @@
       "scientific_name": "Poecilotheria miranda",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "inat:288105468",
@@ -162594,7 +162750,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "inat:599747625",
@@ -169584,7 +169740,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": []
     },
     "d8ab27a812524e45": {
@@ -173135,7 +173291,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": []
     },
     "80e4bcc4b8262a13": {
@@ -174158,8 +174314,8 @@
       "scientific_name": "Selenocosmia kovariki",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "commons:907caf4dcada:123541978",
@@ -175611,7 +175767,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "inat:477094704",
@@ -176609,7 +176765,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "inat:470026230",
@@ -185677,7 +185833,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "inat:356507295",
@@ -187594,8 +187750,8 @@
       "scientific_name": "Warmiru longicolli",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "inat:703768766",
@@ -189841,16 +189997,16 @@
       "scientific_name": "Phormingochilus hatihati",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_state": "NO_CANDIDATES",
+      "last_cycle": 50,
       "link_only_leads": []
     },
     "f1384717899f71f5": {
       "scientific_name": "Phormingochilus pennellhewlettorum",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_state": "NO_CANDIDATES",
+      "last_cycle": 50,
       "link_only_leads": []
     },
     "18fdf200ef8a8d67": {
@@ -193520,7 +193676,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "commons:ecf27de7621a:92589893",
@@ -194344,7 +194500,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": []
     },
     "84d12a63dd3f752f": {
@@ -194352,15 +194508,15 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": []
     },
     "30bbc340d5bbb4dd": {
       "scientific_name": "Orphnaecus philippinus",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "gbif:be8350c6faf7:5069733707:8c3945ad7108",
@@ -194669,7 +194825,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": []
     },
     "6383c4eb2afc3ba2": {
@@ -197028,8 +197184,8 @@
       "scientific_name": "Tapinauchenius sanctivincenti",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 50,
       "link_only_leads": [
         {
           "photo_key": "inat:457473060",
@@ -197065,13 +197221,13 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 49,
+      "last_cycle": 50,
       "link_only_leads": []
     }
   },
   "discovered_candidate_count": 1510,
   "image_generation_connected": false,
   "approved_photo_count": 0,
-  "last_cycle": 49,
-  "unlicensed_link_research_lead_count": 5067
+  "last_cycle": 50,
+  "unlicensed_link_research_lead_count": 5071
 }
