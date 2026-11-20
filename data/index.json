@@ -6,7 +6,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "commons:f3787c4b515c:34451468",
@@ -8718,7 +8718,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "inat:634687512",
@@ -9401,7 +9401,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": []
     },
     "87b1db096a7ff2af": {
@@ -10870,8 +10870,8 @@
       "scientific_name": "Avicularia geroldi",
       "research_only": true,
       "candidates": [],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 55,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "commons:cd5e7cdf8a28:29677896",
@@ -11160,7 +11160,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "inat:16382384",
@@ -14406,7 +14406,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "commons:9f5855dee85b:76578785",
@@ -14483,7 +14483,7 @@
         }
       ],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "inat:754223003",
@@ -15284,7 +15284,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "inat:472639645",
@@ -31463,7 +31463,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "commons:bcac939d4c46:146855579",
@@ -32850,8 +32850,8 @@
           "species_sex_anatomy_review": "PENDING"
         }
       ],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 55,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "inat:360498521",
@@ -33997,7 +33997,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": []
     },
     "523bae6ba16814db": {
@@ -34573,9 +34573,48 @@
     "1ea2db4800232574": {
       "scientific_name": "Cyriocosmus perezmilesi",
       "research_only": true,
-      "candidates": [],
-      "last_state": "LINK_RESEARCH_READY",
-      "last_cycle": 22,
+      "candidates": [
+        {
+          "photo_key": "inat:765021348",
+          "observation_id": 415461436,
+          "photo_id": 765021348,
+          "taxon": "Cyriocosmus perezmilesi",
+          "observation_quality_grade": "research",
+          "link_only": false,
+          "redistribution_allowed_by_collector": true,
+          "license_code": "cc-by",
+          "license_url": null,
+          "license_research_status": "CC0_OR_CC_BY_CANDIDATE",
+          "research_use_status": "USE_SOURCE_LINK_IMMEDIATELY_FOR_RESEARCH",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "(c) TOUROULT Julien, some rights reserved (CC BY)",
+          "source_url": "https://www.inaturalist.org/observations/415461436",
+          "review_preview_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/765021348/large.jpg",
+          "thumbnail_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/765021348/large.jpg",
+          "sex": "UNKNOWN_UNVERIFIED",
+          "taxon_authority": "COMMUNITY_RESEARCH_GRADE_NOT_USER_APPROVED",
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "unverified_observer_text_pose_hints": [],
+          "unverified_observer_behaviour_hints": [],
+          "sha256": "1e61bb5a8b0c83ab032dbc6f6cef89fc524a8405bc44f8568365e3035e8f4918",
+          "bytes": 184586,
+          "width": 1024,
+          "height": 768,
+          "archive_member": "media/1ea2db4800232574/765021348.jpg",
+          "same_observation_reference_group": 415461436,
+          "approved_for_imagegen": false,
+          "archive_url": "https://github.com/osullivanpaul55-cpu/VNMV1-SPECIMEN-RESEARCH/releases/download/photo-candidates-run-83/shard-4.zip",
+          "archive_sha256": null,
+          "archive_asset": "shard-4.zip",
+          "license_verification": "PENDING_HUMAN_SOURCE_CHECK",
+          "species_sex_anatomy_review": "PENDING"
+        }
+      ],
+      "last_state": "REVIEW_REQUIRED",
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "gbif:1ea2db480023:6398644234:b5041338c6ba",
@@ -35109,8 +35148,8 @@
       "scientific_name": "Cyriocosmus sellatus",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "inat:612858659",
@@ -35396,8 +35435,8 @@
           "species_sex_anatomy_review": "PENDING"
         }
       ],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 55,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "inat:329016485",
@@ -38813,7 +38852,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": []
     },
     "ffe239d36d2ed81a": {
@@ -39807,8 +39846,8 @@
       "scientific_name": "Eucratoscelus pachypus",
       "research_only": true,
       "candidates": [],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 55,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "inat:92464385",
@@ -40540,7 +40579,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": []
     },
     "b13f2f4cb58b71f7": {
@@ -41007,7 +41046,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": []
     },
     "82d12550dc127b3b": {
@@ -41015,7 +41054,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": []
     },
     "e3cab69db7e4f893": {
@@ -48329,7 +48368,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": []
     },
     "05c69061264ea61e": {
@@ -55414,7 +55453,7 @@
         }
       ],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "inat:738806481",
@@ -56074,8 +56113,8 @@
       "scientific_name": "Idiothele mira",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "inat:463728682",
@@ -58778,7 +58817,7 @@
         }
       ],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "inat:355337616",
@@ -61986,7 +62025,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "commons:e47aa2f3356d:198651156",
@@ -62240,7 +62279,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "inat:631108109",
@@ -64722,7 +64761,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "commons:e11d6f9f4792:76639023",
@@ -66322,7 +66361,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "commons:f7bb2a3b5cd6:123542463",
@@ -66936,7 +66975,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "commons:f1814a9785cf:13600596",
@@ -67015,7 +67054,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": []
     },
     "e551e88e364f57ef": {
@@ -67560,7 +67599,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "commons:1a1e7c84d61f:92589893",
@@ -68398,7 +68437,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "inat:611359320",
@@ -69765,7 +69804,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "inat:13403822",
@@ -69851,7 +69890,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "inat:751759329",
@@ -71699,7 +71738,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "commons:ea4cfd0ae468:11612683",
@@ -78077,8 +78116,8 @@
       "scientific_name": "Pamphobeteus insignis",
       "research_only": true,
       "candidates": [],
-      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 55,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "inat:568371136",
@@ -78278,8 +78317,8 @@
       "scientific_name": "Pamphobeteus solaris",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_state": "NO_CANDIDATES",
+      "last_cycle": 56,
       "link_only_leads": []
     },
     "1e4b7f98d5bf7ca6": {
@@ -78868,8 +78907,8 @@
       "scientific_name": "Pamphobeteus vespertinus",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_state": "LINK_RESEARCH_READY",
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "inat:719183943",
@@ -79001,6 +79040,222 @@
           "attribution": "(c) JDLS, some rights reserved (CC BY-NC)",
           "source_url": "https://www.inaturalist.org/observations/415029769",
           "review_preview_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/764145137/large.jpg",
+          "sex": "UNKNOWN_UNVERIFIED",
+          "taxon_authority": "COMMUNITY_NEEDS_ID_NOT_USER_APPROVED",
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "unverified_observer_text_pose_hints": [],
+          "unverified_observer_behaviour_hints": [],
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false
+        },
+        {
+          "photo_key": "inat:765749549",
+          "observation_id": 415831531,
+          "photo_id": 765749549,
+          "taxon": "Pamphobeteus vespertinus",
+          "observation_quality_grade": "needs_id",
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "cc-by-nc",
+          "license_url": null,
+          "license_research_status": "NON_ARCHIVABLE_RIGHTS_NOT_CLEARED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "(c) Nicole Varas Rodríguez, some rights reserved (CC BY-NC)",
+          "source_url": "https://www.inaturalist.org/observations/415831531",
+          "review_preview_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/765749549/large.jpg",
+          "sex": "UNKNOWN_UNVERIFIED",
+          "taxon_authority": "COMMUNITY_NEEDS_ID_NOT_USER_APPROVED",
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "unverified_observer_text_pose_hints": [],
+          "unverified_observer_behaviour_hints": [],
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false
+        },
+        {
+          "photo_key": "inat:765623362",
+          "observation_id": 415766003,
+          "photo_id": 765623362,
+          "taxon": "Pamphobeteus vespertinus",
+          "observation_quality_grade": "research",
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "cc-by-nc",
+          "license_url": null,
+          "license_research_status": "NON_ARCHIVABLE_RIGHTS_NOT_CLEARED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "(c) anger_palomino08, some rights reserved (CC BY-NC)",
+          "source_url": "https://www.inaturalist.org/observations/415766003",
+          "review_preview_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/765623362/large.jpg",
+          "sex": "UNKNOWN_UNVERIFIED",
+          "taxon_authority": "COMMUNITY_RESEARCH_GRADE_NOT_USER_APPROVED",
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "unverified_observer_text_pose_hints": [],
+          "unverified_observer_behaviour_hints": [],
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false
+        },
+        {
+          "photo_key": "inat:765589827",
+          "observation_id": 415748987,
+          "photo_id": 765589827,
+          "taxon": "Pamphobeteus vespertinus",
+          "observation_quality_grade": "needs_id",
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "cc-by-nc",
+          "license_url": null,
+          "license_research_status": "NON_ARCHIVABLE_RIGHTS_NOT_CLEARED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "(c) il09, some rights reserved (CC BY-NC)",
+          "source_url": "https://www.inaturalist.org/observations/415748987",
+          "review_preview_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/765589827/large.jpg",
+          "sex": "UNKNOWN_UNVERIFIED",
+          "taxon_authority": "COMMUNITY_NEEDS_ID_NOT_USER_APPROVED",
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "unverified_observer_text_pose_hints": [],
+          "unverified_observer_behaviour_hints": [],
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false
+        },
+        {
+          "photo_key": "inat:765493635",
+          "observation_id": 415700080,
+          "photo_id": 765493635,
+          "taxon": "Pamphobeteus vespertinus",
+          "observation_quality_grade": "needs_id",
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "cc-by-nc",
+          "license_url": null,
+          "license_research_status": "NON_ARCHIVABLE_RIGHTS_NOT_CLEARED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "(c) lvbastidas, some rights reserved (CC BY-NC)",
+          "source_url": "https://www.inaturalist.org/observations/415700080",
+          "review_preview_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/765493635/large.jpg",
+          "sex": "UNKNOWN_UNVERIFIED",
+          "taxon_authority": "COMMUNITY_NEEDS_ID_NOT_USER_APPROVED",
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "unverified_observer_text_pose_hints": [],
+          "unverified_observer_behaviour_hints": [],
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false
+        },
+        {
+          "photo_key": "inat:765401023",
+          "observation_id": 415651022,
+          "photo_id": 765401023,
+          "taxon": "Pamphobeteus vespertinus",
+          "observation_quality_grade": "needs_id",
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "cc-by-nc",
+          "license_url": null,
+          "license_research_status": "NON_ARCHIVABLE_RIGHTS_NOT_CLEARED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "(c) robertpb29, some rights reserved (CC BY-NC)",
+          "source_url": "https://www.inaturalist.org/observations/415651022",
+          "review_preview_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/765401023/large.jpg",
+          "sex": "UNKNOWN_UNVERIFIED",
+          "taxon_authority": "COMMUNITY_NEEDS_ID_NOT_USER_APPROVED",
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "unverified_observer_text_pose_hints": [],
+          "unverified_observer_behaviour_hints": [],
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false
+        },
+        {
+          "photo_key": "inat:765623391",
+          "observation_id": 415766003,
+          "photo_id": 765623391,
+          "taxon": "Pamphobeteus vespertinus",
+          "observation_quality_grade": "research",
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "cc-by-nc",
+          "license_url": null,
+          "license_research_status": "NON_ARCHIVABLE_RIGHTS_NOT_CLEARED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "(c) anger_palomino08, some rights reserved (CC BY-NC)",
+          "source_url": "https://www.inaturalist.org/observations/415766003",
+          "review_preview_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/765623391/large.jpg",
+          "sex": "UNKNOWN_UNVERIFIED",
+          "taxon_authority": "COMMUNITY_RESEARCH_GRADE_NOT_USER_APPROVED",
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "unverified_observer_text_pose_hints": [],
+          "unverified_observer_behaviour_hints": [],
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false
+        },
+        {
+          "photo_key": "inat:765623417",
+          "observation_id": 415766003,
+          "photo_id": 765623417,
+          "taxon": "Pamphobeteus vespertinus",
+          "observation_quality_grade": "research",
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "cc-by-nc",
+          "license_url": null,
+          "license_research_status": "NON_ARCHIVABLE_RIGHTS_NOT_CLEARED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "(c) anger_palomino08, some rights reserved (CC BY-NC)",
+          "source_url": "https://www.inaturalist.org/observations/415766003",
+          "review_preview_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/765623417/large.jpg",
+          "sex": "UNKNOWN_UNVERIFIED",
+          "taxon_authority": "COMMUNITY_RESEARCH_GRADE_NOT_USER_APPROVED",
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "unverified_observer_text_pose_hints": [],
+          "unverified_observer_behaviour_hints": [],
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false
+        },
+        {
+          "photo_key": "inat:765789911",
+          "observation_id": 415651022,
+          "photo_id": 765789911,
+          "taxon": "Pamphobeteus vespertinus",
+          "observation_quality_grade": "needs_id",
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "cc-by-nc",
+          "license_url": null,
+          "license_research_status": "NON_ARCHIVABLE_RIGHTS_NOT_CLEARED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "(c) robertpb29, some rights reserved (CC BY-NC)",
+          "source_url": "https://www.inaturalist.org/observations/415651022",
+          "review_preview_url": "https://inaturalist-open-data.s3.amazonaws.com/photos/765789911/large.jpg",
           "sex": "UNKNOWN_UNVERIFIED",
           "taxon_authority": "COMMUNITY_NEEDS_ID_NOT_USER_APPROVED",
           "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
@@ -89640,7 +89895,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "inat:437957160",
@@ -89759,8 +90014,8 @@
       "scientific_name": "Phormictopus cochleasvorax",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_state": "NO_CANDIDATES",
+      "last_cycle": 56,
       "link_only_leads": []
     },
     "0932ac045a29deff": {
@@ -121399,8 +121654,8 @@
       "scientific_name": "Greta oto",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_state": "LINK_RESEARCH_READY",
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "commons:6098c2a51f3d:772157",
@@ -121826,6 +122081,78 @@
           "attribution": "MargotV",
           "candidate_warning": [
             "GBIF_OCCURRENCE_NOT_USER_APPROVED",
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "LICENCE_AND_ATTRIBUTION_CLAIMS_REQUIRE_SOURCE_CHECK"
+          ],
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false,
+          "reviewed_by_human": false
+        },
+        {
+          "photo_key": "commons:6098c2a51f3d:49123842",
+          "photo_id": 49123842,
+          "taxon": "Greta oto",
+          "source_title": "File:Borboleta asas de vidro na Serra do Japi.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Borboleta_asas_de_vidro_na_Serra_do_Japi.jpg",
+          "review_preview_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Borboleta_asas_de_vidro_na_Serra_do_Japi.jpg/960px-Borboleta_asas_de_vidro_na_Serra_do_Japi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "source_type": "WIKIMEDIA_COMMONS_FILE_PAGE",
+          "source_search_term": "Greta oto",
+          "source_search_query": "\"Greta oto\"",
+          "source_search_mode": "EXACT_PHRASE",
+          "taxon_match_status": "TEXT_SEARCH_MATCH_NOT_TAXONOMICALLY_VERIFIED",
+          "taxon_authority": "WIKIMEDIA_TEXT_SEARCH_NOT_USER_APPROVED",
+          "observation_quality_grade": null,
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "source_license_claim": "CC BY-SA 4.0",
+          "license_research_status": "COMMONS_METADATA_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "Nortondefeis",
+          "candidate_warning": [
+            "TEXT_SEARCH_MATCH_ONLY",
+            "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
+            "LICENCE_AND_ATTRIBUTION_CLAIMS_REQUIRE_SOURCE_CHECK"
+          ],
+          "rights_verdict": "CANDIDATE_METADATA_ONLY_NOT_GENERATION_CLEARED",
+          "review_state": "PENDING",
+          "pose_id": "UNREVIEWED",
+          "pose_review_status": "VISUAL_REVIEW_REQUIRED",
+          "media_copied_to_public_repo": false,
+          "approved_for_imagegen": false,
+          "reviewed_by_human": false
+        },
+        {
+          "photo_key": "commons:6098c2a51f3d:52842765",
+          "photo_id": 52842765,
+          "taxon": "Greta oto",
+          "source_title": "File:Greta oto (Glasswing sp.) captive - Flickr - S. Rae (1).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Greta_oto_(Glasswing_sp.)_captive_-_Flickr_-_S._Rae_(1).jpg",
+          "review_preview_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Greta_oto_%28Glasswing_sp.%29_captive_-_Flickr_-_S._Rae_%281%29.jpg/960px-Greta_oto_%28Glasswing_sp.%29_captive_-_Flickr_-_S._Rae_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+          "source_type": "WIKIMEDIA_COMMONS_FILE_PAGE",
+          "source_search_term": "Greta oto",
+          "source_search_query": "\"Greta oto\"",
+          "source_search_mode": "EXACT_PHRASE",
+          "taxon_match_status": "TEXT_SEARCH_MATCH_NOT_TAXONOMICALLY_VERIFIED",
+          "taxon_authority": "WIKIMEDIA_TEXT_SEARCH_NOT_USER_APPROVED",
+          "observation_quality_grade": null,
+          "link_only": true,
+          "redistribution_allowed_by_collector": false,
+          "license_code": "UNKNOWN_PENDING_VERIFICATION",
+          "license_url": "https://creativecommons.org/licenses/by/2.0",
+          "source_license_claim": "CC BY 2.0",
+          "license_research_status": "COMMONS_METADATA_CLAIM_NOT_INDEPENDENTLY_VERIFIED",
+          "research_use_status": "RESEARCH_LINK_AVAILABLE_NOW",
+          "license_version": "UNVERIFIED_SOURCE_CHECK_REQUIRED",
+          "attribution": "S. Rae  from Scotland, UK",
+          "candidate_warning": [
+            "TEXT_SEARCH_MATCH_ONLY",
             "PHOTO_IDENTITY_NOT_VISUALLY_REVIEWED",
             "LICENCE_AND_ATTRIBUTION_CLAIMS_REQUIRE_SOURCE_CHECK"
           ],
@@ -158002,7 +158329,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "inat:454004337",
@@ -160888,7 +161215,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "inat:491472135",
@@ -161288,7 +161615,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "inat:288105468",
@@ -162925,7 +163252,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "inat:599747625",
@@ -169993,7 +170320,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": []
     },
     "d8ab27a812524e45": {
@@ -173544,7 +173871,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": []
     },
     "80e4bcc4b8262a13": {
@@ -174568,7 +174895,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "commons:907caf4dcada:123541978",
@@ -176020,7 +176347,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "inat:477094704",
@@ -177018,7 +177345,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "inat:470026230",
@@ -186086,7 +186413,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "inat:356507295",
@@ -188004,7 +188331,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "inat:703768766",
@@ -190250,16 +190577,16 @@
       "scientific_name": "Phormingochilus hatihati",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_state": "NO_CANDIDATES",
+      "last_cycle": 56,
       "link_only_leads": []
     },
     "f1384717899f71f5": {
       "scientific_name": "Phormingochilus pennellhewlettorum",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_state": "NO_CANDIDATES",
+      "last_cycle": 56,
       "link_only_leads": []
     },
     "18fdf200ef8a8d67": {
@@ -193929,7 +194256,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "commons:ecf27de7621a:92589893",
@@ -194753,7 +195080,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": []
     },
     "84d12a63dd3f752f": {
@@ -194761,15 +195088,15 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": []
     },
     "30bbc340d5bbb4dd": {
       "scientific_name": "Orphnaecus philippinus",
       "research_only": true,
       "candidates": [],
-      "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_state": "ALREADY_COLLECTED_OR_NO_NEW_LEADS",
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "gbif:be8350c6faf7:5069733707:8c3945ad7108",
@@ -195078,7 +195405,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "NO_CANDIDATES",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": []
     },
     "6383c4eb2afc3ba2": {
@@ -197516,7 +197843,7 @@
       "research_only": true,
       "candidates": [],
       "last_state": "RETRY_DISCOVERY",
-      "last_cycle": 55,
+      "last_cycle": 56,
       "link_only_leads": [
         {
           "photo_key": "inat:457473060",
@@ -197551,14 +197878,14 @@
       "scientific_name": "Thrixopelma pruriens",
       "research_only": true,
       "candidates": [],
-      "last_state": "NO_CANDIDATES",
-      "last_cycle": 55,
+      "last_state": "RETRY_DISCOVERY",
+      "last_cycle": 56,
       "link_only_leads": []
     }
   },
-  "discovered_candidate_count": 1510,
+  "discovered_candidate_count": 1511,
   "image_generation_connected": false,
   "approved_photo_count": 0,
-  "last_cycle": 55,
-  "unlicensed_link_research_lead_count": 5081
+  "last_cycle": 56,
+  "unlicensed_link_research_lead_count": 5091
 }
